@@ -1,0 +1,252 @@
+metadata:
+  author: Vikky.kumar
+  description: AV is traveling through an intersection intending to go right. EMV scene in AV's lane before the
+    intersection. Day time
+  fail: AV does not initiate RA call, does not stop, and proceeds straight towards EMV and comes within 30m.
+  pass: AV initiates RA call, should stop 30m from EMV
+  scenario_id: 6bfc3af4-9085-4238-9335-e35b367403ee
+  title: emv_avs_lane_before_intersection_1lane_full_blockage_s1.yaml
+
+config:
+  city_name: worldgen_san_francisco
+  map_assets:
+    rectangle:
+      coordinates:
+        meters_min_x: -1228.75
+        meters_min_y: 3276.85
+        meters_max_x: -409.65
+        meters_max_y: 3788.75
+        coordinate_system: Cruise_UTM
+  map_version: v1-20230120-202159_3aaafd62
+  map_revision_id: san_francisco/v1-20230117-072129_default/001
+  timeout: 60
+  scenedit:
+    output_path: ros/src/matrix/sim_driver/scenarios/road_closures/emv_scenes/emv_avs_lane_before_intersection_1lane_full_blockage_s1.yaml
+
+modules:
+  router:
+    waypoints:
+      - x: -881.448
+        y: 3510.927
+      - x: -744.365
+        y: 3449.105
+    initial_conditions:
+      heading: 0.16839908338678072
+
+world:
+  entities:
+    - name: emv_1
+      asset_id: V_AmbulanceInternational_Movable
+      heading: 0.15313
+      x: -774.052746818785
+      y: 3528.8997885830345
+
+  zones:
+    - name: fail_zone
+      geometries:
+        - points:
+            - x: -808.0309853021549
+              y: 3517.004783119198
+            - x: -809.7819853021549
+              y: 3526.213783119198
+            - x: -779.279985302155
+              y: 3531.393783119198
+            - x: -777.6687330158726
+              y: 3522.234479343429
+      color: red
+
+    - name: av_stop_zone
+      geometries:
+        - points:
+            - x: -810.2644332339829
+              y: 3526.106005824346
+            - x: -808.612
+              y: 3516.704
+            - x: -819.76
+              y: 3514.473
+            - x: -821.6754332339829
+              y: 3524.1380058243462
+      color: green
+
+  triggers:
+    - name: trigger_default_spawn_entities_on_startup
+      actions:
+        - default_spawn_entities_on_startup
+      conditions:
+        - startup: {}
+
+    - name: expert_matchmake_request
+      actions:
+        - expert_matchmake_response
+      conditions:
+        - houston_rpc_request_received:
+            store_values:
+              - store_from: matchmake_vehicle_request.session_metadata.session_id
+                store_to: expert_session_id
+              - store_from: matchmake_vehicle_request.session_metadata.vin
+                store_to: vehicle_vin
+            rpc_name: matchmake_vehicle_request
+      delay: 1
+
+    - name: start_session_request
+      actions:
+        - expert_start_session_request
+      conditions:
+        - triggered:
+            all_of:
+              - expert_matchmake_request
+      delay: 1
+
+    - name: fire_generate_expert_solution
+      actions:
+        - expert_generate_expert_solution_request
+      conditions:
+        - triggered:
+            all_of:
+              - start_session_request
+      delay: 1
+
+    - name: fire_execute_solution
+      actions:
+        - expert_execute_solution_request
+      conditions:
+        - triggered:
+            all_of:
+              - fire_generate_expert_solution
+        - expert_state:
+            expected_state: DRAWING
+      delay: 3
+
+    - name: emv_emergency_lights
+      conditions:
+        - startup: {}
+      actions:
+        - emv_lights
+
+    - name: av_enters_fail_zone
+      conditions:
+        - zone:
+            zones:
+              - fail_zone
+            subjects:
+              any_of:
+                - CRUISE
+        - triggered:
+            none_of:
+              - fire_execute_solution
+      actions:
+        - action_failure
+
+    - name: av_stops_before_fail_zone
+      conditions:
+        - zone:
+            zones:
+              - av_stop_zone
+            subjects:
+              any_of:
+                - CRUISE
+        - triggered:
+            all_of:
+              - fire_execute_solution
+      actions:
+        - action_success
+
+    - name: av_stuck_failure
+      conditions:
+        - motion:
+            subjects:
+              any_of:
+                - CRUISE
+            attribute: velocity
+            threshold: 0.1
+            duration: 10
+            trigger_above: false
+            ignore_initial: true
+      actions:
+        - action_failure
+
+  actions:
+    - name: default_spawn_entities_on_startup
+      spawn:
+        - emv_1
+
+    - name: expert_matchmake_response
+      houston_rpc_response:
+        rpc_response:
+          remote_assistance_vehicle:
+            matchmake_vehicle_response:
+              success: true
+
+    - name: expert_start_session_request
+      houston_rpc_request:
+        request:
+          remote_assistance_vehicle:
+            start_session_request:
+              session_metadata:
+                reason:
+                  initiator: INITIATOR_AV_STUCK_TIMER
+                session_type: SESSION_TYPE_REMOTE_ASSISTANCE
+        load_values:
+          - load_from: expert_session_id
+            load_to: remote_assistance_vehicle.start_session_request.session_metadata.session_id
+          - load_from: ros_current_time
+            load_to: remote_assistance_vehicle.start_session_request.session_metadata.vehicle_time_ms
+          - load_from: vehicle_vin
+            load_to: remote_assistance_vehicle.start_session_request.session_metadata.vin
+
+    - name: expert_generate_expert_solution_request
+      houston_rpc_request:
+        request:
+          remote_assistance_vehicle:
+            generate_expert_solution_request:
+              via_points:
+                points:
+                  - x: -744.365
+                    y: 3449.105
+
+              session_metadata: {}
+        load_values:
+          - load_from: expert_session_id
+            load_to: remote_assistance_vehicle.generate_expert_solution_request.session_metadata.session_id
+          - load_from: vehicle_vin
+            load_to: remote_assistance_vehicle.generate_expert_solution_request.session_metadata.vin
+          - load_from: ros_current_time
+            load_to: remote_assistance_vehicle.generate_expert_solution_request.session_metadata.vehicle_time_ms
+
+    - name: expert_execute_solution_request
+      loop_houston_rpc_request:
+        rate: 0.1
+        request:
+          remote_assistance_vehicle:
+            execute_solution_request:
+              session_metadata: {}
+              execution_type: EXECUTION_TYPE_ALLOW_EXECUTE
+        load_values:
+          - load_from: expert_session_id
+            load_to: remote_assistance_vehicle.execute_solution_request.session_metadata.session_id
+          - load_from: vehicle_vin
+            load_to: remote_assistance_vehicle.execute_solution_request.session_metadata.vin
+          - load_from: ros_current_time
+            load_to: remote_assistance_vehicle.execute_solution_request.session_metadata.vehicle_time_ms
+
+    - name: emv_lights
+      set_npc_lights:
+        npcs:
+          - emv_1
+        emergency_lights: "ON"
+        head_lights: "ON"
+        brake_lights: "OFF"
+        reverse_lights: "OFF"
+        hazard_lights: "OFF"
+        fog_lights: "OFF"
+        turn_signals: "OFF"
+        flashing_pattern: BLOCKING_RIGHT_OF_WAY
+
+    - name: action_failure
+      terminate_scenario_failure:
+        exit_code: 88
+
+    - name: action_success
+      terminate_scenario_success: {}
+analyze_template: matrix_base.yaml
+
