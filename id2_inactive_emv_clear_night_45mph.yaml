@@ -1,0 +1,227 @@
+metadata:
+  author: vikky.kumar
+  description: AV is traveling on a two-way with 2 or more lanes in each direction. EMV scene on the opposite side with
+    fire hose spanning across the entire road and blocking the AV. AV should start at least 50m away from the hose to
+    allow for sufficient distance to slow and brake. This is more important for high speed roads. Fire hose size 2
+    diameter
+  fail: AV drives over fire hose
+  pass: AV stops 10 meters away from the firehose
+  scenario_id: c2ba6a07-6be4-4f4c-b8ce-95f876eeb793
+  title: id2_inactive_emv_clear_night_45mph.yaml
+
+config:
+  city_name: worldgen_san_francisco
+  light:
+    rig: Aug/San_Francisco/2030/NightSky
+
+  map_assets:
+    rectangle:
+      coordinates:
+        meters_min_x: -1843.15
+        meters_min_y: -5017.55
+        meters_max_x: -921.65
+        meters_max_y: -4505.65
+        coordinate_system: Cruise_UTM
+  map_version: v1-20230215-205429_1bc851b8
+  map_revision_id: san_francisco/v1-20230207-095728_default/001
+  timeout: 80
+  wall_timeout: 6000
+  av_state:
+    post_controls_orientation: NONE
+    autonomous_legal_speed_limit: 20.117
+    max_speed: 20.117
+    ignore_av_max_speed_sf: true
+  check_hard_stop: false
+
+  road_model:
+    roadgen_revision_id: san_francisco/v1-20230207-095728_default/001
+
+  scenedit:
+    output_path: ros/src/matrix/sim_driver/scenarios/id2_inactive_emv_clear_night_45mph.yaml
+
+modules:
+  router:
+    waypoints:
+      - lane_id: 330837
+        interpolate: 0.4256994304745856
+      - lane_id: 330981
+        interpolate: 0.5
+    autonomous_legal_speed_limit: 20.117
+    max_legal_speed_limit: 20.117
+    feature_flags:
+      adjacent_turns: true
+      all_way_yields: true
+      bike_lanes: false
+      blacklisted: true
+      center_lanes: true
+      controlled_by_no_turn: true
+      cross_bike_lanes: true
+      high_speed_lanes: true
+      insufficient_horizon_lanes: true
+      intersection_merge_lanes: true
+      lane_change_bike_shared_outgoing: true
+      lane_change_intersection_turns: true
+      lateral_access_only_intersections: true
+      major_minor_right_crossing_bike_lanes: true
+      minor_major_left: true
+      minor_major_left_yield: true
+      minor_major_right: true
+      minor_major_right_yield: true
+      minor_major_straight: true
+      minor_major_straight_yield: true
+      missing_tiles: true
+      narrow_lanes: true
+      outer_right_turns: true
+      outside_routable_area: true
+      restricted_lanes: true
+      restricted_turns: true
+      zipper_lanes: true
+      untracked_rail_interactions: true
+      unsupported_traffic_light_types: true
+      uncontrolled_high_speed_increase: true
+      too_short_lane_changes: true
+      u_turns: true
+      steep_lanes: true
+      sharp_turns: true
+    skip_pullovers:
+      - false
+    initial_conditions:
+      heading: -0.2791786108154016
+
+world:
+  actions:
+    - name: emergency_lights
+      set_npc_lights:
+        npcs:
+          - firetruck1
+          - firetruck2
+        emergency_lights: 'OFF'
+        head_lights: 'OFF'
+        brake_lights: 'OFF'
+        reverse_lights: 'OFF'
+        hazard_lights: 'OFF'
+        fog_lights: 'OFF'
+        turn_signals: 'OFF'
+        flashing_pattern: NONE
+
+    - name: terminate_scenario_failure
+      terminate_scenario_failure:
+        exit_code: 88
+
+    - name: terminate_scenario_success
+      terminate_scenario_success: {}
+
+    - name: default_spawn_entities_on_startup
+      spawn:
+        - firetruck1
+        - firetruck2
+        - firehose
+
+  triggers:
+    - name: trigger_default_spawn_entities_on_startup
+      actions:
+        - default_spawn_entities_on_startup
+      conditions:
+        - startup: {}
+
+    - name: av_stops_10m_before_firehose
+      conditions:
+        - motion:
+            subjects:
+              any_of:
+                - CRUISE
+            attribute: velocity
+            threshold: 0.1
+            duration: 5
+            trigger_above: false
+            ignore_initial: true
+        - zone:
+            zones:
+              - goal_zone
+            subjects:
+              any_of:
+                - CRUISE
+      actions:
+        - terminate_scenario_success
+
+    - name: av_drives_over_firehose
+      conditions:
+        - zone:
+            zones:
+              - fail_zone
+            subjects:
+              any_of:
+                - CRUISE
+      actions:
+        - terminate_scenario_failure
+
+    - name: av_stuck
+      conditions:
+        - motion:
+            subjects:
+              any_of:
+                - CRUISE
+            attribute: velocity
+            threshold: 0.1
+            duration: 15
+            trigger_above: false
+            ignore_initial: true
+      actions:
+        - terminate_scenario_failure
+
+    - name: emv_lights
+      conditions:
+        - startup: {}
+      actions:
+        - emergency_lights
+
+  entities:
+    - x: -1410.6160000000002
+      y: -4705.153
+      name: firetruck1
+      asset_id: V_FireTruckShort_Movable
+      heading: -3.018539120433499
+
+    - x: -1422.017
+      y: -4706.469
+      name: firetruck2
+      asset_id: V_FireTruckShort_Movable
+      heading: -2.997859315567032
+
+    - x: -1421.296856367362
+      y: -4701.154198727358
+      name: firehose
+      asset_id: P_FireHose45mm
+      heading: -1.416896412845531
+      scale_x: 1.5
+      scale_y: 4
+      scale_z: 3
+
+  zones:
+    - name: fail_zone
+      geometries:
+        - points:
+            - x: -1433.337
+              y: -4695.002
+            - x: -1420.291
+              y: -4693.165
+            - x: -1417.931
+              y: -4708.243
+            - x: -1430.809
+              y: -4710.121
+      color: red
+
+    - name: goal_zone
+      geometries:
+        - points:
+            - x: -1433.418
+              y: -4695.504
+            - x: -1431.019
+              y: -4710.122
+            - x: -1437.604
+              y: -4711.208
+            - x: -1439.962
+              y: -4696.506
+      color: green
+analyze_template: matrix_base.yaml
+
