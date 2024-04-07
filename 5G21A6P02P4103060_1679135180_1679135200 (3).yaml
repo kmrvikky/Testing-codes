@@ -1,0 +1,4082 @@
+metadata:
+  author: road_to_sim
+  description: "R2S conversion for drive segment id: 5G21A6P02P4103060:1679135180:1679135200"
+  scenario_id: 6c4316a6-0975-446a-a0b3-8741f40d1c86
+  title: 5G21A6P02P4103060_1679135180_1679135200_r2s
+  enable_r2s_assertions_pipeline: true
+  conversion_configs:
+    npcs_configs:
+      disable_spline_fitter_refinement: false
+      use_npc_ai: false
+      npc_ai_type: ml
+      npc_ai_disabled_ids: null
+      convert_track_id_spline: null
+      convert_label_id_spline: null
+      npc_ai_min_total_distance: 0
+      npc_ai_min_avg_speed: 0
+      reassociate_objects: 1
+      fuse_labels_and_trackers: false
+      auto_select_parameterized_track_id: false
+      parameterize_track_ids: null
+      parameterize_ttc_thresholds: null
+      clean_scene: false
+      clean_scene_npc_threshold: 20
+      disable_npc_lifespan_match: false
+      disable_npc_despawn: false
+      persist_static_entities: false
+      npc_behavior_sampling: false
+      disable_egregious_motion_removal: true
+      disable_spurious_orientation_removal: false
+      aggregate_small_motion: false
+      use_all_fits: false
+      pose_rewind_ticks: 3
+      visual_asset_matching: null
+      evaluate_asset_matching: false
+      ground_truth_from_labels: false
+    segment_id: 5G21A6P02P4103060:1679135180:1679135200
+    output_dir: /tmp/road_to_sim
+    cache_dir: null
+    generate_on_rails: false
+    bag_path: /home/vikky.kumar/.cache/r2s/5G21A6P02P4103060_1679135180_1679135200.bag
+    bag_labels_path: null
+    use_worldgen: true
+    ci: false
+    start_time: null
+    end_time: null
+    hot_start_pre_evaluation_duration_ns: null
+    additional_topics_to_pass_through: null
+    include_on_rails_vehicle_model_topics: false
+    include_only_tracked_object_ids: null
+    exclude_tracked_object_ids:
+      - "118192"
+      - "116576"
+      - "120048"
+      - "143392"
+      - "57552"
+      - "2960"
+      - "1088"
+      - "28304"
+      - "87040"
+      - "4192"
+      - "1264"
+      - "9552"
+      - "49552"
+      - "118176"
+    include_only_label_ids: null
+    exclude_label_ids: null
+    map_bounds_margin: 100
+    vehicle_type: null
+    use_roadgen: true
+    tracked_object_bag_path: /home/vikky.kumar/.cache/r2s/5G21A6P02P4103060_1679135180_1679135200_2BC025C4.bag
+    triton_road_catalog: ""
+    super_bag: false
+    map_version: unspecified
+    analyze_template: matrix_base.yaml
+    apply_yaml_fixes: true
+    apply_conditional_yaml_fixes: false
+    yaml_fixer_file: null
+    parameterize_av_velocity: false
+    include_old_router_flags: false
+    on_rails_bag_type: default
+    force_daytime: false
+    enable_ds_spoofing: false
+    disable_success_at_timeout: false
+    fail_at_timeout: false
+    enable_avoidance_area_spoofing: true
+    enable_ra_actions: false
+    augment_yaml_file: null
+    augment_yaml: null
+    disable_fused_audio: false
+    enable_tampering_spoofing: false
+    enable_collision_spoofing: false
+    disable_bag_cache: false
+    disable_refreshed_tracks: false
+    plugins: null
+    variables: {}
+    variables_file: null
+    enable_ssm_initial_state_spoofing: false
+    enable_ssm_engagement_spoofing: false
+    enable_cabin_state_spoofing: false
+    enable_hazard_light_spoofing: false
+    enable_end_ride_early_spoofing: false
+    allow_duplicate_timestamps: false
+    disable_motion_profile: false
+    include_av_as_entity: false
+    bypass_unsound_check: false
+    fail_on_unsound_morphing: false
+    fail_on_unsound_flickering_tl: false
+    fail_on_unsound_vru: false
+    disable_event_horizon: false
+    migrate_scenario_version: null
+    framework_type: null
+    need_comparability: false
+    disable_manual_to_driverless_engagement: false
+  fail: ""
+  pass: ""
+config:
+  city_name: san_francisco
+  initial_curvature: 0.0009996135534869764
+  initial_velocity: 10.9980078707466
+  map_revision_id: san_francisco/v1-20230310-071928_default/001
+  map_version: v1-20230314-220547
+  map_assets:
+    rectangle:
+      coordinates:
+        meters_min_x: -7508.428
+        meters_min_y: 290.964
+        meters_max_x: -6869.585
+        meters_max_y: 1065.983
+        coordinate_system: Cruise_UTM
+  initial_steer_command: 3
+  road_model:
+    roadgen_revision_id: san_francisco/v1-20230310-071928_default/001
+  av_state:
+    post_controls_orientation: NONE
+    max_speed: 11.176
+    autonomous_legal_speed_limit: 13.42
+  drive_segment_id: 5G21A6P02P4103060:1679135180:1679135200
+  evaluation_start_time: 1679135180
+  evaluation_end_time: 1679135199.9997306
+  light:
+    rig: Feb/Los_Angeles/0300/Starfield
+    sun_altitude: -42.8659717333892
+    sun_azimuth: 46.39377659562348
+    roadway_light_intensity_scale: 1
+    default_headlights: 'ON'
+  wall_timeout: 2000
+  launch:
+    params:
+      /router/always_route: true
+      /router/average_av_speed: 6.7
+      /router/base_reliability_cost: 0.15
+      /router/enable_avoidance_area_costs: false
+      /router/enable_marketplace_intelligence: false
+      /router/enable_mission_aware_routing: false
+      /router/enable_time_dependent_lanes: false
+      /router/feature_flags/adjacent_turns: false
+      /router/feature_flags/all_way_yields: false
+      /router/feature_flags/bike_lanes: false
+      /router/feature_flags/blacklisted: false
+      /router/feature_flags/center_lanes: false
+      /router/feature_flags/controlled_by_no_turn: false
+      /router/feature_flags/cross_bike_lanes: false
+      /router/feature_flags/high_speed_lanes: false
+      /router/feature_flags/insufficient_horizon_lanes: false
+      /router/feature_flags/intersection_merge_lanes: true
+      /router/feature_flags/lane_change_bike_shared_outgoing: false
+      /router/feature_flags/lane_change_intersection_turns: false
+      /router/feature_flags/lateral_access_only_intersections: false
+      /router/feature_flags/major_minor_left: true
+      /router/feature_flags/major_minor_right_crossing_bike_lanes: false
+      /router/feature_flags/minor_major_left: false
+      /router/feature_flags/minor_major_left_with_bidirectional_cross_traffic: false
+      /router/feature_flags/minor_major_left_yield: false
+      /router/feature_flags/minor_major_outer_left_turns: false
+      /router/feature_flags/minor_major_outer_right_turns: false
+      /router/feature_flags/minor_major_right: true
+      /router/feature_flags/minor_major_right_inner_turn_onto_multilane_roads: true
+      /router/feature_flags/minor_major_right_inner_turn_with_multiple_yieldto_lanes: false
+      /router/feature_flags/minor_major_right_onto_rail_lines: true
+      /router/feature_flags/minor_major_right_yield: false
+      /router/feature_flags/minor_major_straight: false
+      /router/feature_flags/minor_major_straight_yield: false
+      /router/feature_flags/missing_tiles: false
+      /router/feature_flags/narrow_lanes: false
+      /router/feature_flags/outer_right_turns: true
+      /router/feature_flags/outside_routable_area: false
+      /router/feature_flags/restricted_lanes: false
+      /router/feature_flags/restricted_turns: false
+      /router/feature_flags/shared_lanes: true
+      /router/feature_flags/sharp_turns: false
+      /router/feature_flags/steep_lanes: false
+      /router/feature_flags/too_short_lane_changes: false
+      /router/feature_flags/too_short_terminal_lane_changes: false
+      /router/feature_flags/u_turns: false
+      /router/feature_flags/unprotected_left_turns_with_many_yield_to_lanes: false
+      /router/feature_flags/unsupported_traffic_light_types: false
+      /router/feature_flags/untracked_rail_interactions: false
+      /router/feature_flags/yielding_left_turns: true
+      /router/feature_flags/zipper_lanes: false
+      /router/grade_threshold: 0.2
+      /router/ignore_ulh: none
+      /router/left_turn_cost: 12
+      /router/max_legal_speed_limit: 13.42
+      /router/minor_major_right_high_speed_threshold: 11.18
+      /router/pullover_area_buffer: 5
+      /router/pullover_remove_consecutive_lane_changes: true
+      /router/reliability_costs_weight: 0.8
+      /router/right_turn_cost: 9
+      /router/time_costs_weight: 0.2
+      /router/use_soft_fixed_routes: false
+      /router/use_traffic_flow_model: true
+      enable_passenger_readiness_checking: false
+  worldgen:
+    delineator_post: false
+  scenedit:
+    output_path: 5G21A6P02P4103060_1679135180_1679135200.yaml
+  timeout: 100
+modules:
+  router:
+    waypoints:
+      - x: -7158.195907119802
+        y: 750.5778415180143
+      - x: -7146.758
+        y: 569.669
+    initial_conditions:
+      heading: -1.5076510828752603
+    skip_pullovers:
+      - true
+    expects_passengers_at_start_of_waypoint:
+      - false
+    expects_passengers_at_end_of_waypoint:
+      - false
+    feature_flags:
+      adjacent_turns: false
+      all_way_yields: false
+      bike_lanes: false
+      blacklisted: false
+      center_lanes: false
+      controlled_by_no_turn: false
+      cross_bike_lanes: false
+      high_speed_lanes: false
+      insufficient_horizon_lanes: false
+      intersection_merge_lanes: true
+      lane_change_bike_shared_outgoing: false
+      lane_change_intersection_turns: false
+      lateral_access_only_intersections: false
+      major_minor_left: true
+      major_minor_right_crossing_bike_lanes: false
+      minor_major_left: false
+      minor_major_left_with_bidirectional_cross_traffic: false
+      minor_major_left_yield: false
+      minor_major_outer_left_turns: false
+      minor_major_outer_right_turns: false
+      minor_major_right: true
+      minor_major_right_yield: false
+      minor_major_right_inner_turn_onto_multilane_roads: true
+      minor_major_right_inner_turn_with_multiple_yieldto_lanes: false
+      minor_major_right_onto_rail_lines: true
+      minor_major_straight: false
+      minor_major_straight_yield: false
+      missing_tiles: false
+      narrow_lanes: false
+      outer_right_turns: true
+      outside_routable_area: false
+      restricted_lanes: false
+      restricted_turns: false
+      shared_lanes: true
+      sharp_turns: false
+      steep_lanes: false
+      too_short_lane_changes: false
+      too_short_terminal_lane_changes: false
+      u_turns: false
+      unprotected_left_turns_with_many_yield_to_lanes: false
+      unsupported_traffic_light_types: false
+      untracked_rail_interactions: false
+      yielding_left_turns: true
+      zipper_lanes: false
+    always_route: true
+    max_legal_speed_limit: 13.42
+world:
+  entities:
+    - asset_id: C_DogEnglishBulldog
+      name: tracked_object_33840
+      variants:
+        color: BrownLight
+      motion_profile:
+        motions:
+          - t: 0
+            motion:
+              x: -7160.1357921875
+              y: 699.2790404296875
+              z: 12.633598327636719
+              yaw: 1.5707963267948966
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 0.099967401
+            motion:
+              x: -7160.13628046875
+              y: 699.2762938476562
+              z: 12.633598327636719
+              yaw: 1.5707963267948966
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 0.199942749
+            motion:
+              x: -7160.13921015625
+              y: 699.2754393554687
+              z: 12.633598327636719
+              yaw: 1.5707963267948966
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 0.299924271
+            motion:
+              x: -7160.140675
+              y: 699.2754393554687
+              z: 12.633598327636719
+              yaw: 1.5707963267948966
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 0.399893255
+            motion:
+              x: -7160.13237421875
+              y: 699.2765379882812
+              z: 12.633598327636719
+              yaw: 1.5707963267948966
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 0.499854765
+            motion:
+              x: -7160.1182140625
+              y: 699.2784911132812
+              z: 12.633598327636719
+              yaw: 1.5707963267948966
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 0.599811057
+            motion:
+              x: -7160.1182140625
+              y: 699.2787352539062
+              z: 12.633598327636719
+              yaw: 1.5707963267948966
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 0.69977616
+            motion:
+              x: -7160.1182140625
+              y: 699.2790404296875
+              z: 12.633598327636719
+              yaw: 1.5707963267948966
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 0.799786374
+            motion:
+              x: -7160.1182140625
+              y: 699.2793456054687
+              z: 12.633598327636719
+              yaw: 1.5707963267948966
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 0.999939978
+            motion:
+              x: -7160.11870234375
+              y: 699.2799559570312
+              z: 12.633598327636719
+              yaw: 1.5707963267948966
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 2.403585712
+            motion:
+              x: -7161.89284396173
+              y: 700.0138828686595
+              z: 12.226066589355469
+              yaw: 1.028926826651139
+              velocity: 0.3569096413806483
+              acceleration: 0.047680213575076465
+              turn_rate: 0
+          - t: 2.503778395
+            motion:
+              x: -7161.89305753804
+              y: 700.0398386499807
+              z: 12.226066589355469
+              yaw: 1.2243012885626108
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 2.603993397
+            motion:
+              x: -7161.8994640625
+              y: 700.0041991210937
+              z: 12.226066589355469
+              yaw: 1.5707963267948966
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 2.704224945
+            motion:
+              x: -7161.8936046875
+              y: 699.9863158203125
+              z: 12.226066589355469
+              yaw: 1.5707963267948966
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 2.804467699
+            motion:
+              x: -7161.88921015625
+              y: 699.955187890625
+              z: 12.226066589355469
+              yaw: 1.5707963267948966
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 2.904758708
+            motion:
+              x: -7161.89458125
+              y: 699.9646483398437
+              z: 12.233757019042969
+              yaw: 1.5707963267948966
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 3.005091589
+            motion:
+              x: -7161.892628125
+              y: 699.9637938476562
+              z: 12.233757019042969
+              yaw: 1.5707963267948966
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 3.105512521
+            motion:
+              x: -7161.896534375
+              y: 699.9674559570312
+              z: 12.233757019042969
+              yaw: 1.5707963267948966
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 3.206064663
+            motion:
+              x: -7161.89018671875
+              y: 700.004504296875
+              z: 12.233757019042969
+              yaw: 1.5707963267948966
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 3.306720462
+            motion:
+              x: -7161.8975109375
+              y: 700.0021239257812
+              z: 12.226066589355469
+              yaw: 1.5707963267948966
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 3.407464494
+            motion:
+              x: -7161.9053234375
+              y: 699.9753905273437
+              z: 12.226066589355469
+              yaw: 1.5707963267948966
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 3.5083318
+            motion:
+              x: -7161.9092296875
+              y: 699.9709959960937
+              z: 12.233757019042969
+              yaw: 1.5707963267948966
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 3.609327606
+            motion:
+              x: -7161.91020625
+              y: 699.9683104492187
+              z: 12.233757019042969
+              yaw: 1.5707963267948966
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 3.710469131
+            motion:
+              x: -7161.91167109375
+              y: 699.9662962890625
+              z: 12.233757019042969
+              yaw: 1.5707963267948966
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 3.811755123
+            motion:
+              x: -7161.9131359375
+              y: 699.9640990234375
+              z: 12.233757019042969
+              yaw: 1.5707963267948966
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 3.913283502
+            motion:
+              x: -7161.88628046875
+              y: 700.0395384765625
+              z: 12.233757019042969
+              yaw: 1.5707963267948966
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 4.014941153
+            motion:
+              x: -7161.908253125
+              y: 700.0475951171875
+              z: 12.226066589355469
+              yaw: 1.5707963267948966
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 4.11672895
+            motion:
+              x: -7161.92827265625
+              y: 700.04234609375
+              z: 12.226066589355469
+              yaw: 1.5707963267948966
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 4.218642368
+            motion:
+              x: -7161.9297375
+              y: 700.0361815429687
+              z: 12.226066589355469
+              yaw: 1.5707963267948966
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 4.320682594
+            motion:
+              x: -7161.931690625
+              y: 700.0356322265625
+              z: 12.226066589355469
+              yaw: 1.5707963267948966
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 4.422780191
+            motion:
+              x: -7161.93364375
+              y: 700.0363036132812
+              z: 12.226066589355469
+              yaw: 1.5707963267948966
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 5.739462258
+            motion:
+              x: -7161.823672110162
+              y: 701.3268310027751
+              z: 12.149169921875
+              yaw: 1.5817415547084819
+              velocity: 1.0943125213871143
+              acceleration: 0.029325525527853943
+              turn_rate: 0
+          - t: 5.839843759
+            motion:
+              x: -7161.832411690707
+              y: 701.473559933757
+              z: 12.1337890625
+              yaw: 1.58673984957406
+              velocity: 1.1750936706633563
+              acceleration: 0.020452956716172303
+              turn_rate: 0
+          - t: 5.940176599
+            motion:
+              x: -7161.816184214551
+              y: 701.5808016966703
+              z: 12.118415832519531
+              yaw: 1.548950373918788
+              velocity: 1.1364174914357013
+              acceleration: 0.03840295568297135
+              turn_rate: 0
+          - t: 6.04049354
+            motion:
+              x: -7161.795086702323
+              y: 701.6859832563295
+              z: 12.110725402832031
+              yaw: 1.5098291233012182
+              velocity: 1.1018602646230549
+              acceleration: 0.058570324872228983
+              turn_rate: 0
+          - t: 6.140800407
+            motion:
+              x: -7161.787303252154
+              y: 701.7913318995185
+              z: 12.110725402832031
+              yaw: 1.5068881382460908
+              velocity: 1.0737730007906263
+              acceleration: 0.06776432010308073
+              turn_rate: 0
+          - t: 6.241118328
+            motion:
+              x: -7161.7790507084255
+              y: 701.9017479472509
+              z: 12.103034973144531
+              yaw: 1.502003272146581
+              velocity: 1.0702991187133075
+              acceleration: 0.06742497195942913
+              turn_rate: 0
+          - t: 6.341431877
+            motion:
+              x: -7161.770787960689
+              y: 702.0125906783242
+              z: 12.095344543457031
+              yaw: 1.4981504954654878
+              velocity: 1.0684811419307876
+              acceleration: 0.06606414725347
+              turn_rate: 0
+          - t: 6.441746222
+            motion:
+              x: -7161.762515855949
+              y: 702.1237990074841
+              z: 12.095344543457031
+              yaw: 1.4952448175557955
+              velocity: 1.0670499814518972
+              acceleration: 0.06511146355756105
+              turn_rate: 0
+          - t: 6.542051685
+            motion:
+              x: -7161.754727916404
+              y: 702.2350070768608
+              z: 12.087654113769531
+              yaw: 1.4927556618801325
+              velocity: 1.0658811739867262
+              acceleration: 0.06440719407119494
+              turn_rate: 0
+          - t: 6.642338243
+            motion:
+              x: -7161.746449510356
+              y: 702.3461539854168
+              z: 12.087654113769531
+              yaw: 1.49048752862359
+              velocity: 1.065119570218269
+              acceleration: 0.06362395516519023
+              turn_rate: 0
+      attributes:
+        motorcycle_probability: 0
+        truck_probability: 0
+        bus_probability: 0
+        school_bus_probability: 0
+        emv_probability: 0
+      is_divergence_required: true
+    - asset_id: P_PortaPotty
+      name: tracked_object_25472
+      variants:
+        color: Teal
+      x: -7155.444788768795
+      y: 622.8615540362954
+      z: 14.609764099121094
+      heading: 1.5707963267948966
+      attributes:
+        motorcycle_probability: 0
+        truck_probability: 0
+        bus_probability: 0
+        school_bus_probability: 0
+        emv_probability: 0
+      is_divergence_required: true
+    - asset_id: V_Prius_Static
+      name: tracked_object_90656
+      variants:
+        color: BlueMetallic
+      x: -7150.655162708488
+      y: 576.8430114681444
+      z: 14.394467686831424
+      heading: -1.4970689502913543
+      attributes:
+        train_probability: 0.0302886962890625
+        truck_probability: 0.10406494140625
+        bus_probability: 0.17578125
+        school_bus_probability: 0.25048828125
+      is_divergence_required: true
+    - asset_id: V_Countach_Static
+      name: tracked_object_140816
+      variants:
+        color: Blue
+      x: -7256.18701171875
+      y: 621.82080078125
+      z: 16.601303100585938
+      heading: 0.08344665782336505
+      attributes:
+        train_probability: 0.0148468017578125
+        truck_probability: 0.00968170166015625
+        bus_probability: 0.0269317626953125
+        school_bus_probability: 0.179443359375
+      is_divergence_required: true
+    - asset_id: P_PanelChannelizer
+      name: tracked_object_129808
+      variants:
+        color: OrangeDirty
+      x: -7119.822323143058
+      y: 627.9148676300119
+      z: 14.586692810058594
+      heading: 0
+      attributes:
+        motorcycle_probability: 0.0018478253623470664
+        truck_probability: 0.00986348744481802
+        bus_probability: 0.0009684918913990259
+        school_bus_probability: 0.00630195951089263
+        emv_probability: 0.0021937782876193523
+      is_divergence_required: true
+    - asset_id: V_FourTwo_Static
+      name: tracked_object_95616
+      variants:
+        color: Orange
+      x: -7136.467297147295
+      y: 569.3749882569201
+      z: 14.363700866699219
+      heading: 1.6227421299625486
+      attributes:
+        train_probability: 0.0004432201385498047
+        truck_probability: 0.0011339187622070312
+        bus_probability: 0.0019855499267578125
+        school_bus_probability: 0.002490997314453125
+      is_divergence_required: true
+    - asset_id: P_StreetLampB
+      name: tracked_object_75328
+      x: -7137.369140625
+      y: 659.2431640625
+      z: 14.655899047851562
+      heading: 1.5707963267948966
+      attributes:
+        motorcycle_probability: 0.0030778839718550444
+        truck_probability: 0.002729964442551136
+        bus_probability: 0.001818631193600595
+        school_bus_probability: 0.0012076888233423233
+        emv_probability: 0.0013726125471293926
+      is_divergence_required: true
+    - asset_id: C_MaleTeen01
+      name: tracked_object_106960
+      variants:
+        color: J
+        use_matrix_animation: true
+        character_height: 1.3947488784790039
+      x: -7162.05808515625
+      y: 688.5458385742188
+      z: 13.002685546875
+      heading: 0
+      anim_state:
+        - t: 0
+          state: navigation
+      attributes:
+        motorcycle_probability: 0
+        truck_probability: 0
+        bus_probability: 0
+        school_bus_probability: 0
+        emv_probability: 0
+      is_divergence_required: true
+    - asset_id: V_Cobalt_Movable
+      name: tracked_object_880
+      variants:
+        color: White
+      x: -7157.6455078125
+      y: 686.354736328125
+      z: 12.933486938476562
+      heading: -1.4990178612220664
+      attributes:
+        train_probability: 0.00826263427734375
+        truck_probability: 0.1204833984375
+        bus_probability: 0.033660888671875
+        school_bus_probability: 0.01413726806640625
+      is_divergence_required: true
+    - asset_id: V_C250_Static
+      name: tracked_object_896
+      variants:
+        color: BlueGreyMetallic
+      x: -7144.11962890625
+      y: 692.49658203125
+      z: 12.641288757324219
+      heading: 1.6068004899591
+      attributes:
+        train_probability: 0.00942230224609375
+        truck_probability: 0.060028076171875
+        bus_probability: 0.0272674560546875
+        school_bus_probability: 0.016082763671875
+      is_divergence_required: true
+    - asset_id: V_CTS_Movable
+      name: tracked_object_912
+      variants:
+        color: Beige
+      x: -7158.3720703125
+      y: 699.0835571289062
+      z: 12.210685729980469
+      heading: -1.532380835992682
+      attributes:
+        train_probability: 0.0022869110107421875
+        truck_probability: 0.0209503173828125
+        bus_probability: 0.01325225830078125
+        school_bus_probability: 0.0019931793212890625
+      is_divergence_required: true
+    - asset_id: V_ModelS_Movable
+      name: tracked_object_928
+      variants:
+        color: BlueDark
+      x: -7143.4423828125
+      y: 678.9903564453125
+      z: 13.379463195800781
+      heading: 1.62698795209519
+      attributes:
+        train_probability: 0.012664794921875
+        truck_probability: 0.025848388671875
+        bus_probability: 0.038543701171875
+        school_bus_probability: 0.007526397705078125
+      is_divergence_required: true
+    - asset_id: V_Scionb_Static
+      name: tracked_object_944
+      variants:
+        color: Green
+      x: -7143.129655644084
+      y: 772.9695822019502
+      z: 9.196456909179688
+      heading: -3.075157588564927
+      attributes:
+        train_probability: 0.014739990234375
+        truck_probability: 0.0222930908203125
+        bus_probability: 0.0293121337890625
+        school_bus_probability: 0.005794525146484375
+      is_divergence_required: true
+    - asset_id: V_Challenger_Movable
+      name: tracked_object_960
+      variants:
+        color: Silver
+      x: -7159.248046875
+      y: 713.69482421875
+      z: 11.357170104980469
+      heading: -1.5106161481011837
+      attributes:
+        train_probability: 0.0045166015625
+        truck_probability: 0.01476287841796875
+        bus_probability: 0.02105712890625
+        school_bus_probability: 0.01313018798828125
+      is_divergence_required: true
+    - asset_id: V_Golf_Movable
+      name: tracked_object_976
+      variants:
+        color: Silver
+      x: -7160.43212890625
+      y: 732.0448608398438
+      z: 10.296035766601562
+      heading: -1.5106016250639307
+      attributes:
+        train_probability: 0.0009298324584960938
+        truck_probability: 0.00484466552734375
+        bus_probability: 0.0154266357421875
+        school_bus_probability: 0.0081787109375
+      is_divergence_required: true
+    - asset_id: V_Corolla20_Movable
+      name: tracked_object_992
+      variants:
+        color: White
+      x: -7159.78369140625
+      y: 721.7738647460938
+      z: 10.895805358886719
+      heading: -1.499538070122306
+      attributes:
+        train_probability: 0.00067138671875
+        truck_probability: 0.0177764892578125
+        bus_probability: 0.0075531005859375
+        school_bus_probability: 0.00969696044921875
+      is_divergence_required: true
+    - asset_id: V_Cobalt_Static
+      name: tracked_object_1008
+      variants:
+        color: Green
+      x: -7160.720703125
+      y: 737.174560546875
+      z: 10.00384521484375
+      heading: -1.5013279480687558
+      attributes:
+        train_probability: 0.0003566741943359375
+        truck_probability: 0.016845703125
+        bus_probability: 0.005321502685546875
+        school_bus_probability: 0.0084991455078125
+      is_divergence_required: true
+    - asset_id: V_WorkVanExpress_Movable
+      name: tracked_object_1024
+      variants:
+        color: Silver
+      motion_profile:
+        motions:
+          - t: 0
+            motion:
+              x: -7164.466340722931
+              y: 799.5705653901854
+              z: 8.617095763041124
+              yaw: -1.5053265071576103
+              velocity: 1.854933261871338
+              acceleration: -0.26016589999198914
+              turn_rate: 0.004701117053627968
+          - t: 0.099935132
+            motion:
+              x: -7164.473243427592
+              y: 799.478642018634
+              z: 8.624786206440517
+              yaw: -1.5038484614648835
+              velocity: 0.7671744227409363
+              acceleration: -0.11923837661743164
+              turn_rate: -0.001010280684567988
+          - t: 0.199880872
+            motion:
+              x: -7164.458786031487
+              y: 799.4706332024948
+              z: 8.624786277828408
+              yaw: -1.4996185007188514
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 0.299825102
+            motion:
+              x: -7164.466482407293
+              y: 799.4642936727643
+              z: 8.61709579906714
+              yaw: -1.5021898219001335
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 0.399773713
+            motion:
+              x: -7164.46944534826
+              y: 799.4766204777588
+              z: 8.617095811320217
+              yaw: -1.5014535421845379
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 0.499712569
+            motion:
+              x: -7164.473105737598
+              y: 799.4995250618714
+              z: 8.617095754847956
+              yaw: -1.506896392051699
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 0.599646894
+            motion:
+              x: -7164.46088347253
+              y: 799.5163107019752
+              z: 8.61709575394436
+              yaw: -1.5072335736981817
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 0.69956409
+            motion:
+              x: -7164.462121463327
+              y: 799.521969575674
+              z: 8.617095811450541
+              yaw: -1.501446150797733
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 0.799486614
+            motion:
+              x: -7164.4660281400165
+              y: 799.5220916163559
+              z: 8.617095811617336
+              yaw: -1.5014367030358118
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 0.899451014
+            motion:
+              x: -7164.466684115284
+              y: 799.525436592104
+              z: 8.61709589558561
+              yaw: -1.4977231315891268
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 0.999457879
+            motion:
+              x: -7164.466345546461
+              y: 799.5261925151323
+              z: 8.61709576383674
+              yaw: -1.505219731971626
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 1.099493698
+            motion:
+              x: -7164.467255548341
+              y: 799.528909435275
+              z: 8.617095950851958
+              yaw: -1.4958813714072454
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 1.199559193
+            motion:
+              x: -7164.469063231121
+              y: 799.5331925715401
+              z: 8.617095860105895
+              yaw: -1.4991026627103965
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 1.299656359
+            motion:
+              x: -7164.468926977654
+              y: 799.5338735334232
+              z: 8.617095800170869
+              yaw: -1.5021197655446799
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 1.399771874
+            motion:
+              x: -7164.469713170363
+              y: 799.5345844854937
+              z: 8.61709596268308
+              yaw: -1.4955221729452466
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 1.49988697
+            motion:
+              x: -7164.470233516144
+              y: 799.5364741471249
+              z: 8.61709598708984
+              yaw: -1.4948118772061414
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 1.599998829
+            motion:
+              x: -7164.471168773837
+              y: 799.5381252200757
+              z: 8.617095955899176
+              yaw: -1.4957268571388296
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 1.700095321
+            motion:
+              x: -7164.472235420224
+              y: 799.5412921866996
+              z: 8.617096026798361
+              yaw: -1.4937312461715342
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 1.800186652
+            motion:
+              x: -7164.472790321654
+              y: 799.5464139495805
+              z: 8.61709608605957
+              yaw: -1.492255225714944
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 1.900259419
+            motion:
+              x: -7164.475622714894
+              y: 799.5586895628437
+              z: 8.617096001464947
+              yaw: -1.4944107971251361
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 2.000325125
+            motion:
+              x: -7164.473729083937
+              y: 799.5674130003688
+              z: 8.617096051722081
+              yaw: -1.4930927388513169
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 2.100357855
+            motion:
+              x: -7164.4761648267295
+              y: 799.5716859016136
+              z: 8.617096046738485
+              yaw: -1.4932182154350206
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 2.200357171
+            motion:
+              x: -7164.475718632441
+              y: 799.5736967726789
+              z: 8.617096084776161
+              yaw: -1.4922857295408354
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 2.3003144
+            motion:
+              x: -7164.475534969252
+              y: 799.5754198215768
+              z: 8.617095935792108
+              yaw: -1.4963545134131495
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 2.400249397
+            motion:
+              x: -7164.475948435397
+              y: 799.5771343204735
+              z: 8.617095887748242
+              yaw: -1.4980115743794873
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 2.500178296
+            motion:
+              x: -7164.478958371605
+              y: 799.5772504709221
+              z: 8.617095939566425
+              yaw: -1.4962341580204974
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 2.600094803
+            motion:
+              x: -7164.4793998014065
+              y: 799.578230506967
+              z: 8.61709590829076
+              yaw: -1.4972718917814056
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 2.700014259
+            motion:
+              x: -7164.478795634821
+              y: 799.5771029187878
+              z: 8.617096236178822
+              yaw: -1.4890212544465629
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 2.799930174
+            motion:
+              x: -7164.477438700818
+              y: 799.5724552805418
+              z: 8.6170963651178
+              yaw: -1.486629441458302
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 2.899828019
+            motion:
+              x: -7164.475522380936
+              y: 799.5676303857697
+              z: 8.617096412585076
+              yaw: -1.4858135491406923
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 2.999714565
+            motion:
+              x: -7164.477860740026
+              y: 799.5685313198877
+              z: 8.61709586461967
+              yaw: -1.4989156102149572
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 3.099604758
+            motion:
+              x: -7164.478094578588
+              y: 799.5681476721664
+              z: 8.617096026615128
+              yaw: -1.493736045620434
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 3.199524785
+            motion:
+              x: -7164.477376036182
+              y: 799.5670283900562
+              z: 8.617096288383935
+              yaw: -1.4880184568952846
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 3.299508406
+            motion:
+              x: -7164.476906676116
+              y: 799.5659892198975
+              z: 8.617096311010991
+              yaw: -1.48759906950366
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 3.399529708
+            motion:
+              x: -7164.476773603198
+              y: 799.5656338995011
+              z: 8.617096161823298
+              yaw: -1.4905483206857062
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 3.499572582
+            motion:
+              x: -7164.47673652897
+              y: 799.5652096174076
+              z: 8.617096124389679
+              yaw: -1.4913698595151672
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 3.5996305079999997
+            motion:
+              x: -7164.476698060627
+              y: 799.5648464496387
+              z: 8.617096087450422
+              yaw: -1.492222234461602
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 3.699704525
+            motion:
+              x: -7164.475832977074
+              y: 799.5625182043433
+              z: 8.617096199825623
+              yaw: -1.4897519443211316
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 3.799793546
+            motion:
+              x: -7164.475776304942
+              y: 799.5617903461984
+              z: 8.617096140664772
+              yaw: -1.4910078170853267
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 3.8998813329999997
+            motion:
+              x: -7164.475759022663
+              y: 799.5611813721517
+              z: 8.61709612346021
+              yaw: -1.4913907729351616
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 3.999965816
+            motion:
+              x: -7164.475722414297
+              y: 799.5606959869192
+              z: 8.61709608830766
+              yaw: -1.4922019347961546
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 4.100035681
+            motion:
+              x: -7164.474404050885
+              y: 799.5625526447667
+              z: 8.617095844693285
+              yaw: -1.499773084271735
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 4.200097476
+            motion:
+              x: -7164.475014235491
+              y: 799.5635203733941
+              z: 8.617095914053534
+              yaw: -1.497073320704854
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 4.300161876
+            motion:
+              x: -7164.474580882878
+              y: 799.5659576914063
+              z: 8.617095951655026
+              yaw: -1.4958566557198123
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 4.400233761
+            motion:
+              x: -7164.474448258536
+              y: 799.5679816082132
+              z: 8.617095867602027
+              yaw: -1.4987940890259586
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 4.500307101
+            motion:
+              x: -7164.474665287706
+              y: 799.5683316498648
+              z: 8.617096017124185
+              yaw: -1.493986879202174
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 4.600383485
+            motion:
+              x: -7164.473702979185
+              y: 799.5685136567776
+              z: 8.617096029100127
+              yaw: -1.4936710919159106
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 4.700459298
+            motion:
+              x: -7164.473737040469
+              y: 799.568877224332
+              z: 8.617096058794383
+              yaw: -1.492916456032189
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 4.800534056
+            motion:
+              x: -7164.473602495861
+              y: 799.5692537267146
+              z: 8.617095950342707
+              yaw: -1.4958970703942467
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 4.900583443
+            motion:
+              x: -7164.473749693906
+              y: 799.5694255521821
+              z: 8.617096070212238
+              yaw: -1.4926361048740138
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 5.000591088
+            motion:
+              x: -7164.473602424687
+              y: 799.5698030484588
+              z: 8.617095950291601
+              yaw: -1.49589864697964
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 5.100565084
+            motion:
+              x: -7164.473707564724
+              y: 799.5700391813164
+              z: 8.617096033009327
+              yaw: -1.4935695007617051
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 5.200516062
+            motion:
+              x: -7164.473571351238
+              y: 799.570476754836
+              z: 8.61709592861265
+              yaw: -1.4965869327384578
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 5.300464798
+            motion:
+              x: -7164.4736976303875
+              y: 799.5708944406327
+              z: 8.617096024575003
+              yaw: -1.4937895918077067
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 5.400405526
+            motion:
+              x: -7164.473682022462
+              y: 799.5711397820738
+              z: 8.61709601158454
+              yaw: -1.4941353713296417
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 5.5003437349999995
+            motion:
+              x: -7164.473888530529
+              y: 799.5719539876844
+              z: 8.617095831849166
+              yaw: -1.5003762707915227
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 5.600274161
+            motion:
+              x: -7164.474107136387
+              y: 799.5722432194992
+              z: 8.617095962264903
+              yaw: -1.4955346935296439
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 5.700199668
+            motion:
+              x: -7164.474102847545
+              y: 799.5724876831291
+              z: 8.617095959105463
+              yaw: -1.495629697288991
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 5.800119932
+            motion:
+              x: -7164.4744684449815
+              y: 799.5730460663269
+              z: 8.617095878912123
+              yaw: -1.4983470296786587
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 5.900024729
+            motion:
+              x: -7164.474584368215
+              y: 799.5732816484896
+              z: 8.617095954174022
+              yaw: -1.4957794520725134
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+          - t: 5.999932149
+            motion:
+              x: -7164.474604476663
+              y: 799.573463239021
+              z: 8.617095969017441
+              yaw: -1.4953340213760349
+              velocity: 0
+              acceleration: 0
+              turn_rate: 0
+      attributes:
+        train_probability: 0.00942230224609375
+        truck_probability: 0.09967041015625
+        bus_probability: 0.048919677734375
+        school_bus_probability: 0.006317138671875
+      is_divergence_required: true
+    - asset_id: V_VanSprinter_Static
+      name: tracked_object_1040
+      variants:
+        color: Silver
+      x: -7162.997237668595
+      y: 776.5605741910096
+      z: 8.83487516681866
+      heading: -1.5175504338179406
+      attributes:
+        train_probability: 0.014404296875
+        truck_probability: 0.0755615234375
+        bus_probability: 0.1583251953125
+        school_bus_probability: 0.0280303955078125
+      is_divergence_required: true
+    - asset_id: V_C250_Movable
+      name: tracked_object_1056
+      variants:
+        color: GreyMetallic
+      x: -7145.54052734375
+      y: 715.4344482421875
+      z: 11.334098815917969
+      heading: 1.6326234894381544
+      attributes:
+        train_probability: 0.00414276123046875
+        truck_probability: 0.03271484375
+        bus_probability: 0.01165771484375
+        school_bus_probability: 0.00605010986328125
+      is_divergence_required: true
+    - asset_id: V_Crosstrek_Movable
+      name: tracked_object_1120
+      variants:
+        color: Silver
+      x: -7157.8662109375
+      y: 691.0479736328125
+      z: 12.648979187011719
+      heading: -1.4971434617589263
+      attributes:
+        train_probability: 0.0022029876708984375
+        truck_probability: 0.0689697265625
+        bus_probability: 0.01470947265625
+        school_bus_probability: 0.002086639404296875
+      is_divergence_required: true
+    - asset_id: V_CX30_Static
+      name: tracked_object_1152
+      variants:
+        color: Red
+      x: -7146.201171875
+      y: 724.6124267578125
+      z: 10.811225891113281
+      heading: 1.5788706609280958
+      attributes:
+        train_probability: 0.005725860595703125
+        truck_probability: 0.032806396484375
+        bus_probability: 0.013519287109375
+        school_bus_probability: 0.0059051513671875
+      is_divergence_required: true
+    - asset_id: V_ModelS_Static
+      name: tracked_object_1200
+      variants:
+        color: MarronB
+      x: -7147.1376953125
+      y: 738.9891967773438
+      z: 10.00384521484375
+      heading: 1.6099481162396792
+      attributes:
+        train_probability: 0.00428009033203125
+        truck_probability: 0.021240234375
+        bus_probability: 0.01131439208984375
+        school_bus_probability: 0.006839752197265625
+      is_divergence_required: true
+    - asset_id: V_CRV20_Movable
+      name: tracked_object_1232
+      variants:
+        color: White
+      x: -7147.95654296875
+      y: 752.8679809570312
+      z: 9.227218627929688
+      heading: 1.6333792322994354
+      attributes:
+        train_probability: 0.0026683807373046875
+        truck_probability: 0.0204620361328125
+        bus_probability: 0.01470947265625
+        school_bus_probability: 0.004627227783203125
+      is_divergence_required: true
+    - asset_id: V_Prius_Movable
+      name: tracked_object_1248
+      variants:
+        color: Black
+      x: -7149.85302734375
+      y: 782.0010986328125
+      z: 8.881195068359375
+      heading: 1.5896688348933874
+      attributes:
+        train_probability: 0.0016736984252929688
+        truck_probability: 0.017669677734375
+        bus_probability: 0.01186370849609375
+        school_bus_probability: 0.004718780517578125
+      is_divergence_required: true
+    - asset_id: V_Fiat500_Movable
+      name: tracked_object_1264
+      variants:
+        color: Blue
+      x: -7151.837890625
+      y: 814.1527709960938
+      z: 8.535179138183594
+      heading: 1.6353774699712218
+      attributes:
+        train_probability: 0.0006003379821777344
+        truck_probability: 0.0006275177001953125
+        bus_probability: 0.01092529296875
+        school_bus_probability: 0.00003725290298461914
+      is_divergence_required: true
+    - asset_id: V_Scionb_Movable
+      name: tracked_object_1280
+      variants:
+        color: Blue
+      x: -7150.4384765625
+      y: 789.9161376953125
+      z: 8.804306030273438
+      heading: 1.6355280137264947
+      attributes:
+        train_probability: 0.0007162094116210938
+        truck_probability: 0.0009708404541015625
+        bus_probability: 0.0013914108276367188
+        school_bus_probability: 0.000057816505432128906
+      is_divergence_required: true
+    - asset_id: V_CHR_Movable
+      name: tracked_object_1296
+      variants:
+        color: White
+      x: -7149.18505859375
+      y: 773.2109375
+      z: 8.973472595214844
+      heading: 1.6608039609903655
+      attributes:
+        train_probability: 0.0007448196411132812
+        truck_probability: 0.0021266937255859375
+        bus_probability: 0.0027408599853515625
+        school_bus_probability: 0.00023055076599121094
+      is_divergence_required: true
+    - asset_id: P_Streetlight_SF_Finial
+      name: tracked_object_1088
+      x: -7149.03466796875
+      y: 806.28466796875
+      z: 8.796615600585938
+      heading: -1.5707963267948966
+      attributes:
+        motorcycle_probability: 0
+        truck_probability: 0
+        bus_probability: 0
+        school_bus_probability: 0
+        emv_probability: 0
+      is_divergence_required: true
+    - asset_id: P_CardboardBox_A
+      name: tracked_object_1104
+      x: -7165.1841921875
+      y: 734.64311328125
+      z: 10.926567077636719
+      heading: 0
+      attributes:
+        motorcycle_probability: 0
+        truck_probability: 0
+        bus_probability: 0
+        school_bus_probability: 0
+        emv_probability: 0
+      is_divergence_required: true
+    - asset_id: P_Streetlight_SF_Finial
+      name: tracked_object_1216
+      x: -7147.0771484375
+      y: 773.606689453125
+      z: 9.11956787109375
+      heading: -1.5707963267948966
+      attributes:
+        motorcycle_probability: 0
+        truck_probability: 0
+        bus_probability: 0
+        school_bus_probability: 0
+        emv_probability: 0
+      is_divergence_required: true
+    - asset_id: P_PanelChannelizer
+      name: tracked_object_19888
+      variants:
+        color: WhiteDirty
+      x: -7157.8017578125
+      y: 661.4806442382812
+      z: 14.486732482910156
+      heading: 0
+      attributes:
+        motorcycle_probability: 0.005168359726667404
+        truck_probability: 0.0057258824817836285
+        bus_probability: 0.0028582029044628143
+        school_bus_probability: 0.002419553231447935
+        emv_probability: 0.0030120136216282845
+      is_divergence_required: true
+    - asset_id: V_Explorer_Static
+      name: tracked_object_37840
+      variants:
+        color: Brown
+      x: -7153.245985086648
+      y: 618.4104185453931
+      z: 14.318065035124778
+      heading: -1.5203184644196837
+      attributes:
+        train_probability: 0.005825042724609375
+        truck_probability: 0.07147216796875
+        bus_probability: 0.048583984375
+        school_bus_probability: 0.0789794921875
+      is_divergence_required: true
+    - asset_id: P_StreetLampB
+      name: tracked_object_36640
+      x: -7136.024443747662
+      y: 627.1528778883978
+      z: 14.502113342285156
+      heading: 1.5707963267948966
+      attributes:
+        motorcycle_probability: 0
+        truck_probability: 0
+        bus_probability: 0
+        school_bus_probability: 0
+        emv_probability: 0
+      is_divergence_required: true
+    - asset_id: V_C250_Movable
+      name: tracked_object_46144
+      variants:
+        color: GreyMetallic
+      x: -7134.111387594715
+      y: 629.3686860945123
+      z: 14.33294677734375
+      heading: 0.05508615432385933
+      attributes:
+        train_probability: 0.0018014907836914062
+        truck_probability: 0.0021076202392578125
+        bus_probability: 0.0075225830078125
+        school_bus_probability: 0.006946563720703125
+      is_divergence_required: true
+    - asset_id: P_StreetLampB
+      name: tracked_object_31152
+      x: -7140.44970703125
+      y: 661.4169311523438
+      z: 15.109573364257812
+      heading: -1.5707963267948966
+      attributes:
+        motorcycle_probability: 0
+        truck_probability: 0
+        bus_probability: 0
+        school_bus_probability: 0
+        emv_probability: 0
+      is_divergence_required: true
+    - asset_id: P_Mailbox
+      name: tracked_object_42640
+      x: -7140.65673828125
+      y: 663.84814453125
+      z: 14.586692810058594
+      heading: 0
+      attributes:
+        motorcycle_probability: 0
+        truck_probability: 0
+        bus_probability: 0
+        school_bus_probability: 0
+        emv_probability: 0
+      is_divergence_required: true
+    - asset_id: P_StreetLampB
+      name: tracked_object_33856
+      x: -7137.992193855447
+      y: 624.4860684434127
+      z: 14.455978393554688
+      heading: 1.5707963267948966
+      attributes:
+        motorcycle_probability: 0
+        truck_probability: 0
+        bus_probability: 0
+        school_bus_probability: 0
+        emv_probability: 0
+      is_divergence_required: true
+    - asset_id: P_TrashBag_B
+      name: tracked_object_56688
+      x: -7133.53777341604
+      y: 627.7481295594438
+      z: 14.7635498046875
+      heading: 1.5707963267948966
+      attributes:
+        motorcycle_probability: 0
+        truck_probability: 0
+        bus_probability: 0
+        school_bus_probability: 0
+        emv_probability: 0
+      is_divergence_required: true
+    - asset_id: C_MaleChild02
+      name: tracked_object_59248
+      variants:
+        color: I
+        use_matrix_animation: true
+        character_height: 1.1687440872192383
+      x: -7171.49884140625
+      y: 678.1406778320312
+      z: 13.333328247070312
+      heading: 0
+      anim_state:
+        - t: 0
+          state: navigation
+        - t: 0.037247206
+          state: navigation
+      attributes:
+        motorcycle_probability: 0.09780862927436829
+        truck_probability: 0.026367558166384697
+        bus_probability: 0.008313246071338654
+        school_bus_probability: 0.006738073192536831
+        emv_probability: 0.021262280642986298
+      is_divergence_required: true
+    - asset_id: V_CX30_Static
+      name: tracked_object_64272
+      variants:
+        color: Silver
+      x: -7137.793475948966
+      y: 592.2292891422653
+      z: 14.356010926529729
+      heading: 1.6326421592560283
+      attributes:
+        train_probability: 0.0065155029296875
+        truck_probability: 0.01074981689453125
+        bus_probability: 0.038848876953125
+        school_bus_probability: 0.57275390625
+      is_divergence_required: true
+    - asset_id: P_StreetLampB
+      name: tracked_object_65136
+      x: -7135.7041015625
+      y: 643.2752075195312
+      z: 14.809684753417969
+      heading: 1.5707963267948966
+      attributes:
+        motorcycle_probability: 0
+        truck_probability: 0
+        bus_probability: 0
+        school_bus_probability: 0
+        emv_probability: 0
+      is_divergence_required: true
+    - asset_id: P_TrashBag_B
+      name: tracked_object_65152
+      x: -7156.96755841513
+      y: 625.4853495400665
+      z: 14.486732482910156
+      heading: 3.141592653589793
+      attributes:
+        motorcycle_probability: 0.00662360992282629
+        truck_probability: 0.006807279773056507
+        bus_probability: 0.004222818184643984
+        school_bus_probability: 0.002857350744307041
+        emv_probability: 0.0029146717861294746
+        bike_without_rider_probability: 0.0143235232681036
+      is_divergence_required: true
+    - asset_id: V_CoupeBRZ_Movable
+      name: tracked_object_67456
+      variants:
+        color: Silver
+      x: -7152.57815431621
+      y: 606.8665481368718
+      z: 14.379081726074219
+      heading: -1.4938283952747373
+      attributes:
+        train_probability: 0.0125579833984375
+        truck_probability: 0.042236328125
+        bus_probability: 0.2191162109375
+        school_bus_probability: 0.58203125
+      is_divergence_required: true
+    - asset_id: P_CardboardBox_D
+      name: tracked_object_68176
+      x: -7138.252348330293
+      y: 623.0627694097908
+      z: 14.740478515625
+      heading: 1.5707963267948966
+      attributes:
+        motorcycle_probability: 0
+        truck_probability: 0
+        bus_probability: 0
+        school_bus_probability: 0
+        emv_probability: 0
+      is_divergence_required: true
+    - asset_id: P_StreetLampB
+      name: tracked_object_70144
+      x: -7159.8935546875
+      y: 658.0296020507812
+      z: 14.540557861328125
+      heading: 1.5707963267948966
+      attributes:
+        motorcycle_probability: 0
+        truck_probability: 0
+        bus_probability: 0
+        school_bus_probability: 0
+        emv_probability: 0
+      is_divergence_required: true
+    - asset_id: P_TrashBag_B
+      name: tracked_object_72096
+      x: -7159.59420059275
+      y: 625.8347397072254
+      z: 14.602073669433594
+      heading: -1.5707963267948966
+      attributes:
+        motorcycle_probability: 0.0022769251372665167
+        truck_probability: 0.0022400806192308664
+        bus_probability: 0.0011573303490877151
+        school_bus_probability: 0.0007674946100451052
+        emv_probability: 0.0008527861791662872
+      is_divergence_required: true
+    - asset_id: P_PanelChannelizer
+      name: tracked_object_72768
+      variants:
+        color: Orange
+      x: -7158.827103642713
+      y: 641.687298026061
+      z: 14.917335510253906
+      heading: 0
+      attributes:
+        motorcycle_probability: 0.029941339045763016
+        truck_probability: 0.02185628190636635
+        bus_probability: 0.005050153937190771
+        school_bus_probability: 0.006530323065817356
+        emv_probability: 0.011957124806940556
+        bike_without_rider_probability: 0.04346674308180809
+      is_divergence_required: true
+    - asset_id: V_Crosstrek_Static
+      name: tracked_object_75984
+      variants:
+        color: White
+      x: -7162.30810546875
+      y: 655.2208251953125
+      z: 14.486732482910156
+      heading: 2.6699887024923448
+      attributes:
+        train_probability: 0.01140594482421875
+        truck_probability: 0.104248046875
+        bus_probability: 0.032135009765625
+        school_bus_probability: 0.005084991455078125
+      is_divergence_required: true
+    - asset_id: V_Scionb_Movable
+      name: tracked_object_78496
+      variants:
+        color: Red
+      x: -7151.737327549126
+      y: 594.9682199652024
+      z: 14.348315222076353
+      heading: -1.4886339360337948
+      attributes:
+        train_probability: 0.01158905029296875
+        truck_probability: 0.0506591796875
+        bus_probability: 0.0867919921875
+        school_bus_probability: 0.056732177734375
+      is_divergence_required: true
+    - asset_id: V_MiniR50Convertible_Movable
+      name: tracked_object_85776
+      variants:
+        color: Yellow
+      x: -7152.32957118337
+      y: 601.5247753175289
+      z: 14.356010437011719
+      heading: -1.4913453741619804
+      attributes:
+        train_probability: 0.00860595703125
+        truck_probability: 0.008453369140625
+        bus_probability: 0.035400390625
+        school_bus_probability: 0.0296478271484375
+      is_divergence_required: true
+    - asset_id: V_PriusC_Static
+      name: tracked_object_90672
+      variants:
+        color: Grey
+      x: -7166.63525390625
+      y: 654.336181640625
+      z: 14.640518188476562
+      heading: 2.6457644095780295
+      attributes:
+        train_probability: 0.00559234619140625
+        truck_probability: 0.0777587890625
+        bus_probability: 0.0212554931640625
+        school_bus_probability: 0.0011005401611328125
+      is_divergence_required: true
+    - asset_id: V_Camaro_Static
+      name: tracked_object_92160
+      variants:
+        color: Orange
+      x: -7191.1904296875
+      y: 625.8201904296875
+      z: 15.432525634765625
+      heading: 0.06375963065344947
+      attributes:
+        train_probability: 0.0010595321655273438
+        truck_probability: 0.001430511474609375
+        bus_probability: 0.00499725341796875
+        school_bus_probability: 0.00026416778564453125
+      is_divergence_required: true
+    - asset_id: V_Bolt_Static
+      name: tracked_object_93056
+      variants:
+        color: Orange
+      x: -7151.099066441469
+      y: 582.3723442644448
+      z: 14.394436262297324
+      heading: -1.4971381905885013
+      attributes:
+        train_probability: 0.007022857666015625
+        truck_probability: 0.02862548828125
+        bus_probability: 0.0589599609375
+        school_bus_probability: 0.0770263671875
+      is_divergence_required: true
+    - asset_id: V_Aventador_Static
+      name: tracked_object_95600
+      variants:
+        color: Silver
+      x: -7214.01416015625
+      y: 624.3949584960938
+      z: 16.09381103515625
+      heading: 0.06518764947888366
+      attributes:
+        train_probability: 0.0019311904907226562
+        truck_probability: 0.004451751708984375
+        bus_probability: 0.007171630859375
+        school_bus_probability: 0.01629638671875
+      is_divergence_required: true
+    - asset_id: V_CoupeBRZ_Static
+      name: tracked_object_95632
+      variants:
+        color: Red
+      x: -7172.22265625
+      y: 654.525390625
+      z: 14.809684753417969
+      heading: 2.6802237353955287
+      attributes:
+        train_probability: 0.00411224365234375
+        truck_probability: 0.028228759765625
+        bus_probability: 0.0305328369140625
+        school_bus_probability: 0.036865234375
+      is_divergence_required: true
+    - asset_id: V_MiniR50_Static
+      name: tracked_object_98832
+      variants:
+        color: Blue
+      x: -7177.36865234375
+      y: 654.2034912109375
+      z: 14.963470458984375
+      heading: 2.6433909439821623
+      attributes:
+        train_probability: 0.011444091796875
+        truck_probability: 0.043701171875
+        bus_probability: 0.05743408203125
+        school_bus_probability: 0.00553131103515625
+      is_divergence_required: true
+    - asset_id: V_PriusC_Static
+      name: tracked_object_100368
+      variants:
+        color: BlueGreen
+      x: -7182.4560546875
+      y: 653.7833251953125
+      z: 15.132637023925781
+      heading: 2.638408254490799
+      attributes:
+        train_probability: 0.036529541015625
+        truck_probability: 0.0777587890625
+        bus_probability: 0.1871337890625
+        school_bus_probability: 0.011932373046875
+      is_divergence_required: true
+    - asset_id: V_Miata89_Static
+      name: tracked_object_101760
+      variants:
+        color: Orange
+      x: -7213.72412109375
+      y: 651.944580078125
+      z: 16.00922393798828
+      heading: 2.639342328825928
+      attributes:
+        train_probability: 0.0018110275268554688
+        truck_probability: 0.060699462890625
+        bus_probability: 0.041595458984375
+        school_bus_probability: 0.002536773681640625
+      is_divergence_required: true
+    - asset_id: V_Beetle_Static
+      name: tracked_object_104976
+      variants:
+        color: Orange
+      x: -7149.679865931726
+      y: 561.3127904089654
+      z: 14.348319269960607
+      heading: -1.50848958897289
+      attributes:
+        train_probability: 0.00952911376953125
+        truck_probability: 0.033050537109375
+        bus_probability: 0.0489501953125
+        school_bus_probability: 0.024200439453125
+      is_divergence_required: true
+    - asset_id: C_Male06
+      name: tracked_object_106944
+      variants:
+        color: I
+        use_matrix_animation: true
+        character_height: 1.5785625457763675
+      motion_profile:
+        motions:
+          - t: 0
+            motion:
+              x: -7048.201277226304
+              y: 631.0999977018051
+              z: 13.164161682128906
+              yaw: 0.17445291808355237
+              velocity: 0.9181147517930418
+              acceleration: 0.008232221420245558
+              turn_rate: 0
+          - t: 0.099757168
+            motion:
+              x: -7048.152246742497
+              y: 631.132182166238
+              z: 13.164161682128906
+              yaw: 0.2932273143568981
+              velocity: 0.769536128267578
+              acceleration: 0.04969262762281387
+              turn_rate: 0
+          - t: 0.199532206
+            motion:
+              x: -7048.1162310512545
+              y: 631.1070683493979
+              z: 13.156478881835938
+              yaw: 0.12669374223185884
+              velocity: 0.6303837404227327
+              acceleration: 0.07516319640524585
+              turn_rate: 0
+          - t: 0.299330491
+            motion:
+              x: -7048.051580494159
+              y: 631.1566638449086
+              z: 13.156478881835938
+              yaw: 0.27031949215445933
+              velocity: 0.6380788127724117
+              acceleration: 0.059326744822766446
+              turn_rate: 0
+          - t: 0.399165874
+            motion:
+              x: -7047.962192366647
+              y: 631.2222688199051
+              z: 13.148788452148438
+              yaw: 0.3842408165432146
+              velocity: 0.7251521235047672
+              acceleration: 0.0404317381375776
+              turn_rate: 0
+          - t: 0.499040357
+            motion:
+              x: -7047.878843928868
+              y: 631.2273205330384
+              z: 13.148788452148438
+              yaw: 0.29127071692316153
+              velocity: 0.7403077020670688
+              acceleration: 0.021983373262545035
+              turn_rate: 0
+          - t: 0.598949105
+            motion:
+              x: -7047.829391567101
+              y: 631.2074555537155
+              z: 13.141098022460938
+              yaw: 0.19087901893853232
+              velocity: 0.678297601235213
+              acceleration: 0.058480175583968196
+              turn_rate: 0
+          - t: 0.698874953
+            motion:
+              x: -7047.736844839736
+              y: 631.1907480333965
+              z: 13.141098022460938
+              yaw: 0.10034610335033438
+              velocity: 0.7337241006008762
+              acceleration: 0.06022546531969414
+              turn_rate: 0
+          - t: 0.79881591
+            motion:
+              x: -7047.633144871363
+              y: 631.2046465304242
+              z: 13.125717163085938
+              yaw: 0.11010688920428592
+              velocity: 0.8102841563328573
+              acceleration: 0.06126955984397735
+              turn_rate: 0
+          - t: 0.898786786
+            motion:
+              x: -7047.553723089562
+              y: 631.1643411209824
+              z: 13.118026733398438
+              yaw: -0.0010776308027034827
+              velocity: 0.807942978790054
+              acceleration: 0.07451163709871886
+              turn_rate: 0
+          - t: 0.998740689
+            motion:
+              x: -7047.488017643503
+              y: 631.1791624840747
+              z: 13.102653503417969
+              yaw: 0.03871773084013857
+              velocity: 0.7712260034596087
+              acceleration: 0.025204074193422143
+              turn_rate: 0
+          - t: 1.098679911
+            motion:
+              x: -7047.411199025125
+              y: 631.1851100059752
+              z: 13.110336303710938
+              yaw: 0.047002339369145336
+              velocity: 0.7689726091924455
+              acceleration: 0.013936875835149144
+              turn_rate: 0
+          - t: 1.198619458
+            motion:
+              x: -7047.346073946919
+              y: 631.1360210886926
+              z: 13.094963073730469
+              yaw: -0.07018469338303925
+              velocity: 0.7529988287769963
+              acceleration: 0.04692935387021576
+              turn_rate: 0
+          - t: 1.298530607
+            motion:
+              x: -7047.2736292579875
+              y: 631.1227004373156
+              z: 13.087272644042969
+              yaw: -0.08613826635960069
+              velocity: 0.7489664821557429
+              acceleration: 0.038775528237776156
+              turn_rate: 0
+          - t: 1.398444161
+            motion:
+              x: -7047.198860934842
+              y: 631.1164163941155
+              z: 13.079582214355469
+              yaw: -0.08297695664785158
+              velocity: 0.7470239575428476
+              acceleration: 0.02627831597951407
+              turn_rate: 0
+          - t: 1.498342379
+            motion:
+              x: -7047.124559656555
+              y: 631.1108049375365
+              z: 13.079582214355469
+              yaw: -0.07871962264324564
+              velocity: 0.7453126990917164
+              acceleration: 0.019009772305099534
+              turn_rate: 0
+          - t: 1.598207564
+            motion:
+              x: -7047.050284776013
+              y: 631.105009368328
+              z: 13.071891784667969
+              yaw: -0.07582356075689971
+              velocity: 0.743695715454437
+              acceleration: 0.017505728837696712
+              turn_rate: 0
+          - t: 1.6980213530000001
+            motion:
+              x: -7046.841739634144
+              y: 631.1178004989833
+              z: 13.056510925292969
+              yaw: -0.04807486572767572
+              velocity: 0.8977452660875684
+              acceleration: 0.017837167899216824
+              turn_rate: 0
+          - t: 1.797830021
+            motion:
+              x: -7046.737653414584
+              y: 631.1160981671999
+              z: 13.048828125
+              yaw: -0.043819232470158086
+              velocity: 0.9110344748295223
+              acceleration: 0.0071284392367951645
+              turn_rate: 0
+          - t: 1.897651417
+            motion:
+              x: -7046.635687439365
+              y: 631.1251690893462
+              z: 13.048828125
+              yaw: -0.022936164739178398
+              velocity: 0.9198589459132848
+              acceleration: 0.010950860656987652
+              turn_rate: 0
+      anim_state:
+        - t: 0
+          state: navigation
+      attributes:
+        motorcycle_probability: 0.03669501841068268
+        truck_probability: 0.010498927906155586
+        bus_probability: 0.007160435430705547
+        school_bus_probability: 0.003593960078433156
+        emv_probability: 0.0041509405709803104
+      is_divergence_required: true
+    - asset_id: V_Beetle_Static
+      name: tracked_object_108624
+      variants:
+        color: Orange
+      x: -7150.093886625627
+      y: 568.0591072798579
+      z: 14.356002070309636
+      heading: -1.5116257987454298
+      attributes:
+        train_probability: 0.01416015625
+        truck_probability: 0.02740478515625
+        bus_probability: 0.0638427734375
+        school_bus_probability: 0.427001953125
+      is_divergence_required: true
+    - asset_id: V_Bolt_Static
+      name: tracked_object_115104
+      variants:
+        color: White
+      x: -7136.362870889989
+      y: 563.3237591371482
+      z: 14.371359722597827
+      heading: 1.6304922686550556
+      attributes:
+        train_probability: 0.00186920166015625
+        truck_probability: 0.0123138427734375
+        bus_probability: 0.01171112060546875
+        school_bus_probability: 0.0203399658203125
+      is_divergence_required: true
+    - asset_id: V_Miata08_Static
+      name: tracked_object_118192
+      variants:
+        color: Orange
+      x: -7256.249488276743
+      y: 646.5160834162011
+      z: 16.778158601720712
+      heading: 2.5621276949422156
+      attributes:
+        train_probability: 0.003864288330078125
+        truck_probability: 0.00099945068359375
+        bus_probability: 0.046142578125
+        school_bus_probability: 0.0062713623046875
+      is_divergence_required: true
+    - asset_id: V_GoCar_Static
+      name: tracked_object_127776
+      x: -7135.112813567278
+      y: 548.2074787807064
+      z: 14.394462585449219
+      heading: 1.6309207551531113
+      attributes:
+        train_probability: 0.00424957275390625
+        truck_probability: 0.01409912109375
+        bus_probability: 0.0236053466796875
+        school_bus_probability: 0.1068115234375
+      is_divergence_required: true
+    - asset_id: V_Scionb_Movable
+      name: tracked_object_131696
+      variants:
+        color: White
+      x: -7148.536070754954
+      y: 543.1629922157489
+      z: 14.355985540849028
+      heading: -1.5098948964717522
+      attributes:
+        train_probability: 0.0721435546875
+        truck_probability: 0.1109619140625
+        bus_probability: 0.12469482421875
+        school_bus_probability: 0.055938720703125
+      is_divergence_required: true
+    - name: collision_car
+      asset_id: V_Prius_Movable
+      profile:
+        coordinates:
+          - x: -7228.461
+            y: 627.034
+          - x: -7125.486
+            y: 633.76
+        velocities:
+          - t: 0
+            velocity: 0
+          - t: 16.800925
+            velocity: 10.693
+  triggers:
+    - name: trigger_spawn_tracked_object_33840
+      actions:
+        - spawn_tracked_object_33840
+      conditions:
+        - startup: {}
+      delay: 0.40233528
+    - name: trigger_despawn_tracked_object_33840
+      actions:
+        - despawn_tracked_object_33840
+      conditions:
+        - startup: {}
+      delay: 7.044673523
+    - name: trigger_spawn_tracked_object_25472
+      actions:
+        - spawn_tracked_object_25472
+      conditions:
+        - startup: {}
+      delay: 0.299709797
+    - name: trigger_spawn_tracked_object_90656
+      actions:
+        - spawn_tracked_object_90656
+      conditions:
+        - startup: {}
+      delay: 9.00063854
+    - name: trigger_spawn_tracked_object_140816
+      actions:
+        - spawn_tracked_object_140816
+      conditions:
+        - startup: {}
+      delay: 11.020858535
+    - name: trigger_spawn_tracked_object_129808
+      actions:
+        - spawn_tracked_object_129808
+      conditions:
+        - startup: {}
+      delay: 12.584991981
+    - name: trigger_spawn_tracked_object_95616
+      actions:
+        - spawn_tracked_object_95616
+      conditions:
+        - startup: {}
+      delay: 6.798748823
+    - name: trigger_spawn_tracked_object_75328
+      actions:
+        - spawn_tracked_object_75328
+      conditions:
+        - startup: {}
+      delay: 5.095052351
+    - name: trigger_spawn_tracked_object_9552
+      conditions:
+        - startup: {}
+      delay: 1.049374533
+    - name: trigger_despawn_tracked_object_9552
+      conditions:
+        - startup: {}
+      delay: 4.549881096
+    - name: trigger_spawn_tracked_object_106960
+      actions:
+        - spawn_tracked_object_106960
+      conditions:
+        - startup: {}
+      delay: 11.146342803
+    - name: trigger_spawn_tracked_object_880
+      actions:
+        - spawn_tracked_object_880
+      conditions:
+        - startup: {}
+      delay: 0.301566787
+    - name: trigger_spawn_tracked_object_896
+      actions:
+        - spawn_tracked_object_896
+      conditions:
+        - startup: {}
+      delay: 0.297697481
+    - name: trigger_spawn_tracked_object_912
+      actions:
+        - spawn_tracked_object_912
+      conditions:
+        - startup: {}
+      delay: 0.301776697
+    - name: trigger_spawn_tracked_object_928
+      actions:
+        - spawn_tracked_object_928
+      conditions:
+        - startup: {}
+      delay: 0.298318698
+    - name: trigger_spawn_tracked_object_944
+      actions:
+        - spawn_tracked_object_944
+      conditions:
+        - startup: {}
+      delay: 0.259837933
+    - name: trigger_despawn_tracked_object_944
+      actions:
+        - despawn_tracked_object_944
+      conditions:
+        - startup: {}
+      delay: 4.053977833
+    - name: trigger_spawn_tracked_object_960
+      actions:
+        - spawn_tracked_object_960
+      conditions:
+        - startup: {}
+      delay: 0.302269093
+    - name: trigger_spawn_tracked_object_976
+      actions:
+        - spawn_tracked_object_976
+      conditions:
+        - startup: {}
+      delay: 0.30430505
+    - name: trigger_despawn_tracked_object_976
+      actions:
+        - despawn_tracked_object_976
+      conditions:
+        - startup: {}
+      delay: 11.649346053
+    - name: trigger_spawn_tracked_object_992
+      actions:
+        - spawn_tracked_object_992
+      conditions:
+        - startup: {}
+      delay: 0.302838232
+    - name: trigger_despawn_tracked_object_992
+      actions:
+        - despawn_tracked_object_992
+      conditions:
+        - startup: {}
+      delay: 11.949197843
+    - name: trigger_spawn_tracked_object_1008
+      actions:
+        - spawn_tracked_object_1008
+      conditions:
+        - startup: {}
+      delay: 0.306177595
+    - name: trigger_despawn_tracked_object_1008
+      actions:
+        - despawn_tracked_object_1008
+      conditions:
+        - startup: {}
+      delay: 10.149772747
+    - name: trigger_spawn_tracked_object_1024
+      actions:
+        - spawn_tracked_object_1024
+      conditions:
+        - startup: {}
+      delay: 0.349713913
+    - name: trigger_despawn_tracked_object_1024
+      actions:
+        - despawn_tracked_object_1024
+      conditions:
+        - startup: {}
+      delay: 6.349646062
+    - name: trigger_spawn_tracked_object_1040
+      actions:
+        - spawn_tracked_object_1040
+      conditions:
+        - startup: {}
+      delay: 0.348994436
+    - name: trigger_despawn_tracked_object_1040
+      actions:
+        - despawn_tracked_object_1040
+      conditions:
+        - startup: {}
+      delay: 13.250221879
+    - name: trigger_spawn_tracked_object_1056
+      actions:
+        - spawn_tracked_object_1056
+      conditions:
+        - startup: {}
+      delay: 0.295628388
+    - name: trigger_spawn_tracked_object_1120
+      actions:
+        - spawn_tracked_object_1120
+      conditions:
+        - startup: {}
+      delay: 0.301626724
+    - name: trigger_spawn_tracked_object_1152
+      actions:
+        - spawn_tracked_object_1152
+      conditions:
+        - startup: {}
+      delay: 0.293885976
+    - name: trigger_spawn_tracked_object_1200
+      actions:
+        - spawn_tracked_object_1200
+      conditions:
+        - startup: {}
+      delay: 0.286582039
+    - name: trigger_spawn_tracked_object_1232
+      actions:
+        - spawn_tracked_object_1232
+      conditions:
+        - startup: {}
+      delay: 0.267843156
+    - name: trigger_despawn_tracked_object_1232
+      actions:
+        - despawn_tracked_object_1232
+      conditions:
+        - startup: {}
+      delay: 13.152077064
+    - name: trigger_spawn_tracked_object_1248
+      actions:
+        - spawn_tracked_object_1248
+      conditions:
+        - startup: {}
+      delay: 0.255252392
+    - name: trigger_despawn_tracked_object_1248
+      actions:
+        - despawn_tracked_object_1248
+      conditions:
+        - startup: {}
+      delay: 11.751257089
+    - name: trigger_spawn_tracked_object_1264
+      actions:
+        - spawn_tracked_object_1264
+      conditions:
+        - startup: {}
+      delay: 0.253107558
+    - name: trigger_despawn_tracked_object_1264
+      actions:
+        - despawn_tracked_object_1264
+      conditions:
+        - startup: {}
+      delay: 11.351324805
+    - name: trigger_spawn_tracked_object_1280
+      actions:
+        - spawn_tracked_object_1280
+      conditions:
+        - startup: {}
+      delay: 0.254405155
+    - name: trigger_despawn_tracked_object_1280
+      actions:
+        - despawn_tracked_object_1280
+      conditions:
+        - startup: {}
+      delay: 10.35202169
+    - name: trigger_spawn_tracked_object_1296
+      actions:
+        - spawn_tracked_object_1296
+      conditions:
+        - startup: {}
+      delay: 0.256741997
+    - name: trigger_despawn_tracked_object_1296
+      actions:
+        - despawn_tracked_object_1296
+      conditions:
+        - startup: {}
+      delay: 11.951394571
+    - name: trigger_spawn_tracked_object_1088
+      actions:
+        - spawn_tracked_object_1088
+      conditions:
+        - startup: {}
+      delay: 0.353895827
+    - name: trigger_despawn_tracked_object_1088
+      actions:
+        - despawn_tracked_object_1088
+      conditions:
+        - startup: {}
+      delay: 1.452808119
+    - name: trigger_spawn_tracked_object_1104
+      actions:
+        - spawn_tracked_object_1104
+      conditions:
+        - startup: {}
+      delay: 0.410872917
+    - name: trigger_despawn_tracked_object_1104
+      actions:
+        - despawn_tracked_object_1104
+      conditions:
+        - startup: {}
+      delay: 1.527970992
+    - name: trigger_spawn_tracked_object_1216
+      actions:
+        - spawn_tracked_object_1216
+      conditions:
+        - startup: {}
+      delay: 0.357446564
+    - name: trigger_despawn_tracked_object_1216
+      actions:
+        - despawn_tracked_object_1216
+      conditions:
+        - startup: {}
+      delay: 1.454946909
+    - name: trigger_spawn_tracked_object_19888
+      actions:
+        - spawn_tracked_object_19888
+      conditions:
+        - startup: {}
+      delay: 1.701408755
+    - name: trigger_spawn_tracked_object_37840
+      actions:
+        - spawn_tracked_object_37840
+      conditions:
+        - startup: {}
+      delay: 3.000893287
+    - name: trigger_spawn_tracked_object_36640
+      actions:
+        - spawn_tracked_object_36640
+      conditions:
+        - startup: {}
+      delay: 3.697145727
+    - name: trigger_spawn_tracked_object_46144
+      actions:
+        - spawn_tracked_object_46144
+      conditions:
+        - startup: {}
+      delay: 3.796697547
+    - name: trigger_spawn_tracked_object_31152
+      actions:
+        - spawn_tracked_object_31152
+      conditions:
+        - startup: {}
+      delay: 3.8959724810000003
+    - name: trigger_spawn_tracked_object_42640
+      actions:
+        - spawn_tracked_object_42640
+      conditions:
+        - startup: {}
+      delay: 3.895823825
+    - name: trigger_spawn_tracked_object_33856
+      actions:
+        - spawn_tracked_object_33856
+      conditions:
+        - startup: {}
+      delay: 4.297829945
+    - name: trigger_spawn_tracked_object_56688
+      actions:
+        - spawn_tracked_object_56688
+      conditions:
+        - startup: {}
+      delay: 5.097033819
+    - name: trigger_spawn_tracked_object_59248
+      actions:
+        - spawn_tracked_object_59248
+      conditions:
+        - startup: {}
+      delay: 5.313480794
+    - name: trigger_despawn_tracked_object_59248
+      actions:
+        - despawn_tracked_object_59248
+      conditions:
+        - startup: {}
+      delay: 7.82406722
+    - name: trigger_spawn_tracked_object_64272
+      actions:
+        - spawn_tracked_object_64272
+      conditions:
+        - startup: {}
+      delay: 5.599005222
+    - name: trigger_spawn_tracked_object_65136
+      actions:
+        - spawn_tracked_object_65136
+      conditions:
+        - startup: {}
+      delay: 5.995431118
+    - name: trigger_spawn_tracked_object_65152
+      actions:
+        - spawn_tracked_object_65152
+      conditions:
+        - startup: {}
+      delay: 6.001974521
+    - name: trigger_spawn_tracked_object_67456
+      actions:
+        - spawn_tracked_object_67456
+      conditions:
+        - startup: {}
+      delay: 6.000882626
+    - name: trigger_spawn_tracked_object_68176
+      actions:
+        - spawn_tracked_object_68176
+      conditions:
+        - startup: {}
+      delay: 6.497136522
+    - name: trigger_spawn_tracked_object_70144
+      actions:
+        - spawn_tracked_object_70144
+      conditions:
+        - startup: {}
+      delay: 6.704163814
+    - name: trigger_spawn_tracked_object_72096
+      actions:
+        - spawn_tracked_object_72096
+      conditions:
+        - startup: {}
+      delay: 7.002769872
+    - name: trigger_spawn_tracked_object_72768
+      actions:
+        - spawn_tracked_object_72768
+      conditions:
+        - startup: {}
+      delay: 7.103281468
+    - name: trigger_spawn_tracked_object_75984
+      actions:
+        - spawn_tracked_object_75984
+      conditions:
+        - startup: {}
+      delay: 7.606388429
+    - name: trigger_spawn_tracked_object_78496
+      actions:
+        - spawn_tracked_object_78496
+      conditions:
+        - startup: {}
+      delay: 8.001561669
+    - name: trigger_spawn_tracked_object_85776
+      actions:
+        - spawn_tracked_object_85776
+      conditions:
+        - startup: {}
+      delay: 9.20075894
+    - name: trigger_spawn_tracked_object_90672
+      actions:
+        - spawn_tracked_object_90672
+      conditions:
+        - startup: {}
+      delay: 9.912879684
+    - name: trigger_spawn_tracked_object_91408
+      conditions:
+        - startup: {}
+      delay: 9.983681597
+    - name: trigger_spawn_tracked_object_92160
+      actions:
+        - spawn_tracked_object_92160
+      conditions:
+        - startup: {}
+      delay: 10.113215589
+    - name: trigger_spawn_tracked_object_93056
+      actions:
+        - spawn_tracked_object_93056
+      conditions:
+        - startup: {}
+      delay: 10.201328555
+    - name: trigger_spawn_tracked_object_95600
+      actions:
+        - spawn_tracked_object_95600
+      conditions:
+        - startup: {}
+      delay: 10.517379847
+    - name: trigger_spawn_tracked_object_95632
+      actions:
+        - spawn_tracked_object_95632
+      conditions:
+        - startup: {}
+      delay: 10.518523865
+    - name: trigger_spawn_tracked_object_96576
+      conditions:
+        - startup: {}
+      delay: 10.582357825
+    - name: trigger_spawn_tracked_object_98832
+      actions:
+        - spawn_tracked_object_98832
+      conditions:
+        - startup: {}
+      delay: 10.82129129
+    - name: trigger_spawn_tracked_object_98848
+      conditions:
+        - startup: {}
+      delay: 10.777716193
+    - name: trigger_spawn_tracked_object_100368
+      actions:
+        - spawn_tracked_object_100368
+      conditions:
+        - startup: {}
+      delay: 10.922298969
+    - name: trigger_spawn_tracked_object_101760
+      actions:
+        - spawn_tracked_object_101760
+      conditions:
+        - startup: {}
+      delay: 11.024172962
+    - name: trigger_spawn_tracked_object_104976
+      actions:
+        - spawn_tracked_object_104976
+      conditions:
+        - startup: {}
+      delay: 10.9012146
+    - name: trigger_spawn_tracked_object_106944
+      actions:
+        - spawn_tracked_object_106944
+      conditions:
+        - startup: {}
+      delay: 11.380283144
+    - name: trigger_despawn_tracked_object_106944
+      actions:
+        - despawn_tracked_object_106944
+      conditions:
+        - startup: {}
+      delay: 13.277934561
+    - name: trigger_spawn_tracked_object_108624
+      actions:
+        - spawn_tracked_object_108624
+      conditions:
+        - startup: {}
+      delay: 11.400833047
+    - name: trigger_spawn_tracked_object_108608
+      conditions:
+        - startup: {}
+      delay: 11.475255982
+    - name: trigger_spawn_tracked_object_115104
+      actions:
+        - spawn_tracked_object_115104
+      conditions:
+        - startup: {}
+      delay: 11.798232524
+    - name: trigger_spawn_tracked_object_116576
+      conditions:
+        - startup: {}
+      delay: 11.872064705
+    - name: trigger_despawn_tracked_object_116576
+      conditions:
+        - startup: {}
+      delay: 13.370525865
+    - name: trigger_spawn_tracked_object_118192
+      actions:
+        - spawn_tracked_object_118192
+      conditions:
+        - startup: {}
+      delay: 11.824600697
+    - name: trigger_spawn_tracked_object_120032
+      conditions:
+        - startup: {}
+      delay: 12.074551615
+    - name: trigger_spawn_tracked_object_127776
+      actions:
+        - spawn_tracked_object_127776
+      conditions:
+        - startup: {}
+      delay: 12.498831344
+    - name: trigger_spawn_tracked_object_131696
+      actions:
+        - spawn_tracked_object_131696
+      conditions:
+        - startup: {}
+      delay: 12.701034487
+    - name: trigger_spawn_tracked_object_136016
+      conditions:
+        - startup: {}
+      delay: 12.870655695
+    - name: trigger_traffic_light_11388_at_0_0
+      delay: 0
+      actions:
+        - change_traffic_light_11388_at_0
+      conditions:
+        - startup: {}
+    - name: trigger_traffic_light_11388_at_6.796694571
+      delay: 6.796694571
+      actions:
+        - change_traffic_light_11388_at_1679135186796694571
+      conditions:
+        - startup: {}
+    - name: trigger_traffic_light_11389_at_0_1
+      delay: 0
+      actions:
+        - change_traffic_light_11389_at_0
+      conditions:
+        - startup: {}
+    - name: trigger_traffic_light_11389_at_6.796694571
+      delay: 6.796694571
+      actions:
+        - change_traffic_light_11389_at_1679135186796694571
+      conditions:
+        - startup: {}
+    - name: trigger_traffic_light_11390_at_0_2
+      delay: 0
+      actions:
+        - change_traffic_light_11390_at_0
+      conditions:
+        - startup: {}
+    - name: trigger_traffic_light_11390_at_6.796694571
+      delay: 6.796694571
+      actions:
+        - change_traffic_light_11390_at_1679135186796694571
+      conditions:
+        - startup: {}
+    - name: trigger_traffic_light_11415_at_0_3
+      delay: 0
+      actions:
+        - change_traffic_light_11415_at_0
+      conditions:
+        - startup: {}
+    - name: faudio_0_0_trigger
+      actions:
+        - faudio_0_0
+      conditions:
+        - startup: {}
+      delay: 0.426040053
+    - name: faudio_0_1_trigger
+      actions:
+        - faudio_0_1
+      conditions:
+        - startup: {}
+      delay: 0.916701843
+    - name: faudio_0_2_trigger
+      actions:
+        - faudio_0_2
+      conditions:
+        - startup: {}
+      delay: 1.4286967769999999
+    - name: faudio_0_3_trigger
+      actions:
+        - faudio_0_3
+      conditions:
+        - startup: {}
+      delay: 1.9193586009999999
+    - name: faudio_0_4_trigger
+      actions:
+        - faudio_0_4
+      conditions:
+        - startup: {}
+      delay: 2.431353505
+    - name: faudio_0_5_trigger
+      actions:
+        - faudio_0_5
+      conditions:
+        - startup: {}
+      delay: 2.922015535
+    - name: faudio_0_6_trigger
+      actions:
+        - faudio_0_6
+      conditions:
+        - startup: {}
+      delay: 3.434010798
+    - name: faudio_0_7_trigger
+      actions:
+        - faudio_0_7
+      conditions:
+        - startup: {}
+      delay: 3.924672604
+    - name: faudio_0_8_trigger
+      actions:
+        - faudio_0_8
+      conditions:
+        - startup: {}
+      delay: 4.436667357
+    - name: faudio_0_9_trigger
+      actions:
+        - faudio_0_9
+      conditions:
+        - startup: {}
+      delay: 4.927329156
+    - name: faudio_0_10_trigger
+      actions:
+        - faudio_0_10
+      conditions:
+        - startup: {}
+      delay: 5.41799108
+    - name: faudio_0_11_trigger
+      actions:
+        - faudio_0_11
+      conditions:
+        - startup: {}
+      delay: 5.929986004
+    - name: faudio_0_12_trigger
+      actions:
+        - faudio_0_12
+      conditions:
+        - startup: {}
+      delay: 6.420647688
+    - name: faudio_0_13_trigger
+      actions:
+        - faudio_0_13
+      conditions:
+        - startup: {}
+      delay: 6.932642633
+    - name: faudio_0_14_trigger
+      actions:
+        - faudio_0_14
+      conditions:
+        - startup: {}
+      delay: 7.423304724
+    - name: faudio_0_15_trigger
+      actions:
+        - faudio_0_15
+      conditions:
+        - startup: {}
+      delay: 7.935299941
+    - name: faudio_0_16_trigger
+      actions:
+        - faudio_0_16
+      conditions:
+        - startup: {}
+      delay: 8.425961936
+    - name: faudio_0_17_trigger
+      actions:
+        - faudio_0_17
+      conditions:
+        - startup: {}
+      delay: 8.916623835
+    - name: faudio_0_18_trigger
+      actions:
+        - faudio_0_18
+      conditions:
+        - startup: {}
+      delay: 9.428618584
+    - name: faudio_0_19_trigger
+      actions:
+        - faudio_0_19
+      conditions:
+        - startup: {}
+      delay: 9.919280351
+    - name: faudio_0_20_trigger
+      actions:
+        - faudio_0_20
+      conditions:
+        - startup: {}
+      delay: 10.431275711
+    - name: faudio_0_21_trigger
+      actions:
+        - faudio_0_21
+      conditions:
+        - startup: {}
+      delay: 10.921937835
+    - name: faudio_0_22_trigger
+      actions:
+        - faudio_0_22
+      conditions:
+        - startup: {}
+      delay: 11.433932491
+    - name: faudio_0_23_trigger
+      actions:
+        - faudio_0_23
+      conditions:
+        - startup: {}
+      delay: 11.924594268
+    - name: faudio_0_24_trigger
+      actions:
+        - faudio_0_24
+      conditions:
+        - startup: {}
+      delay: 12.436589693
+    - name: faudio_0_25_trigger
+      actions:
+        - faudio_0_25
+      conditions:
+        - startup: {}
+      delay: 12.927251771
+    - name: faudio_0_26_trigger
+      actions:
+        - faudio_0_26
+      conditions:
+        - startup: {}
+      delay: 13.417913147
+    - name: faudio_0_27_trigger
+      actions:
+        - faudio_0_27
+      conditions:
+        - startup: {}
+      delay: 13.652577302
+    - name: faudio_0_destroy_trigger
+      actions:
+        - faudio_0_destroy
+      conditions:
+        - startup: {}
+      delay: 14.152577302
+    - name: trigger_sync_avoidance_areas_1679135180207109968
+      delay: 0.207109968
+      actions:
+        - sync_avoidance_areas_1679135180207109968
+      conditions:
+        - startup: {}
+    - name: segment_end
+      actions:
+        - segment_end_action
+      conditions:
+        - startup: {}
+      delay: 19.999730542
+    - name: trigger_set_actions_for_2.1500000953674316_turn_left_true_tracked_object_880
+      actions:
+        - set_actions_for_2.1500000953674316_turn_left_true_tracked_object_880
+      conditions:
+        - startup: {}
+      delay: 2.1500000953674316
+    - name: trigger_set_actions_for_3.3499999046325684_reverse_true_tracked_object_880
+      actions:
+        - set_actions_for_3.3499999046325684_reverse_true_tracked_object_880
+      conditions:
+        - startup: {}
+      delay: 3.3499999046325684
+    - name: trigger_set_actions_for_0.5499999523162842_reverse_true_tracked_object_912
+      actions:
+        - set_actions_for_0.5499999523162842_reverse_true_tracked_object_912
+      conditions:
+        - startup: {}
+      delay: 0.5499999523162842
+    - name: trigger_set_actions_for_0.8499999046325684_reverse_true_tracked_object_928
+      actions:
+        - set_actions_for_0.8499999046325684_reverse_true_tracked_object_928
+      conditions:
+        - startup: {}
+      delay: 0.8499999046325684
+    - name: trigger_set_actions_for_2.6500000953674316_reverse_true_tracked_object_960
+      actions:
+        - set_actions_for_2.6500000953674316_reverse_true_tracked_object_960
+      conditions:
+        - startup: {}
+      delay: 2.6500000953674316
+    - name: trigger_set_actions_for_0.8499999046325684_reverse_true_tracked_object_976
+      actions:
+        - set_actions_for_0.8499999046325684_reverse_true_tracked_object_976
+      conditions:
+        - startup: {}
+      delay: 0.8499999046325684
+    - name: trigger_set_actions_for_0.75_reverse_true_tracked_object_992
+      actions:
+        - set_actions_for_0.75_reverse_true_tracked_object_992
+      conditions:
+        - startup: {}
+      delay: 0.75
+    - name: trigger_set_actions_for_11.25_turn_left_true_tracked_object_1056
+      actions:
+        - set_actions_for_11.25_turn_left_true_tracked_object_1056
+      conditions:
+        - startup: {}
+      delay: 11.25
+    - name: trigger_set_actions_for_0.9500000476837158_brake_lights_true_tracked_object_1120
+      actions:
+        - set_actions_for_0.9500000476837158_brake_lights_true_tracked_object_1120
+      conditions:
+        - startup: {}
+      delay: 0.9500000476837158
+    - name: trigger_set_actions_for_2.549999952316284_turn_left_true_tracked_object_1120
+      actions:
+        - set_actions_for_2.549999952316284_turn_left_true_tracked_object_1120
+      conditions:
+        - startup: {}
+      delay: 2.549999952316284
+    - name: trigger_set_actions_for_2.75_reverse_true_tracked_object_1120
+      actions:
+        - set_actions_for_2.75_reverse_true_tracked_object_1120
+      conditions:
+        - startup: {}
+      delay: 2.75
+    - name: trigger_set_actions_for_9.75_turn_left_true_tracked_object_1232
+      actions:
+        - set_actions_for_9.75_turn_left_true_tracked_object_1232
+      conditions:
+        - startup: {}
+      delay: 9.75
+    - name: trigger_set_actions_for_0.75_turn_left_true_tracked_object_1248
+      actions:
+        - set_actions_for_0.75_turn_left_true_tracked_object_1248
+      conditions:
+        - startup: {}
+      delay: 0.75
+    - name: trigger_set_actions_for_3.3499999046325684_turn_left_true_tracked_object_1264
+      actions:
+        - set_actions_for_3.3499999046325684_turn_left_true_tracked_object_1264
+      conditions:
+        - startup: {}
+      delay: 3.3499999046325684
+    - name: trigger_set_actions_for_3.75_turn_left_true_tracked_object_1280
+      actions:
+        - set_actions_for_3.75_turn_left_true_tracked_object_1280
+      conditions:
+        - startup: {}
+      delay: 3.75
+    - name: trigger_set_actions_for_4.450000047683716_turn_left_true_tracked_object_1296
+      actions:
+        - set_actions_for_4.450000047683716_turn_left_true_tracked_object_1296
+      conditions:
+        - startup: {}
+      delay: 4.450000047683716
+    - name: trigger_set_actions_for_8.049999952316284_reverse_true_tracked_object_46144
+      actions:
+        - set_actions_for_8.049999952316284_reverse_true_tracked_object_46144
+      conditions:
+        - startup: {}
+      delay: 8.049999952316284
+    - name: trigger_set_actions_for_11.849999904632568_turn_left_true_tracked_object_67456
+      actions:
+        - set_actions_for_11.849999904632568_turn_left_true_tracked_object_67456
+      conditions:
+        - startup: {}
+      delay: 11.849999904632568
+    - name: trigger_set_actions_for_12.950000047683716_reverse_true_tracked_object_78496
+      actions:
+        - set_actions_for_12.950000047683716_reverse_true_tracked_object_78496
+      conditions:
+        - startup: {}
+      delay: 12.950000047683716
+    - name: trigger_set_actions_for_13.049999952316284_turn_left_true_tracked_object_78496
+      actions:
+        - set_actions_for_13.049999952316284_turn_left_true_tracked_object_78496
+      conditions:
+        - startup: {}
+      delay: 13.049999952316284
+    - name: trigger_set_actions_for_12.349999904632568_turn_left_true_tracked_object_85776
+      actions:
+        - set_actions_for_12.349999904632568_turn_left_true_tracked_object_85776
+      conditions:
+        - startup: {}
+      delay: 12.349999904632568
+    - name: trigger_set_actions_for_12.450000047683716_reverse_true_tracked_object_85776
+      actions:
+        - set_actions_for_12.450000047683716_reverse_true_tracked_object_85776
+      conditions:
+        - startup: {}
+      delay: 12.450000047683716
+    - name: trigger_set_actions_for_13.349999904632568_reverse_true_tracked_object_131696
+      actions:
+        - set_actions_for_13.349999904632568_reverse_true_tracked_object_131696
+      conditions:
+        - startup: {}
+      delay: 13.349999904632568
+    - name: trigger_default_spawn_entities_on_startup
+      actions:
+        - default_spawn_entities_on_startup
+      conditions:
+        - startup: {}
+  actions:
+    - name: spawn_tracked_object_33840
+      spawn:
+        - tracked_object_33840
+    - name: spawn_tracked_object_25472
+      spawn:
+        - tracked_object_25472
+    - name: spawn_tracked_object_90656
+      spawn:
+        - tracked_object_90656
+    - name: spawn_tracked_object_140816
+      spawn:
+        - tracked_object_140816
+    - name: spawn_tracked_object_129808
+      spawn:
+        - tracked_object_129808
+    - name: spawn_tracked_object_95616
+      spawn:
+        - tracked_object_95616
+    - name: spawn_tracked_object_75328
+      spawn:
+        - tracked_object_75328
+    - name: spawn_tracked_object_106960
+      spawn:
+        - tracked_object_106960
+    - name: spawn_tracked_object_880
+      spawn:
+        - tracked_object_880
+    - name: spawn_tracked_object_896
+      spawn:
+        - tracked_object_896
+    - name: spawn_tracked_object_912
+      spawn:
+        - tracked_object_912
+    - name: spawn_tracked_object_928
+      spawn:
+        - tracked_object_928
+    - name: spawn_tracked_object_944
+      spawn:
+        - tracked_object_944
+    - name: spawn_tracked_object_960
+      spawn:
+        - tracked_object_960
+    - name: spawn_tracked_object_976
+      spawn:
+        - tracked_object_976
+    - name: spawn_tracked_object_992
+      spawn:
+        - tracked_object_992
+    - name: spawn_tracked_object_1008
+      spawn:
+        - tracked_object_1008
+    - name: spawn_tracked_object_1024
+      spawn:
+        - tracked_object_1024
+    - name: spawn_tracked_object_1040
+      spawn:
+        - tracked_object_1040
+    - name: spawn_tracked_object_1056
+      spawn:
+        - tracked_object_1056
+    - name: spawn_tracked_object_1120
+      spawn:
+        - tracked_object_1120
+    - name: spawn_tracked_object_1152
+      spawn:
+        - tracked_object_1152
+    - name: spawn_tracked_object_1200
+      spawn:
+        - tracked_object_1200
+    - name: spawn_tracked_object_1232
+      spawn:
+        - tracked_object_1232
+    - name: spawn_tracked_object_1248
+      spawn:
+        - tracked_object_1248
+    - name: spawn_tracked_object_1264
+      spawn:
+        - tracked_object_1264
+    - name: spawn_tracked_object_1280
+      spawn:
+        - tracked_object_1280
+    - name: spawn_tracked_object_1296
+      spawn:
+        - tracked_object_1296
+    - name: spawn_tracked_object_1088
+      spawn:
+        - tracked_object_1088
+    - name: spawn_tracked_object_1104
+      spawn:
+        - tracked_object_1104
+    - name: spawn_tracked_object_1216
+      spawn:
+        - tracked_object_1216
+    - name: spawn_tracked_object_19888
+      spawn:
+        - tracked_object_19888
+    - name: spawn_tracked_object_37840
+      spawn:
+        - tracked_object_37840
+    - name: spawn_tracked_object_36640
+      spawn:
+        - tracked_object_36640
+    - name: spawn_tracked_object_46144
+      spawn:
+        - tracked_object_46144
+    - name: spawn_tracked_object_31152
+      spawn:
+        - tracked_object_31152
+    - name: spawn_tracked_object_42640
+      spawn:
+        - tracked_object_42640
+    - name: spawn_tracked_object_33856
+      spawn:
+        - tracked_object_33856
+    - name: spawn_tracked_object_56688
+      spawn:
+        - tracked_object_56688
+    - name: spawn_tracked_object_59248
+      spawn:
+        - tracked_object_59248
+    - name: spawn_tracked_object_64272
+      spawn:
+        - tracked_object_64272
+    - name: spawn_tracked_object_65136
+      spawn:
+        - tracked_object_65136
+    - name: spawn_tracked_object_65152
+      spawn:
+        - tracked_object_65152
+    - name: spawn_tracked_object_67456
+      spawn:
+        - tracked_object_67456
+    - name: spawn_tracked_object_68176
+      spawn:
+        - tracked_object_68176
+    - name: spawn_tracked_object_70144
+      spawn:
+        - tracked_object_70144
+    - name: spawn_tracked_object_72096
+      spawn:
+        - tracked_object_72096
+    - name: spawn_tracked_object_72768
+      spawn:
+        - tracked_object_72768
+    - name: spawn_tracked_object_75984
+      spawn:
+        - tracked_object_75984
+    - name: spawn_tracked_object_78496
+      spawn:
+        - tracked_object_78496
+    - name: spawn_tracked_object_85776
+      spawn:
+        - tracked_object_85776
+    - name: spawn_tracked_object_90672
+      spawn:
+        - tracked_object_90672
+    - name: spawn_tracked_object_92160
+      spawn:
+        - tracked_object_92160
+    - name: spawn_tracked_object_93056
+      spawn:
+        - tracked_object_93056
+    - name: spawn_tracked_object_95600
+      spawn:
+        - tracked_object_95600
+    - name: spawn_tracked_object_95632
+      spawn:
+        - tracked_object_95632
+    - name: spawn_tracked_object_98832
+      spawn:
+        - tracked_object_98832
+    - name: spawn_tracked_object_100368
+      spawn:
+        - tracked_object_100368
+    - name: spawn_tracked_object_101760
+      spawn:
+        - tracked_object_101760
+    - name: spawn_tracked_object_104976
+      spawn:
+        - tracked_object_104976
+    - name: spawn_tracked_object_106944
+      spawn:
+        - tracked_object_106944
+    - name: spawn_tracked_object_108624
+      spawn:
+        - tracked_object_108624
+    - name: spawn_tracked_object_115104
+      spawn:
+        - tracked_object_115104
+    - name: spawn_tracked_object_118192
+      spawn:
+        - tracked_object_118192
+    - name: spawn_tracked_object_127776
+      spawn:
+        - tracked_object_127776
+    - name: spawn_tracked_object_131696
+      spawn:
+        - tracked_object_131696
+    - name: despawn_tracked_object_33840
+      remove:
+        - tracked_object_33840
+    - name: despawn_tracked_object_944
+      remove:
+        - tracked_object_944
+    - name: despawn_tracked_object_976
+      remove:
+        - tracked_object_976
+    - name: despawn_tracked_object_992
+      remove:
+        - tracked_object_992
+    - name: despawn_tracked_object_1008
+      remove:
+        - tracked_object_1008
+    - name: despawn_tracked_object_1024
+      remove:
+        - tracked_object_1024
+    - name: despawn_tracked_object_1040
+      remove:
+        - tracked_object_1040
+    - name: despawn_tracked_object_1232
+      remove:
+        - tracked_object_1232
+    - name: despawn_tracked_object_1248
+      remove:
+        - tracked_object_1248
+    - name: despawn_tracked_object_1264
+      remove:
+        - tracked_object_1264
+    - name: despawn_tracked_object_1280
+      remove:
+        - tracked_object_1280
+    - name: despawn_tracked_object_1296
+      remove:
+        - tracked_object_1296
+    - name: despawn_tracked_object_1088
+      remove:
+        - tracked_object_1088
+    - name: despawn_tracked_object_1104
+      remove:
+        - tracked_object_1104
+    - name: despawn_tracked_object_1216
+      remove:
+        - tracked_object_1216
+    - name: despawn_tracked_object_59248
+      remove:
+        - tracked_object_59248
+    - name: despawn_tracked_object_106944
+      remove:
+        - tracked_object_106944
+    - name: set_actions_for_2.1500000953674316_turn_left_true_tracked_object_880
+      set_npc_lights:
+        npcs:
+          - tracked_object_880
+        turn_signals: LEFT
+    - name: set_actions_for_3.3499999046325684_reverse_true_tracked_object_880
+      set_npc_lights:
+        npcs:
+          - tracked_object_880
+        reverse_lights: 'ON'
+    - name: set_actions_for_0.5499999523162842_reverse_true_tracked_object_912
+      set_npc_lights:
+        npcs:
+          - tracked_object_912
+        reverse_lights: 'ON'
+    - name: set_actions_for_0.8499999046325684_reverse_true_tracked_object_928
+      set_npc_lights:
+        npcs:
+          - tracked_object_928
+        reverse_lights: 'ON'
+    - name: set_actions_for_2.6500000953674316_reverse_true_tracked_object_960
+      set_npc_lights:
+        npcs:
+          - tracked_object_960
+        reverse_lights: 'ON'
+    - name: set_actions_for_0.8499999046325684_reverse_true_tracked_object_976
+      set_npc_lights:
+        npcs:
+          - tracked_object_976
+        reverse_lights: 'ON'
+    - name: set_actions_for_0.75_reverse_true_tracked_object_992
+      set_npc_lights:
+        npcs:
+          - tracked_object_992
+        reverse_lights: 'ON'
+    - name: set_actions_for_11.25_turn_left_true_tracked_object_1056
+      set_npc_lights:
+        npcs:
+          - tracked_object_1056
+        turn_signals: LEFT
+    - name: set_actions_for_0.9500000476837158_brake_lights_true_tracked_object_1120
+      set_npc_lights:
+        npcs:
+          - tracked_object_1120
+        brake_lights: 'ON'
+    - name: set_actions_for_2.549999952316284_turn_left_true_tracked_object_1120
+      set_npc_lights:
+        npcs:
+          - tracked_object_1120
+        turn_signals: LEFT
+    - name: set_actions_for_2.75_reverse_true_tracked_object_1120
+      set_npc_lights:
+        npcs:
+          - tracked_object_1120
+        reverse_lights: 'ON'
+    - name: set_actions_for_9.75_turn_left_true_tracked_object_1232
+      set_npc_lights:
+        npcs:
+          - tracked_object_1232
+        turn_signals: LEFT
+    - name: set_actions_for_0.75_turn_left_true_tracked_object_1248
+      set_npc_lights:
+        npcs:
+          - tracked_object_1248
+        turn_signals: LEFT
+    - name: set_actions_for_3.3499999046325684_turn_left_true_tracked_object_1264
+      set_npc_lights:
+        npcs:
+          - tracked_object_1264
+        turn_signals: LEFT
+    - name: set_actions_for_3.75_turn_left_true_tracked_object_1280
+      set_npc_lights:
+        npcs:
+          - tracked_object_1280
+        turn_signals: LEFT
+    - name: set_actions_for_4.450000047683716_turn_left_true_tracked_object_1296
+      set_npc_lights:
+        npcs:
+          - tracked_object_1296
+        turn_signals: LEFT
+    - name: set_actions_for_8.049999952316284_reverse_true_tracked_object_46144
+      set_npc_lights:
+        npcs:
+          - tracked_object_46144
+        reverse_lights: 'ON'
+    - name: set_actions_for_11.849999904632568_turn_left_true_tracked_object_67456
+      set_npc_lights:
+        npcs:
+          - tracked_object_67456
+        turn_signals: LEFT
+    - name: set_actions_for_12.950000047683716_reverse_true_tracked_object_78496
+      set_npc_lights:
+        npcs:
+          - tracked_object_78496
+        reverse_lights: 'ON'
+    - name: set_actions_for_13.049999952316284_turn_left_true_tracked_object_78496
+      set_npc_lights:
+        npcs:
+          - tracked_object_78496
+        turn_signals: LEFT
+    - name: set_actions_for_12.349999904632568_turn_left_true_tracked_object_85776
+      set_npc_lights:
+        npcs:
+          - tracked_object_85776
+        turn_signals: LEFT
+    - name: set_actions_for_12.450000047683716_reverse_true_tracked_object_85776
+      set_npc_lights:
+        npcs:
+          - tracked_object_85776
+        reverse_lights: 'ON'
+    - name: set_actions_for_13.349999904632568_reverse_true_tracked_object_131696
+      set_npc_lights:
+        npcs:
+          - tracked_object_131696
+        reverse_lights: 'ON'
+    - name: change_traffic_light_11388_at_0
+      update_traffic_lights:
+        traffic_light_ids:
+          - 11388
+        bulbs:
+          RED_BLOB: 'ON'
+    - name: change_traffic_light_11388_at_1679135186796694571
+      update_traffic_lights:
+        traffic_light_ids:
+          - 11388
+        bulbs:
+          GREEN_BLOB: 'ON'
+    - name: change_traffic_light_11389_at_0
+      update_traffic_lights:
+        traffic_light_ids:
+          - 11389
+        bulbs:
+          RED_BLOB: 'ON'
+    - name: change_traffic_light_11389_at_1679135186796694571
+      update_traffic_lights:
+        traffic_light_ids:
+          - 11389
+        bulbs:
+          GREEN_BLOB: 'ON'
+    - name: change_traffic_light_11390_at_0
+      update_traffic_lights:
+        traffic_light_ids:
+          - 11390
+        bulbs:
+          RED_BLOB: 'ON'
+    - name: change_traffic_light_11390_at_1679135186796694571
+      update_traffic_lights:
+        traffic_light_ids:
+          - 11390
+        bulbs:
+          GREEN_BLOB: 'ON'
+    - name: change_traffic_light_11415_at_0
+      update_traffic_lights:
+        traffic_light_ids:
+          - 11415
+        bulbs:
+          RED_BLOB: 'ON'
+    - name: faudio_0_0
+      create_audio_fusions:
+        - name: faudio_0
+          classification: SIREN
+          probability: 0.005955493077635765
+          smoothed_probability: 0.02778986096382141
+          distance: 100
+          distance_confidence: 0
+          relative_motion: UNCERTAIN
+    - name: faudio_0_1
+      create_audio_fusions:
+        - name: faudio_0
+          classification: SIREN
+          probability: 0.02624811790883541
+          smoothed_probability: 0.02686481550335884
+          distance: 100
+          distance_confidence: 0
+          relative_motion: UNCERTAIN
+    - name: faudio_0_2
+      create_audio_fusions:
+        - name: faudio_0
+          classification: SIREN
+          probability: 0.03903775289654732
+          smoothed_probability: 0.03416857868432999
+          distance: 100
+          distance_confidence: 0
+          relative_motion: UNCERTAIN
+    - name: faudio_0_3
+      create_audio_fusions:
+        - name: faudio_0
+          classification: SIREN
+          probability: 0.007064434699714184
+          smoothed_probability: 0.01790609210729599
+          distance: 100
+          distance_confidence: 0
+          relative_motion: UNCERTAIN
+    - name: faudio_0_4
+      create_audio_fusions:
+        - name: faudio_0
+          classification: SIREN
+          probability: 0.009705780074000359
+          smoothed_probability: 0.012985904701054096
+          distance: 100
+          distance_confidence: 0
+          relative_motion: UNCERTAIN
+    - name: faudio_0_5
+      create_audio_fusions:
+        - name: faudio_0
+          classification: SIREN
+          probability: 0.016226138919591904
+          smoothed_probability: 0.01493004523217678
+          distance: 100
+          distance_confidence: 0
+          relative_motion: UNCERTAIN
+    - name: faudio_0_6
+      create_audio_fusions:
+        - name: faudio_0
+          classification: SIREN
+          probability: 0.007429705932736397
+          smoothed_probability: 0.010429841466248035
+          distance: 100
+          distance_confidence: 0
+          relative_motion: UNCERTAIN
+    - name: faudio_0_7
+      create_audio_fusions:
+        - name: faudio_0
+          classification: SIREN
+          probability: 0.018612675368785858
+          smoothed_probability: 0.015339542180299759
+          distance: 100
+          distance_confidence: 0
+          relative_motion: UNCERTAIN
+    - name: faudio_0_8
+      create_audio_fusions:
+        - name: faudio_0
+          classification: SIREN
+          probability: 0.01506846770644188
+          smoothed_probability: 0.015176897868514061
+          distance: 100
+          distance_confidence: 0
+          relative_motion: UNCERTAIN
+    - name: faudio_0_9
+      create_audio_fusions:
+        - name: faudio_0
+          classification: SIREN
+          probability: 0.027033088728785515
+          smoothed_probability: 0.022290613502264023
+          distance: 100
+          distance_confidence: 0
+          relative_motion: UNCERTAIN
+    - name: faudio_0_10
+      create_audio_fusions:
+        - name: faudio_0
+          classification: SIREN
+          probability: 0.014555496163666248
+          smoothed_probability: 0.017649542540311813
+          distance: 100
+          distance_confidence: 0
+          relative_motion: UNCERTAIN
+    - name: faudio_0_11
+      create_audio_fusions:
+        - name: faudio_0
+          classification: SIREN
+          probability: 0.0056184702552855015
+          smoothed_probability: 0.010430898517370224
+          distance: 100
+          distance_confidence: 0
+          relative_motion: UNCERTAIN
+    - name: faudio_0_12
+      create_audio_fusions:
+        - name: faudio_0
+          classification: SIREN
+          probability: 0.009876199066638947
+          smoothed_probability: 0.010098079219460487
+          distance: 100
+          distance_confidence: 0
+          relative_motion: UNCERTAIN
+    - name: faudio_0_13
+      create_audio_fusions:
+        - name: faudio_0
+          classification: SIREN
+          probability: 0.01939542032778263
+          smoothed_probability: 0.015676483511924744
+          distance: 100
+          distance_confidence: 0
+          relative_motion: UNCERTAIN
+    - name: faudio_0_14
+      create_audio_fusions:
+        - name: faudio_0
+          classification: SIREN
+          probability: 0.01587146893143654
+          smoothed_probability: 0.01579347439110279
+          distance: 100
+          distance_confidence: 0
+          relative_motion: UNCERTAIN
+    - name: faudio_0_15
+      create_audio_fusions:
+        - name: faudio_0
+          classification: SIREN
+          probability: 0.13971444964408875
+          smoothed_probability: 0.09014605730772018
+          distance: 100
+          distance_confidence: 0
+          relative_motion: UNCERTAIN
+    - name: faudio_0_16
+      create_audio_fusions:
+        - name: faudio_0
+          classification: SIREN
+          probability: 0.022237557917833328
+          smoothed_probability: 0.04940095916390419
+          distance: 100
+          distance_confidence: 0
+          relative_motion: UNCERTAIN
+    - name: faudio_0_17
+      create_audio_fusions:
+        - name: faudio_0
+          classification: SIREN
+          probability: 0.010486182756721973
+          smoothed_probability: 0.026052093133330345
+          distance: 100
+          distance_confidence: 0
+          relative_motion: UNCERTAIN
+    - name: faudio_0_18
+      create_audio_fusions:
+        - name: faudio_0
+          classification: SIREN
+          probability: 0.003830860834568739
+          smoothed_probability: 0.012719353660941124
+          distance: 100
+          distance_confidence: 0
+          relative_motion: UNCERTAIN
+    - name: faudio_0_19
+      create_audio_fusions:
+        - name: faudio_0
+          classification: SIREN
+          probability: 0.0014861994422972202
+          smoothed_probability: 0.005979460664093494
+          distance: 100
+          distance_confidence: 0
+          relative_motion: UNCERTAIN
+    - name: faudio_0_20
+      create_audio_fusions:
+        - name: faudio_0
+          classification: SIREN
+          probability: 0.004744641948491335
+          smoothed_probability: 0.005238569341599941
+          distance: 100
+          distance_confidence: 0
+          relative_motion: UNCERTAIN
+    - name: faudio_0_21
+      create_audio_fusions:
+        - name: faudio_0
+          classification: SIREN
+          probability: 0.009247529320418835
+          smoothed_probability: 0.007643945515155792
+          distance: 100
+          distance_confidence: 0
+          relative_motion: UNCERTAIN
+    - name: faudio_0_22
+      create_audio_fusions:
+        - name: faudio_0
+          classification: SIREN
+          probability: 0.015947915613651276
+          smoothed_probability: 0.012626327574253082
+          distance: 100
+          distance_confidence: 0
+          relative_motion: UNCERTAIN
+    - name: faudio_0_23
+      create_audio_fusions:
+        - name: faudio_0
+          classification: SIREN
+          probability: 0.10610678791999817
+          smoothed_probability: 0.06871460378170013
+          distance: 100
+          distance_confidence: 0
+          relative_motion: UNCERTAIN
+    - name: faudio_0_24
+      create_audio_fusions:
+        - name: faudio_0
+          classification: SIREN
+          probability: 0.6803930401802063
+          smoothed_probability: 0.43572163581848145
+          distance: 100
+          distance_confidence: 0
+          relative_motion: UNCERTAIN
+    - name: faudio_0_25
+      create_audio_fusions:
+        - name: faudio_0
+          classification: SIREN
+          probability: 0.688093900680542
+          smoothed_probability: 0.5871449708938599
+          distance: 100
+          distance_confidence: 0
+          relative_motion: UNCERTAIN
+    - name: faudio_0_26
+      create_audio_fusions:
+        - name: faudio_0
+          classification: SIREN
+          probability: 0.6393899321556091
+          smoothed_probability: 0.6184919476509094
+          distance: 100
+          distance_confidence: 0
+          relative_motion: UNCERTAIN
+    - name: faudio_0_27
+      create_audio_fusions:
+        - name: faudio_0
+          classification: SIREN
+          probability: 0.9402275681495667
+          smoothed_probability: 0.8115333318710327
+          distance: 100
+          distance_confidence: 0
+          relative_motion: UNCERTAIN
+    - name: faudio_0_destroy
+      remove_audio_fusions:
+        - faudio_0
+    - name: sync_avoidance_areas_1679135180207109968
+      sync_avoidance_areas:
+        - geometry:
+            - x: -7249.943
+              y: 843.628
+            - x: -7249.943
+              y: 846.428
+            - x: -7252.743
+              y: 846.428
+            - x: -7252.743
+              y: 843.628
+          type: PARTIAL
+          subtype: UNKNOWN
+          route_cost: -1
+        - geometry:
+            - x: -7047.743
+              y: 645.728
+            - x: -7050.543
+              y: 645.728
+            - x: -7050.543
+              y: 648.528
+            - x: -7047.743
+              y: 648.528
+          type: PARTIAL
+          subtype: UNKNOWN
+          route_cost: -1
+        - geometry:
+            - x: -6953.043
+              y: 448.728
+            - x: -6939.843
+              y: 449.028
+            - x: -6938.743
+              y: 433.728
+            - x: -6951.343
+              y: 432.828
+          type: FULL
+          subtype: UNKNOWN
+          route_cost: -1
+        - geometry:
+            - x: -7158.243
+              y: 853.828
+            - x: -7158.243
+              y: 855.828
+            - x: -7160.243
+              y: 855.828
+            - x: -7160.243
+              y: 853.828
+          type: PARTIAL
+          subtype: UNKNOWN
+          route_cost: -1
+        - geometry:
+            - x: -6982.743
+              y: 850.028
+            - x: -6965.443
+              y: 853.428
+            - x: -6950.643
+              y: 684.928
+            - x: -6971.943
+              y: 684.528
+          type: FULL
+          subtype: UNKNOWN
+          route_cost: -1
+        - geometry:
+            - x: -6968.443
+              y: 630.528
+            - x: -6957.543
+              y: 456.828
+            - x: -6935.943
+              y: 453.928
+            - x: -6946.943
+              y: 627.028
+          type: FULL
+          subtype: UNKNOWN
+          route_cost: -1
+        - geometry:
+            - x: -7141.243
+              y: 640.228
+            - x: -7143.243
+              y: 640.228
+            - x: -7143.243
+              y: 642.228
+            - x: -7141.243
+              y: 642.228
+          type: PARTIAL
+          subtype: UNKNOWN
+          route_cost: -1
+        - geometry:
+            - x: -6996.943
+              y: 1057.228
+            - x: -6973.143
+              y: 1059.528
+            - x: -6963.643
+              y: 890.428
+            - x: -6983.843
+              y: 887.228
+          type: FULL
+          subtype: UNKNOWN
+          route_cost: -1
+        - geometry:
+            - x: -7323.943
+              y: 630.028
+            - x: -7327.843
+              y: 630.028
+            - x: -7327.843
+              y: 633.928
+            - x: -7323.943
+              y: 633.928
+          type: PARTIAL
+          subtype: UNKNOWN
+          route_cost: -1
+        - geometry:
+            - x: -7332.243
+              y: 629.228
+            - x: -7333.543
+              y: 629.228
+            - x: -7333.543
+              y: 630.528
+            - x: -7332.243
+              y: 630.528
+          type: PARTIAL
+          subtype: UNKNOWN
+          route_cost: -1
+        - geometry:
+            - x: -7061.143
+              y: 855.628
+            - x: -7061.143
+              y: 858.328
+            - x: -7063.843
+              y: 858.328
+            - x: -7063.843
+              y: 855.628
+          type: PARTIAL
+          subtype: UNKNOWN
+          route_cost: -1
+        - geometry:
+            - x: -7237.743
+              y: 635.028
+            - x: -7239.243
+              y: 635.028
+            - x: -7239.243
+              y: 636.628
+            - x: -7237.743
+              y: 636.628
+          type: PARTIAL
+          subtype: UNKNOWN
+          route_cost: -1
+        - geometry:
+            - x: -7345.043
+              y: 627.428
+            - x: -7349.043
+              y: 627.428
+            - x: -7349.043
+              y: 631.428
+            - x: -7345.043
+              y: 631.428
+          type: PARTIAL
+          subtype: UNKNOWN
+          route_cost: -1
+        - geometry:
+            - x: -7070.143
+              y: 863.028
+            - x: -7070.143
+              y: 866.428
+            - x: -7073.543
+              y: 866.428
+            - x: -7073.543
+              y: 863.028
+          type: PARTIAL
+          subtype: UNKNOWN
+          route_cost: -1
+        - geometry:
+            - x: -7258.843
+              y: 852.428
+            - x: -7258.843
+              y: 855.728
+            - x: -7262.243
+              y: 855.728
+            - x: -7262.243
+              y: 852.428
+          type: PARTIAL
+          subtype: UNKNOWN
+          route_cost: -1
+    - name: segment_end_action
+      terminate_scenario_success: {}
+    - name: default_spawn_entities_on_startup
+      spawn:
+        - collision_car
+analyze_template: matrix_base.yaml
+
