@@ -1,0 +1,5110 @@
+metadata:
+  author: anupam.1.das
+  description: "R2S conversion for drive segment id: 5G21A6P01P4147101:1692778160:1692778180"
+  scenario_id: f507830b-2377-4792-b75b-8df80db934ad
+  title: 5G21A6P01P4147101_1692778160_1692778180_r2s
+  conversion_configs:
+    npcs_configs:
+      disable_spline_fitter_refinement: false
+      use_npc_ai: true
+      npc_ai_type: ml
+      npc_ai_disabled_ids: null
+      convert_track_id_spline: null
+      convert_label_id_spline: null
+      npc_ai_min_total_distance: 0
+      npc_ai_min_avg_speed: 0
+      splice_tracked_objects: false
+      fuse_labels_and_trackers: false
+      auto_select_parameterized_track_id: false
+      parameterize_track_ids: null
+      parameterize_ttc_thresholds: null
+      clean_scene: false
+      clean_scene_npc_threshold: 20
+      disable_npc_lifespan_match: false
+      disable_npc_despawn_at_scenario_end: false
+      persist_stationary_entities: false
+      npc_behavior_sampling: false
+      disable_egregious_motion_removal: true
+      disable_spurious_orientation_removal: false
+      aggregate_small_motion: false
+      use_all_fits: false
+    segment_id: 5G21A6P01P4147101:1692778160:1692778180
+    output_dir: /artifacts
+    generate_on_rails: false
+    bag_path: /home/cruise/.cache/bag_data/5G21A6P01P4147101_1692778160_1692778180.bag
+    bag_labels_path: null
+    use_worldgen: true
+    ci: true
+    start_time: 1692778160300000000
+    end_time: 1692778179300000000
+    hot_start_pre_evaluation_duration_ns: 4700000000
+    additional_topics_to_pass_through: null
+    include_on_rails_vehicle_model_topics: false
+    include_only_tracked_object_ids: null
+    exclude_tracked_object_ids: null
+    include_only_label_ids: null
+    exclude_label_ids: null
+    map_bounds_margin: 100
+    vehicle_type: null
+    convert_camera_objects: false
+    translation_yaml: null
+    use_roadgen: true
+    tracked_object_bag_path: null
+    tracked_objects_topic: /tracked_objects
+    triton_road_catalog: road
+    super_bag: false
+    use_closest_worldgen_map_version: false
+    apply_yaml_fixes: true
+    apply_conditional_yaml_fixes: false
+    yaml_fixer_file: null
+    parameterize_av_velocity: false
+    include_old_router_flags: false
+    on_rails_bag_type: default
+    force_daytime: false
+    enable_ds_spoofing: false
+    disable_success_at_timeout: false
+    enable_avoidance_area_spoofing: true
+    enable_ra_actions: false
+    augment_yaml_file: null
+    augment_yaml:
+      config:
+        hot_start:
+          commercial_logging: true
+    disable_fused_audio: false
+    enable_tampering_spoofing: false
+    enable_collision_spoofing: false
+    disable_bag_cache: false
+    disable_refreshed_tracks: false
+    plugins: null
+    variables: {}
+    variables_file: null
+    enable_ssm_engagement_spoofing: false
+    enable_cabin_state_spoofing: false
+    enable_hazard_light_spoofing: false
+    enable_end_ride_early_spoofing: false
+    allow_duplicate_timestamps: false
+    use_motion_profile: false
+    include_av_as_entity: false
+  fail: av enters stay out region
+  pass: av enters success zone
+config:
+  city_name: worldgen_san_francisco
+  initial_curvature: 0.004551999519204042
+  initial_velocity: 4.0310319024031855
+  map_revision_id: san_francisco/v1-20231003-113103_default/001
+  map_version: v1-20231006-014922_76f17063
+  map_assets:
+    rectangle:
+      coordinates:
+        meters_min_x: -3763.1982421875
+        meters_min_y: -4579.95550859375
+        meters_max_x: -3383.3486328125
+        meters_max_y: -4272.167432140679
+        coordinate_system: Cruise_UTM
+  initial_steer_command: 11.8125
+  road_model:
+    roadgen_revision_id: san_francisco/v1-20231003-113103_default/001
+  av_state:
+    post_controls_orientation: NONE
+    max_speed: 11.176
+    autonomous_legal_speed_limit: 13.42
+  drive_segment_id: 5G21A6P01P4147101:1692778160:1692778180
+  enable_hot_start: true
+  evaluation_start_time: 1692778165
+  pre_evaluation_duration: 4.7
+  start_mode: AUTONOMOUS_SUPERVISED
+  approved_to_engage_driverless: true
+  approved_for_driverless_testing: false
+  evaluation_end_time: 1692778179.3
+  atmospherics:
+    file_path: fog_model_path
+  light:
+    rig: Aug/San_Francisco/2330/NightSky
+    roadway_light_intensity_scale: 1
+    default_headlights: 'ON'
+  wall_timeout: 6000
+  launch:
+    params:
+      /router/always_route: true
+      /router/average_av_speed: 6.7
+      /router/base_reliability_cost: 0.00001
+      /router/enable_avoidance_area_costs: false
+      /router/enable_marketplace_intelligence: true
+      /router/enable_time_dependent_lanes: false
+      /router/feature_flags/adjacent_turns: true
+      /router/feature_flags/all_way_yields: false
+      /router/feature_flags/bike_lanes: false
+      /router/feature_flags/blacklisted: false
+      /router/feature_flags/center_lanes: false
+      /router/feature_flags/controlled_by_no_turn: false
+      /router/feature_flags/cross_bike_lanes: true
+      /router/feature_flags/high_speed_lanes: false
+      /router/feature_flags/high_speed_maneuvers: false
+      /router/feature_flags/insufficient_horizon_lanes: false
+      /router/feature_flags/intersection_merge_lanes: true
+      /router/feature_flags/lane_change_bike_shared_outgoing: false
+      /router/feature_flags/lane_change_intersection_turns: false
+      /router/feature_flags/lateral_access_only_intersections: false
+      /router/feature_flags/major_minor_left: true
+      /router/feature_flags/major_minor_right_crossing_bike_lanes: true
+      /router/feature_flags/minor_major_left: true
+      /router/feature_flags/minor_major_left_with_bidirectional_cross_traffic: false
+      /router/feature_flags/minor_major_left_yield: false
+      /router/feature_flags/minor_major_outer_left_turns: false
+      /router/feature_flags/minor_major_outer_right_turns: false
+      /router/feature_flags/minor_major_right: true
+      /router/feature_flags/minor_major_right_high_speed: false
+      /router/feature_flags/minor_major_right_inner_turn_onto_multilane_roads: false
+      /router/feature_flags/minor_major_right_inner_turn_with_multiple_yieldto_lanes: false
+      /router/feature_flags/minor_major_right_onto_rail_lines: false
+      /router/feature_flags/minor_major_right_yield: true
+      /router/feature_flags/minor_major_straight: false
+      /router/feature_flags/minor_major_straight_yield: false
+      /router/feature_flags/missing_tiles: false
+      /router/feature_flags/narrow_lanes: false
+      /router/feature_flags/outer_right_turns: true
+      /router/feature_flags/outside_routable_area: false
+      /router/feature_flags/restricted_lanes: false
+      /router/feature_flags/restricted_turns: false
+      /router/feature_flags/shared_lanes: true
+      /router/feature_flags/sharp_turns: false
+      /router/feature_flags/steep_lanes: false
+      /router/feature_flags/too_short_lane_changes: false
+      /router/feature_flags/too_short_terminal_lane_changes: false
+      /router/feature_flags/u_turns: false
+      /router/feature_flags/uncontrolled_high_speed_increase: false
+      /router/feature_flags/unprotected_left_turns_with_many_yield_to_lanes: false
+      /router/feature_flags/unsupported_traffic_light_types: false
+      /router/feature_flags/untracked_rail_interactions: false
+      /router/feature_flags/yielding_left_turns: true
+      /router/feature_flags/zipper_lanes: true
+      /router/grade_threshold: 0.2
+      /router/ignore_ulh: none
+      /router/left_turn_cost: 12
+      /router/max_legal_speed_limit: 13.42
+      /router/minor_major_right_high_speed_threshold: 11.18
+      /router/pullover_area_buffer: 5
+      /router/pullover_max_distance_to_next_interval: 750
+      /router/pullover_max_lane_change_search_distance: 150
+      /router/pullover_max_required_lane_change_runway_to_access: 80
+      /router/pullover_max_required_lane_change_runway_to_exit: 80
+      /router/pullover_max_required_lane_changes_to_access: 1
+      /router/pullover_max_required_lane_changes_to_exit: 1
+      /router/pullover_remove_consecutive_lane_changes: true
+      /router/reliability_costs_weight: 0
+      /router/right_turn_cost: 9
+      /router/time_costs_weight: 1
+      /router/use_soft_fixed_routes: false
+      /router/use_traffic_flow_model: true
+  worldgen:
+    delineator_post: false
+  hot_start:
+    commercial_logging: true
+  timeout: 100
+  scenedit:
+    output_path: ros/src/matrix/sim_driver/scenarios/era/era_025/era025/5G21A6P01P4147101_1692778160_1692778180_r2s.yaml
+modules:
+  router:
+    waypoints:
+      - x: -3527.2647097157346
+        y: -4469.751103386466
+      - x: -4838.822977183154
+        y: -3340.9478532620706
+    initial_conditions:
+      heading: -3.0780805949969734
+    skip_pullovers:
+      - true
+    feature_flags:
+      adjacent_turns: true
+      all_way_yields: false
+      bike_lanes: false
+      blacklisted: false
+      center_lanes: false
+      controlled_by_no_turn: false
+      cross_bike_lanes: true
+      high_speed_lanes: false
+      high_speed_maneuvers: false
+      insufficient_horizon_lanes: false
+      intersection_merge_lanes: true
+      lane_change_bike_shared_outgoing: false
+      lane_change_intersection_turns: false
+      lateral_access_only_intersections: false
+      major_minor_left: true
+      major_minor_right_crossing_bike_lanes: true
+      minor_major_left: true
+      minor_major_left_with_bidirectional_cross_traffic: false
+      minor_major_left_yield: false
+      minor_major_outer_left_turns: false
+      minor_major_outer_right_turns: false
+      minor_major_right: true
+      minor_major_right_yield: true
+      minor_major_right_inner_turn_onto_multilane_roads: false
+      minor_major_right_high_speed: false
+      minor_major_right_inner_turn_with_multiple_yieldto_lanes: false
+      minor_major_right_onto_rail_lines: false
+      minor_major_straight: false
+      minor_major_straight_yield: false
+      missing_tiles: false
+      narrow_lanes: false
+      outer_right_turns: true
+      outside_routable_area: false
+      restricted_lanes: false
+      restricted_turns: false
+      shared_lanes: true
+      sharp_turns: false
+      steep_lanes: false
+      too_short_lane_changes: false
+      too_short_terminal_lane_changes: false
+      u_turns: false
+      uncontrolled_high_speed_increase: false
+      unprotected_left_turns_with_many_yield_to_lanes: false
+      unsupported_traffic_light_types: false
+      untracked_rail_interactions: false
+      yielding_left_turns: true
+      zipper_lanes: true
+    always_route: true
+    max_legal_speed_limit: 13.42
+world:
+  entities:
+    - name: tracked_object_557503392
+      asset_id: V_Forester_Static
+      variants:
+        color: BlueGreyMetallic
+      x: -3487.5365354051155
+      y: -4466.304808247068
+      z: 107.68984496894457
+      heading: 0.04641036214112834
+      attributes:
+        train_probability: 0.00896453857421875
+        truck_probability: 0.0234375
+        bus_probability: 0.10223388671875
+        school_bus_probability: 0.020477294921875
+    - name: tracked_object_557583872
+      asset_id: V_Suburban_Static
+      variants:
+        color: Gold
+      x: -3483.350341796875
+      y: -4461.18798828125
+      z: 107.30487060546875
+      heading: -1.5921334750016203
+      attributes:
+        train_probability: 0.01103973388671875
+        truck_probability: 0.007205963134765625
+        bus_probability: 0.0262451171875
+        school_bus_probability: 0.0758056640625
+    - name: tracked_object_557637680
+      asset_id: V_S10_Static
+      variants:
+        color: White
+      x: -3486.8967806912747
+      y: -4471.987162607464
+      z: 107.5406133207983
+      heading: -0.005377823312957554
+      attributes:
+        train_probability: 0.005229949951171875
+        truck_probability: 0.03253173828125
+        bus_probability: 0.11956787109375
+        school_bus_probability: 0.0311431884765625
+    - name: tracked_object_557652400
+      asset_id: V_Corolla20_Static
+      variants:
+        color: Red
+      x: -3510.2841796875
+      y: -4472.34912109375
+      z: 111.06497192382812
+      heading: 0.041572672593635805
+      attributes:
+        train_probability: 0.0244903564453125
+        truck_probability: 0.00556182861328125
+        bus_probability: 0.05645751953125
+        school_bus_probability: 0.01166534423828125
+    - name: tracked_object_557664704
+      asset_id: V_Beetle_Static
+      variants:
+        color: Blue
+      x: -3498.58642578125
+      y: -4460.62060546875
+      z: 110.17300415039062
+      heading: 1.5816742697555406
+      attributes:
+        train_probability: 0.009735107421875
+        truck_probability: 0.003612518310546875
+        bus_probability: 0.11712646484375
+        school_bus_probability: 0.215576171875
+    - name: tracked_object_557677712
+      asset_id: V_NissanD21_Static
+      variants:
+        color: Yellow
+      x: -3494.638427734375
+      y: -4472.24072265625
+      z: 108.96577453613281
+      heading: 0.010179875643894054
+      attributes:
+        train_probability: 0.007137298583984375
+        truck_probability: 0.098388671875
+        bus_probability: 0.2342529296875
+        school_bus_probability: 0.037139892578125
+    - name: tracked_object_557695616
+      asset_id: V_RDX_Static
+      variants:
+        color: Blue
+      x: -3492.0218389755637
+      y: -4460.993209996435
+      z: 109.05804443359375
+      heading: -1.5454005076565218
+      attributes:
+        train_probability: 0.0106048583984375
+        truck_probability: 0.020294189453125
+        bus_probability: 0.10028076171875
+        school_bus_probability: 0.1798095703125
+    - name: tracked_object_557728224
+      asset_id: V_LandRover_Static
+      variants:
+        color: White
+      x: -3523.72998046875
+      y: -4466.68115234375
+      z: 111.71856689453125
+      heading: -3.0984554916292457
+      attributes:
+        train_probability: 0.015716552734375
+        truck_probability: 0.0256805419921875
+        bus_probability: 0.06488037109375
+        school_bus_probability: 0.0135040283203125
+    - name: tracked_object_557782000
+      asset_id: V_Vandura_Static
+      variants:
+        color: White
+      x: -3532.81005859375
+      y: -4474.126953125
+      z: 111.85697937011719
+      heading: 0.24288353179762331
+      attributes:
+        train_probability: 0.0340576171875
+        truck_probability: 0.01384735107421875
+        bus_probability: 0.03814697265625
+        school_bus_probability: 0.028778076171875
+    - name: tracked_object_557786832
+      asset_id: V_LandRover_Static
+      variants:
+        color: White
+      x: -3536.055908203125
+      y: -4467.04638671875
+      z: 111.93386840820312
+      heading: -3.0968159043866974
+      attributes:
+        train_probability: 0.02520751953125
+        truck_probability: 0.043731689453125
+        bus_probability: 0.037567138671875
+        school_bus_probability: 0.05511474609375
+    - name: tracked_object_557787632
+      asset_id: V_Scionb_Static
+      variants:
+        color: Red
+      x: -3505.814562412634
+      y: -4478.003168821717
+      z: 110.33448791503906
+      heading: 1.592905175593179
+      attributes:
+        train_probability: 0.003459930419921875
+        truck_probability: 0.0249786376953125
+        bus_probability: 0.11126708984375
+        school_bus_probability: 0.10137939453125
+    - name: tracked_object_557797056
+      asset_id: V_Pacifica_Static
+      variants:
+        color: BlueDarkMetallic
+      x: -3541.5625
+      y: -4467.0703125
+      z: 111.97999572753906
+      heading: -3.0912398206284997
+      attributes:
+        train_probability: 0.0494384765625
+        truck_probability: 0.032958984375
+        bus_probability: 0.0343017578125
+        school_bus_probability: 0.09808349609375
+    - name: tracked_object_557802816
+      asset_id: V_HummerH2_Movable
+      variants:
+        color: Yellow
+      x: -3547.2568359375
+      y: -4476.03076171875
+      z: 111.99537658691406
+      heading: 0.03911407635143248
+      attributes:
+        train_probability: 0.01317596435546875
+        truck_probability: 0.0285186767578125
+        bus_probability: 0.0419921875
+        school_bus_probability: 0.0243072509765625
+    - name: tracked_object_557802832
+      asset_id: V_C250_Static
+      variants:
+        color: Silver
+      x: -3528.923828125
+      y: -4478.6572265625
+      z: 111.75701904296875
+      heading: 1.6549794130369748
+      attributes:
+        train_probability: 0.0428466796875
+        truck_probability: 0.036956787109375
+        bus_probability: 0.1817626953125
+        school_bus_probability: 0.10284423828125
+    - name: tracked_object_557802848
+      asset_id: V_Carrera16_Static
+      variants:
+        color: BlueGreenMetallic
+      x: -3557.509521484375
+      y: -4476.75146484375
+      z: 111.97999572753906
+      heading: 0.06098896819965386
+      attributes:
+        train_probability: 0.0200958251953125
+        truck_probability: 0.015350341796875
+        bus_probability: 0.034088134765625
+        school_bus_probability: 0.047943115234375
+    - name: tracked_object_557803664
+      asset_id: V_Cayanne_Static
+      variants:
+        color: GreenLt
+      x: -3562.625244140625
+      y: -4476.87255859375
+      z: 111.93386840820312
+      heading: 0.0635861247592999
+      attributes:
+        train_probability: 0.0204010009765625
+        truck_probability: 0.0034027099609375
+        bus_probability: 0.0212554931640625
+        school_bus_probability: 0.0112762451171875
+    - name: tracked_object_557810208
+      asset_id: V_Maz6_Movable
+      variants:
+        color: Silver
+      x: -3577.401123046875
+      y: -4476.98486328125
+      z: 111.53402709960938
+      heading: 0.04813913078673263
+      attributes:
+        train_probability: 0.0782470703125
+        truck_probability: 0.04058837890625
+        bus_probability: 0.229736328125
+        school_bus_probability: 0.119384765625
+    - name: tracked_object_557810224
+      asset_id: V_Camaro_Movable
+      variants:
+        color: White
+      x: -3577.51953125
+      y: -4468.72509765625
+      z: 111.49557495117188
+      heading: -3.1138195420817065
+      attributes:
+        train_probability: 0.0692138671875
+        truck_probability: 0.0178070068359375
+        bus_probability: 0.0628662109375
+        school_bus_probability: 0.0631103515625
+    - name: tracked_object_557815920
+      asset_id: V_RAV419_Static
+      variants:
+        color: Silver
+      x: -3540.960693359375
+      y: -4475.89697265625
+      z: 111.92617797851562
+      heading: 0.09653028293934489
+      attributes:
+        train_probability: 0.0097808837890625
+        truck_probability: 0.08197021484375
+        bus_probability: 0.09808349609375
+        school_bus_probability: 0.07647705078125
+    - name: tracked_object_557817184
+      asset_id: V_CRV20_Static
+      variants:
+        color: BlueMetallic
+      x: -3590.986328125
+      y: -4477.064453125
+      z: 110.83428955078125
+      heading: 0.0174292944041528
+      attributes:
+        train_probability: 0.016754150390625
+        truck_probability: 0.01287841796875
+        bus_probability: 0.03814697265625
+        school_bus_probability: 0.072509765625
+    - name: tracked_object_557818560
+      asset_id: V_PoliceExplorerDFW_Movable
+      variants: {}
+      x: -3596.6708984375
+      y: -4474.5712890625
+      z: 110.67280578613281
+      heading: 0.06958592409337575
+      attributes:
+        truck_probability: 0.1497802734375
+        bus_probability: 0.41455078125
+        school_bus_probability: 0.2490234375
+        emv_probability: 0.73681640625
+        train_probability: 0.09490966796875
+    - name: tracked_object_557820080
+      asset_id: V_FireTruckInternationalSAN_Movable
+      x: -3609.050048828125
+      y: -4474.21142578125
+      z: 110.22683715820312
+      heading: 0.013141419195874148
+      attributes:
+        truck_probability: 0.78369140625
+        bus_probability: 0.282958984375
+        school_bus_probability: 0.0096435546875
+        emv_probability: 0.9208984375
+        train_probability: 0.0239410400390625
+    - name: tracked_object_557833504
+      asset_id: V_Cayanne_Static
+      variants:
+        color: Silver
+      x: -3581.770263671875
+      y: -4463.29443359375
+      z: 111.86466979980469
+      heading: 1.558636659550566
+      attributes:
+        train_probability: 0.024871826171875
+        truck_probability: 0.044403076171875
+        bus_probability: 0.2003173828125
+        school_bus_probability: 0.1610107421875
+    - name: tracked_object_557838896
+      asset_id: V_FireTruckInternationalSAN_Static
+      x: -3625.7607421875
+      y: -4473.4033203125
+      z: 109.88850402832031
+      heading: 0.013962634015954637
+      attributes:
+        truck_probability: 0.56201171875
+        bus_probability: 0.5126953125
+        school_bus_probability: 0.0316162109375
+        train_probability: 0.1553955078125
+        emv_probability: 0.8583984375
+    - name: tracked_object_557857424
+      asset_id: V_CRV20_Movable
+      variants:
+        color: BlueMetallic
+      profile:
+        coordinates:
+          - interpolation_type: linear
+            x: -3563.145263671875
+            y: -4453.86767578125
+            z: 112.10302734375
+            heading: -1.4906041361365523
+          - interpolation_type: linear
+            x: -3563.1416015625
+            y: -4453.86962890625
+            z: 112.10302734375
+            heading: -1.4925862364259261
+          - interpolation_type: linear
+            x: -3563.138916015625
+            y: -4453.8701171875
+            z: 112.10302734375
+            heading: -1.496263655470763
+          - interpolation_type: linear
+            x: -3563.137451171875
+            y: -4453.87158203125
+            z: 112.10302734375
+            heading: -1.492962250247163
+            facing: backward
+          - interpolation_type: linear
+            x: -3563.136474609375
+            y: -4453.86669921875
+            z: 112.10302734375
+            heading: -1.4934976195695102
+            facing: backward
+          - interpolation_type: linear
+            x: -3563.139892578125
+            y: -4453.8388671875
+            z: 112.10302734375
+            heading: -1.4923375580410172
+            facing: backward
+          - interpolation_type: linear
+            x: -3563.135498046875
+            y: -4453.81201171875
+            z: 112.10302734375
+            heading: -1.4947324119211212
+            facing: backward
+          - interpolation_type: linear
+            x: -3563.1328125
+            y: -4453.7568359375
+            z: 112.10302734375
+            heading: -1.4967087875716516
+            facing: backward
+          - interpolation_type: linear
+            x: -3563.130126953125
+            y: -4453.68701171875
+            z: 112.1107177734375
+            heading: -1.4961791974542828
+            facing: backward
+          - interpolation_type: linear
+            x: -3563.138427734375
+            y: -4453.6123046875
+            z: 112.10302734375
+            heading: -1.495491757188473
+          - interpolation_type: linear
+            x: -3563.1279296875
+            y: -4453.62255859375
+            z: 112.1107177734375
+            heading: -1.495280152934475
+          - interpolation_type: linear
+            x: -3563.1181640625
+            y: -4453.62841796875
+            z: 112.10302734375
+            heading: -1.497556742996153
+          - interpolation_type: linear
+            x: -3563.1142578125
+            y: -4453.66259765625
+            z: 112.10302734375
+            heading: -1.4987331325062725
+          - interpolation_type: linear
+            x: -3563.10888671875
+            y: -4453.6865234375
+            z: 112.10302734375
+            heading: -1.504629493768551
+            facing: backward
+          - interpolation_type: linear
+            x: -3563.10888671875
+            y: -4453.68017578125
+            z: 112.10302734375
+            heading: -1.5086140173371154
+          - interpolation_type: linear
+            x: -3563.109375
+            y: -4453.6826171875
+            z: 112.10302734375
+            heading: -1.5083282714142299
+          - interpolation_type: linear
+            x: -3563.100830078125
+            y: -4453.73388671875
+            z: 112.10302734375
+            heading: -1.509642389202661
+          - interpolation_type: linear
+            x: -3563.103515625
+            y: -4453.76123046875
+            z: 112.1107177734375
+            heading: -1.5101749315036659
+          - interpolation_type: linear
+            x: -3563.103515625
+            y: -4453.79296875
+            z: 112.1107177734375
+            heading: -1.5212678126291987
+          - interpolation_type: linear
+            x: -3563.09521484375
+            y: -4453.79833984375
+            z: 112.1107177734375
+            heading: -1.5196047632163001
+          - interpolation_type: linear
+            x: -3563.0771484375
+            y: -4453.79736328125
+            z: 112.10302734375
+            heading: -1.5162912900442995
+          - interpolation_type: linear
+            x: -3563.06494140625
+            y: -4453.79931640625
+            z: 112.10302734375
+            heading: -1.5154421001917875
+            facing: backward
+          - interpolation_type: linear
+            x: -3563.06298828125
+            y: -4453.76513671875
+            z: 112.10302734375
+            heading: -1.5236931098827011
+          - interpolation_type: linear
+            x: -3563.070556640625
+            y: -4453.765625
+            z: 112.10302734375
+            heading: -1.5313912626839963
+          - interpolation_type: linear
+            x: -3563.068115234375
+            y: -4453.76611328125
+            z: 112.10302734375
+            heading: -1.5416318860762361
+            facing: backward
+          - interpolation_type: linear
+            x: -3563.066650390625
+            y: -4453.76171875
+            z: 112.10302734375
+            heading: -1.5476921792418439
+            facing: backward
+          - interpolation_type: linear
+            x: -3563.073486328125
+            y: -4453.75146484375
+            z: 112.10302734375
+            heading: -1.549860474790725
+          - interpolation_type: linear
+            x: -3563.063232421875
+            y: -4453.751953125
+            z: 112.10302734375
+            heading: -1.5497631000744834
+            facing: backward
+          - interpolation_type: linear
+            x: -3563.0634765625
+            y: -4453.7451171875
+            z: 112.10302734375
+            heading: -1.550922602887221
+          - interpolation_type: linear
+            x: -3563.059814453125
+            y: -4453.74560546875
+            z: 112.10302734375
+            heading: -1.5500602796153393
+            facing: backward
+          - interpolation_type: linear
+            x: -3563.060791015625
+            y: -4453.73876953125
+            z: 112.10302734375
+            heading: -1.5506085725129757
+            facing: backward
+          - interpolation_type: linear
+            x: -3563.058837890625
+            y: -4453.73681640625
+            z: 112.10302734375
+            heading: -1.550290607172462
+            facing: backward
+          - interpolation_type: linear
+            x: -3563.05810546875
+            y: -4453.73388671875
+            z: 112.10302734375
+            heading: -1.5478764466829151
+            facing: backward
+          - interpolation_type: linear
+            x: -3563.058837890625
+            y: -4453.732421875
+            z: 112.10302734375
+            heading: -1.5467581035652727
+          - interpolation_type: linear
+            x: -3563.0556640625
+            y: -4453.73193359375
+            z: 112.10302734375
+            heading: -1.548008279275352
+          - interpolation_type: linear
+            x: -3563.053466796875
+            y: -4453.73291015625
+            z: 112.10302734375
+            heading: -1.5472425577168372
+          - interpolation_type: linear
+            x: -3563.051025390625
+            y: -4453.7353515625
+            z: 112.10302734375
+            heading: -1.5461574338354014
+            facing: backward
+          - interpolation_type: linear
+            x: -3563.0517578125
+            y: -4453.73388671875
+            z: 112.10302734375
+            heading: -1.5461282229177833
+          - interpolation_type: linear
+            x: -3563.052001953125
+            y: -4453.7353515625
+            z: 112.10302734375
+            heading: -1.5468642829227373
+          - interpolation_type: linear
+            x: -3563.05322265625
+            y: -4453.736328125
+            z: 112.10302734375
+            heading: -1.5473264519660062
+          - interpolation_type: linear
+            x: -3563.053955078125
+            y: -4453.73779296875
+            z: 112.10302734375
+            heading: -1.5476989206243756
+          - interpolation_type: linear
+            x: -3563.053955078125
+            y: -4453.73974609375
+            z: 112.10302734375
+            heading: -1.5476047269177633
+          - interpolation_type: linear
+            x: -3563.0546875
+            y: -4453.74072265625
+            z: 112.10302734375
+            heading: -1.547842551217226
+          - interpolation_type: linear
+            x: -3563.05517578125
+            y: -4453.74462890625
+            z: 112.10302734375
+            heading: -1.5480123992307275
+          - interpolation_type: linear
+            x: -3563.05517578125
+            y: -4453.74609375
+            z: 112.10302734375
+            heading: -1.5486062060185528
+          - interpolation_type: linear
+            x: -3563.055419921875
+            y: -4453.74951171875
+            z: 112.10302734375
+            heading: -1.5496593577011863
+          - interpolation_type: linear
+            x: -3563.05712890625
+            y: -4453.7509765625
+            z: 112.10302734375
+            heading: -1.5498192789241119
+          - interpolation_type: linear
+            x: -3563.05908203125
+            y: -4453.751953125
+            z: 112.10302734375
+            heading: -1.5503288085695353
+          - interpolation_type: linear
+            x: -3563.060302734375
+            y: -4453.751953125
+            z: 112.10302734375
+            heading: -1.5501879908801917
+          - interpolation_type: linear
+            x: -3563.061767578125
+            y: -4453.75341796875
+            z: 112.10302734375
+            heading: -1.5507183044852788
+          - interpolation_type: linear
+            x: -3563.062255859375
+            y: -4453.75439453125
+            z: 112.10302734375
+            heading: -1.5501202021811897
+          - interpolation_type: linear
+            x: -3563.063232421875
+            y: -4453.7548828125
+            z: 112.10302734375
+            heading: -1.5519330375359799
+          - interpolation_type: linear
+            x: -3563.064697265625
+            y: -4453.755859375
+            z: 112.10302734375
+            heading: -1.5501481035150526
+          - interpolation_type: linear
+            x: -3563.066650390625
+            y: -4453.7568359375
+            z: 112.10302734375
+            heading: -1.5514982302230704
+          - interpolation_type: linear
+            x: -3563.068603515625
+            y: -4453.75830078125
+            z: 112.10302734375
+            heading: -1.552234330780447
+          - interpolation_type: linear
+            x: -3563.069580078125
+            y: -4453.75927734375
+            z: 112.10302734375
+            heading: -1.5502932285853266
+          - interpolation_type: linear
+            x: -3563.0712890625
+            y: -4453.7607421875
+            z: 112.10302734375
+            heading: -1.5507692392875114
+          - interpolation_type: linear
+            x: -3563.073486328125
+            y: -4453.76220703125
+            z: 112.10302734375
+            heading: -1.551059113386125
+          - interpolation_type: linear
+            x: -3563.074951171875
+            y: -4453.76318359375
+            z: 112.10302734375
+            heading: -1.5520444544323873
+          - interpolation_type: linear
+            x: -3563.076171875
+            y: -4453.763671875
+            z: 112.10302734375
+            heading: -1.5514225784061244
+          - interpolation_type: linear
+            x: -3563.077392578125
+            y: -4453.765625
+            z: 112.10302734375
+            heading: -1.5526867388760694
+          - interpolation_type: linear
+            x: -3563.079345703125
+            y: -4453.767578125
+            z: 112.10302734375
+            heading: -1.554510586767122
+          - interpolation_type: linear
+            x: -3563.07958984375
+            y: -4453.76953125
+            z: 112.10302734375
+            heading: -1.5545390482528842
+          - interpolation_type: linear
+            x: -3563.08154296875
+            y: -4453.77587890625
+            z: 112.10302734375
+            heading: -1.55478996626747
+          - interpolation_type: linear
+            x: -3563.082275390625
+            y: -4453.78125
+            z: 112.10302734375
+            heading: -1.5564110021260686
+          - interpolation_type: linear
+            x: -3563.080810546875
+            y: -4453.78369140625
+            z: 112.10302734375
+            heading: -1.556006539671607
+          - interpolation_type: linear
+            x: -3563.0810546875
+            y: -4453.78662109375
+            z: 112.10302734375
+            heading: -1.5570931563652164
+          - interpolation_type: linear
+            x: -3563.0810546875
+            y: -4453.7880859375
+            z: 112.10302734375
+            heading: -1.5583638370445778
+          - interpolation_type: linear
+            x: -3563.08056640625
+            y: -4453.7890625
+            z: 112.10302734375
+            heading: -1.557321227603316
+          - interpolation_type: linear
+            x: -3563.082275390625
+            y: -4453.791015625
+            z: 112.10302734375
+            heading: -1.5545545901247637
+          - interpolation_type: linear
+            x: -3563.08349609375
+            y: -4453.79150390625
+            z: 112.10302734375
+            heading: -1.5546454081674776
+          - interpolation_type: linear
+            x: -3563.086181640625
+            y: -4453.79248046875
+            z: 112.10302734375
+            heading: -1.5528668763920945
+          - interpolation_type: linear
+            x: -3563.08740234375
+            y: -4453.79345703125
+            z: 112.10302734375
+            heading: -1.554283636195347
+          - interpolation_type: linear
+            x: -3563.087646484375
+            y: -4453.7939453125
+            z: 112.10302734375
+            heading: -1.5561716952245659
+          - interpolation_type: linear
+            x: -3563.08984375
+            y: -4453.7958984375
+            z: 112.10302734375
+            heading: -1.5547543884843815
+          - interpolation_type: linear
+            x: -3563.091064453125
+            y: -4453.796875
+            z: 112.10302734375
+            heading: -1.5579854033469553
+          - interpolation_type: linear
+            x: -3563.09326171875
+            y: -4453.80029296875
+            z: 112.10302734375
+            heading: -1.5557687311709694
+          - interpolation_type: linear
+            x: -3563.093017578125
+            y: -4453.80224609375
+            z: 112.10302734375
+            heading: -1.556331982461181
+        distances:
+          - t: 0
+            distance: 0
+          - t: 0.100005504
+            distance: 0.004150390625
+          - t: 0.200022026
+            distance: 0.006879965792846423
+          - t: 0.300056429
+            distance: 0.008951567690853887
+          - t: 0.400108696
+            distance: 0.01393107893459684
+          - t: 0.500189752
+            distance: 0.04197220005834924
+          - t: 0.600304188
+            distance: 0.06918484613860856
+          - t: 0.70047738
+            distance: 0.12442594495611647
+          - t: 0.80070129
+            distance: 0.19472371444309278
+          - t: 0.900966874
+            distance: 0.2702828713754409
+          - t: 1.001230166
+            distance: 0.2868507405912413
+          - t: 1.1014916750000001
+            distance: 0.30059273519936247
+          - t: 1.201724362
+            distance: 0.3349949128435198
+          - t: 1.301954177
+            distance: 0.3595161619245544
+          - t: 1.402177587
+            distance: 0.3658638181745544
+          - t: 1.502373647
+            distance: 0.36835357379642586
+          - t: 1.602510624
+            distance: 0.4203303044020015
+          - t: 1.702615637
+            distance: 0.4488616123786559
+          - t: 1.802693964
+            distance: 0.4805998936286559
+          - t: 1.902779095
+            distance: 0.49048683539199406
+          - t: 2.002868303
+            distance: 0.5101462203743587
+          - t: 2.102947963
+            distance: 0.5225085142231597
+          - t: 2.203034273
+            distance: 0.5567439598148748
+          - t: 2.3030908070000002
+            distance: 0.5643280538417347
+          - t: 2.403137434
+            distance: 0.5668178094636062
+          - t: 2.503188954
+            distance: 0.5714500521298684
+          - t: 2.603252369
+            distance: 0.583773713715927
+          - t: 2.703352229
+            distance: 0.5940392391268785
+          - t: 2.803484996
+            distance: 0.6008795348915864
+          - t: 2.9036404019999997
+            distance: 0.6045740529458885
+          - t: 3.003840511
+            distance: 0.6114793926059134
+          - t: 3.104077975
+            distance: 0.6142415284699234
+          - t: 3.204344329
+            distance: 0.6172613812230614
+          - t: 3.304629255
+            distance: 0.6188991263237692
+          - t: 3.404897617
+            distance: 0.6221102948877257
+          - t: 3.5051488920000002
+            distance: 0.622990556429587
+          - t: 3.605383074
+            distance: 0.6259606553213342
+          - t: 3.705600826
+            distance: 0.6294133251513466
+          - t: 3.805805402
+            distance: 0.6299592401849159
+          - t: 3.905975545
+            distance: 0.6313403081169209
+          - t: 4.006116954
+            distance: 0.6328253575627945
+          - t: 4.106246206
+            distance: 0.634388620316074
+          - t: 4.206363441
+            distance: 0.6360263654167818
+          - t: 4.306463005
+            distance: 0.6379794904167818
+          - t: 4.406557469
+            distance: 0.6392001935417818
+          - t: 4.506666352
+            distance: 0.6397461085753511
+          - t: 4.6067917739999995
+            distance: 0.6431727855401016
+          - t: 4.70693603
+            distance: 0.6446376292901016
+          - t: 4.80710596
+            distance: 0.6480643062548521
+          - t: 4.907314466
+            distance: 0.6490408687548521
+          - t: 5.007552674
+            distance: 0.6497732906298521
+          - t: 5.107831408
+            distance: 0.6508651206969907
+          - t: 5.208150883
+            distance: 0.6530487808312678
+          - t: 5.308508341
+            distance: 0.6542694839562678
+          - t: 5.408897245
+            distance: 0.6563410858542753
+          - t: 5.5093120330000005
+            distance: 0.6574329159214138
+          - t: 5.609744473
+            distance: 0.6585247459885524
+          - t: 5.710162832
+            distance: 0.660285269072275
+          - t: 5.810577718
+            distance: 0.6624689292065522
+          - t: 5.910972557
+            distance: 0.6649103354565522
+          - t: 6.01133784
+            distance: 0.6662914033885572
+          - t: 6.111666961
+            distance: 0.668542268734576
+          - t: 6.211975249
+            distance: 0.6711830533601599
+          - t: 6.312265067
+            distance: 0.6729435764438826
+          - t: 6.412540051
+            distance: 0.6742583139456244
+          - t: 6.512812771
+            distance: 0.6765615319954429
+          - t: 6.613099465
+            distance: 0.6793236678594529
+          - t: 6.713418997
+            distance: 0.6812919925050336
+          - t: 6.813773134
+            distance: 0.6879333355268771
+          - t: 6.914146217
+            distance: 0.6933541371165193
+          - t: 7.014522825
+            distance: 0.6962012815964242
+          - t: 7.114911949
+            distance: 0.6991411240228872
+          - t: 7.215328925
+            distance: 0.6996870390564565
+          - t: 7.315775833
+            distance: 0.7006636015564565
+          - t: 7.416271464
+            distance: 0.7006636015564565
+          - t: 7.516803182
+            distance: 0.7016702191408358
+          - t: 7.617364755
+            distance: 0.7027620492079744
+          - t: 7.7179468369999995
+            distance: 0.7030061898329744
+          - t: 7.818537163
+            distance: 0.7054475960829744
+          - t: 7.919108831
+            distance: 0.7067623335847162
+          - t: 8.019659428
+            distance: 0.7077388960847162
+          - t: 8.120178444
+            distance: 0.7097072207302969
+          - t: 8.220642716
+            distance: 0.7112704834835764
+          - t: 8.321066961
+            distance: 0.7118163985171456
+          - t: 8.421454028
+            distance: 0.7129082285842842
+          - t: 8.521812398
+            distance: 0.7137884901261454
+          - t: 8.622151155
+            distance: 0.7143344051597147
+          - t: 8.722475346
+            distance: 0.7150249391257172
+          - t: 8.822788024
+            distance: 0.7152690797507172
+          - t: 8.923091517
+            distance: 0.7152690797507172
+          - t: 9.023392123
+            distance: 0.7155132203757172
+          - t: 9.123687813
+            distance: 0.7160591354092865
+          - t: 9.223982743
+            distance: 0.717150965476425
+          - t: 9.324287399
+            distance: 0.717395106101425
+          - t: 9.424613689
+            distance: 0.7180856400674275
+          - t: 9.524975931
+            distance: 0.719177470134566
+          - t: 9.625368538
+            distance: 0.7232407799434266
+          - t: 9.725786102
+            distance: 0.7252091045890073
+          - t: 9.826220182
+            distance: 0.7257550196225766
+          - t: 9.926650976
+            distance: 0.7257550196225766
+          - t: 10.02705696
+            distance: 0.7257550196225766
+          - t: 10.127439507
+            distance: 0.7257550196225766
+          - t: 10.227803407
+            distance: 0.7257550196225766
+          - t: 10.32813649
+            distance: 0.7257550196225766
+          - t: 10.428425167
+            distance: 0.7259991602475766
+          - t: 10.528663393
+            distance: 0.7262433008725766
+          - t: 10.628858026
+            distance: 0.7264874414975766
+          - t: 10.729028377
+            distance: 0.7267315821225766
+          - t: 10.829185665
+            distance: 0.7269757227475766
+          - t: 10.929325253
+            distance: 0.7272198633725766
+        reactivity_options:
+          activation: foni
+          ttc_threshold: 2.5
+      autonomous_behavior:
+        sta_policy_behavior:
+          enabled: true
+      attributes:
+        train_probability: 0.0107421875
+        truck_probability: 0.01318359375
+        bus_probability: 0.06927490234375
+        school_bus_probability: 0.296630859375
+    - name: tracked_object_557859456
+      asset_id: V_CoupeBRZ_Static
+      variants:
+        color: Black
+      x: -3619.567138671875
+      y: -4469.3466796875
+      z: 109.91925048828125
+      heading: -3.128614890380111
+      attributes:
+        train_probability: 0.00888824462890625
+        truck_probability: 0.07403564453125
+        bus_probability: 0.368896484375
+        school_bus_probability: 0.09063720703125
+    - name: tracked_object_557877168
+      asset_id: V_Golf_Static
+      variants:
+        color: Silver
+      x: -3606.96923828125
+      y: -4469.05517578125
+      z: 110.22683715820312
+      heading: -3.1243987374495785
+      attributes:
+        train_probability: 0.0538330078125
+        truck_probability: 0.0189666748046875
+        bus_probability: 0.25
+        school_bus_probability: 0.11395263671875
+    - name: tracked_object_557855376
+      asset_id: P_Mailbox
+      x: -3568.132080078125
+      y: -4463.66748046875
+      z: 112.06459045410156
+      heading: 1.5707963267948966
+      attributes:
+        motorcycle_probability: 0.0022122750524431467
+        truck_probability: 0.008178971707820892
+        bus_probability: 0.0006949650123715401
+        school_bus_probability: 0.0023821156937628984
+        emv_probability: 0.001257374882698059
+        bike_without_rider_probability: 0.0313524454832077
+    - name: tracked_object_557889104
+      asset_id: V_Scionb_Static
+      variants:
+        color: Green
+      x: -3573.4678570699066
+      y: -4462.501216614163
+      z: 112.1722412109375
+      heading: 1.5570856666694985
+      attributes:
+        train_probability: 0.0587158203125
+        truck_probability: 0.04559326171875
+        bus_probability: 0.1829833984375
+        school_bus_probability: 0.1002197265625
+    - name: tracked_object_557916752
+      asset_id: C_Female18
+      variants:
+        color: A
+        use_matrix_animation: true
+        height_scale_factor: 1.076410489737675
+      profile:
+        coordinates:
+          - interpolation_type: linear
+            x: -3609.610611037477
+            y: -4476.736931063987
+            z: 110.15439940154079
+            heading: -2.9021435286138995
+          - interpolation_type: linear
+            x: -3609.6623027758196
+            y: -4476.754582704679
+            z: 110.1511387450619
+            heading: -2.9021435286138995
+          - interpolation_type: linear
+            x: -3609.713994514162
+            y: -4476.772234345371
+            z: 110.14787808858303
+            heading: -2.9021435286138995
+          - interpolation_type: linear
+            x: -3609.768475390625
+            y: -4476.775190625
+            z: 110.14224243164062
+            heading: 3.141592653589793
+          - interpolation_type: linear
+            x: -3609.77848515625
+            y: -4476.76786640625
+            z: 110.14224243164062
+            heading: 3.141592653589793
+          - interpolation_type: linear
+            x: -3609.8915291576045
+            y: -4476.847765995292
+            z: 110.14224243164062
+            heading: -2.858062745716661
+          - interpolation_type: linear
+            x: -3609.933284794993
+            y: -4476.860500590341
+            z: 110.13455200195312
+            heading: -2.857481284628713
+          - interpolation_type: linear
+            x: -3609.967675419402
+            y: -4476.871560117281
+            z: 110.13455200195312
+            heading: -2.860012047230262
+          - interpolation_type: linear
+            x: -3609.997207201389
+            y: -4476.880790330357
+            z: 110.12687683105469
+            heading: -2.860710027948355
+          - interpolation_type: linear
+            x: -3610.0858010358975
+            y: -4476.873797504388
+            z: 110.11918640136719
+            heading: -2.9879004310419064
+          - interpolation_type: linear
+            x: -3610.157171444846
+            y: -4476.894821611787
+            z: 110.11918640136719
+            heading: -2.9725533743975463
+          - interpolation_type: linear
+            x: -3610.185226426062
+            y: -4476.93270677936
+            z: 110.11918640136719
+            heading: -2.8583610826065002
+          - interpolation_type: linear
+            x: -3610.208659930214
+            y: -4476.975173943746
+            z: 110.11918640136719
+            heading: -2.7012752658851387
+          - interpolation_type: linear
+            x: -3610.24018261577
+            y: -4476.9913846371
+            z: 110.11918640136719
+            heading: -2.6856613167838974
+          - interpolation_type: linear
+            x: -3610.270223931282
+            y: -4477.0081857034365
+            z: 110.11149597167969
+            heading: -2.6685682191670055
+          - interpolation_type: linear
+            x: -3610.2703967356856
+            y: -4476.999306897116
+            z: 110.11149597167969
+            heading: -2.7124659619237486
+          - interpolation_type: linear
+            x: -3610.2884866997456
+            y: -4477.007199299622
+            z: 110.11149597167969
+            heading: -2.704201320620738
+          - interpolation_type: linear
+            x: -3610.334723927429
+            y: -4477.0652664465615
+            z: 110.11149597167969
+            heading: -2.5911366007587144
+          - interpolation_type: linear
+            x: -3610.408972376351
+            y: -4477.033340511981
+            z: 110.11149597167969
+            heading: -2.828820321361683
+          - interpolation_type: linear
+            x: -3610.4446281053615
+            y: -4477.037857554279
+            z: 110.11149597167969
+            heading: -2.8486205883688664
+          - interpolation_type: linear
+            x: -3610.5257272217823
+            y: -4477.026642888105
+            z: 110.11149597167969
+            heading: -2.965343753280546
+          - interpolation_type: linear
+            x: -3610.57616471234
+            y: -4477.098050226065
+            z: 110.10380554199219
+            heading: -2.782061289320465
+          - interpolation_type: linear
+            x: -3610.636163449906
+            y: -4477.0632769097965
+            z: 110.10380554199219
+            heading: -2.9355810624083225
+          - interpolation_type: linear
+            x: -3610.6851163097767
+            y: -4477.084713348404
+            z: 110.10380554199219
+            heading: -2.899671600171523
+          - interpolation_type: linear
+            x: -3610.7310265104293
+            y: -4477.139196973093
+            z: 110.10380554199219
+            heading: -2.80159709322549
+          - interpolation_type: linear
+            x: -3610.7631304057145
+            y: -4477.194923909366
+            z: 110.09611511230469
+            heading: -2.6867371039947026
+          - interpolation_type: linear
+            x: -3610.803178430863
+            y: -4477.216491178013
+            z: 110.09611511230469
+            heading: -2.6784350642034305
+          - interpolation_type: linear
+            x: -3610.812818398317
+            y: -4477.278248166826
+            z: 110.09611511230469
+            heading: -2.532712563815129
+          - interpolation_type: linear
+            x: -3610.826025762102
+            y: -4477.346061978566
+            z: 110.09611511230469
+            heading: -2.3810485499684395
+          - interpolation_type: linear
+            x: -3610.835204795612
+            y: -4477.330339560898
+            z: 110.08842468261719
+            heading: -2.462990253320076
+          - interpolation_type: linear
+            x: -3610.8283617821958
+            y: -4477.362138411828
+            z: 110.08842468261719
+            heading: -2.3518920425362073
+          - interpolation_type: linear
+            x: -3610.812842267495
+            y: -4477.431017802523
+            z: 110.08842468261719
+            heading: -2.0911522256072446
+          - interpolation_type: linear
+            x: -3610.8512055287533
+            y: -4477.49012556025
+            z: 110.08073425292969
+            heading: -2.1324652154255017
+          - interpolation_type: linear
+            x: -3610.8818859312482
+            y: -4477.488581747756
+            z: 110.08073425292969
+            heading: -2.2456962526813387
+          - interpolation_type: linear
+            x: -3610.9007341592983
+            y: -4477.4792547339775
+            z: 110.08073425292969
+            heading: -2.3455098116961652
+          - interpolation_type: linear
+            x: -3610.9483460058873
+            y: -4477.436708833711
+            z: 110.08073425292969
+            heading: -2.7209980399620584
+          - interpolation_type: linear
+            x: -3610.967723375681
+            y: -4477.454369117446
+            z: 110.08073425292969
+            heading: -2.6842970759321183
+          - interpolation_type: linear
+            x: -3610.9969655512705
+            y: -4477.48443811791
+            z: 110.08073425292969
+            heading: -2.623387031164757
+          - interpolation_type: linear
+            x: -3611.0177017524043
+            y: -4477.49796391915
+            z: 110.08073425292969
+            heading: -2.618408393087404
+          - interpolation_type: linear
+            x: -3611.0941461712946
+            y: -4477.504848478998
+            z: 110.07304382324219
+            heading: -2.759779950132618
+          - interpolation_type: linear
+            x: -3611.1740918318574
+            y: -4477.497229930251
+            z: 110.06535339355469
+            heading: -2.886317315668719
+          - interpolation_type: linear
+            x: -3611.2400527135733
+            y: -4477.506587114249
+            z: 110.06535339355469
+            heading: -2.9143018827026532
+          - interpolation_type: linear
+            x: -3611.2926608558796
+            y: -4477.479157891726
+            z: 110.06535339355469
+            heading: -3.0272185897748294
+          - interpolation_type: linear
+            x: -3611.3799928438652
+            y: -4477.489878150193
+            z: 110.06535339355469
+            heading: -3.019985692634681
+          - interpolation_type: linear
+            x: -3611.4328757404132
+            y: -4477.469749630659
+            z: 110.06535339355469
+            heading: -3.106345823280469
+          - interpolation_type: linear
+            x: -3611.46800188769
+            y: -4477.435003107285
+            z: 110.05766296386719
+            heading: 3.0708017049863083
+          - interpolation_type: linear
+            x: -3611.5494288448162
+            y: -4477.463093158349
+            z: 110.06535339355469
+            heading: -3.111310923861526
+          - interpolation_type: linear
+            x: -3611.6109909284237
+            y: -4477.503850383148
+            z: 110.06535339355469
+            heading: -3.007797758769312
+          - interpolation_type: linear
+            x: -3611.645668276621
+            y: -4477.485856346211
+            z: 110.05766296386719
+            heading: -3.0753074198146506
+          - interpolation_type: linear
+            x: -3611.686032694606
+            y: -4477.479479388825
+            z: 110.05766296386719
+            heading: -3.1069218877859757
+          - interpolation_type: linear
+            x: -3611.7308079090726
+            y: -4477.487593186162
+            z: 110.05766296386719
+            heading: -3.0864919689654142
+          - interpolation_type: linear
+            x: -3611.7588180864022
+            y: -4477.497543199392
+            z: 110.04997253417969
+            heading: -3.0527242318098953
+          - interpolation_type: linear
+            x: -3611.802084735728
+            y: -4477.462716655833
+            z: 110.04997253417969
+            heading: 3.1017064386208935
+          - interpolation_type: linear
+            x: -3611.819915360244
+            y: -4477.484654809276
+            z: 110.05766296386719
+            heading: -3.0866302530155463
+          - interpolation_type: linear
+            x: -3611.8503419890185
+            y: -4477.456919477956
+            z: 110.04997253417969
+            heading: 3.078129568089089
+          - interpolation_type: linear
+            x: -3611.860376439721
+            y: -4477.472660314162
+            z: 110.05766296386719
+            heading: -3.1223948841402316
+            facing: backward
+          - interpolation_type: linear
+            x: -3611.85563359375
+            y: -4477.47294453125
+            z: 110.04997253417969
+            heading: 3.141592653589793
+          - interpolation_type: linear
+            x: -3611.85465703125
+            y: -4477.46610859375
+            z: 110.04997253417969
+            heading: 3.141592653589793
+          - interpolation_type: linear
+            x: -3611.8512390625
+            y: -4477.462690625
+            z: 110.05766296386719
+            heading: 3.141592653589793
+          - interpolation_type: linear
+            x: -3611.857342578125
+            y: -4477.46220234375
+            z: 110.05766296386719
+            heading: 3.141592653589793
+          - interpolation_type: linear
+            x: -3611.899334765625
+            y: -4477.4265578125
+            z: 110.05766296386719
+            heading: 3.141592653589793
+          - interpolation_type: linear
+            x: -3611.899334765625
+            y: -4477.431440625
+            z: 110.05766296386719
+            heading: 3.141592653589793
+          - interpolation_type: linear
+            x: -3611.918866015625
+            y: -4477.41239765625
+            z: 110.05766296386719
+            heading: 3.141592653589793
+            facing: backward
+          - interpolation_type: linear
+            x: -3611.9117859375
+            y: -4477.4011671875
+            z: 110.05766296386719
+            heading: 3.141592653589793
+          - interpolation_type: linear
+            x: -3611.92008671875
+            y: -4477.40360859375
+            z: 110.05766296386719
+            heading: 3.141592653589793
+          - interpolation_type: linear
+            x: -3611.92301640625
+            y: -4477.40067890625
+            z: 110.05766296386719
+            heading: 3.141592653589793
+          - interpolation_type: linear
+            x: -3611.927166796875
+            y: -4477.39774921875
+            z: 110.05766296386719
+            heading: 3.141592653589793
+          - interpolation_type: linear
+            x: -3611.932049609375
+            y: -4477.3953078125
+            z: 110.05766296386719
+            heading: 3.141592653589793
+          - interpolation_type: linear
+            x: -3611.922283984375
+            y: -4477.41337421875
+            z: 110.05766296386719
+            heading: 3.141592653589793
+          - interpolation_type: linear
+            x: -3611.923748828125
+            y: -4477.4138625
+            z: 110.05766296386719
+            heading: 3.141592653589793
+          - interpolation_type: linear
+            x: -3611.92594609375
+            y: -4477.4138625
+            z: 110.05766296386719
+            heading: 3.141592653589793
+          - interpolation_type: linear
+            x: -3611.9283875
+            y: -4477.4138625
+            z: 110.05766296386719
+            heading: 3.141592653589793
+          - interpolation_type: linear
+            x: -3611.930584765625
+            y: -4477.4138625
+            z: 110.05766296386719
+            heading: 3.141592653589793
+        distances:
+          - t: 0
+            distance: 0
+          - t: 0.099910974
+            distance: 0.054719723250884755
+          - t: 0.199821949
+            distance: 0.10943944650176866
+          - t: 0.299732841
+            distance: 0.16429075568025678
+          - t: 0.39966605
+            distance: 0.17669396446529637
+          - t: 0.499574398
+            distance: 0.3151240571887077
+          - t: 0.599483614
+            distance: 0.35945063920855497
+          - t: 0.69937681
+            distance: 0.39557581302629635
+          - t: 0.799254911
+            distance: 0.42745419487151515
+          - t: 0.89913448
+            distance: 0.516655707396552
+          - t: 0.999018999
+            distance: 0.5910583173333511
+          - t: 1.098931754
+            distance: 0.6382003144599021
+          - t: 1.198874671
+            distance: 0.6867038109092939
+          - t: 1.2988427
+            distance: 0.7221504790701345
+          - t: 1.398850599
+            distance: 0.757419433924307
+          - t: 1.498897229
+            distance: 0.7662999216944821
+          - t: 1.598968611
+            distance: 0.7860366087772197
+          - t: 1.699044855
+            distance: 0.8602637923258601
+          - t: 1.799117713
+            distance: 0.9410851847053459
+          - t: 1.899168211
+            distance: 0.9770258953605602
+          - t: 1.999199472
+            distance: 1.0588967413414445
+          - t: 2.09919554
+            distance: 1.1466582994242716
+          - t: 2.199190608
+            distance: 1.216005484182053
+          - t: 2.299137526
+            distance: 1.2694461371507064
+          - t: 2.399042777
+            distance: 1.3406936766395519
+          - t: 2.498932705
+            distance: 1.4054647676260974
+          - t: 2.598812524
+            distance: 1.4509509347015457
+          - t: 2.698662374
+            distance: 1.513455771633082
+          - t: 2.798498637
+            distance: 1.5825437410686662
+          - t: 2.898358194
+            distance: 1.602307136077186
+          - t: 2.998221366
+            distance: 1.6348339519842934
+          - t: 3.098085617
+            distance: 1.7054400834392085
+          - t: 3.197971345
+            distance: 1.7763245637343597
+          - t: 3.297900812
+            distance: 1.8070437833576753
+          - t: 3.397858344
+            distance: 1.8280734977316937
+          - t: 3.497852753
+            distance: 1.8919252131752544
+          - t: 3.597874149
+            distance: 1.9181429186757704
+          - t: 3.697919482
+            distance: 1.960086328433648
+          - t: 3.79799015
+            distance: 1.9848438997328648
+          - t: 3.898078467
+            distance: 2.061982016462273
+          - t: 3.998179243
+            distance: 2.1426572520467144
+          - t: 4.098255871
+            distance: 2.209278530998052
+          - t: 4.198325597
+            distance: 2.2686079409491393
+          - t: 4.298357979
+            distance: 2.356595440442746
+          - t: 4.398352197
+            distance: 2.4131795198816963
+          - t: 4.498305617
+            distance: 2.4631826179642133
+          - t: 4.598213023
+            distance: 2.54966118770451
+          - t: 4.698088927
+            distance: 2.623492356674341
+          - t: 4.7979505719999995
+            distance: 2.6633100230057334
+          - t: 4.897801161
+            distance: 2.704175067050487
+          - t: 4.997652061
+            distance: 2.749679501315004
+          - t: 5.097528818
+            distance: 2.7803831738330387
+          - t: 5.197443268
+            distance: 2.835924969627878
+          - t: 5.297355236
+            distance: 2.865222690630063
+          - t: 5.397273019
+            distance: 2.9071055158786923
+          - t: 5.497192117
+            distance: 2.927294791104322
+          - t: 5.597135015
+            distance: 2.9363345961927765
+          - t: 5.697108921
+            distance: 2.943239935852801
+          - t: 5.797124122
+            distance: 2.9523233124017687
+          - t: 5.89717292
+            distance: 2.9584463281263704
+          - t: 5.9972586230000005
+            distance: 3.0135269637351523
+          - t: 6.097352233
+            distance: 3.0184097762351523
+          - t: 6.197460613
+            distance: 3.0456880530387918
+          - t: 6.2975487359999995
+            distance: 3.0589640062852004
+          - t: 6.39761161
+            distance: 3.0676163720794727
+          - t: 6.497649323
+            distance: 3.0717595758754874
+          - t: 6.59763735
+            distance: 3.0768398131915724
+          - t: 6.697586974
+            distance: 3.0822989635272653
+          - t: 6.797499421
+            distance: 3.102835819821028
+          - t: 6.897399405
+            distance: 3.104379900709782
+          - t: 6.997288078
+            distance: 3.106577166334782
+          - t: 7.097169127
+            distance: 3.109018572584782
+          - t: 7.197049644
+            distance: 3.111215838209782
+        reactivity_options:
+          activation: foni
+          ttc_threshold: 2.5
+      autonomous_behavior:
+        sta_policy_behavior:
+          enabled: true
+      anim_state:
+        - t: 0
+          state: navigation
+      attributes:
+        motorcycle_probability: 0
+        truck_probability: 0
+        bus_probability: 0
+        school_bus_probability: 0
+        emv_probability: 0
+    - name: tracked_object_557922112
+      asset_id: V_iMiEV_Static
+      variants:
+        color: BodySilver
+      x: -3640.279541015625
+      y: -4473.908203125
+      z: 109.70394897460938
+      heading: 0.00955689486001184
+      attributes:
+        train_probability: 0.0655517578125
+        truck_probability: 0.488525390625
+        bus_probability: 0.4462890625
+        school_bus_probability: 0.01415252685546875
+    - name: tracked_object_557927952
+      asset_id: V_PriusC_Static
+      variants:
+        color: White
+      x: -3563.37548828125
+      y: -4448.36572265625
+      z: 112.19529724121094
+      heading: -1.5532305243766356
+      attributes:
+        train_probability: 0.01148223876953125
+        truck_probability: 0.010772705078125
+        bus_probability: 0.08990478515625
+        school_bus_probability: 0.2802734375
+    - name: tracked_object_557932160
+      asset_id: V_Countach_Static
+      variants:
+        color: White
+      x: -3663.1259765625
+      y: -4469.8603515625
+      z: 109.33486938476562
+      heading: -3.1362517187043824
+      attributes:
+        train_probability: 0.003826141357421875
+        truck_probability: 0.01537322998046875
+        bus_probability: 0.1265869140625
+        school_bus_probability: 0.053131103515625
+    - name: tracked_object_557934400
+      asset_id: V_Crosstrek_Static
+      variants:
+        color: YellowGreen
+      x: -3554.96435546875
+      y: -4453.99169921875
+      z: 112.10302734375
+      heading: 1.646479915932913
+      attributes:
+        train_probability: 0.0199737548828125
+        truck_probability: 0.01025390625
+        bus_probability: 0.026397705078125
+        school_bus_probability: 0.06298828125
+    - name: tracked_object_557943552
+      asset_id: V_Odyssey_Movable
+      variants:
+        color: Black
+      profile:
+        coordinates:
+          - interpolation_type: linear
+            x: -3549.697265625
+            y: -4449.63818359375
+            z: 112.62591552734375
+            heading: 0.02867682291156374
+          - interpolation_type: linear
+            x: -3549.60302734375
+            y: -4449.62109375
+            z: 112.63359069824219
+            heading: 0.05459979089250953
+          - interpolation_type: linear
+            x: -3549.39599609375
+            y: -4449.59912109375
+            z: 112.63359069824219
+            heading: 0.019309332694672818
+          - interpolation_type: linear
+            x: -3549.218017578125
+            y: -4449.60009765625
+            z: 112.66435241699219
+            heading: 0.022461836966033495
+          - interpolation_type: linear
+            x: -3549.19677734375
+            y: -4449.609375
+            z: 112.68742370605469
+            heading: 0.027868050965888125
+          - interpolation_type: linear
+            x: -3549.19677734375
+            y: -4449.6083984375
+            z: 112.67973327636719
+            heading: -0.02364908564782082
+          - interpolation_type: linear
+            x: -3549.134033203125
+            y: -4449.6103515625
+            z: 112.67973327636719
+            heading: -0.011282402909750444
+            facing: backward
+          - interpolation_type: linear
+            x: -3549.1669921875
+            y: -4449.57763671875
+            z: 112.68742370605469
+            heading: -0.023268940814801055
+            facing: backward
+          - interpolation_type: linear
+            x: -3549.209228515625
+            y: -4449.5732421875
+            z: 112.68742370605469
+            heading: -0.012567123523851535
+            facing: backward
+          - interpolation_type: linear
+            x: -3549.278076171875
+            y: -4449.60693359375
+            z: 112.68742370605469
+            heading: 0.004202058767718661
+          - interpolation_type: linear
+            x: -3549.22314453125
+            y: -4449.603515625
+            z: 112.66435241699219
+            heading: 0.028530011226877316
+            facing: backward
+          - interpolation_type: linear
+            x: -3549.261962890625
+            y: -4449.587890625
+            z: 112.67973327636719
+            heading: 0.013058842096153205
+            facing: backward
+          - interpolation_type: linear
+            x: -3549.30029296875
+            y: -4449.5927734375
+            z: 112.67204284667969
+            heading: 0.01073282466324411
+            facing: backward
+          - interpolation_type: linear
+            x: -3549.335205078125
+            y: -4449.59130859375
+            z: 112.67204284667969
+            heading: 0.005427633013573257
+            facing: backward
+          - interpolation_type: linear
+            x: -3549.36865234375
+            y: -4449.58935546875
+            z: 112.65666198730469
+            heading: 0.0027173115882082903
+            facing: backward
+          - interpolation_type: linear
+            x: -3549.541748046875
+            y: -4449.5810546875
+            z: 112.65666198730469
+            heading: -0.011237836838216247
+            facing: backward
+          - interpolation_type: linear
+            x: -3549.9462890625
+            y: -4449.703125
+            z: 112.64128112792969
+            heading: 0.0119065052610372
+            facing: backward
+          - interpolation_type: linear
+            x: -3550.02197265625
+            y: -4449.62841796875
+            z: 112.58746337890625
+            heading: 0.025386456310404266
+          - interpolation_type: linear
+            x: -3550.012939453125
+            y: -4449.625
+            z: 112.57208251953125
+            heading: 0.03268370352480244
+          - interpolation_type: linear
+            x: -3550.00390625
+            y: -4449.61669921875
+            z: 112.57208251953125
+            heading: 0.028307923994553626
+            facing: backward
+          - interpolation_type: linear
+            x: -3550.025146484375
+            y: -4449.60009765625
+            z: 112.57208251953125
+            heading: 0.04650848936383278
+          - interpolation_type: linear
+            x: -3550.0322265625
+            y: -4449.580078125
+            z: 112.57208251953125
+            heading: 0.04197882388082431
+            facing: backward
+          - interpolation_type: linear
+            x: -3550.047119140625
+            y: -4449.5908203125
+            z: 112.57208251953125
+            heading: 0.053688241499525
+            facing: backward
+          - interpolation_type: linear
+            x: -3550.057861328125
+            y: -4449.59814453125
+            z: 112.57208251953125
+            heading: 0.049518403680461905
+          - interpolation_type: linear
+            x: -3550.057861328125
+            y: -4449.60107421875
+            z: 112.57208251953125
+            heading: 0.04652234433516878
+            facing: backward
+          - interpolation_type: linear
+            x: -3550.060546875
+            y: -4449.60107421875
+            z: 112.57208251953125
+            heading: 0.040113428175682316
+          - interpolation_type: linear
+            x: -3550.060791015625
+            y: -4449.603515625
+            z: 112.57208251953125
+            heading: 0.04194324344123591
+          - interpolation_type: linear
+            x: -3550.06103515625
+            y: -4449.6044921875
+            z: 112.57208251953125
+            heading: 0.03882046890596147
+            facing: backward
+          - interpolation_type: linear
+            x: -3550.06591796875
+            y: -4449.6044921875
+            z: 112.57208251953125
+            heading: 0.035753501833382106
+          - interpolation_type: linear
+            x: -3550.066650390625
+            y: -4449.6083984375
+            z: 112.57208251953125
+            heading: 0.03444724011569101
+            facing: backward
+          - interpolation_type: linear
+            x: -3550.0673828125
+            y: -4449.609375
+            z: 112.57208251953125
+            heading: 0.03669256043077596
+          - interpolation_type: linear
+            x: -3550.067626953125
+            y: -4449.6103515625
+            z: 112.57208251953125
+            heading: 0.036548189893804935
+          - interpolation_type: linear
+            x: -3550.06689453125
+            y: -4449.60986328125
+            z: 112.57208251953125
+            heading: 0.035024348339622424
+          - interpolation_type: linear
+            x: -3550.065185546875
+            y: -4449.6103515625
+            z: 112.57208251953125
+            heading: 0.039820569789362104
+          - interpolation_type: linear
+            x: -3550.062255859375
+            y: -4449.60791015625
+            z: 112.57208251953125
+            heading: 0.031593142581885385
+          - interpolation_type: linear
+            x: -3550.06005859375
+            y: -4449.60693359375
+            z: 112.57208251953125
+            heading: 0.030951234482497807
+          - interpolation_type: linear
+            x: -3550.057373046875
+            y: -4449.6064453125
+            z: 112.57208251953125
+            heading: 0.027238296147237506
+            facing: backward
+          - interpolation_type: linear
+            x: -3550.05908203125
+            y: -4449.6064453125
+            z: 112.57208251953125
+            heading: 0.025850121710860655
+          - interpolation_type: linear
+            x: -3550.058837890625
+            y: -4449.6083984375
+            z: 112.57208251953125
+            heading: 0.029615169875218065
+          - interpolation_type: linear
+            x: -3550.058349609375
+            y: -4449.609375
+            z: 112.57208251953125
+            heading: 0.03033329430760912
+            facing: backward
+          - interpolation_type: linear
+            x: -3550.06201171875
+            y: -4449.60986328125
+            z: 112.57208251953125
+            heading: 0.023624178676193267
+            facing: backward
+          - interpolation_type: linear
+            x: -3550.064453125
+            y: -4449.6123046875
+            z: 112.57208251953125
+            heading: 0.02262550461674895
+          - interpolation_type: linear
+            x: -3550.0634765625
+            y: -4449.61279296875
+            z: 112.57208251953125
+            heading: 0.02080027588081102
+          - interpolation_type: linear
+            x: -3550.059326171875
+            y: -4449.61328125
+            z: 112.57208251953125
+            heading: 0.025742820669084843
+          - interpolation_type: linear
+            x: -3550.056640625
+            y: -4449.61279296875
+            z: 112.57208251953125
+            heading: 0.029917024745403704
+          - interpolation_type: linear
+            x: -3550.055419921875
+            y: -4449.61474609375
+            z: 112.57208251953125
+            heading: 0.0326638555232881
+          - interpolation_type: linear
+            x: -3550.05126953125
+            y: -4449.61572265625
+            z: 112.57208251953125
+            heading: 0.030303707522704833
+          - interpolation_type: linear
+            x: -3550.0478515625
+            y: -4449.61669921875
+            z: 112.57208251953125
+            heading: 0.031678903510203416
+          - interpolation_type: linear
+            x: -3550.048095703125
+            y: -4449.6142578125
+            z: 112.57208251953125
+            heading: 0.039357126372469686
+          - interpolation_type: linear
+            x: -3550.04541015625
+            y: -4449.6142578125
+            z: 112.57208251953125
+            heading: 0.03751177731591594
+          - interpolation_type: linear
+            x: -3550.042236328125
+            y: -4449.61376953125
+            z: 112.57208251953125
+            heading: 0.04225520553439122
+          - interpolation_type: linear
+            x: -3550.0400390625
+            y: -4449.61376953125
+            z: 112.57208251953125
+            heading: 0.03918373365523653
+          - interpolation_type: linear
+            x: -3550.0380859375
+            y: -4449.611328125
+            z: 112.57208251953125
+            heading: 0.03831077494052737
+          - interpolation_type: linear
+            x: -3550.034912109375
+            y: -4449.611328125
+            z: 112.57208251953125
+            heading: 0.03612893618338964
+          - interpolation_type: linear
+            x: -3550.033935546875
+            y: -4449.61083984375
+            z: 112.57208251953125
+            heading: 0.03442439466992387
+          - interpolation_type: linear
+            x: -3550.03369140625
+            y: -4449.60986328125
+            z: 112.57208251953125
+            heading: 0.03578664483422812
+            facing: backward
+          - interpolation_type: linear
+            x: -3550.048583984375
+            y: -4449.6005859375
+            z: 112.57208251953125
+            heading: 0.03411037627955649
+            facing: backward
+          - interpolation_type: linear
+            x: -3550.0576171875
+            y: -4449.59619140625
+            z: 112.57208251953125
+            heading: 0.0328112214319889
+            facing: backward
+        distances:
+          - t: 0
+            distance: 0
+          - t: 0.100476746
+            distance: 0.09608238475742438
+          - t: 0.201013
+            distance: 0.30427637146031444
+          - t: 0.301509018
+            distance: 0.4848963843017736
+          - t: 0.401874967
+            distance: 0.517599611090059
+          - t: 0.502210527
+            distance: 0.5253517967879631
+          - t: 0.602575702
+            distance: 0.5881263288852667
+          - t: 0.702836323
+            distance: 0.6351975341109329
+          - t: 0.803054265
+            distance: 0.6776618640643173
+          - t: 0.90323227
+            distance: 0.7543111342905934
+          - t: 1.003488496
+            distance: 0.813989036659356
+          - t: 1.103654697
+            distance: 0.8585712807109981
+          - t: 1.203812087
+            distance: 0.897968989473782
+          - t: 1.303981711
+            distance: 0.9329118163231351
+          - t: 1.404164784
+            distance: 0.9697778591019371
+          - t: 1.504257703
+            distance: 1.1430724793580158
+          - t: 1.604200772
+            distance: 1.565909522853341
+          - t: 1.7044177029999998
+            distance: 1.6850963383618243
+          - t: 1.804717497
+            distance: 1.7032581693319389
+          - t: 1.905051116
+            distance: 1.7155260839085025
+          - t: 2.005397206
+            distance: 1.742484560010581
+          - t: 2.105783677
+            distance: 1.763719181215722
+          - t: 2.206190596
+            distance: 1.7820817375599347
+          - t: 2.30661658
+            distance: 1.795083228727605
+          - t: 2.407058443
+            distance: 1.798012916227605
+          - t: 2.507475381
+            distance: 1.800698463102605
+          - t: 2.607883066
+            distance: 1.8031520460179178
+          - t: 2.708260937
+            distance: 1.804158663602297
+          - t: 2.808593283
+            distance: 1.809041476102297
+          - t: 2.90888279
+            distance: 1.8130157975368917
+          - t: 3.009139714
+            distance: 1.8142365006618917
+          - t: 3.109367362
+            distance: 1.815243118246271
+          - t: 3.209568981
+            distance: 1.816219680746271
+          - t: 3.309756959
+            distance: 1.8178574258469788
+          - t: 3.409949356
+            distance: 1.8196347964254165
+          - t: 3.51016247
+            distance: 1.8234483948999802
+          - t: 3.610400843
+            distance: 1.8258529011992468
+          - t: 3.71064629
+            distance: 1.8285824763670933
+          - t: 3.810881006
+            distance: 1.8292730103330956
+          - t: 3.911119364
+            distance: 1.8315238756791143
+          - t: 4.011377327
+            distance: 1.8317680163041143
+          - t: 4.111658043
+            distance: 1.8324585502701167
+          - t: 4.211979001
+            distance: 1.833004465303686
+          - t: 4.312329789
+            distance: 1.834225168428686
+          - t: 4.412702521
+            distance: 1.8353169984958246
+          - t: 4.513090978
+            distance: 1.8358052797458246
+          - t: 4.613482487
+            distance: 1.8360494203708246
+          - t: 4.713851425
+            distance: 1.8362935609958246
+          - t: 4.814196032
+            distance: 1.836839476029394
+          - t: 4.914507973
+            distance: 1.8373853910629634
+          - t: 5.014763217
+            distance: 1.8373853910629634
+          - t: 5.11497554
+            distance: 1.8411754727759175
+          - t: 5.215153987
+            distance: 1.8420557343177788
+          - t: 5.315306331
+            distance: 1.8426016493513482
+          - t: 5.415441295
+            distance: 1.8430899306013482
+          - t: 5.515564124
+            distance: 1.8438223524763482
+          - t: 5.615679803
+            distance: 1.8450430556013482
+          - t: 5.715789962
+            distance: 1.8452871962263482
+          - t: 5.815901977
+            distance: 1.84660193372809
+          - t: 5.916015632
+            distance: 1.8507809480758983
+          - t: 6.016133424
+            distance: 1.8535105232437448
+          - t: 6.116265592
+            distance: 1.8558137412935634
+          - t: 6.216424358
+            distance: 1.8600774740075705
+          - t: 6.316624078
+            distance: 1.8636322151644458
+          - t: 6.416855707
+            distance: 1.8660857980797585
+          - t: 6.517117432
+            distance: 1.8663299387047585
+          - t: 6.61740186
+            distance: 1.8670623605797585
+          - t: 6.717689643
+            distance: 1.8692596262047585
+          - t: 6.817957262
+            distance: 1.872470794768715
+          - t: 6.918207241
+            distance: 1.874668060393715
+          - t: 7.018442367
+            distance: 1.874912201018715
+          - t: 7.118653681
+            distance: 1.875888763518715
+          - t: 7.218826034
+            distance: 1.8765792974847173
+          - t: 7.318953144
+            distance: 1.878547622130298
+          - t: 7.4190429
+            distance: 1.878547622130298
+          - t: 7.519114096
+            distance: 1.879035903380298
+          - t: 7.619178095
+            distance: 1.880012465880298
+          - t: 7.719229417
+            distance: 1.881721450255298
+          - t: 7.819272806
+            distance: 1.8828132803224364
+          - t: 7.919306561
+            distance: 1.8833015615724364
+          - t: 8.019341718
+            distance: 1.8843081791568157
+          - t: 8.119378287
+            distance: 1.8850406010318157
+          - t: 8.219408538
+            distance: 1.8852847416568157
+          - t: 8.319432326
+            distance: 1.8855288822818157
+          - t: 8.419453197
+            distance: 1.8857730229068157
+          - t: 8.519489795
+            distance: 1.8860171635318157
+          - t: 8.619542504
+            distance: 1.8862613041568157
+          - t: 8.719619547
+            distance: 1.9021829420822849
+          - t: 8.819745009
+            distance: 1.9026712233322849
+          - t: 8.919897672
+            distance: 1.9122799482610713
+        reactivity_options:
+          activation: foni
+          ttc_threshold: 2.5
+      autonomous_behavior:
+        sta_policy_behavior:
+          enabled: true
+      attributes:
+        train_probability: 0.0091094970703125
+        truck_probability: 0.0115814208984375
+        bus_probability: 0.0718994140625
+        school_bus_probability: 0.254638671875
+    - name: tracked_object_557948288
+      asset_id: V_Explorer_Movable
+      variants:
+        color: Brown
+      profile:
+        coordinates:
+          - interpolation_type: linear
+            x: -3602.53076171875
+            y: -4462.4521484375
+            z: 111.10342407226562
+            heading: -1.5011847475656381
+          - interpolation_type: linear
+            x: -3602.542236328125
+            y: -4462.4599609375
+            z: 111.08804321289062
+            heading: -1.5402909428389562
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.52880859375
+            y: -4462.43408203125
+            z: 111.09573364257812
+            heading: -1.5458265347281852
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.505126953125
+            y: -4462.4189453125
+            z: 111.09573364257812
+            heading: -1.587507318355472
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.51123046875
+            y: -4462.3916015625
+            z: 111.09573364257812
+            heading: -1.5539492034571787
+          - interpolation_type: linear
+            x: -3602.509033203125
+            y: -4462.39404296875
+            z: 111.10342407226562
+            heading: -1.5331120914084282
+          - interpolation_type: linear
+            x: -3602.50341796875
+            y: -4462.4013671875
+            z: 111.10342407226562
+            heading: -1.5406412993792975
+          - interpolation_type: linear
+            x: -3602.498779296875
+            y: -4462.4208984375
+            z: 111.09573364257812
+            heading: -1.5430374482698455
+          - interpolation_type: linear
+            x: -3602.501220703125
+            y: -4462.42919921875
+            z: 111.10342407226562
+            heading: -1.5396653267461775
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.51513671875
+            y: -4462.4189453125
+            z: 111.09573364257812
+            heading: -1.5469363791394586
+          - interpolation_type: linear
+            x: -3602.5126953125
+            y: -4462.42724609375
+            z: 111.09573364257812
+            heading: -1.543969254726742
+          - interpolation_type: linear
+            x: -3602.51806640625
+            y: -4462.42529296875
+            z: 111.09573364257812
+            heading: -1.5411206746068637
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.515869140625
+            y: -4462.421875
+            z: 111.09573364257812
+            heading: -1.5470283271305896
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.517333984375
+            y: -4462.41650390625
+            z: 111.09573364257812
+            heading: -1.551909630818052
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.52294921875
+            y: -4462.40869140625
+            z: 111.09573364257812
+            heading: -1.5526496619356496
+          - interpolation_type: linear
+            x: -3602.528564453125
+            y: -4462.41796875
+            z: 111.09573364257812
+            heading: -1.5568596553254628
+          - interpolation_type: linear
+            x: -3602.5283203125
+            y: -4462.42138671875
+            z: 111.09573364257812
+            heading: -1.557119746167849
+          - interpolation_type: linear
+            x: -3602.528076171875
+            y: -4462.42431640625
+            z: 111.09573364257812
+            heading: -1.5522815192916144
+          - interpolation_type: linear
+            x: -3602.527099609375
+            y: -4462.423828125
+            z: 111.09573364257812
+            heading: -1.5496445653025088
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.52880859375
+            y: -4462.419921875
+            z: 111.09573364257812
+            heading: -1.5505937782445836
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.5322265625
+            y: -4462.41748046875
+            z: 111.09573364257812
+            heading: -1.5540076257926883
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.53173828125
+            y: -4462.4130859375
+            z: 111.09573364257812
+            heading: -1.553643793638102
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.533203125
+            y: -4462.41015625
+            z: 111.09573364257812
+            heading: -1.5578958988723763
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.534912109375
+            y: -4462.40234375
+            z: 111.09573364257812
+            heading: -1.556200344815429
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.538330078125
+            y: -4462.39013671875
+            z: 111.09573364257812
+            heading: -1.5518058915056083
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.541259765625
+            y: -4462.3837890625
+            z: 111.10342407226562
+            heading: -1.561600075230525
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.5439453125
+            y: -4462.37548828125
+            z: 111.10342407226562
+            heading: -1.5800274066023983
+          - interpolation_type: linear
+            x: -3602.54150390625
+            y: -4462.37451171875
+            z: 111.10342407226562
+            heading: -1.5682687059600018
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.540283203125
+            y: -4462.37255859375
+            z: 111.10342407226562
+            heading: -1.5580239777797429
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.5400390625
+            y: -4462.3720703125
+            z: 111.10342407226562
+            heading: -1.5662658246942298
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.54052734375
+            y: -4462.3671875
+            z: 111.10342407226562
+            heading: -1.5635216410016797
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.539794921875
+            y: -4462.36181640625
+            z: 111.10342407226562
+            heading: -1.5601687371376263
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.5439453125
+            y: -4462.34375
+            z: 111.10342407226562
+            heading: -1.5619448037125097
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.55078125
+            y: -4462.333984375
+            z: 111.10342407226562
+            heading: -1.558241000718879
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.55322265625
+            y: -4462.330078125
+            z: 111.10342407226562
+            heading: -1.5567379415379503
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.554443359375
+            y: -4462.32861328125
+            z: 111.10342407226562
+            heading: -1.5596614771802206
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.5556640625
+            y: -4462.32373046875
+            z: 111.10342407226562
+            heading: -1.5589194071577668
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.5576171875
+            y: -4462.31396484375
+            z: 111.10342407226562
+            heading: -1.5633066768643764
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.567626953125
+            y: -4462.30322265625
+            z: 111.10342407226562
+            heading: -1.562033185491432
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.575439453125
+            y: -4462.29150390625
+            z: 111.10342407226562
+            heading: -1.56427514125385
+          - interpolation_type: linear
+            x: -3602.574951171875
+            y: -4462.29248046875
+            z: 111.10342407226562
+            heading: -1.5652926692407818
+          - interpolation_type: linear
+            x: -3602.572265625
+            y: -4462.30322265625
+            z: 111.10342407226562
+            heading: -1.5678936316435428
+          - interpolation_type: linear
+            x: -3602.57080078125
+            y: -4462.30322265625
+            z: 111.10342407226562
+            heading: -1.5639178643721086
+          - interpolation_type: linear
+            x: -3602.57177734375
+            y: -4462.30615234375
+            z: 111.10342407226562
+            heading: -1.5669090428794512
+          - interpolation_type: linear
+            x: -3602.573974609375
+            y: -4462.31591796875
+            z: 111.10342407226562
+            heading: -1.5624061884758031
+          - interpolation_type: linear
+            x: -3602.57373046875
+            y: -4462.3232421875
+            z: 111.10342407226562
+            heading: -1.566378925975271
+          - interpolation_type: linear
+            x: -3602.571044921875
+            y: -4462.3271484375
+            z: 111.10342407226562
+            heading: -1.5655194328091049
+          - interpolation_type: linear
+            x: -3602.5703125
+            y: -4462.32861328125
+            z: 111.10342407226562
+            heading: -1.56637986261342
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.570556640625
+            y: -4462.326171875
+            z: 111.10342407226562
+            heading: -1.5655477076954525
+          - interpolation_type: linear
+            x: -3602.568359375
+            y: -4462.32568359375
+            z: 111.10342407226562
+            heading: -1.5724039516334551
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.570556640625
+            y: -4462.3193359375
+            z: 111.10342407226562
+            heading: -1.5713393832437679
+          - interpolation_type: linear
+            x: -3602.566650390625
+            y: -4462.3173828125
+            z: 111.10342407226562
+            heading: -1.570839209639962
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.564697265625
+            y: -4462.31298828125
+            z: 111.10342407226562
+            heading: -1.5736366656841647
+          - interpolation_type: linear
+            x: -3602.57080078125
+            y: -4462.31103515625
+            z: 111.10342407226562
+            heading: -1.5666304081824483
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.572021484375
+            y: -4462.30810546875
+            z: 111.10342407226562
+            heading: -1.5661804369560508
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.572021484375
+            y: -4462.3037109375
+            z: 111.10342407226562
+            heading: -1.5670721418262734
+          - interpolation_type: linear
+            x: -3602.568359375
+            y: -4462.30322265625
+            z: 111.10342407226562
+            heading: -1.5668884449749556
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.568359375
+            y: -4462.30126953125
+            z: 111.10342407226562
+            heading: -1.5743972980168628
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.569580078125
+            y: -4462.29833984375
+            z: 111.10342407226562
+            heading: -1.5706270425521345
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.57080078125
+            y: -4462.294921875
+            z: 111.10342407226562
+            heading: -1.569791300547957
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.572021484375
+            y: -4462.29296875
+            z: 111.10342407226562
+            heading: -1.5671698889737484
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.573486328125
+            y: -4462.291015625
+            z: 111.10342407226562
+            heading: -1.5657778419859685
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.57373046875
+            y: -4462.28369140625
+            z: 111.10342407226562
+            heading: -1.564514261965384
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.576416015625
+            y: -4462.271484375
+            z: 111.10342407226562
+            heading: -1.5686847912609216
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.57421875
+            y: -4462.263671875
+            z: 111.10342407226562
+            heading: -1.5703673120074442
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.573486328125
+            y: -4462.24951171875
+            z: 111.10342407226562
+            heading: -1.5689647411834506
+          - interpolation_type: linear
+            x: -3602.5712890625
+            y: -4462.24853515625
+            z: 111.10342407226562
+            heading: -1.569025974480421
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.57177734375
+            y: -4462.2470703125
+            z: 111.10342407226562
+            heading: -1.5719374906362737
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.5693359375
+            y: -4462.24560546875
+            z: 111.10342407226562
+            heading: -1.5716734547439755
+          - interpolation_type: linear
+            x: -3602.5703125
+            y: -4462.25
+            z: 111.10342407226562
+            heading: -1.5677202326993886
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.567626953125
+            y: -4462.24267578125
+            z: 111.10342407226562
+            heading: -1.5669494899095637
+          - interpolation_type: linear
+            x: -3602.566650390625
+            y: -4462.244140625
+            z: 111.10342407226562
+            heading: -1.5671275693055302
+          - interpolation_type: linear
+            x: -3602.5654296875
+            y: -4462.2490234375
+            z: 111.10342407226562
+            heading: -1.5702313609270577
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.5654296875
+            y: -4462.24755859375
+            z: 111.10342407226562
+            heading: -1.5675430885591277
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.5634765625
+            y: -4462.24560546875
+            z: 111.10342407226562
+            heading: -1.5666699190138267
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.563720703125
+            y: -4462.24365234375
+            z: 111.10342407226562
+            heading: -1.5621730616677667
+          - interpolation_type: linear
+            x: -3602.56396484375
+            y: -4462.24462890625
+            z: 111.10342407226562
+            heading: -1.5649243434170217
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.5634765625
+            y: -4462.24365234375
+            z: 111.10342407226562
+            heading: -1.5661710742796757
+          - interpolation_type: linear
+            x: -3602.56494140625
+            y: -4462.24462890625
+            z: 111.10342407226562
+            heading: -1.5655845965714201
+          - interpolation_type: linear
+            x: -3602.56494140625
+            y: -4462.24658203125
+            z: 111.10342407226562
+            heading: -1.5615512030713656
+          - interpolation_type: linear
+            x: -3602.566650390625
+            y: -4462.248046875
+            z: 111.10342407226562
+            heading: -1.5647344699118695
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.566650390625
+            y: -4462.24755859375
+            z: 111.10342407226562
+            heading: -1.5644163287019766
+          - interpolation_type: linear
+            x: -3602.566650390625
+            y: -4462.25
+            z: 111.10342407226562
+            heading: -1.564426814629505
+          - interpolation_type: linear
+            x: -3602.567626953125
+            y: -4462.251953125
+            z: 111.10342407226562
+            heading: -1.5645597640091709
+          - interpolation_type: linear
+            x: -3602.567138671875
+            y: -4462.2529296875
+            z: 111.10342407226562
+            heading: -1.559049732619148
+          - interpolation_type: linear
+            x: -3602.5673828125
+            y: -4462.25439453125
+            z: 111.10342407226562
+            heading: -1.5659892509116171
+          - interpolation_type: linear
+            x: -3602.5673828125
+            y: -4462.2568359375
+            z: 111.10342407226562
+            heading: -1.5629960273679229
+          - interpolation_type: linear
+            x: -3602.567138671875
+            y: -4462.2578125
+            z: 111.10342407226562
+            heading: -1.5618264612723478
+          - interpolation_type: linear
+            x: -3602.567626953125
+            y: -4462.26123046875
+            z: 111.10342407226562
+            heading: -1.559189794157862
+          - interpolation_type: linear
+            x: -3602.56884765625
+            y: -4462.26904296875
+            z: 111.10342407226562
+            heading: -1.5593191839410514
+          - interpolation_type: linear
+            x: -3602.568115234375
+            y: -4462.2724609375
+            z: 111.10342407226562
+            heading: -1.5643416150885454
+          - interpolation_type: linear
+            x: -3602.56787109375
+            y: -4462.27490234375
+            z: 111.10342407226562
+            heading: -1.5596970542815634
+          - interpolation_type: linear
+            x: -3602.567626953125
+            y: -4462.27587890625
+            z: 111.10342407226562
+            heading: -1.557458668783871
+          - interpolation_type: linear
+            x: -3602.56689453125
+            y: -4462.27734375
+            z: 111.10342407226562
+            heading: -1.5537726237489122
+          - interpolation_type: linear
+            x: -3602.567138671875
+            y: -4462.2802734375
+            z: 111.10342407226562
+            heading: -1.5516251892945359
+          - interpolation_type: linear
+            x: -3602.56640625
+            y: -4462.28271484375
+            z: 111.10342407226562
+            heading: -1.55446545852187
+          - interpolation_type: linear
+            x: -3602.5654296875
+            y: -4462.2822265625
+            z: 111.10342407226562
+            heading: -1.5590675217546084
+          - interpolation_type: linear
+            x: -3602.565673828125
+            y: -4462.28466796875
+            z: 111.10342407226562
+            heading: -1.555908420926982
+          - interpolation_type: linear
+            x: -3602.565185546875
+            y: -4462.28564453125
+            z: 111.10342407226562
+            heading: -1.5554803636777002
+          - interpolation_type: linear
+            x: -3602.565673828125
+            y: -4462.2890625
+            z: 111.10342407226562
+            heading: -1.5549191696761542
+          - interpolation_type: linear
+            x: -3602.56494140625
+            y: -4462.291015625
+            z: 111.10342407226562
+            heading: -1.557919492087536
+          - interpolation_type: linear
+            x: -3602.56884765625
+            y: -4462.29345703125
+            z: 111.10342407226562
+            heading: -1.553211237103572
+          - interpolation_type: linear
+            x: -3602.56982421875
+            y: -4462.29443359375
+            z: 111.10342407226562
+            heading: -1.5524843156936061
+          - interpolation_type: linear
+            x: -3602.572265625
+            y: -4462.29345703125
+            z: 111.10342407226562
+            heading: -1.5541740933487875
+          - interpolation_type: linear
+            x: -3602.573974609375
+            y: -4462.29345703125
+            z: 111.10342407226562
+            heading: -1.5561943533853735
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.57568359375
+            y: -4462.28955078125
+            z: 111.10342407226562
+            heading: -1.5531732260372244
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.574951171875
+            y: -4462.2841796875
+            z: 111.10342407226562
+            heading: -1.5521433241487674
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.58740234375
+            y: -4462.2744140625
+            z: 111.10342407226562
+            heading: -1.5486020860789478
+          - interpolation_type: linear
+            x: -3602.60107421875
+            y: -4462.27490234375
+            z: 111.10342407226562
+            heading: -1.5477537879393044
+          - interpolation_type: linear
+            x: -3602.6064453125
+            y: -4462.27001953125
+            z: 111.09573364257812
+            heading: -1.5462310315096526
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.609619140625
+            y: -4462.25830078125
+            z: 111.09573364257812
+            heading: -1.5462426414700927
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.60986328125
+            y: -4462.24951171875
+            z: 111.09573364257812
+            heading: -1.5471279531605793
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.617919921875
+            y: -4462.22509765625
+            z: 111.09573364257812
+            heading: -1.5491473915872394
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.617919921875
+            y: -4462.21142578125
+            z: 111.09573364257812
+            heading: -1.548853390115312
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.619384765625
+            y: -4462.203125
+            z: 111.09573364257812
+            heading: -1.5489930886153254
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.623291015625
+            y: -4462.19091796875
+            z: 111.09573364257812
+            heading: -1.5490816618995873
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.623291015625
+            y: -4462.1845703125
+            z: 111.10342407226562
+            heading: -1.549716098950199
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.627685546875
+            y: -4462.16796875
+            z: 111.10342407226562
+            heading: -1.5513604093488267
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.6279296875
+            y: -4462.16064453125
+            z: 111.10342407226562
+            heading: -1.5516680717806433
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.62548828125
+            y: -4462.14892578125
+            z: 111.10342407226562
+            heading: -1.5503404190222494
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.62548828125
+            y: -4462.14501953125
+            z: 111.10342407226562
+            heading: -1.551473137724153
+            facing: backward
+          - interpolation_type: linear
+            x: -3602.630615234375
+            y: -4462.13720703125
+            z: 111.10342407226562
+            heading: -1.5518163778408984
+          - interpolation_type: linear
+            x: -3602.627685546875
+            y: -4462.13916015625
+            z: 111.10342407226562
+            heading: -1.5526483508494207
+          - interpolation_type: linear
+            x: -3602.62646484375
+            y: -4462.140625
+            z: 111.10342407226562
+            heading: -1.5525457356861478
+          - interpolation_type: linear
+            x: -3602.6259765625
+            y: -4462.14208984375
+            z: 111.10342407226562
+            heading: -1.5532267791752106
+          - interpolation_type: linear
+            x: -3602.625732421875
+            y: -4462.1513671875
+            z: 111.10342407226562
+            heading: -1.5540051915195308
+          - interpolation_type: linear
+            x: -3602.626220703125
+            y: -4462.15380859375
+            z: 111.10342407226562
+            heading: -1.5533385700873388
+          - interpolation_type: linear
+            x: -3602.6259765625
+            y: -4462.1572265625
+            z: 111.10342407226562
+            heading: -1.5516319293920238
+          - interpolation_type: linear
+            x: -3602.626220703125
+            y: -4462.158203125
+            z: 111.10342407226562
+            heading: -1.5528629454987115
+          - interpolation_type: linear
+            x: -3602.623046875
+            y: -4462.16015625
+            z: 111.10342407226562
+            heading: -1.548632798232126
+          - interpolation_type: linear
+            x: -3602.621826171875
+            y: -4462.1640625
+            z: 111.10342407226562
+            heading: -1.5494604883202896
+          - interpolation_type: linear
+            x: -3602.619873046875
+            y: -4462.16650390625
+            z: 111.10342407226562
+            heading: -1.5497248999008686
+          - interpolation_type: linear
+            x: -3602.618896484375
+            y: -4462.1689453125
+            z: 111.10342407226562
+            heading: -1.5445233637661915
+          - interpolation_type: linear
+            x: -3602.618408203125
+            y: -4462.17138671875
+            z: 111.10342407226562
+            heading: -1.5463303889830777
+          - interpolation_type: linear
+            x: -3602.617919921875
+            y: -4462.17236328125
+            z: 111.10342407226562
+            heading: -1.546151254379764
+          - interpolation_type: linear
+            x: -3602.6181640625
+            y: -4462.17431640625
+            z: 111.10342407226562
+            heading: -1.548638415369731
+          - interpolation_type: linear
+            x: -3602.618408203125
+            y: -4462.177734375
+            z: 111.10342407226562
+            heading: -1.5504001535507799
+          - interpolation_type: linear
+            x: -3602.6181640625
+            y: -4462.1806640625
+            z: 111.10342407226562
+            heading: -1.5507613743890278
+        distances:
+          - t: 0
+            distance: 0
+          - t: 0.100076793
+            distance: 0.020718896005153444
+          - t: 0.200141222
+            distance: 0.050871251600035694
+          - t: 0.300183859
+            distance: 0.07897712922746893
+          - t: 0.400208837
+            distance: 0.10699379510774668
+          - t: 0.500188816
+            distance: 0.11535627975542927
+          - t: 0.600134006
+            distance: 0.12458531206570066
+          - t: 0.700060978
+            distance: 0.14608251449077908
+          - t: 0.799973714
+            distance: 0.15765861671114118
+          - t: 0.899869467
+            distance: 0.17657793998226837
+          - t: 0.999749241
+            distance: 0.1852303057765405
+          - t: 1.099638656
+            distance: 0.19094549127982158
+          - t: 1.199542021
+            distance: 0.19500880108868224
+          - t: 1.299455333
+            distance: 0.2005760639065491
+          - t: 1.39939186
+            distance: 0.21019718719523955
+          - t: 1.49935372
+            distance: 0.22104153891131026
+          - t: 1.599344002
+            distance: 0.2244682158760608
+          - t: 1.699367753
+            distance: 0.22740805830252378
+          - t: 1.799429095
+            distance: 0.22849988836966234
+          - t: 1.899518732
+            distance: 0.2327636210836694
+          - t: 1.9996312349999998
+            distance: 0.23696397521796755
+          - t: 2.099762519
+            distance: 0.2413855499924487
+          - t: 2.199902517
+            distance: 0.24466104019386442
+          - t: 2.300023627
+            distance: 0.25265827620663744
+          - t: 2.400131842
+            distance: 0.2653347947474062
+          - t: 2.5002093199999997
+            distance: 0.27572799047798885
+          - t: 2.600244798
+            distance: 0.28445238910357756
+          - t: 2.7002350440000003
+            distance: 0.2870818641070612
+          - t: 2.800193915
+            distance: 0.28938508215687975
+          - t: 2.900125596
+            distance: 0.29011750403187975
+          - t: 3.000032074
+            distance: 0.29120933409901834
+          - t: 3.099932257
+            distance: 0.2961164999296438
+          - t: 3.199837519
+            distance: 0.301537301519286
+          - t: 3.299774243
+            distance: 0.32007431252780966
+          - t: 3.399736175
+            distance: 0.3319947769962996
+          - t: 3.499709535
+            distance: 0.3366012130959366
+          - t: 3.599677842
+            distance: 0.3385080123332185
+          - t: 3.699659997
+            distance: 0.34354110025511503
+          - t: 3.799666613
+            distance: 0.35350012274260095
+          - t: 3.899702281
+            distance: 0.36818310609587723
+          - t: 3.9997829510000003
+            distance: 0.38226729076565846
+          - t: 4.099895063
+            distance: 0.38335912083279705
+          - t: 4.20003014
+            distance: 0.39443191426096946
+          - t: 4.300192945
+            distance: 0.39589675801096946
+          - t: 4.400362702
+            distance: 0.39898491978847767
+          - t: 4.5005144
+            distance: 0.40899468541347767
+          - t: 4.600647969
+            distance: 0.4163229720442412
+          - t: 4.700758079
+            distance: 0.42106332552054676
+          - t: 4.800820414
+            distance: 0.4227010706212546
+          - t: 4.90084745
+            distance: 0.4227010706212546
+          - t: 5.000847019
+            distance: 0.4231893518712546
+          - t: 5.100829518
+            distance: 0.42515767651683534
+          - t: 5.200801047
+            distance: 0.42584821048283783
+          - t: 5.300766656
+            distance: 0.42781653512841855
+          - t: 5.400734757
+            distance: 0.4345337306812494
+          - t: 5.500704689
+            distance: 0.4389010509498037
+          - t: 5.600683285
+            distance: 0.443710063548337
+          - t: 5.700668146
+            distance: 0.45011846430439495
+          - t: 5.800667273
+            distance: 0.45329229242939495
+          - t: 5.900687884
+            distance: 0.45768682367939495
+          - t: 6.000737462
+            distance: 0.4613813417336971
+          - t: 6.100833836
+            distance: 0.4633344667336971
+          - t: 6.200973104
+            distance: 0.4665082948586971
+          - t: 6.301150316
+            distance: 0.4701377061739604
+          - t: 6.401355981
+            distance: 0.4724409242237789
+          - t: 6.501570852
+            distance: 0.4748823304737789
+          - t: 6.601773357
+            distance: 0.48221061710454244
+          - t: 6.701966873
+            distance: 0.49470956801877114
+          - t: 6.802146868
+            distance: 0.49558982956063247
+          - t: 6.902316388
+            distance: 0.504018870821195
+          - t: 7.002455498
+            distance: 0.5181979563639016
+          - t: 7.102548127
+            distance: 0.5206024626631682
+          - t: 7.202607909
+            distance: 0.5221465435519224
+          - t: 7.30265652
+            distance: 0.5249936880318273
+          - t: 7.402698501
+            distance: 0.5294954187238649
+          - t: 7.502735878
+            distance: 0.5303756802657261
+          - t: 7.602774321
+            distance: 0.5374851625794766
+          - t: 7.702801906
+            distance: 0.5392456856631993
+          - t: 7.80283339
+            distance: 0.5442787735850959
+          - t: 7.902874407
+            distance: 0.5457436173350959
+          - t: 8.002913186
+            distance: 0.5485057531991059
+          - t: 8.102947188
+            distance: 0.5504740778446866
+          - t: 8.202977389
+            distance: 0.551480695429066
+          - t: 8.303028898
+            distance: 0.5525725254962045
+          - t: 8.403098791
+            distance: 0.5543330485799272
+          - t: 8.503200006
+            distance: 0.5562861735799272
+          - t: 8.603343632
+            distance: 0.558537038925946
+          - t: 8.70351898
+            distance: 0.5590829539595152
+          - t: 8.803715839
+            distance: 0.5600895715438946
+          - t: 8.903907683
+            distance: 0.5606354865774639
+          - t: 9.004083543
+            distance: 0.5626038112230446
+          - t: 9.104246066
+            distance: 0.5630920924730446
+          - t: 9.204410236
+            distance: 0.5635803737230446
+          - t: 9.304546372
+            distance: 0.5649614416550496
+          - t: 9.404636898
+            distance: 0.5660532717221881
+          - t: 9.504677345
+            distance: 0.5675383211680617
+          - t: 9.604682157
+            distance: 0.5699797274180617
+          - t: 9.704672477999999
+            distance: 0.570986345002441
+          - t: 9.804646186
+            distance: 0.5744390148324535
+          - t: 9.904605067
+            distance: 0.5823463071863118
+          - t: 10.004566049
+            distance: 0.5858418689693382
+          - t: 10.104534426
+            distance: 0.5882954518846509
+          - t: 10.204513961
+            distance: 0.5893020694690303
+          - t: 10.304495048
+            distance: 0.5909398145697381
+          - t: 10.404489793
+            distance: 0.593879656996201
+          - t: 10.50448409
+            distance: 0.596428559952478
+          - t: 10.604476777
+            distance: 0.596428559952478
+          - t: 10.704459457
+            distance: 0.5975203900196165
+          - t: 10.804450106
+            distance: 0.5999739729349293
+          - t: 10.904469063
+            distance: 0.6010658030020678
+          - t: 11.004532428
+            distance: 0.6017982248770678
+          - t: 11.104635981
+            distance: 0.6054276361923311
+          - t: 11.204774891
+            distance: 0.6075135746067153
+          - t: 11.304938028
+            distance: 0.6121200107063524
+          - t: 11.405111716
+            distance: 0.6135010786383573
+          - t: 11.505272968
+            distance: 0.6144776411383573
+          - t: 11.60541757
+            distance: 0.61623816422208
+          - t: 11.705551376
+            distance: 0.61794714859708
+          - t: 11.805657554
+            distance: 0.622210881311087
+          - t: 11.905724165
+            distance: 0.6276316829007292
+          - t: 12.005761498
+            distance: 0.6434556872201617
+          - t: 12.105777652
+            distance: 0.6571362787495776
+          - t: 12.205789196
+            distance: 0.6677114011961418
+          - t: 12.305811449
+            distance: 0.6798523355312555
+          - t: 12.405849549
+            distance: 0.688644788219424
+          - t: 12.505917136
+            distance: 0.7143538509389069
+          - t: 12.605996505
+            distance: 0.7280257259389069
+          - t: 12.70606889
+            distance: 0.7364547671994695
+          - t: 12.80614582
+            distance: 0.7492715687115854
+          - t: 12.90623435
+            distance: 0.7592433011912775
+          - t: 13.006368135
+            distance: 0.7764166463036495
+          - t: 13.1065351
+            distance: 0.7837449329344129
+          - t: 13.2067439
+            distance: 0.7957152949189161
+          - t: 13.306992291
+            distance: 0.7996215449189161
+          - t: 13.407280992
+            distance: 0.8089661050795629
+          - t: 13.507601583
+            distance: 0.8124871512470082
+          - t: 13.607929766
+            distance: 0.8143939504842901
+          - t: 13.708262754
+            distance: 0.8159380313730442
+          - t: 13.808598402
+            distance: 0.8252185869437221
+          - t: 13.908948595
+            distance: 0.8277083425655936
+          - t: 14.009328139
+            distance: 0.8311350195303441
+          - t: 14.109748278
+            distance: 0.8321416371147234
+          - t: 14.210192733
+            distance: 0.8326875521482927
+          - t: 14.310628399
+            distance: 0.833567813690154
+          - t: 14.411031776
+            distance: 0.8359723199894206
+          - t: 14.51141915
+            distance: 0.8400648626198502
+          - t: 14.611809743
+            distance: 0.8431913881264093
+          - t: 14.712201467
+            distance: 0.8436796693764093
+          - t: 14.812622852
+            distance: 0.8439238100014093
+          - t: 14.913072087
+            distance: 0.8460097484157935
+          - t: 15.013571163
+            distance: 0.8484995040376649
+          - t: 15.114132502
+            distance: 0.8495913341048035
+          - t: 15.214734325
+            distance: 0.8515596587503842
+          - t: 15.315367471
+            distance: 0.8549863357151347
+          - t: 15.416029206
+            distance: 0.8579261781415977
+        reactivity_options:
+          activation: foni
+          ttc_threshold: 2.5
+      autonomous_behavior:
+        sta_policy_behavior:
+          enabled: true
+      attributes:
+        train_probability: 0.00959014892578125
+        truck_probability: 0.055328369140625
+        bus_probability: 0.22900390625
+        school_bus_probability: 0.10369873046875
+    - name: tracked_object_557948304
+      asset_id: V_Forester_Static
+      variants:
+        color: Black
+      x: -3596.075439453125
+      y: -4462.841796875
+      z: 111.34178161621094
+      heading: -1.5679917539136625
+      attributes:
+        train_probability: 0.01210784912109375
+        truck_probability: 0.1083984375
+        bus_probability: 0.16162109375
+        school_bus_probability: 0.0501708984375
+    - name: tracked_object_557900480
+      asset_id: P_Streetlight_SF_Finial
+      x: -3549.507568359375
+      y: -4478.0478515625
+      z: 112.971923828125
+      heading: -1.5707963267948966
+      attributes:
+        motorcycle_probability: 0
+        truck_probability: 0
+        bus_probability: 0
+        school_bus_probability: 0
+        emv_probability: 0
+    - name: tracked_object_557955328
+      asset_id: V_Carrera74_Static
+      variants:
+        color: Yellow
+      x: -3563.685546875
+      y: -4426.25
+      z: 112.59515380859375
+      heading: -1.5606694433290367
+      attributes:
+        train_probability: 0.00629425048828125
+        truck_probability: 0.05938720703125
+        bus_probability: 0.075927734375
+        school_bus_probability: 0.2181396484375
+    - name: tracked_object_557964848
+      asset_id: V_GoCar_Static
+      x: -3563.841796875
+      y: -4408.2421875
+      z: 112.86427307128906
+      heading: -1.569118480015228
+      attributes:
+        train_probability: 0.0038509368896484375
+        truck_probability: 0.013946533203125
+        bus_probability: 0.07269287109375
+        school_bus_probability: 0.1300048828125
+    - name: tracked_object_557964864
+      asset_id: V_Countach_Static
+      variants:
+        color: Blue
+      x: -3555.1982421875
+      y: -4431.0712890625
+      z: 112.48750305175781
+      heading: 1.5886980617357378
+      attributes:
+        train_probability: 0.007312774658203125
+        truck_probability: 0.039093017578125
+        bus_probability: 0.152099609375
+        school_bus_probability: 0.0753173828125
+    - name: tracked_object_557998400
+      asset_id: V_FourTwo_Static
+      variants:
+        color: SilverDark
+      x: -3663.068359375
+      y: -4469.91845703125
+      z: 109.34255981445312
+      heading: -3.103371384485863
+      attributes:
+        train_probability: 0.01276397705078125
+        truck_probability: 0.0384521484375
+        bus_probability: 0.2415771484375
+        school_bus_probability: 0.107666015625
+    - name: tracked_object_558006576
+      asset_id: V_MiniR50Convertible_Static
+      variants:
+        color: Black
+      x: -3628.158935546875
+      y: -4469.35888671875
+      z: 109.80390930175781
+      heading: -3.115136359460355
+      attributes:
+        train_probability: 0.008331298828125
+        truck_probability: 0.04595947265625
+        bus_probability: 0.29052734375
+        school_bus_probability: 0.1419677734375
+    - name: tracked_object_558011936
+      asset_id: V_Aventador_Static
+      variants:
+        color: Silver
+      x: -3557.9187125748817
+      y: -4372.22602589291
+      z: 112.00306113572938
+      heading: 1.802518668334915
+      attributes:
+        train_probability: 0.004329681396484375
+        truck_probability: 0.009735107421875
+        bus_probability: 0.03216552734375
+        school_bus_probability: 0.138671875
+    - name: tracked_object_558014592
+      asset_id: V_PriusC_Static
+      variants:
+        color: Black
+      x: -3550.237548828125
+      y: -4419.12744140625
+      z: 113.0565185546875
+      heading: 0.04725882745371038
+      attributes:
+        train_probability: 0.00556182861328125
+        truck_probability: 0.0175323486328125
+        bus_probability: 0.084228515625
+        school_bus_probability: 0.2381591796875
+    - name: tracked_object_558022736
+      asset_id: C_Female10
+      variants:
+        color: E
+        use_matrix_animation: true
+        height_scale_factor: 1.0900571689707972
+      x: -3614.08682734375
+      y: -4477.46694453125
+      z: 110.00384521484375
+      heading: 0
+      anim_state:
+        - t: 0
+          state: navigation
+      attributes:
+        motorcycle_probability: 0
+        truck_probability: 0
+        bus_probability: 0
+        school_bus_probability: 0
+        emv_probability: 0
+    - name: tracked_object_558017312
+      asset_id: P_StreetLampB
+      x: -3553.79150390625
+      y: -4380.76513671875
+      z: 113.048828125
+      heading: 1.5707963267948966
+      attributes:
+        motorcycle_probability: 0
+        truck_probability: 0
+        bus_probability: 0
+        school_bus_probability: 0
+        emv_probability: 0
+    - name: tracked_object_558033408
+      asset_id: V_RDX_Static
+      variants:
+        color: Orange
+      x: -3633.5195809092534
+      y: -4469.3769051804475
+      z: 109.75029719478908
+      heading: -3.130558356872424
+      attributes:
+        train_probability: 0.007110595703125
+        truck_probability: 0.0235137939453125
+        bus_probability: 0.1627197265625
+        school_bus_probability: 0.0792236328125
+    - name: tracked_object_558041440
+      asset_id: C_Female19
+      variants:
+        color: E
+        use_matrix_animation: true
+        height_scale_factor: 1.1109557389101974
+      x: -3584.850048828125
+      y: -4467.46698203125
+      z: 111.2879638671875
+      heading: 0
+      anim_state:
+        - t: 0
+          state: navigation
+      attributes:
+        motorcycle_probability: 0
+        truck_probability: 0
+        bus_probability: 0
+        school_bus_probability: 0
+        emv_probability: 0
+    - name: tracked_object_558043984
+      asset_id: V_Prius_Static
+      variants:
+        color: BlueMetallic
+      x: -3550.484837740174
+      y: -4442.060155420353
+      z: 112.71049499511719
+      heading: -0.07753895677004816
+      attributes:
+        motorcycle_probability: 0
+        truck_probability: 0
+        bus_probability: 0
+        school_bus_probability: 0
+        emv_probability: 0
+    - name: tracked_object_558094880
+      asset_id: V_GolfMk1_Static
+      variants:
+        color: Tan
+      x: -3633.674560546875
+      y: -4469.32470703125
+      z: 109.75009155273438
+      heading: -3.1040469805836697
+      attributes:
+        train_probability: 0.0099029541015625
+        truck_probability: 0.0293731689453125
+        bus_probability: 0.1468505859375
+        school_bus_probability: 0.273681640625
+    - name: tracked_object_558141664
+      asset_id: V_Aventador_Static
+      variants:
+        color: Silver
+      x: -3580.9342790620353
+      y: -4459.7392410595
+      z: 112.087646484375
+      heading: 0.34166891288993123
+      attributes:
+        train_probability: 0.015625
+        truck_probability: 0.0374755859375
+        bus_probability: 0.0787353515625
+        school_bus_probability: 0.309814453125
+    - name: tracked_object_558145440
+      asset_id: C_MaleTeen01
+      variants:
+        color: H
+        use_matrix_animation: true
+        height_scale_factor: 1.185888375998892
+      profile:
+        coordinates:
+          - interpolation_type: linear
+            x: -3583.1144804856212
+            y: -4479.918899557242
+            z: 111.33409118652344
+            heading: -0.02950650813164238
+            facing: backward
+          - interpolation_type: linear
+            x: -3583.126642034153
+            y: -4479.936423275867
+            z: 111.33409118652344
+            heading: 0.2238804737778431
+          - interpolation_type: linear
+            x: -3583.118209765625
+            y: -4479.93597734375
+            z: 111.33409118652344
+            heading: 0
+          - interpolation_type: linear
+            x: -3583.1208953125
+            y: -4479.9452546875
+            z: 111.33409118652344
+            heading: 0
+            facing: backward
+          - interpolation_type: linear
+            x: -3583.124069140625
+            y: -4479.95062578125
+            z: 111.33409118652344
+            heading: 0
+            facing: backward
+          - interpolation_type: linear
+            x: -3583.126510546875
+            y: -4479.95257890625
+            z: 111.33409118652344
+            heading: 0
+          - interpolation_type: linear
+            x: -3583.11747734375
+            y: -4479.95404375
+            z: 111.33409118652344
+            heading: 0
+            facing: backward
+          - interpolation_type: linear
+            x: -3583.125045703125
+            y: -4479.9550203125
+            z: 111.33409118652344
+            heading: 0
+            facing: backward
+          - interpolation_type: linear
+            x: -3583.12919609375
+            y: -4479.95550859375
+            z: 111.33409118652344
+            heading: 0
+            facing: backward
+          - interpolation_type: linear
+            x: -3583.13407890625
+            y: -4479.952090625
+            z: 111.33409118652344
+            heading: 0
+          - interpolation_type: linear
+            x: -3583.132369921875
+            y: -4479.95160234375
+            z: 111.33409118652344
+            heading: 0
+        distances:
+          - t: 0
+            distance: 0
+          - t: 0.099707665
+            distance: 0.021330353422717507
+          - t: 0.199411645
+            distance: 0.029774405055695275
+          - t: 0.299141118
+            distance: 0.0394326279291584
+          - t: 0.398884427
+            distance: 0.045671364422898944
+          - t: 0.498654163
+            distance: 0.04879788992945795
+          - t: 0.598395238
+            distance: 0.05794909345191465
+          - t: 0.698147417
+            distance: 0.06558019677617627
+          - t: 0.79787483
+            distance: 0.06975921112398478
+          - t: 0.897599536
+            distance: 0.07571944335822975
+          - t: 0.997324329
+            distance: 0.07571944335822975
+          - t: 1.097051505
+            distance: 0.07645186523322975
+          - t: 1.196778736
+            distance: 0.07754369530036832
+          - t: 1.296512971
+            distance: 0.07852025780036832
+          - t: 1.396265731
+            distance: 0.07949682030036832
+        reactivity_options:
+          activation: foni
+          ttc_threshold: 2.5
+      autonomous_behavior:
+        sta_policy_behavior:
+          enabled: true
+      anim_state:
+        - t: 0
+          state: navigation
+      attributes:
+        motorcycle_probability: 0
+        truck_probability: 0
+        bus_probability: 0
+        school_bus_probability: 0
+        emv_probability: 0
+    - name: tracked_object_558181872
+      asset_id: C_Male08
+      variants:
+        color: H
+        use_matrix_animation: true
+        height_scale_factor: 1.1314797059504156
+      x: -3584.7961878401175
+      y: -4467.466118141947
+      z: 111.264892578125
+      heading: 0.7604351007951308
+      anim_state:
+        - t: 0
+          state: navigation
+      attributes:
+        motorcycle_probability: 0
+        truck_probability: 0
+        bus_probability: 0
+        school_bus_probability: 0
+        emv_probability: 0
+    - name: tracked_object_558185168
+      asset_id: C_FemaleTeen03
+      variants:
+        color: G
+        use_matrix_animation: true
+        height_scale_factor: 1.1754227256397605
+      x: -3611.9813203125
+      y: -4477.3756953125
+      z: 110.05766296386719
+      heading: 0
+      anim_state:
+        - t: 0
+          state: navigation
+      attributes:
+        motorcycle_probability: 0
+        truck_probability: 0
+        bus_probability: 0
+        school_bus_probability: 0
+        emv_probability: 0
+    - name: tracked_object_558236944
+      asset_id: C_Female09
+      variants:
+        color: G
+        use_matrix_animation: true
+        height_scale_factor: 1.0959228876194143
+      x: -3584.685744140625
+      y: -4467.58016640625
+      z: 111.35716247558594
+      heading: 0
+      anim_state:
+        - t: 0
+          state: navigation
+      attributes:
+        motorcycle_probability: 0
+        truck_probability: 0
+        bus_probability: 0
+        school_bus_probability: 0
+        emv_probability: 0
+  triggers:
+    - name: trigger_spawn_tracked_object_557503392
+      actions:
+        - spawn_tracked_object_557503392
+      conditions:
+        - startup: {}
+      delay: 0.049949898
+    - name: trigger_despawn_tracked_object_557503392
+      actions:
+        - despawn_tracked_object_557503392
+      conditions:
+        - startup: {}
+      delay: 3.550069162
+    - name: trigger_spawn_tracked_object_557583872
+      actions:
+        - spawn_tracked_object_557583872
+      conditions:
+        - startup: {}
+      delay: 0.048272956
+    - name: trigger_despawn_tracked_object_557583872
+      actions:
+        - despawn_tracked_object_557583872
+      conditions:
+        - startup: {}
+      delay: 2.248945802
+    - name: trigger_spawn_tracked_object_557637680
+      actions:
+        - spawn_tracked_object_557637680
+      conditions:
+        - startup: {}
+      delay: 0.052102151
+    - name: trigger_despawn_tracked_object_557637680
+      actions:
+        - despawn_tracked_object_557637680
+      conditions:
+        - startup: {}
+      delay: 2.651474096
+    - name: trigger_spawn_tracked_object_557652400
+      actions:
+        - spawn_tracked_object_557652400
+      conditions:
+        - startup: {}
+      delay: 0.053551475
+    - name: trigger_despawn_tracked_object_557652400
+      actions:
+        - despawn_tracked_object_557652400
+      conditions:
+        - startup: {}
+      delay: 18.786675183
+    - name: trigger_spawn_tracked_object_557664704
+      actions:
+        - spawn_tracked_object_557664704
+      conditions:
+        - startup: {}
+      delay: 0.046451489
+    - name: trigger_despawn_tracked_object_557664704
+      actions:
+        - despawn_tracked_object_557664704
+      conditions:
+        - startup: {}
+      delay: 2.247712002
+    - name: trigger_spawn_tracked_object_557677712
+      actions:
+        - spawn_tracked_object_557677712
+      conditions:
+        - startup: {}
+      delay: 0.052422184
+    - name: trigger_despawn_tracked_object_557677712
+      actions:
+        - despawn_tracked_object_557677712
+      conditions:
+        - startup: {}
+      delay: 6.051097248
+    - name: trigger_spawn_tracked_object_557695616
+      actions:
+        - spawn_tracked_object_557695616
+      conditions:
+        - startup: {}
+      delay: 0.047471425
+    - name: trigger_despawn_tracked_object_557695616
+      actions:
+        - despawn_tracked_object_557695616
+      conditions:
+        - startup: {}
+      delay: 3.348205306
+    - name: trigger_spawn_tracked_object_557728224
+      actions:
+        - spawn_tracked_object_557728224
+      conditions:
+        - startup: {}
+      delay: 0.040361668
+    - name: trigger_despawn_tracked_object_557728224
+      actions:
+        - despawn_tracked_object_557728224
+      conditions:
+        - startup: {}
+      delay: 18.648888425
+    - name: trigger_spawn_tracked_object_557782000
+      actions:
+        - spawn_tracked_object_557782000
+      conditions:
+        - startup: {}
+      delay: 0.089746146
+    - name: trigger_despawn_tracked_object_557782000
+      actions:
+        - despawn_tracked_object_557782000
+      conditions:
+        - startup: {}
+      delay: 18.750588395
+    - name: trigger_spawn_tracked_object_557786832
+      actions:
+        - spawn_tracked_object_557786832
+      conditions:
+        - startup: {}
+      delay: 0.006211132
+    - name: trigger_despawn_tracked_object_557786832
+      actions:
+        - despawn_tracked_object_557786832
+      conditions:
+        - startup: {}
+      delay: 18.848854421
+    - name: trigger_spawn_tracked_object_557787632
+      actions:
+        - spawn_tracked_object_557787632
+      conditions:
+        - startup: {}
+      delay: 0.056915114
+    - name: trigger_despawn_tracked_object_557787632
+      actions:
+        - despawn_tracked_object_557787632
+      conditions:
+        - startup: {}
+      delay: 3.5542833590000003
+    - name: trigger_spawn_tracked_object_557797056
+      actions:
+        - spawn_tracked_object_557797056
+      conditions:
+        - startup: {}
+      delay: 0.004316596
+    - name: trigger_despawn_tracked_object_557797056
+      actions:
+        - despawn_tracked_object_557797056
+      conditions:
+        - startup: {}
+      delay: 18.848749286
+    - name: trigger_spawn_tracked_object_557802816
+      actions:
+        - spawn_tracked_object_557802816
+      conditions:
+        - startup: {}
+      delay: 0.096283412
+    - name: trigger_despawn_tracked_object_557802816
+      actions:
+        - despawn_tracked_object_557802816
+      conditions:
+        - startup: {}
+      delay: 18.751355515
+    - name: trigger_spawn_tracked_object_557802832
+      actions:
+        - spawn_tracked_object_557802832
+      conditions:
+        - startup: {}
+      delay: 0.078107694
+    - name: trigger_despawn_tracked_object_557802832
+      actions:
+        - despawn_tracked_object_557802832
+      conditions:
+        - startup: {}
+      delay: 8.253546018
+    - name: trigger_spawn_tracked_object_557802848
+      actions:
+        - spawn_tracked_object_557802848
+      conditions:
+        - startup: {}
+      delay: 0.097590273
+    - name: trigger_despawn_tracked_object_557802848
+      actions:
+        - despawn_tracked_object_557802848
+      conditions:
+        - startup: {}
+      delay: 18.751978125
+    - name: trigger_spawn_tracked_object_557803664
+      actions:
+        - spawn_tracked_object_557803664
+      conditions:
+        - startup: {}
+      delay: 0.098062748
+    - name: trigger_despawn_tracked_object_557803664
+      actions:
+        - despawn_tracked_object_557803664
+      conditions:
+        - startup: {}
+      delay: 18.752337001
+    - name: trigger_spawn_tracked_object_557810208
+      actions:
+        - spawn_tracked_object_557810208
+      conditions:
+        - startup: {}
+      delay: 0.0989623
+    - name: trigger_despawn_tracked_object_557810208
+      actions:
+        - despawn_tracked_object_557810208
+      conditions:
+        - startup: {}
+      delay: 18.753967645
+    - name: trigger_spawn_tracked_object_557810224
+      actions:
+        - spawn_tracked_object_557810224
+      conditions:
+        - startup: {}
+      delay: 0.001666845
+    - name: trigger_despawn_tracked_object_557810224
+      actions:
+        - despawn_tracked_object_557810224
+      conditions:
+        - startup: {}
+      delay: 18.848104783
+    - name: trigger_spawn_tracked_object_557815920
+      actions:
+        - spawn_tracked_object_557815920
+      conditions:
+        - startup: {}
+      delay: 0.094277749
+    - name: trigger_despawn_tracked_object_557815920
+      actions:
+        - despawn_tracked_object_557815920
+      conditions:
+        - startup: {}
+      delay: 18.751175628
+    - name: trigger_spawn_tracked_object_557817184
+      actions:
+        - spawn_tracked_object_557817184
+      conditions:
+        - startup: {}
+      delay: 0.099432057
+    - name: trigger_despawn_tracked_object_557817184
+      actions:
+        - despawn_tracked_object_557817184
+      conditions:
+        - startup: {}
+      delay: 18.759487856
+    - name: trigger_spawn_tracked_object_557818560
+      actions:
+        - spawn_tracked_object_557818560
+      conditions:
+        - startup: {}
+      delay: 0.000242086
+    - name: trigger_despawn_tracked_object_557818560
+      actions:
+        - despawn_tracked_object_557818560
+      conditions:
+        - startup: {}
+      delay: 18.763752177
+    - name: trigger_spawn_tracked_object_557820080
+      actions:
+        - spawn_tracked_object_557820080
+      conditions:
+        - startup: {}
+      delay: 0.000496986
+    - name: trigger_despawn_tracked_object_557820080
+      actions:
+        - despawn_tracked_object_557820080
+      conditions:
+        - startup: {}
+      delay: 18.795011979
+    - name: trigger_spawn_tracked_object_557833504
+      actions:
+        - spawn_tracked_object_557833504
+      conditions:
+        - startup: {}
+      delay: 0.003202879
+    - name: trigger_despawn_tracked_object_557833504
+      actions:
+        - despawn_tracked_object_557833504
+      conditions:
+        - startup: {}
+      delay: 18.843312457
+    - name: trigger_spawn_tracked_object_557838896
+      actions:
+        - spawn_tracked_object_557838896
+      conditions:
+        - startup: {}
+      delay: 0.000796364
+    - name: trigger_despawn_tracked_object_557838896
+      actions:
+        - despawn_tracked_object_557838896
+      conditions:
+        - startup: {}
+      delay: 18.798556965
+    - name: trigger_spawn_tracked_object_557857424
+      actions:
+        - spawn_tracked_object_557857424
+      conditions:
+        - startup: {}
+      delay: 0.008002954
+    - name: trigger_despawn_tracked_object_557857424
+      actions:
+        - despawn_tracked_object_557857424
+      conditions:
+        - startup: {}
+      delay: 10.937328207
+    - name: trigger_spawn_tracked_object_557859456
+      actions:
+        - spawn_tracked_object_557859456
+      conditions:
+        - startup: {}
+      delay: 0.001392115
+    - name: trigger_despawn_tracked_object_557859456
+      actions:
+        - despawn_tracked_object_557859456
+      conditions:
+        - startup: {}
+      delay: 18.801358142
+    - name: trigger_spawn_tracked_object_557877168
+      actions:
+        - spawn_tracked_object_557877168
+      conditions:
+        - startup: {}
+      delay: 0.101404854
+    - name: trigger_despawn_tracked_object_557877168
+      actions:
+        - despawn_tracked_object_557877168
+      conditions:
+        - startup: {}
+      delay: 18.804349946
+    - name: trigger_spawn_tracked_object_557855376
+      actions:
+        - spawn_tracked_object_557855376
+      conditions:
+        - startup: {}
+      delay: 0.403651513
+    - name: trigger_despawn_tracked_object_557855376
+      actions:
+        - despawn_tracked_object_557855376
+      conditions:
+        - startup: {}
+      delay: 18.846164022
+    - name: trigger_spawn_tracked_object_557889104
+      actions:
+        - spawn_tracked_object_557889104
+      conditions:
+        - startup: {}
+      delay: 0.60379366
+    - name: trigger_despawn_tracked_object_557889104
+      actions:
+        - despawn_tracked_object_557889104
+      conditions:
+        - startup: {}
+      delay: 18.844793432
+    - name: trigger_spawn_tracked_object_557916752
+      actions:
+        - spawn_tracked_object_557916752
+      conditions:
+        - startup: {}
+      delay: 1.6008142950000002
+    - name: trigger_despawn_tracked_object_557916752
+      actions:
+        - despawn_tracked_object_557916752
+      conditions:
+        - startup: {}
+      delay: 8.797863938999999
+    - name: trigger_spawn_tracked_object_557922112
+      actions:
+        - spawn_tracked_object_557922112
+      conditions:
+        - startup: {}
+      delay: 2.300910246
+    - name: trigger_despawn_tracked_object_557922112
+      actions:
+        - despawn_tracked_object_557922112
+      conditions:
+        - startup: {}
+      delay: 18.798834611
+    - name: trigger_spawn_tracked_object_557927952
+      actions:
+        - spawn_tracked_object_557927952
+      conditions:
+        - startup: {}
+      delay: 2.5132019
+    - name: trigger_despawn_tracked_object_557927952
+      actions:
+        - despawn_tracked_object_557927952
+      conditions:
+        - startup: {}
+      delay: 9.832222189
+    - name: trigger_spawn_tracked_object_557932160
+      actions:
+        - spawn_tracked_object_557932160
+      conditions:
+        - startup: {}
+      delay: 2.701278063
+    - name: trigger_despawn_tracked_object_557932160
+      actions:
+        - despawn_tracked_object_557932160
+      conditions:
+        - startup: {}
+      delay: 4.600794356
+    - name: trigger_spawn_tracked_object_557934400
+      actions:
+        - spawn_tracked_object_557934400
+      conditions:
+        - startup: {}
+      delay: 2.513775301
+    - name: trigger_despawn_tracked_object_557934400
+      actions:
+        - despawn_tracked_object_557934400
+      conditions:
+        - startup: {}
+      delay: 15.042812234
+    - name: trigger_spawn_tracked_object_557943552
+      actions:
+        - spawn_tracked_object_557943552
+      conditions:
+        - startup: {}
+      delay: 3.221111114
+    - name: trigger_despawn_tracked_object_557943552
+      actions:
+        - despawn_tracked_object_557943552
+      conditions:
+        - startup: {}
+      delay: 12.141008786
+    - name: trigger_spawn_tracked_object_557948288
+      actions:
+        - spawn_tracked_object_557948288
+      conditions:
+        - startup: {}
+      delay: 3.403657061
+    - name: trigger_despawn_tracked_object_557948288
+      actions:
+        - despawn_tracked_object_557948288
+      conditions:
+        - startup: {}
+      delay: 18.819686267
+    - name: trigger_spawn_tracked_object_557948304
+      actions:
+        - spawn_tracked_object_557948304
+      conditions:
+        - startup: {}
+      delay: 3.403764619
+    - name: trigger_despawn_tracked_object_557948304
+      actions:
+        - despawn_tracked_object_557948304
+      conditions:
+        - startup: {}
+      delay: 18.831206341
+    - name: trigger_spawn_tracked_object_557900480
+      actions:
+        - spawn_tracked_object_557900480
+      conditions:
+        - startup: {}
+      delay: 3.486968122
+    - name: trigger_despawn_tracked_object_557900480
+      actions:
+        - despawn_tracked_object_557900480
+      conditions:
+        - startup: {}
+      delay: 18.752075101
+    - name: trigger_spawn_tracked_object_557955328
+      actions:
+        - spawn_tracked_object_557955328
+      conditions:
+        - startup: {}
+      delay: 3.72015826
+    - name: trigger_despawn_tracked_object_557955328
+      actions:
+        - despawn_tracked_object_557955328
+      conditions:
+        - startup: {}
+      delay: 9.027393204
+    - name: trigger_spawn_tracked_object_557964848
+      actions:
+        - spawn_tracked_object_557964848
+      conditions:
+        - startup: {}
+      delay: 4.121986139
+    - name: trigger_despawn_tracked_object_557964848
+      actions:
+        - despawn_tracked_object_557964848
+      conditions:
+        - startup: {}
+      delay: 7.825454892
+    - name: trigger_spawn_tracked_object_557964864
+      actions:
+        - spawn_tracked_object_557964864
+      conditions:
+        - startup: {}
+      delay: 4.122931835
+    - name: trigger_despawn_tracked_object_557964864
+      actions:
+        - despawn_tracked_object_557964864
+      conditions:
+        - startup: {}
+      delay: 9.130881758
+    - name: trigger_spawn_tracked_object_557998400
+      actions:
+        - spawn_tracked_object_557998400
+      conditions:
+        - startup: {}
+      delay: 5.400737898
+    - name: trigger_despawn_tracked_object_557998400
+      actions:
+        - despawn_tracked_object_557998400
+      conditions:
+        - startup: {}
+      delay: 18.800212228
+    - name: trigger_spawn_tracked_object_558006576
+      actions:
+        - spawn_tracked_object_558006576
+      conditions:
+        - startup: {}
+      delay: 5.701203611
+    - name: trigger_despawn_tracked_object_558006576
+      actions:
+        - despawn_tracked_object_558006576
+      conditions:
+        - startup: {}
+      delay: 18.800912903
+    - name: trigger_spawn_tracked_object_558011936
+      actions:
+        - spawn_tracked_object_558011936
+      conditions:
+        - startup: {}
+      delay: 5.925433379
+    - name: trigger_despawn_tracked_object_558011936
+      actions:
+        - despawn_tracked_object_558011936
+      conditions:
+        - startup: {}
+      delay: 7.926539483
+    - name: trigger_spawn_tracked_object_558014592
+      actions:
+        - spawn_tracked_object_558014592
+      conditions:
+        - startup: {}
+      delay: 6.027462869
+    - name: trigger_despawn_tracked_object_558014592
+      actions:
+        - despawn_tracked_object_558014592
+      conditions:
+        - startup: {}
+      delay: 9.230974424
+    - name: trigger_spawn_tracked_object_558022736
+      actions:
+        - spawn_tracked_object_558022736
+      conditions:
+        - startup: {}
+      delay: 6.299013643
+    - name: trigger_despawn_tracked_object_558022736
+      actions:
+        - despawn_tracked_object_558022736
+      conditions:
+        - startup: {}
+      delay: 7.398041783
+    - name: trigger_spawn_tracked_object_558017312
+      actions:
+        - spawn_tracked_object_558017312
+      conditions:
+        - startup: {}
+      delay: 6.526130039
+    - name: trigger_despawn_tracked_object_558017312
+      actions:
+        - despawn_tracked_object_558017312
+      conditions:
+        - startup: {}
+      delay: 7.927382733
+    - name: trigger_spawn_tracked_object_558033408
+      actions:
+        - spawn_tracked_object_558033408
+      conditions:
+        - startup: {}
+      delay: 6.700589101
+    - name: trigger_despawn_tracked_object_558033408
+      actions:
+        - despawn_tracked_object_558033408
+      conditions:
+        - startup: {}
+      delay: 8.800628247
+    - name: trigger_spawn_tracked_object_558041440
+      actions:
+        - spawn_tracked_object_558041440
+      conditions:
+        - startup: {}
+      delay: 6.802315426
+    - name: trigger_despawn_tracked_object_558041440
+      actions:
+        - despawn_tracked_object_558041440
+      conditions:
+        - startup: {}
+      delay: 8.704084781
+    - name: trigger_spawn_tracked_object_558043984
+      actions:
+        - spawn_tracked_object_558043984
+      conditions:
+        - startup: {}
+      delay: 7.130317533
+    - name: trigger_despawn_tracked_object_558043984
+      actions:
+        - despawn_tracked_object_558043984
+      conditions:
+        - startup: {}
+      delay: 10.637664333
+    - name: trigger_spawn_tracked_object_558094880
+      actions:
+        - spawn_tracked_object_558094880
+      conditions:
+        - startup: {}
+      delay: 9.400276243
+    - name: trigger_despawn_tracked_object_558094880
+      actions:
+        - despawn_tracked_object_558094880
+      conditions:
+        - startup: {}
+      delay: 18.800764053
+    - name: trigger_spawn_tracked_object_558141664
+      actions:
+        - spawn_tracked_object_558141664
+      conditions:
+        - startup: {}
+      delay: 11.626124811
+    - name: trigger_despawn_tracked_object_558141664
+      actions:
+        - despawn_tracked_object_558141664
+      conditions:
+        - startup: {}
+      delay: 13.030660246
+    - name: trigger_spawn_tracked_object_558145440
+      actions:
+        - spawn_tracked_object_558145440
+      conditions:
+        - startup: {}
+      delay: 12.076128551
+    - name: trigger_despawn_tracked_object_558145440
+      actions:
+        - despawn_tracked_object_558145440
+      conditions:
+        - startup: {}
+      delay: 13.472394282
+    - name: trigger_spawn_tracked_object_558181872
+      actions:
+        - spawn_tracked_object_558181872
+      conditions:
+        - startup: {}
+      delay: 14.328732855
+    - name: trigger_despawn_tracked_object_558181872
+      actions:
+        - despawn_tracked_object_558181872
+      conditions:
+        - startup: {}
+      delay: 15.937765168
+    - name: trigger_spawn_tracked_object_558185168
+      actions:
+        - spawn_tracked_object_558185168
+      conditions:
+        - startup: {}
+      delay: 14.496815489
+    - name: trigger_despawn_tracked_object_558185168
+      actions:
+        - despawn_tracked_object_558185168
+      conditions:
+        - startup: {}
+      delay: 17.195050481
+    - name: trigger_spawn_tracked_object_558236944
+      actions:
+        - spawn_tracked_object_558236944
+      conditions:
+        - startup: {}
+      delay: 17.74473577
+    - name: trigger_despawn_tracked_object_558236944
+      actions:
+        - despawn_tracked_object_558236944
+      conditions:
+        - startup: {}
+      delay: 18.84607638
+    - name: trigger_set_avoidance_areas_FULL_1692778160487077298
+      delay: 0.187077298
+      actions:
+        - set_avoidance_areas_FULL_1692778160487077298
+      conditions:
+        - startup: {}
+    - name: trigger_set_avoidance_areas_FULL_1692778178517126994
+      delay: 18.217126994
+      actions:
+        - set_avoidance_areas_FULL_1692778178517126994
+      conditions:
+        - startup: {}
+    - name: trigger_set_avoidance_areas_PARTIAL_1692778160487077298
+      delay: 0.187077298
+      actions:
+        - set_avoidance_areas_PARTIAL_1692778160487077298
+      conditions:
+        - startup: {}
+    - name: trigger_set_avoidance_areas_PARTIAL_1692778178517126994
+      delay: 18.217126994
+      actions:
+        - set_avoidance_areas_PARTIAL_1692778178517126994
+      conditions:
+        - startup: {}
+    - name: trigger_spoof_houston_connection_loss_1692778160307124416
+      delay: 0.007124416
+      actions:
+        - spoof_houston_connection_loss_1692778160307124416
+      conditions:
+        - startup: {}
+    - name: trigger_set_actions_for_2.3500001430511475_reverse_true_tracked_object_557802816
+      actions:
+        - set_actions_for_2.3500001430511475_reverse_true_tracked_object_557802816
+      conditions:
+        - startup: {}
+      delay: 2.3500001430511475
+    - name: trigger_set_actions_for_6.549999952316284_reverse_true_tracked_object_557810208
+      actions:
+        - set_actions_for_6.549999952316284_reverse_true_tracked_object_557810208
+      conditions:
+        - startup: {}
+      delay: 6.549999952316284
+    - name: trigger_set_actions_for_8.150000095367432_hazard_true_tracked_object_557810224
+      actions:
+        - set_actions_for_8.150000095367432_hazard_true_tracked_object_557810224
+      conditions:
+        - startup: {}
+      delay: 8.150000095367432
+    - name: trigger_set_actions_for_8.850000143051147_hazard_true_tracked_object_557818560
+      actions:
+        - set_actions_for_8.850000143051147_hazard_true_tracked_object_557818560
+      conditions:
+        - startup: {}
+      delay: 1.850000143051147
+    - name: trigger_set_actions_for_6.049999952316284_emv_requesting_row_true_tracked_object_557820080
+      actions:
+        - set_actions_for_6.049999952316284_emv_requesting_row_true_tracked_object_557820080
+      conditions:
+        - startup: {}
+      delay: 2.049999952316284
+    - name: trigger_set_tracked_object_557820080_active_emv_probability
+      actions:
+        - set_tracked_object_557820080_active_emv_probability
+      conditions:
+        - startup: {}
+      delay: 2.049999952316284
+    - name: trigger_set_on_emv_headlight
+      actions:
+        - action_turn_on_headlights
+      conditions:
+        - startup: {}
+      delay: 2.049999952316284
+    - name: av_enters_success_region
+      conditions:
+        - zone:
+            zones:
+              - success_region
+            subjects:
+              any_of:
+                &a1
+                - CRUISE
+      actions:
+        - action_success
+    - name: av_enters_stay_out_region
+      conditions:
+        - zone:
+            zones:
+              - stay_out_region
+            subjects:
+              any_of: *a1
+      actions:
+        - action_failure
+  actions:
+    - name: spawn_tracked_object_557503392
+      spawn:
+        - tracked_object_557503392
+    - name: spawn_tracked_object_557583872
+      spawn:
+        - tracked_object_557583872
+    - name: spawn_tracked_object_557637680
+      spawn:
+        - tracked_object_557637680
+    - name: spawn_tracked_object_557652400
+      spawn:
+        - tracked_object_557652400
+    - name: spawn_tracked_object_557664704
+      spawn:
+        - tracked_object_557664704
+    - name: spawn_tracked_object_557677712
+      spawn:
+        - tracked_object_557677712
+    - name: spawn_tracked_object_557695616
+      spawn:
+        - tracked_object_557695616
+    - name: spawn_tracked_object_557728224
+      spawn:
+        - tracked_object_557728224
+    - name: spawn_tracked_object_557782000
+      spawn:
+        - tracked_object_557782000
+    - name: spawn_tracked_object_557786832
+      spawn:
+        - tracked_object_557786832
+    - name: spawn_tracked_object_557787632
+      spawn:
+        - tracked_object_557787632
+    - name: spawn_tracked_object_557797056
+      spawn:
+        - tracked_object_557797056
+    - name: spawn_tracked_object_557802816
+      spawn:
+        - tracked_object_557802816
+    - name: spawn_tracked_object_557802832
+      spawn:
+        - tracked_object_557802832
+    - name: spawn_tracked_object_557802848
+      spawn:
+        - tracked_object_557802848
+    - name: spawn_tracked_object_557803664
+      spawn:
+        - tracked_object_557803664
+    - name: spawn_tracked_object_557810208
+      spawn:
+        - tracked_object_557810208
+    - name: spawn_tracked_object_557810224
+      spawn:
+        - tracked_object_557810224
+    - name: spawn_tracked_object_557815920
+      spawn:
+        - tracked_object_557815920
+    - name: spawn_tracked_object_557817184
+      spawn:
+        - tracked_object_557817184
+    - name: spawn_tracked_object_557818560
+      spawn:
+        - tracked_object_557818560
+    - name: spawn_tracked_object_557820080
+      spawn:
+        - tracked_object_557820080
+    - name: spawn_tracked_object_557833504
+      spawn:
+        - tracked_object_557833504
+    - name: spawn_tracked_object_557838896
+      spawn:
+        - tracked_object_557838896
+    - name: spawn_tracked_object_557857424
+      spawn:
+        - tracked_object_557857424
+    - name: spawn_tracked_object_557859456
+      spawn:
+        - tracked_object_557859456
+    - name: spawn_tracked_object_557877168
+      spawn:
+        - tracked_object_557877168
+    - name: spawn_tracked_object_557855376
+      spawn:
+        - tracked_object_557855376
+    - name: spawn_tracked_object_557889104
+      spawn:
+        - tracked_object_557889104
+    - name: spawn_tracked_object_557916752
+      spawn:
+        - tracked_object_557916752
+    - name: spawn_tracked_object_557922112
+      spawn:
+        - tracked_object_557922112
+    - name: spawn_tracked_object_557927952
+      spawn:
+        - tracked_object_557927952
+    - name: spawn_tracked_object_557932160
+      spawn:
+        - tracked_object_557932160
+    - name: spawn_tracked_object_557934400
+      spawn:
+        - tracked_object_557934400
+    - name: spawn_tracked_object_557943552
+      spawn:
+        - tracked_object_557943552
+    - name: spawn_tracked_object_557948288
+      spawn:
+        - tracked_object_557948288
+    - name: spawn_tracked_object_557948304
+      spawn:
+        - tracked_object_557948304
+    - name: spawn_tracked_object_557900480
+      spawn:
+        - tracked_object_557900480
+    - name: spawn_tracked_object_557955328
+      spawn:
+        - tracked_object_557955328
+    - name: spawn_tracked_object_557964848
+      spawn:
+        - tracked_object_557964848
+    - name: spawn_tracked_object_557964864
+      spawn:
+        - tracked_object_557964864
+    - name: spawn_tracked_object_557998400
+      spawn:
+        - tracked_object_557998400
+    - name: spawn_tracked_object_558006576
+      spawn:
+        - tracked_object_558006576
+    - name: spawn_tracked_object_558011936
+      spawn:
+        - tracked_object_558011936
+    - name: spawn_tracked_object_558014592
+      spawn:
+        - tracked_object_558014592
+    - name: spawn_tracked_object_558022736
+      spawn:
+        - tracked_object_558022736
+    - name: spawn_tracked_object_558017312
+      spawn:
+        - tracked_object_558017312
+    - name: spawn_tracked_object_558033408
+      spawn:
+        - tracked_object_558033408
+    - name: spawn_tracked_object_558041440
+      spawn:
+        - tracked_object_558041440
+    - name: spawn_tracked_object_558043984
+      spawn:
+        - tracked_object_558043984
+    - name: spawn_tracked_object_558094880
+      spawn:
+        - tracked_object_558094880
+    - name: spawn_tracked_object_558141664
+      spawn:
+        - tracked_object_558141664
+    - name: spawn_tracked_object_558145440
+      spawn:
+        - tracked_object_558145440
+    - name: spawn_tracked_object_558181872
+      spawn:
+        - tracked_object_558181872
+    - name: spawn_tracked_object_558185168
+      spawn:
+        - tracked_object_558185168
+    - name: spawn_tracked_object_558236944
+      spawn:
+        - tracked_object_558236944
+    - name: despawn_tracked_object_557503392
+      remove:
+        - tracked_object_557503392
+    - name: despawn_tracked_object_557583872
+      remove:
+        - tracked_object_557583872
+    - name: despawn_tracked_object_557637680
+      remove:
+        - tracked_object_557637680
+    - name: despawn_tracked_object_557652400
+      remove:
+        - tracked_object_557652400
+    - name: despawn_tracked_object_557664704
+      remove:
+        - tracked_object_557664704
+    - name: despawn_tracked_object_557677712
+      remove:
+        - tracked_object_557677712
+    - name: despawn_tracked_object_557695616
+      remove:
+        - tracked_object_557695616
+    - name: despawn_tracked_object_557728224
+      remove:
+        - tracked_object_557728224
+    - name: despawn_tracked_object_557782000
+      remove:
+        - tracked_object_557782000
+    - name: despawn_tracked_object_557786832
+      remove:
+        - tracked_object_557786832
+    - name: despawn_tracked_object_557787632
+      remove:
+        - tracked_object_557787632
+    - name: despawn_tracked_object_557797056
+      remove:
+        - tracked_object_557797056
+    - name: despawn_tracked_object_557802816
+      remove:
+        - tracked_object_557802816
+    - name: despawn_tracked_object_557802832
+      remove:
+        - tracked_object_557802832
+    - name: despawn_tracked_object_557802848
+      remove:
+        - tracked_object_557802848
+    - name: despawn_tracked_object_557803664
+      remove:
+        - tracked_object_557803664
+    - name: despawn_tracked_object_557810208
+      remove:
+        - tracked_object_557810208
+    - name: despawn_tracked_object_557810224
+      remove:
+        - tracked_object_557810224
+    - name: despawn_tracked_object_557815920
+      remove:
+        - tracked_object_557815920
+    - name: despawn_tracked_object_557817184
+      remove:
+        - tracked_object_557817184
+    - name: despawn_tracked_object_557818560
+      remove:
+        - tracked_object_557818560
+    - name: despawn_tracked_object_557820080
+      remove:
+        - tracked_object_557820080
+    - name: despawn_tracked_object_557833504
+      remove:
+        - tracked_object_557833504
+    - name: despawn_tracked_object_557838896
+      remove:
+        - tracked_object_557838896
+    - name: despawn_tracked_object_557857424
+      remove:
+        - tracked_object_557857424
+    - name: despawn_tracked_object_557859456
+      remove:
+        - tracked_object_557859456
+    - name: despawn_tracked_object_557877168
+      remove:
+        - tracked_object_557877168
+    - name: despawn_tracked_object_557855376
+      remove:
+        - tracked_object_557855376
+    - name: despawn_tracked_object_557889104
+      remove:
+        - tracked_object_557889104
+    - name: despawn_tracked_object_557916752
+      remove:
+        - tracked_object_557916752
+    - name: despawn_tracked_object_557922112
+      remove:
+        - tracked_object_557922112
+    - name: despawn_tracked_object_557927952
+      remove:
+        - tracked_object_557927952
+    - name: despawn_tracked_object_557932160
+      remove:
+        - tracked_object_557932160
+    - name: despawn_tracked_object_557934400
+      remove:
+        - tracked_object_557934400
+    - name: despawn_tracked_object_557943552
+      remove:
+        - tracked_object_557943552
+    - name: despawn_tracked_object_557948288
+      remove:
+        - tracked_object_557948288
+    - name: despawn_tracked_object_557948304
+      remove:
+        - tracked_object_557948304
+    - name: despawn_tracked_object_557900480
+      remove:
+        - tracked_object_557900480
+    - name: despawn_tracked_object_557955328
+      remove:
+        - tracked_object_557955328
+    - name: despawn_tracked_object_557964848
+      remove:
+        - tracked_object_557964848
+    - name: despawn_tracked_object_557964864
+      remove:
+        - tracked_object_557964864
+    - name: despawn_tracked_object_557998400
+      remove:
+        - tracked_object_557998400
+    - name: despawn_tracked_object_558006576
+      remove:
+        - tracked_object_558006576
+    - name: despawn_tracked_object_558011936
+      remove:
+        - tracked_object_558011936
+    - name: despawn_tracked_object_558014592
+      remove:
+        - tracked_object_558014592
+    - name: despawn_tracked_object_558022736
+      remove:
+        - tracked_object_558022736
+    - name: despawn_tracked_object_558017312
+      remove:
+        - tracked_object_558017312
+    - name: despawn_tracked_object_558033408
+      remove:
+        - tracked_object_558033408
+    - name: despawn_tracked_object_558041440
+      remove:
+        - tracked_object_558041440
+    - name: despawn_tracked_object_558043984
+      remove:
+        - tracked_object_558043984
+    - name: despawn_tracked_object_558094880
+      remove:
+        - tracked_object_558094880
+    - name: despawn_tracked_object_558141664
+      remove:
+        - tracked_object_558141664
+    - name: despawn_tracked_object_558145440
+      remove:
+        - tracked_object_558145440
+    - name: despawn_tracked_object_558181872
+      remove:
+        - tracked_object_558181872
+    - name: despawn_tracked_object_558185168
+      remove:
+        - tracked_object_558185168
+    - name: despawn_tracked_object_558236944
+      remove:
+        - tracked_object_558236944
+    - name: set_actions_for_2.3500001430511475_reverse_true_tracked_object_557802816
+      set_npc_lights:
+        npcs:
+          - tracked_object_557802816
+        reverse_lights: 'ON'
+    - name: set_actions_for_6.549999952316284_reverse_true_tracked_object_557810208
+      set_npc_lights:
+        npcs:
+          - tracked_object_557810208
+        reverse_lights: 'ON'
+    - name: set_actions_for_8.150000095367432_hazard_true_tracked_object_557810224
+      set_npc_lights:
+        npcs:
+          - tracked_object_557810224
+        hazard_lights: 'ON'
+    - name: set_actions_for_8.850000143051147_hazard_true_tracked_object_557818560
+      set_npc_lights:
+        npcs:
+          - tracked_object_557818560
+        hazard_lights: 'ON'
+        head_lights: HIGH_BEAM
+        flashing_pattern: REQUESTING_RIGHT_OF_WAY
+        emergency_lights: 'ON'
+    - name: set_actions_for_6.049999952316284_emv_requesting_row_true_tracked_object_557820080
+      set_npc_lights:
+        npcs:
+          - tracked_object_557820080
+        emergency_lights: 'OFF'
+        head_lights: HIGH_BEAM
+    - name: set_tracked_object_557820080_active_emv_probability
+      set_perception_attribute:
+        npcs:
+          - tracked_object_557820080
+        attributes:
+          active_emv_probability: 1
+    - name: set_avoidance_areas_FULL_1692778160487077298
+      sync_avoidance_areas: []
+    - name: set_avoidance_areas_FULL_1692778178517126994
+      sync_avoidance_areas: []
+    - name: set_avoidance_areas_PARTIAL_1692778160487077298
+      sync_avoidance_areas:
+        - geometry:
+            - x: -3441.943
+              y: -4347.872
+            - x: -3441.943
+              y: -4345.872
+            - x: -3443.943
+              y: -4345.872
+            - x: -3443.943
+              y: -4347.872
+          type: PARTIAL
+          subtype: VRE
+          route_cost: -1
+        - geometry:
+            - x: -3564.443
+              y: -4370.472
+            - x: -3559.743
+              y: -4369.672
+            - x: -3558.043
+              y: -4377.472
+            - x: -3562.443
+              y: -4378.172
+          type: PARTIAL
+          subtype: VRE
+          route_cost: -1
+        - geometry:
+            - x: -3560.943
+              y: -4470.272
+            - x: -3560.943
+              y: -4466.672
+            - x: -3564.643
+              y: -4466.672
+            - x: -3564.643
+              y: -4470.272
+          type: PARTIAL
+          subtype: VRE
+          route_cost: -1
+    - name: set_avoidance_areas_PARTIAL_1692778178517126994
+      sync_avoidance_areas:
+        - geometry:
+            - x: -3441.943
+              y: -4347.872
+            - x: -3441.943
+              y: -4345.872
+            - x: -3443.943
+              y: -4345.872
+            - x: -3443.943
+              y: -4347.872
+          type: PARTIAL
+          subtype: VRE
+          route_cost: -1
+        - geometry:
+            - x: -3564.443
+              y: -4370.472
+            - x: -3559.743
+              y: -4369.672
+            - x: -3558.043
+              y: -4377.472
+            - x: -3562.443
+              y: -4378.172
+          type: PARTIAL
+          subtype: VRE
+          route_cost: -1
+        - geometry:
+            - x: -3560.943
+              y: -4470.272
+            - x: -3560.943
+              y: -4466.672
+            - x: -3564.643
+              y: -4466.672
+            - x: -3564.643
+              y: -4470.272
+          type: PARTIAL
+          subtype: VRE
+          route_cost: -1
+    - name: spoof_houston_connection_loss_1692778160307124416
+      publish_topic:
+        topic_name: /houston_comms/connectivity_ddtf_status
+        message:
+          connectivity_heartbeat_ok: true
+          driverless_control_backend_ok: true
+    - name: action_turn_on_headlights
+      set_npc_lights:
+        npcs:
+          - tracked_object_557838896
+        head_lights: 'ON'
+    - name: action_success
+      terminate_scenario_success: {}
+    - name: action_failure
+      terminate_scenario_failure:
+        exit_code: 88
+  zones:
+    - name: stay_out_region
+      geometries:
+        - points:
+            - x: -3630.286
+              y: -4471.029
+            - x: -3630.212
+              y: -4476.96
+            - x: -3588.759
+              y: -4476.517
+            - x: -3588.949
+              y: -4470.43
+      color: red
+    - name: success_region
+      geometries:
+        - points:
+            - x: -3559.6690000000003
+              y: -4458.717000000001
+            - x: -3554.2670000000003
+              y: -4458.763000000001
+            - x: -3554.2250000000004
+              y: -4465.7570000000005
+            - x: -3559.635
+              y: -4465.892000000001
+      color: green
+parameters:
+  zipper_lists:
+    - names:
+        - fog_model_path
+      values:
+        - - fog_distribution_new_model/fop_1_delay0_new_fog_model.yaml
+analyze_template: planning_multi_scoring_distance_to_collision.yaml
+
