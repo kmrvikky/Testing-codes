@@ -1,0 +1,729 @@
+metadata:
+  author: road_to_sim
+  description: "R2S conversion for drive segment id: 5G21A6P04L4100008:1695569268:1695569293"
+  scenario_id: 2a0d1b80-41ff-4944-ace7-ab05dbb5022c
+  title: 5G21A6P04L4100008_1695569268_1695569293_r2s
+  enable_r2s_assertions_pipeline: true
+  fail: ""
+  pass: ""
+  tags:
+    generator_sceneedit: 1716437977
+
+config:
+  city_name: san_francisco
+  initial_curvature: 0
+  initial_velocity: 0
+  map_version: v1-20230922-000408
+  map_assets:
+    rectangle:
+      coordinates:
+        meters_min_x: -979.694
+        meters_min_y: 2550.263
+        meters_max_x: -445.622
+        meters_max_y: 3160.824
+        coordinate_system: Cruise_UTM
+  initial_steer_command: 0
+  road_model:
+    disable: true
+
+  av_state:
+    max_speed: 20.117
+    autonomous_legal_speed_limit: 20.117
+  drive_segment_id: 5G21A6P04L4100008:1695569268:1695569293
+  evaluation_start_time: 1695569268
+  evaluation_end_time: 1695569292.9999661
+  launch:
+    params:
+      /router/always_route: true
+      /router/average_av_speed: 6.7
+      /router/base_reliability_cost: 0.00001
+      /router/cost_faa_construction_road_closure: 14400
+      /router/cost_faa_high_res_data_needed_driveable_area_change: 14400
+      /router/cost_faa_high_res_data_needed_traffic_control: 14400
+      /router/cost_faa_make_right_turns: -1
+      /router/cost_faa_navigate_traffic_light_intersections: 14400
+      /router/cost_faa_semantic_update_needed_driveable_area_discrepancy: 14400
+      /router/cost_faa_semantic_update_needed_traffic_control: 14400
+      /router/enable_avoidance_area_costs: false
+      /router/enable_marketplace_intelligence: true
+      /router/enable_mission_aware_routing: false
+      /router/enable_time_dependent_lanes: false
+      /router/feature_flags/adjacent_turns: true
+      /router/feature_flags/all_way_yields: true
+      /router/feature_flags/bike_lanes: false
+      /router/feature_flags/blacklisted: false
+      /router/feature_flags/center_lanes: false
+      /router/feature_flags/controlled_by_no_turn: false
+      /router/feature_flags/cross_bike_lanes: true
+      /router/feature_flags/high_speed_lanes: true
+      /router/feature_flags/insufficient_horizon_lanes: false
+      /router/feature_flags/intersection_merge_lanes: true
+      /router/feature_flags/lane_change_bike_shared_outgoing: false
+      /router/feature_flags/lane_change_intersection_turns: false
+      /router/feature_flags/lateral_access_only_intersections: false
+      /router/feature_flags/major_minor_left: true
+      /router/feature_flags/major_minor_right_crossing_bike_lanes: true
+      /router/feature_flags/minor_major_left: true
+      /router/feature_flags/minor_major_left_crossing_vehicle_lanes: true
+      /router/feature_flags/minor_major_left_with_bidirectional_cross_traffic: true
+      /router/feature_flags/minor_major_left_yield: true
+      /router/feature_flags/minor_major_outer_left_turns: true
+      /router/feature_flags/minor_major_outer_right_turns: true
+      /router/feature_flags/minor_major_right: true
+      /router/feature_flags/minor_major_right_crossing_vehicle_lanes: true
+      /router/feature_flags/minor_major_right_inner_turn_onto_multilane_roads: true
+      /router/feature_flags/minor_major_right_inner_turn_with_multiple_yieldto_lanes: true
+      /router/feature_flags/minor_major_right_onto_rail_lines: false
+      /router/feature_flags/minor_major_right_yield: true
+      /router/feature_flags/minor_major_straight: true
+      /router/feature_flags/minor_major_straight_yield: true
+      /router/feature_flags/missing_tiles: false
+      /router/feature_flags/mixed_traffic_controls: true
+      /router/feature_flags/narrow_lanes: true
+      /router/feature_flags/outer_right_turns: true
+      /router/feature_flags/outside_routable_area: false
+      /router/feature_flags/restricted_lanes: false
+      /router/feature_flags/restricted_turns: false
+      /router/feature_flags/shared_lanes: true
+      /router/feature_flags/sharp_turns: true
+      /router/feature_flags/steep_lanes: true
+      /router/feature_flags/too_short_lane_changes: false
+      /router/feature_flags/too_short_terminal_lane_changes: false
+      /router/feature_flags/u_turns: false
+      /router/feature_flags/unprotected_left_turns_with_many_yield_to_lanes: true
+      /router/feature_flags/unsupported_traffic_light_types: false
+      /router/feature_flags/untracked_rail_interactions: false
+      /router/feature_flags/yielding_left_turns: true
+      /router/feature_flags/zipper_lanes: true
+      /router/grade_threshold: 0.2
+      /router/ignore_ulh: none
+      /router/left_turn_cost: 12
+      /router/max_legal_speed_limit: 20.117
+      /router/minor_major_right_high_speed_threshold: 11.18
+      /router/pullover_area_buffer: 5
+      /router/pullover_max_distance_to_next_interval: 750
+      /router/pullover_max_lane_change_search_distance: 150
+      /router/pullover_max_required_lane_changes_to_access: 1
+      /router/pullover_max_required_lane_changes_to_exit: 1
+      /router/pullover_remove_consecutive_lane_changes: true
+      /router/reliability_costs_weight: 1
+      /router/right_turn_cost: 9
+      /router/time_costs_weight: 1
+      /router/use_soft_fixed_routes: false
+      /router/use_traffic_flow_model: true
+      enable_passenger_readiness_checking: false
+
+  worldgen:
+    delineator_post: false
+
+  scenedit:
+    output_path: ros/src/planning_simulator_scenarios/v2tests/5G21A6P04L4100008_1695569268_1695569293.yaml
+
+modules:
+  router:
+    waypoints:
+      - x: -708.519
+        y: 2811.649
+      - x: -714.668
+        y: 2849.254
+      - x: -716.031
+        y: 2851.991
+      - x: -724.402
+        y: 2894.703
+    initial_conditions:
+      heading: -4.546477695176456
+    expects_passengers_at_start_of_waypoint:
+      - false
+    expects_passengers_at_end_of_waypoint:
+      - false
+    feature_flags:
+      adjacent_turns: true
+      all_way_yields: true
+      bike_lanes: false
+      blacklisted: false
+      center_lanes: false
+      controlled_by_no_turn: false
+      cross_bike_lanes: true
+      high_speed_lanes: true
+      insufficient_horizon_lanes: false
+      intersection_merge_lanes: true
+      lane_change_bike_shared_outgoing: false
+      lane_change_intersection_turns: false
+      lateral_access_only_intersections: false
+      major_minor_left: true
+      major_minor_right_crossing_bike_lanes: true
+      minor_major_left: true
+      minor_major_left_with_bidirectional_cross_traffic: true
+      minor_major_left_yield: true
+      minor_major_left_crossing_vehicle_lanes: true
+      minor_major_outer_left_turns: true
+      minor_major_outer_right_turns: true
+      minor_major_right: true
+      minor_major_right_crossing_vehicle_lanes: true
+      minor_major_right_yield: true
+      minor_major_right_inner_turn_onto_multilane_roads: true
+      minor_major_right_inner_turn_with_multiple_yieldto_lanes: true
+      minor_major_right_onto_rail_lines: false
+      minor_major_straight: true
+      minor_major_straight_yield: true
+      missing_tiles: false
+      mixed_traffic_controls: true
+      narrow_lanes: true
+      outer_right_turns: true
+      outside_routable_area: false
+      restricted_lanes: false
+      restricted_turns: false
+      shared_lanes: true
+      sharp_turns: true
+      steep_lanes: true
+      too_short_lane_changes: false
+      too_short_terminal_lane_changes: false
+      u_turns: false
+      unprotected_left_turns_with_many_yield_to_lanes: true
+      unsupported_traffic_light_types: false
+      untracked_rail_interactions: false
+      yielding_left_turns: true
+      zipper_lanes: true
+    always_route: true
+    max_legal_speed_limit: 20.117
+    skip_pullovers:
+      - false
+      - false
+      - true
+    soft_fixed_routes:
+      - source_pose:
+          - -708.519
+          - 2811.649
+        source_radius: 10.2
+        destination_pose:
+          - -724.402
+          - 2894.703
+        destination_radius: 10.2
+        fixed_routes:
+          - cost_multiplier: 0.004
+            lane_ids: []
+
+world:
+  entities:
+
+    - asset_id: V_HummerH2_Static
+      name: tracked_object_28115280
+      variants:
+        color: Red
+      x: -697.2695009330761
+      y: 2806.7275725249797
+      z: 4.690472045849078
+      heading: -1.3706252622915118
+      attributes:
+        motorcycle_probability: 0.000025172987079713494
+        truck_probability: 0.0001983481488423422
+        bus_probability: 0.0000497144392284099
+        school_bus_probability: 0
+        emv_probability: 0
+      is_divergence_required: true
+
+    - asset_id: V_LandRover_Static
+      name: tracked_object_28871920
+      variants:
+        color: Champagne
+      x: -702.1978759765625
+      y: 2805.6591796875
+      z: 5.497886657714844
+      heading: 1.8177820392456836
+      attributes:
+        train_probability: 0.0390625
+        truck_probability: 0.27978515625
+        bus_probability: 0.219482421875
+        school_bus_probability: 0.055755615234375
+      is_divergence_required: true
+
+    - asset_id: V_Prius_Static
+      name: tracked_object_28887984
+      variants:
+        color: Blue
+      x: -720.3175597861826
+      y: 2802.622809149635
+      z: 8.442907291223781
+      heading: 1.76237511614512
+      attributes:
+        motorcycle_probability: 0.00003194945020368323
+        truck_probability: 0.000218193483306095
+        bus_probability: 0.000060536778619280085
+        school_bus_probability: 0
+        emv_probability: 0
+      is_divergence_required: true
+
+    - asset_id: V_LandRover_Static
+      name: tracked_object_28906336
+      variants:
+        color: Silver
+      x: -714.606689453125
+      y: 2804.15087890625
+      z: 7.512489318847656
+      heading: -1.4066720360258664
+      attributes:
+        train_probability: 0.0706787109375
+        truck_probability: 0.057464599609375
+        bus_probability: 0.2166748046875
+        school_bus_probability: 0.07305908203125
+      is_divergence_required: true
+
+    - asset_id: V_LandCruiser_Static
+      name: tracked_object_28920576
+      variants:
+        color: Blue
+      x: -699.4484435976743
+      y: 2805.5076666692316
+      z: 5.074966762111536
+      heading: -1.386710318700507
+      attributes:
+        motorcycle_probability: 0.000030878280085744336
+        truck_probability: 0.00018841089331544936
+        bus_probability: 0.00005692469494533725
+        school_bus_probability: 0
+        emv_probability: 0
+      is_divergence_required: true
+
+    - asset_id: P_Streetlight_SF_Finial
+      name: tracked_object_28930384
+      x: -709.8609008789062
+      y: 2807.117431640625
+      z: 7.0742034912109375
+      heading: -1.5707963267948966
+      attributes:
+        motorcycle_probability: 0.0012525725178420544
+        truck_probability: 0.006520856637507677
+        bus_probability: 0.002586058806627989
+        school_bus_probability: 0.0011767918476834893
+        emv_probability: 0.003422471694648266
+        bike_without_rider_probability: 0.0025460897013545036
+      is_divergence_required: true
+
+    - asset_id: V_Escape_Static
+      name: tracked_object_28940288
+      variants:
+        color: Black
+      x: -704.4857525468719
+      y: 2805.2067905366557
+      z: 5.897726996561706
+      heading: 1.7103435807576364
+      attributes:
+        train_probability: 0.0211334228515625
+        truck_probability: 0.06451416015625
+        bus_probability: 0.058929443359375
+        school_bus_probability: 0.07794189453125
+      is_divergence_required: true
+
+    - asset_id: V_TaxiEscape_Static
+      name: tracked_object_28997296
+      variants:
+        color: Red
+      x: -722.5680319560121
+      y: 2802.6926297843593
+      z: 8.773544019347952
+      heading: 1.7265937405897531
+      attributes:
+        motorcycle_probability: 0.000019028100723517127
+        truck_probability: 0.00012735322525259107
+        bus_probability: 0.000043105374061269686
+        school_bus_probability: 0
+        emv_probability: 0
+      is_divergence_required: true
+
+    - asset_id: V_Bolt_Static
+      name: tracked_object_32947344
+      variants:
+        color: Grey
+      x: -727.4577193087207
+      y: 2909.445680764332
+      z: -3.376182052913516
+      heading: -2.969456195043784
+      attributes:
+        train_probability: 0.006641387939453125
+        truck_probability: 0.01453399658203125
+        bus_probability: 0.042083740234375
+        school_bus_probability: 0.002689361572265625
+      is_divergence_required: true
+
+    - asset_id: P_StreetLampB
+      name: tracked_object_33012336
+      x: -716.3314819335938
+      y: 2807.12548828125
+      z: 7.850822448730469
+      heading: 1.5707963267948966
+      attributes:
+        motorcycle_probability: 0
+        truck_probability: 0
+        bus_probability: 0
+        school_bus_probability: 0
+        emv_probability: 0
+      is_divergence_required: true
+
+  triggers:
+    - name: trigger_spawn_tracked_object_28115280
+      actions:
+        - spawn_tracked_object_28115280
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 0.033841146
+
+    - name: trigger_despawn_tracked_object_28115280
+      actions:
+        - despawn_tracked_object_28115280
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 8.135857266
+
+    - name: trigger_spawn_tracked_object_28871920
+      actions:
+        - spawn_tracked_object_28871920
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 0.03914292
+
+    - name: trigger_despawn_tracked_object_28871920
+      actions:
+        - despawn_tracked_object_28871920
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 11.344417413
+
+    - name: trigger_spawn_tracked_object_28887984
+      actions:
+        - spawn_tracked_object_28887984
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 0.067185683
+
+    - name: trigger_despawn_tracked_object_28887984
+      actions:
+        - despawn_tracked_object_28887984
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 8.465877888
+
+    - name: trigger_spawn_tracked_object_28906336
+      actions:
+        - spawn_tracked_object_28906336
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 0.063296283
+
+    - name: trigger_despawn_tracked_object_28906336
+      actions:
+        - despawn_tracked_object_28906336
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 10.259442906
+
+    - name: trigger_spawn_tracked_object_28920576
+      actions:
+        - spawn_tracked_object_28920576
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 0.036664487
+
+    - name: trigger_despawn_tracked_object_28920576
+      actions:
+        - despawn_tracked_object_28920576
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 9.340193352
+
+    - name: trigger_spawn_tracked_object_28930384
+      actions:
+        - spawn_tracked_object_28930384
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 0.056635833
+
+    - name: trigger_spawn_tracked_object_28940288
+      actions:
+        - spawn_tracked_object_28940288
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 0.043079544
+
+    - name: trigger_despawn_tracked_object_28940288
+      actions:
+        - despawn_tracked_object_28940288
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 23.951410652
+
+    - name: trigger_spawn_tracked_object_28997296
+      actions:
+        - spawn_tracked_object_28997296
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 0.068567519
+
+    - name: trigger_despawn_tracked_object_28997296
+      actions:
+        - despawn_tracked_object_28997296
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 7.368319784
+
+    - name: trigger_spawn_tracked_object_32947344
+      actions:
+        - spawn_tracked_object_32947344
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 0.099886445
+
+    - name: trigger_spawn_tracked_object_33012336
+      actions:
+        - spawn_tracked_object_33012336
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 0.069164279
+
+    - name: trigger_despawn_tracked_object_33012336
+      actions:
+        - despawn_tracked_object_33012336
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 6.168093392
+
+    - name: trigger_traffic_light_6817_at_22.596640122
+      delay: 22.596640122
+      actions:
+        - change_traffic_light_6817_at_1695569290596640122
+      conditions:
+        - system_state: DRIVERLESS
+
+    - name: trigger_traffic_light_6812_at_22.596640122
+      delay: 22.596640122
+      actions:
+        - change_traffic_light_6812_at_1695569290596640122
+      conditions:
+        - system_state: DRIVERLESS
+
+    - name: trigger_traffic_light_6823_at_22.596640122
+      delay: 22.596640122
+      actions:
+        - change_traffic_light_6823_at_1695569290596640122
+      conditions:
+        - system_state: DRIVERLESS
+
+    - name: trigger_traffic_light_6819_at_22.596640122
+      delay: 22.596640122
+      actions:
+        - change_traffic_light_6819_at_1695569290596640122
+      conditions:
+        - system_state: DRIVERLESS
+
+    - name: trigger_traffic_light_6820_at_22.596640122
+      delay: 22.596640122
+      actions:
+        - change_traffic_light_6820_at_1695569290596640122
+      conditions:
+        - system_state: DRIVERLESS
+
+    - name: trigger_traffic_light_6815_at_22.596640122
+      delay: 22.596640122
+      actions:
+        - change_traffic_light_6815_at_1695569290596640122
+      conditions:
+        - system_state: DRIVERLESS
+
+    - name: trigger_traffic_light_6830_at_22.596640122
+      delay: 22.596640122
+      actions:
+        - change_traffic_light_6830_at_1695569290596640122
+      conditions:
+        - system_state: DRIVERLESS
+
+    - name: segment_end
+      actions:
+        - segment_end_action
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 24.999966124
+
+    - name: trigger_AV_lights_at_1695569268000596351
+      actions:
+        - set_AV_headlights_on_to_ON_0
+        - set_AV_brake_lights_on_to_ON_0
+        - set_AV_reverse_lights_on_to_OFF_0
+        - set_AV_hazard_lights_on_to_OFF_0
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 0.000596351
+
+    - name: trigger_AV_lights_at_1695569273834801823
+      actions:
+        - set_AV_brake_lights_on_to_OFF_1
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 5.834801823
+
+    - name: trigger_AV_lights_at_1695569280959988855
+      actions:
+        - set_AV_brake_lights_on_to_ON_2
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 12.959988855
+
+  actions:
+    - name: spawn_tracked_object_28115280
+      spawn:
+        - tracked_object_28115280
+
+    - name: spawn_tracked_object_28871920
+      spawn:
+        - tracked_object_28871920
+
+    - name: spawn_tracked_object_28887984
+      spawn:
+        - tracked_object_28887984
+
+    - name: spawn_tracked_object_28906336
+      spawn:
+        - tracked_object_28906336
+
+    - name: spawn_tracked_object_28920576
+      spawn:
+        - tracked_object_28920576
+
+    - name: spawn_tracked_object_28930384
+      spawn:
+        - tracked_object_28930384
+
+    - name: spawn_tracked_object_28940288
+      spawn:
+        - tracked_object_28940288
+
+    - name: spawn_tracked_object_28997296
+      spawn:
+        - tracked_object_28997296
+
+    - name: spawn_tracked_object_32947344
+      spawn:
+        - tracked_object_32947344
+
+    - name: spawn_tracked_object_33012336
+      spawn:
+        - tracked_object_33012336
+
+    - name: despawn_tracked_object_28115280
+      remove:
+        - tracked_object_28115280
+
+    - name: despawn_tracked_object_28871920
+      remove:
+        - tracked_object_28871920
+
+    - name: despawn_tracked_object_28887984
+      remove:
+        - tracked_object_28887984
+
+    - name: despawn_tracked_object_28906336
+      remove:
+        - tracked_object_28906336
+
+    - name: despawn_tracked_object_28920576
+      remove:
+        - tracked_object_28920576
+
+    - name: despawn_tracked_object_28940288
+      remove:
+        - tracked_object_28940288
+
+    - name: despawn_tracked_object_28997296
+      remove:
+        - tracked_object_28997296
+
+    - name: despawn_tracked_object_33012336
+      remove:
+        - tracked_object_33012336
+
+    - name: set_AV_headlights_on_to_ON_0
+      set_npc_lights:
+        npcs:
+          - CRUISE
+        head_lights: 'ON'
+
+    - name: set_AV_brake_lights_on_to_ON_0
+      set_npc_lights:
+        npcs:
+          - CRUISE
+        brake_lights: 'ON'
+
+    - name: set_AV_reverse_lights_on_to_OFF_0
+      set_npc_lights:
+        npcs:
+          - CRUISE
+        reverse_lights: 'OFF'
+
+    - name: set_AV_hazard_lights_on_to_OFF_0
+      set_npc_lights:
+        npcs:
+          - CRUISE
+        hazard_lights: 'OFF'
+
+    - name: set_AV_brake_lights_on_to_OFF_1
+      set_npc_lights:
+        npcs:
+          - CRUISE
+        brake_lights: 'OFF'
+
+    - name: set_AV_brake_lights_on_to_ON_2
+      set_npc_lights:
+        npcs:
+          - CRUISE
+        brake_lights: 'ON'
+
+    - name: change_traffic_light_6817_at_1695569290596640122
+      update_traffic_lights:
+        traffic_light_ids:
+          - 6817
+        bulbs:
+          GREEN_BLOB: 'ON'
+
+    - name: change_traffic_light_6812_at_1695569290596640122
+      update_traffic_lights:
+        traffic_light_ids:
+          - 6812
+        bulbs:
+          GREEN_BLOB: 'ON'
+
+    - name: change_traffic_light_6823_at_1695569290596640122
+      update_traffic_lights:
+        traffic_light_ids:
+          - 6823
+        bulbs:
+          RED_BLOB: 'ON'
+
+    - name: change_traffic_light_6819_at_1695569290596640122
+      update_traffic_lights:
+        traffic_light_ids:
+          - 6819
+        bulbs:
+          RED_BLOB: 'ON'
+
+    - name: change_traffic_light_6820_at_1695569290596640122
+      update_traffic_lights:
+        traffic_light_ids:
+          - 6820
+        bulbs:
+          RED_BLOB: 'ON'
+
+    - name: change_traffic_light_6815_at_1695569290596640122
+      update_traffic_lights:
+        traffic_light_ids:
+          - 6815
+        bulbs:
+          RED_BLOB: 'ON'
+
+    - name: change_traffic_light_6830_at_1695569290596640122
+      update_traffic_lights:
+        traffic_light_ids:
+          - 6830
+        bulbs:
+          GREEN_BLOB: 'ON'
+
+    - name: segment_end_action
+      terminate_scenario_success: {}
+analyze_template: planning_multi_scoring_distance_to_collision_ml_grader.yaml
