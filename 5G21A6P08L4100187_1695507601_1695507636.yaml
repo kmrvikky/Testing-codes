@@ -1,0 +1,3578 @@
+metadata:
+  author: road_to_sim
+  description: "R2S conversion for drive segment id: 5G21A6P08L4100187:1695507601:1695507636"
+  scenario_id: 42668840-6315-4748-b25f-be70f97db9b9
+  title: 5G21A6P08L4100187_1695507601_1695507636_r2s
+  enable_r2s_assertions_pipeline: true
+  fail: ""
+  pass: ""
+  tags:
+    generator_sceneedit: 1716393880
+config:
+  city_name: san_francisco
+  initial_curvature: -0.004516406966848605
+  initial_velocity: 2.65014832536191
+  map_version: v1-20230918-154903
+  map_assets:
+    rectangle:
+      coordinates:
+        meters_min_x: -6541.553
+        meters_min_y: 2412.78
+        meters_max_x: -5986.805
+        meters_max_y: 2974.598
+        coordinate_system: Cruise_UTM
+  initial_steer_command: -11.5625
+  road_model:
+    disable: true
+  av_state:
+    max_speed: 20.117
+    autonomous_legal_speed_limit: 20.117
+  drive_segment_id: 5G21A6P08L4100187:1695507601:1695507636
+  evaluation_start_time: 1695507601
+  evaluation_end_time: 1695507635.9999907
+  launch:
+    params:
+      /router/always_route: true
+      /router/average_av_speed: 6.7
+      /router/base_reliability_cost: 0.00001
+      /router/cost_faa_construction_road_closure: 14400
+      /router/cost_faa_high_res_data_needed_driveable_area_change: 14400
+      /router/cost_faa_high_res_data_needed_traffic_control: 14400
+      /router/cost_faa_make_right_turns: -1
+      /router/cost_faa_navigate_traffic_light_intersections: 14400
+      /router/cost_faa_semantic_update_needed_driveable_area_discrepancy: 14400
+      /router/cost_faa_semantic_update_needed_traffic_control: 14400
+      /router/enable_avoidance_area_costs: true
+      /router/enable_marketplace_intelligence: true
+      /router/enable_mission_aware_routing: false
+      /router/enable_time_dependent_lanes: false
+      /router/feature_flags/adjacent_turns: true
+      /router/feature_flags/all_way_yields: true
+      /router/feature_flags/bike_lanes: false
+      /router/feature_flags/blacklisted: false
+      /router/feature_flags/center_lanes: false
+      /router/feature_flags/controlled_by_no_turn: false
+      /router/feature_flags/cross_bike_lanes: true
+      /router/feature_flags/high_speed_lanes: true
+      /router/feature_flags/insufficient_horizon_lanes: false
+      /router/feature_flags/intersection_merge_lanes: true
+      /router/feature_flags/lane_change_bike_shared_outgoing: false
+      /router/feature_flags/lane_change_intersection_turns: false
+      /router/feature_flags/lateral_access_only_intersections: false
+      /router/feature_flags/major_minor_left: true
+      /router/feature_flags/major_minor_right_crossing_bike_lanes: true
+      /router/feature_flags/minor_major_left: true
+      /router/feature_flags/minor_major_left_crossing_vehicle_lanes: true
+      /router/feature_flags/minor_major_left_with_bidirectional_cross_traffic: true
+      /router/feature_flags/minor_major_left_yield: true
+      /router/feature_flags/minor_major_outer_left_turns: true
+      /router/feature_flags/minor_major_outer_right_turns: true
+      /router/feature_flags/minor_major_right: true
+      /router/feature_flags/minor_major_right_crossing_vehicle_lanes: true
+      /router/feature_flags/minor_major_right_inner_turn_onto_multilane_roads: true
+      /router/feature_flags/minor_major_right_inner_turn_with_multiple_yieldto_lanes: true
+      /router/feature_flags/minor_major_right_onto_rail_lines: false
+      /router/feature_flags/minor_major_right_yield: true
+      /router/feature_flags/minor_major_straight: true
+      /router/feature_flags/minor_major_straight_yield: true
+      /router/feature_flags/missing_tiles: false
+      /router/feature_flags/mixed_traffic_controls: true
+      /router/feature_flags/narrow_lanes: true
+      /router/feature_flags/outer_right_turns: true
+      /router/feature_flags/outside_routable_area: false
+      /router/feature_flags/restricted_lanes: false
+      /router/feature_flags/restricted_turns: false
+      /router/feature_flags/shared_lanes: true
+      /router/feature_flags/sharp_turns: true
+      /router/feature_flags/steep_lanes: true
+      /router/feature_flags/too_short_lane_changes: false
+      /router/feature_flags/too_short_terminal_lane_changes: false
+      /router/feature_flags/u_turns: false
+      /router/feature_flags/unprotected_left_turns_with_many_yield_to_lanes: true
+      /router/feature_flags/unsupported_traffic_light_types: false
+      /router/feature_flags/untracked_rail_interactions: false
+      /router/feature_flags/yielding_left_turns: true
+      /router/feature_flags/zipper_lanes: true
+      /router/grade_threshold: 0.2
+      /router/ignore_ulh: none
+      /router/left_turn_cost: 12
+      /router/max_legal_speed_limit: 20.117
+      /router/minor_major_right_high_speed_threshold: 11.18
+      /router/pullover_area_buffer: 5
+      /router/pullover_max_distance_to_next_interval: 750
+      /router/pullover_max_lane_change_search_distance: 150
+      /router/pullover_max_required_lane_changes_to_access: 1
+      /router/pullover_max_required_lane_changes_to_exit: 1
+      /router/pullover_remove_consecutive_lane_changes: true
+      /router/reliability_costs_weight: 1
+      /router/right_turn_cost: 9
+      /router/time_costs_weight: 1
+      /router/use_soft_fixed_routes: false
+      /router/use_traffic_flow_model: true
+      enable_passenger_readiness_checking: false
+  worldgen:
+    delineator_post: false
+  scenedit:
+    output_path: ros/src/planning_simulator_scenarios/v2tests/5G21A6P08L4100187_1695507601_1695507636.yaml
+modules:
+  router:
+    waypoints:
+      - x: -6255.826
+        y: 2670.543
+      - x: -6291.553
+        y: 2687.377
+      - x: -6284.997
+        y: 2681.923
+      - x: -6288.772
+        y: 2685.98
+    initial_conditions:
+      heading: -3.6471182852076507
+    expects_passengers_at_start_of_waypoint:
+      - false
+    expects_passengers_at_end_of_waypoint:
+      - false
+    feature_flags:
+      adjacent_turns: true
+      all_way_yields: true
+      bike_lanes: false
+      blacklisted: false
+      center_lanes: false
+      controlled_by_no_turn: false
+      cross_bike_lanes: true
+      high_speed_lanes: true
+      insufficient_horizon_lanes: false
+      intersection_merge_lanes: true
+      lane_change_bike_shared_outgoing: false
+      lane_change_intersection_turns: false
+      lateral_access_only_intersections: false
+      major_minor_left: true
+      major_minor_right_crossing_bike_lanes: true
+      minor_major_left: true
+      minor_major_left_with_bidirectional_cross_traffic: true
+      minor_major_left_yield: true
+      minor_major_left_crossing_vehicle_lanes: true
+      minor_major_outer_left_turns: true
+      minor_major_outer_right_turns: true
+      minor_major_right: true
+      minor_major_right_crossing_vehicle_lanes: true
+      minor_major_right_yield: true
+      minor_major_right_inner_turn_onto_multilane_roads: true
+      minor_major_right_inner_turn_with_multiple_yieldto_lanes: true
+      minor_major_right_onto_rail_lines: false
+      minor_major_straight: true
+      minor_major_straight_yield: true
+      missing_tiles: false
+      mixed_traffic_controls: true
+      narrow_lanes: true
+      outer_right_turns: true
+      outside_routable_area: false
+      restricted_lanes: false
+      restricted_turns: false
+      shared_lanes: true
+      sharp_turns: true
+      steep_lanes: true
+      too_short_lane_changes: false
+      too_short_terminal_lane_changes: false
+      u_turns: false
+      unprotected_left_turns_with_many_yield_to_lanes: true
+      unsupported_traffic_light_types: false
+      untracked_rail_interactions: false
+      yielding_left_turns: true
+      zipper_lanes: true
+    always_route: true
+    max_legal_speed_limit: 20.117
+    skip_pullovers:
+      - true
+      - true
+      - true
+world:
+  entities:
+    - asset_id: P_Cone_DelineatorB
+      name: tracked_object_76083584
+      variants:
+        color: OrangeDirty
+      x: -6281.757304088405
+      y: 2692.201083731665
+      z: 54.063812255859375
+      heading: 0
+      attributes:
+        motorcycle_probability: 0.00005265994695946574
+        truck_probability: 0.00003578000178094953
+        bus_probability: 0.0000446202429884579
+        school_bus_probability: 0
+        emv_probability: 0
+      is_divergence_required: true
+    - asset_id: C_MaleChild01
+      name: tracked_object_76083456
+      variants:
+        color: C
+        use_matrix_animation: true
+        character_height: 0.7679367065429688
+      x: -6283.062743102178
+      y: 2692.4960799508103
+      z: 54.04844665527344
+      heading: 0
+      anim_state:
+        - t: 0
+          state: navigation
+      attributes:
+        motorcycle_probability: 0.009757454507052898
+        truck_probability: 0.007623570971190929
+        bus_probability: 0.00517733721062541
+        school_bus_probability: 0.0028247893787920475
+        emv_probability: 0.006406364496797323
+        bike_without_rider_probability: 0.008395864628255367
+      is_divergence_required: true
+    - asset_id: P_PanelChannelizer
+      name: tracked_object_76084016
+      variants:
+        color: OrangeDirty
+      x: -6257.562000078445
+      y: 2673.3277225912766
+      z: 51.61860656738281
+      heading: 0
+      attributes:
+        motorcycle_probability: 0.00008592833182774484
+        truck_probability: 0.00010144234693143517
+        bus_probability: 0.00005631771273328923
+        school_bus_probability: 0
+        emv_probability: 0
+      is_divergence_required: true
+    - asset_id: P_Cone_DelineatorB
+      name: tracked_object_76083152
+      variants:
+        color: OrangeDirty
+      x: -6254.671819851943
+      y: 2672.9636905191715
+      z: 51.74932861328125
+      heading: 0
+      attributes:
+        motorcycle_probability: 0.011503248475492
+        truck_probability: 0.012216714210808277
+        bus_probability: 0.0015750490128993988
+        school_bus_probability: 0.007631547283381224
+        emv_probability: 0.003735124599188566
+        bike_without_rider_probability: 0.1693102866411209
+      is_divergence_required: true
+    - asset_id: P_PanelChannelizer
+      name: tracked_object_76083360
+      variants:
+        color: OrangeDirty
+      x: -6245.762173025869
+      y: 2667.237279453438
+      z: 51.15724182128906
+      heading: 0
+      attributes:
+        motorcycle_probability: 0.0037954330909997225
+        truck_probability: 0.002435418078675866
+        bus_probability: 0.0007562309037894011
+        school_bus_probability: 0.002993609756231308
+        emv_probability: 0.009849661029875278
+        bike_without_rider_probability: 0.11519206315279007
+      is_divergence_required: true
+    - asset_id: P_Cone_Large
+      name: tracked_object_76083408
+      variants:
+        color: OrangeDirty
+      x: -6253.3921871988805
+      y: 2670.878718123522
+      z: 51.41099548339844
+      heading: 1.5707963267948966
+      attributes:
+        motorcycle_probability: 0.011697834357619286
+        truck_probability: 0.007293504662811756
+        bus_probability: 0.0024834161158651114
+        school_bus_probability: 0.0065877242013812065
+        emv_probability: 0.018059810623526573
+        bike_without_rider_probability: 0.055077992379665375
+      is_divergence_required: true
+    - asset_id: P_Cone_Large
+      name: tracked_object_76073648
+      variants:
+        color: OrangeTaggedLight
+        mesh: Tipped
+      x: -6239.995493806387
+      y: 2663.6666580856777
+      z: 50.93424987792969
+      heading: 0
+      attributes:
+        motorcycle_probability: 0.001553674228489399
+        truck_probability: 0.009132125414907932
+        bus_probability: 0.003438384272158146
+        school_bus_probability: 0.00529167614877224
+        emv_probability: 0.006179296877235174
+        bike_without_rider_probability: 0.010945910587906837
+      is_divergence_required: true
+    - asset_id: P_Cone_Large
+      name: tracked_object_76077408
+      variants:
+        color: OrangeSolid
+      x: -6239.075700887239
+      y: 2663.6137188014573
+      z: 50.92655944824219
+      heading: 1.5707963267948966
+      attributes:
+        motorcycle_probability: 0.000049040787416743115
+        truck_probability: 0.00006922105967532843
+        bus_probability: 0.000038020163628971204
+        school_bus_probability: 0.00033723784144967794
+        emv_probability: 0.0004608553135767579
+      is_divergence_required: true
+    - asset_id: P_Cone_Medium
+      name: tracked_object_76078032
+      variants:
+        color: OrangeDirty
+        mesh: Tipped
+      x: -6257.303467075155
+      y: 2673.134426777006
+      z: 51.61091613769531
+      heading: 0
+      attributes:
+        motorcycle_probability: 0.008667203597724438
+        truck_probability: 0.0042133997194468975
+        bus_probability: 0.0010924262460321188
+        school_bus_probability: 0.0031507338862866163
+        emv_probability: 0.030991287901997566
+        bike_without_rider_probability: 0.052820488810539246
+      is_divergence_required: true
+    - asset_id: P_Cone_Large
+      name: tracked_object_76078544
+      variants:
+        color: OrangeDirty
+      x: -6252.512968160971
+      y: 2670.926761130103
+      z: 51.40330505371094
+      heading: 1.5707963267948966
+      attributes:
+        motorcycle_probability: 0.006830486468970776
+        truck_probability: 0.010131580755114555
+        bus_probability: 0.0006616797763854265
+        school_bus_probability: 0.004603049252182245
+        emv_probability: 0.007918017916381359
+        bike_without_rider_probability: 0.19190217554569244
+      is_divergence_required: true
+    - asset_id: P_Cone_Large
+      name: tracked_object_76083104
+      variants:
+        color: OrangeDirty
+      x: -6237.000109883949
+      y: 2662.97554162709
+      z: 50.87274169921875
+      heading: 1.5707963267948966
+      attributes:
+        motorcycle_probability: 0.00004012303179479204
+        truck_probability: 0.0000688714935677126
+        bus_probability: 0.000025240011382265948
+        school_bus_probability: 0.00011139461275888607
+        emv_probability: 0.0003497461148072034
+      is_divergence_required: true
+    - asset_id: P_Cone_DelineatorB
+      name: tracked_object_76083264
+      variants:
+        color: OrangeDirty
+      x: -6249.539077096246
+      y: 2671.9406480473
+      z: 52.01844787597656
+      heading: 0
+      attributes:
+        motorcycle_probability: 0.019369320943951607
+        truck_probability: 0.0037125423550605774
+        bus_probability: 0.00014925107825547457
+        school_bus_probability: 0.001765277935191989
+        emv_probability: 0.0005853548063896596
+        bike_without_rider_probability: 0.19495569169521332
+      is_divergence_required: true
+    - asset_id: P_Cone_DelineatorB
+      name: tracked_object_76083376
+      variants:
+        color: OrangeDirty
+      x: -6251.737570208375
+      y: 2671.7348923721074
+      z: 51.81852722167969
+      heading: 0
+      attributes:
+        motorcycle_probability: 0.00012044839968439192
+        truck_probability: 0.00008049167809076607
+        bus_probability: 0.0000762152558309026
+        school_bus_probability: 0.001033473527058959
+        emv_probability: 0.0003575446316972375
+      is_divergence_required: true
+    - asset_id: V_NissanD21_Movable
+      name: tracked_object_76083744
+      variants:
+        color: Blue
+      profile:
+        coordinates:
+          - x: -6284.1259765625
+            y: 2722.803955078125
+            z: 52.00098419189453
+            tangents:
+              in:
+                x: 0
+                y: 0
+                z: 0
+              out:
+                x: 9.2197265625
+                y: -2.570068359375
+                z: -0.5253067016601562
+          - x: -6274.8984375
+            y: 2720.22412109375
+            z: 51.591033935546875
+            tangents:
+              in:
+                x: 9.21533203125
+                y: -2.589111328125
+                z: -0.5253524780273438
+              out:
+                x: 4.6787109375
+                y: -1.314697265625
+                z: -0.2667388916015625
+          - x: -6270.2041015625
+            y: 2718.960205078125
+            z: 51.38498306274414
+            tangents:
+              in:
+                x: 4.6962890625
+                y: -1.25830078125
+                z: -0.2668647766113281
+              out:
+                x: 8.37890625
+                y: -2.244873046875
+                z: -0.47609710693359375
+          - x: -6261.8076171875
+            y: 2716.747314453125
+            z: 50.977317810058594
+            tangents:
+              in:
+                x: 8.3818359375
+                y: -2.26318359375
+                z: -0.4764747619628906
+              out:
+                x: 0
+                y: 0
+                z: 0
+        distances:
+          - t: 0
+            distance: 0
+            tangents:
+              in: 0
+              out: 22.867252349853516
+          - t: 1.910144611
+            distance: 23.148977279663086
+            tangents:
+              in: 24.196273803710938
+              out: 0
+        reactivity_options:
+          activation: foni
+          ttc_threshold: 2.5
+      autonomous_behavior:
+        sta_policy_behavior:
+          enabled: true
+      attributes:
+        train_probability: 0.0186767578125
+        truck_probability: 0.037109375
+        bus_probability: 0.031219482421875
+        school_bus_probability: 0.023712158203125
+      is_divergence_required: true
+    - asset_id: V_Cobalt_Movable
+      name: tracked_object_76084032
+      variants:
+        color: Blue
+      profile:
+        coordinates:
+          - x: -6285.6201171875
+            y: 2722.840087890625
+            z: 52.06355667114258
+            tangents:
+              in:
+                x: 0
+                y: 0
+                z: 0
+              out:
+                x: 25.7578125
+                y: -6.815185546875
+                z: -1.2167129516601562
+          - x: -6259.88720703125
+            y: 2715.93603515625
+            z: 50.858463287353516
+            tangents:
+              in:
+                x: 25.7080078125
+                y: -6.96533203125
+                z: -1.3690338134765625
+              out:
+                x: 0
+                y: 0
+                z: 0
+        distances:
+          - t: 0
+            distance: 0
+            tangents:
+              in: 0
+              out: 25.859004974365234
+          - t: 1.911407195
+            distance: 26.670377731323242
+            tangents:
+              in: 27.7840518951416
+              out: 0
+        reactivity_options:
+          activation: foni
+          ttc_threshold: 2.5
+      autonomous_behavior:
+        sta_policy_behavior:
+          enabled: true
+      attributes:
+        train_probability: 0.01165771484375
+        truck_probability: 0.04107666015625
+        bus_probability: 0.05401611328125
+        school_bus_probability: 0.0382080078125
+      is_divergence_required: true
+  triggers:
+    - name: trigger_spawn_tracked_object_76083584
+      actions:
+        - spawn_tracked_object_76083584
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 17.735679865
+    - name: trigger_despawn_tracked_object_76083584
+      actions:
+        - despawn_tracked_object_76083584
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 24.135239094
+    - name: trigger_spawn_tracked_object_76083456
+      actions:
+        - spawn_tracked_object_76083456
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 8.700766563
+    - name: trigger_despawn_tracked_object_76083456
+      actions:
+        - despawn_tracked_object_76083456
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 14.623269217
+    - name: trigger_spawn_tracked_object_76084016
+      actions:
+        - spawn_tracked_object_76084016
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 20.650089979
+    - name: trigger_spawn_tracked_object_76083152
+      actions:
+        - spawn_tracked_object_76083152
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 0.007832006
+    - name: trigger_despawn_tracked_object_76083152
+      actions:
+        - despawn_tracked_object_76083152
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 5.548083064
+    - name: trigger_spawn_tracked_object_76083360
+      actions:
+        - spawn_tracked_object_76083360
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 0.044493505
+    - name: trigger_despawn_tracked_object_76083360
+      actions:
+        - despawn_tracked_object_76083360
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 22.190092525
+    - name: trigger_spawn_tracked_object_76083408
+      actions:
+        - spawn_tracked_object_76083408
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 0.007003774
+    - name: trigger_despawn_tracked_object_76083408
+      actions:
+        - despawn_tracked_object_76083408
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 20.824364824
+    - name: trigger_spawn_tracked_object_76073648
+      actions:
+        - spawn_tracked_object_76073648
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 0.048613688
+    - name: trigger_spawn_tracked_object_76077408
+      actions:
+        - spawn_tracked_object_76077408
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 0.048263272
+    - name: trigger_despawn_tracked_object_76077408
+      actions:
+        - despawn_tracked_object_76077408
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 9.451370015
+    - name: trigger_spawn_tracked_object_76078032
+      actions:
+        - spawn_tracked_object_76078032
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 0.003949916
+    - name: trigger_despawn_tracked_object_76078032
+      actions:
+        - despawn_tracked_object_76078032
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 17.350239338
+    - name: trigger_spawn_tracked_object_76078544
+      actions:
+        - spawn_tracked_object_76078544
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 0.010179007
+    - name: trigger_spawn_tracked_object_76083104
+      actions:
+        - spawn_tracked_object_76083104
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 0.048170134
+    - name: trigger_despawn_tracked_object_76083104
+      actions:
+        - despawn_tracked_object_76083104
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 5.568469037
+    - name: trigger_spawn_tracked_object_76083264
+      actions:
+        - spawn_tracked_object_76083264
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 1.23364377
+    - name: trigger_despawn_tracked_object_76083264
+      actions:
+        - despawn_tracked_object_76083264
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 2.641610653
+    - name: trigger_spawn_tracked_object_76083376
+      actions:
+        - spawn_tracked_object_76083376
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 2.743103504
+    - name: trigger_despawn_tracked_object_76083376
+      actions:
+        - despawn_tracked_object_76083376
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 5.348379596
+    - name: trigger_spawn_tracked_object_76083744
+      actions:
+        - spawn_tracked_object_76083744
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 24.021516323
+    - name: trigger_despawn_tracked_object_76083744
+      actions:
+        - despawn_tracked_object_76083744
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 25.931660934
+    - name: trigger_spawn_tracked_object_76084032
+      actions:
+        - spawn_tracked_object_76084032
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 26.920839548
+    - name: trigger_despawn_tracked_object_76084032
+      actions:
+        - despawn_tracked_object_76084032
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 28.832246743
+    - name: trigger_set_next_destination_f35bfa92-2fa1-41e2-82e9-ed0995c6e075
+      delay: 34.17753252
+      actions:
+        - set_next_destination_f35bfa92-2fa1-41e2-82e9-ed0995c6e075
+      conditions:
+        - startup: {}
+    - name: trigger_sync_avoidance_areas_1695507602167120786
+      delay: 1.167120786
+      actions:
+        - sync_avoidance_areas_1695507602167120786
+      conditions:
+        - startup: {}
+    - name: trigger_spoof_houston_connection_loss_1695507601007124227
+      delay: 0.007124227
+      actions:
+        - spoof_houston_connection_loss_1695507601007124227
+      conditions:
+        - startup: {}
+    - name: segment_end
+      actions:
+        - segment_end_action
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 34.999990654
+    - name: trigger_AV_lights_at_1695507601001218892
+      actions:
+        - set_AV_headlights_on_to_ON_0
+        - set_AV_brake_lights_on_to_OFF_0
+        - set_AV_reverse_lights_on_to_OFF_0
+        - set_AV_hazard_lights_on_to_OFF_0
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 0.001218892
+    - name: trigger_AV_lights_at_1695507606366674395
+      actions:
+        - set_AV_brake_lights_on_to_ON_1
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 5.366674395
+    - name: trigger_AV_lights_at_1695507609416832619
+      actions:
+        - set_AV_brake_lights_on_to_OFF_2
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 8.416832619000001
+    - name: trigger_AV_lights_at_1695507610366916472
+      actions:
+        - set_AV_brake_lights_on_to_ON_3
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 9.366916472
+    - name: trigger_AV_lights_at_1695507612217020825
+      actions:
+        - set_AV_brake_lights_on_to_OFF_4
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 11.217020825
+    - name: trigger_AV_lights_at_1695507618542317445
+      actions:
+        - set_AV_brake_lights_on_to_ON_5
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 17.542317445
+    - name: trigger_AV_lights_at_1695507621517488307
+      actions:
+        - set_AV_brake_lights_on_to_OFF_6
+      conditions:
+        - system_state: DRIVERLESS
+      delay: 20.517488307
+  actions:
+    - name: spawn_tracked_object_76083584
+      spawn:
+        - tracked_object_76083584
+    - name: spawn_tracked_object_76083456
+      spawn:
+        - tracked_object_76083456
+    - name: spawn_tracked_object_76084016
+      spawn:
+        - tracked_object_76084016
+    - name: spawn_tracked_object_76083152
+      spawn:
+        - tracked_object_76083152
+    - name: spawn_tracked_object_76083360
+      spawn:
+        - tracked_object_76083360
+    - name: spawn_tracked_object_76083408
+      spawn:
+        - tracked_object_76083408
+    - name: spawn_tracked_object_76073648
+      spawn:
+        - tracked_object_76073648
+    - name: spawn_tracked_object_76077408
+      spawn:
+        - tracked_object_76077408
+    - name: spawn_tracked_object_76078032
+      spawn:
+        - tracked_object_76078032
+    - name: spawn_tracked_object_76078544
+      spawn:
+        - tracked_object_76078544
+    - name: spawn_tracked_object_76083104
+      spawn:
+        - tracked_object_76083104
+    - name: spawn_tracked_object_76083264
+      spawn:
+        - tracked_object_76083264
+    - name: spawn_tracked_object_76083376
+      spawn:
+        - tracked_object_76083376
+    - name: spawn_tracked_object_76083744
+      spawn:
+        - tracked_object_76083744
+    - name: spawn_tracked_object_76084032
+      spawn:
+        - tracked_object_76084032
+    - name: despawn_tracked_object_76083584
+      remove:
+        - tracked_object_76083584
+    - name: despawn_tracked_object_76083456
+      remove:
+        - tracked_object_76083456
+    - name: despawn_tracked_object_76083152
+      remove:
+        - tracked_object_76083152
+    - name: despawn_tracked_object_76083360
+      remove:
+        - tracked_object_76083360
+    - name: despawn_tracked_object_76083408
+      remove:
+        - tracked_object_76083408
+    - name: despawn_tracked_object_76077408
+      remove:
+        - tracked_object_76077408
+    - name: despawn_tracked_object_76078032
+      remove:
+        - tracked_object_76078032
+    - name: despawn_tracked_object_76083104
+      remove:
+        - tracked_object_76083104
+    - name: despawn_tracked_object_76083264
+      remove:
+        - tracked_object_76083264
+    - name: despawn_tracked_object_76083376
+      remove:
+        - tracked_object_76083376
+    - name: despawn_tracked_object_76083744
+      remove:
+        - tracked_object_76083744
+    - name: despawn_tracked_object_76084032
+      remove:
+        - tracked_object_76084032
+    - name: set_AV_headlights_on_to_ON_0
+      set_npc_lights:
+        npcs:
+          - CRUISE
+        head_lights: 'ON'
+    - name: set_AV_brake_lights_on_to_OFF_0
+      set_npc_lights:
+        npcs:
+          - CRUISE
+        brake_lights: 'OFF'
+    - name: set_AV_reverse_lights_on_to_OFF_0
+      set_npc_lights:
+        npcs:
+          - CRUISE
+        reverse_lights: 'OFF'
+    - name: set_AV_hazard_lights_on_to_OFF_0
+      set_npc_lights:
+        npcs:
+          - CRUISE
+        hazard_lights: 'OFF'
+    - name: set_AV_brake_lights_on_to_ON_1
+      set_npc_lights:
+        npcs:
+          - CRUISE
+        brake_lights: 'ON'
+    - name: set_AV_brake_lights_on_to_OFF_2
+      set_npc_lights:
+        npcs:
+          - CRUISE
+        brake_lights: 'OFF'
+    - name: set_AV_brake_lights_on_to_ON_3
+      set_npc_lights:
+        npcs:
+          - CRUISE
+        brake_lights: 'ON'
+    - name: set_AV_brake_lights_on_to_OFF_4
+      set_npc_lights:
+        npcs:
+          - CRUISE
+        brake_lights: 'OFF'
+    - name: set_AV_brake_lights_on_to_ON_5
+      set_npc_lights:
+        npcs:
+          - CRUISE
+        brake_lights: 'ON'
+    - name: set_AV_brake_lights_on_to_OFF_6
+      set_npc_lights:
+        npcs:
+          - CRUISE
+        brake_lights: 'OFF'
+    - name: set_next_destination_f35bfa92-2fa1-41e2-82e9-ed0995c6e075
+      set_destination:
+        x: 538.9200033145025
+        y: 2321.142753002234
+        skip_pullover: false
+    - name: sync_avoidance_areas_1695507602167120786
+      sync_avoidance_areas:
+        - geometry:
+            - x: -2833.043
+              y: 2466.728
+            - x: -2825.943
+              y: 2424.628
+            - x: -2782.143
+              y: 2433.028
+            - x: -2787.243
+              y: 2475.028
+          type: FULL
+          subtype: EMERGENCY_SITUATIONS
+          route_cost: -1
+        - geometry:
+            - x: -1003.043
+              y: 2436.528
+            - x: -1002.143
+              y: 2430.428
+            - x: -940.543
+              y: 2440.828
+            - x: -889.443
+              y: 2449.328
+            - x: -891.143
+              y: 2455.228
+            - x: -953.243
+              y: 2444.928
+            - x: -986.743
+              y: 2439.328
+          type: FULL
+          subtype: LOW_RES_DATA_NEEDED
+          route_cost: -1
+        - geometry:
+            - x: -7442.743
+              y: 1262.228
+            - x: -7442.343
+              y: 1245.928
+            - x: -7387.543
+              y: 1247.828
+            - x: -7388.243
+              y: 1266.828
+          type: FULL
+          subtype: SLOW_STREETS
+          route_cost: -1
+        - geometry:
+            - x: -7269.943
+              y: 1276.328
+            - x: -7269.943
+              y: 1256.728
+            - x: -7197.943
+              y: 1261.828
+            - x: -7199.843
+              y: 1279.628
+          type: FULL
+          subtype: SLOW_STREETS
+          route_cost: -1
+        - geometry:
+            - x: -7177.243
+              y: 1281.128
+            - x: -7175.743
+              y: 1264.328
+            - x: -7106.043
+              y: 1268.828
+            - x: -7106.643
+              y: 1286.628
+          type: FULL
+          subtype: SLOW_STREETS
+          route_cost: -1
+        - geometry:
+            - x: -6889.643
+              y: 1301.828
+            - x: -6889.443
+              y: 1278.728
+            - x: -6818.843
+              y: 1283.928
+            - x: -6819.743
+              y: 1304.528
+          type: FULL
+          subtype: SLOW_STREETS
+          route_cost: -1
+        - geometry:
+            - x: -6800.343
+              y: 1303.328
+            - x: -6798.543
+              y: 1286.128
+            - x: -6724.243
+              y: 1291.028
+            - x: -6724.243
+              y: 1311.628
+          type: FULL
+          subtype: SLOW_STREETS
+          route_cost: -1
+        - geometry:
+            - x: -6517.243
+              y: 1323.228
+            - x: -6444.843
+              y: 1327.428
+            - x: -6443.943
+              y: 1309.428
+            - x: -6516.243
+              y: 1306.028
+          type: FULL
+          subtype: SLOW_STREETS
+          route_cost: -1
+        - geometry:
+            - x: -6228.843
+              y: 1341.028
+            - x: -6153.243
+              y: 1343.428
+            - x: -6150.543
+              y: 1327.928
+            - x: -6227.643
+              y: 1322.928
+          type: FULL
+          subtype: SLOW_STREETS
+          route_cost: -1
+        - geometry:
+            - x: -5942.443
+              y: 1355.928
+            - x: -5869.143
+              y: 1363.428
+            - x: -5868.343
+              y: 1346.928
+            - x: -5941.543
+              y: 1341.128
+          type: FULL
+          subtype: SLOW_STREETS
+          route_cost: -1
+        - geometry:
+            - x: -5753.843
+              y: 1369.428
+            - x: -5680.043
+              y: 1372.228
+            - x: -5678.243
+              y: 1358.828
+            - x: -5753.143
+              y: 1355.328
+          type: FULL
+          subtype: SLOW_STREETS
+          route_cost: -1
+        - geometry:
+            - x: -5565.043
+              y: 1379.428
+            - x: -5490.443
+              y: 1384.528
+            - x: -5490.043
+              y: 1369.228
+            - x: -5563.043
+              y: 1364.628
+          type: FULL
+          subtype: SLOW_STREETS
+          route_cost: -1
+        - geometry:
+            - x: -5376.143
+              y: 1392.128
+            - x: -5303.743
+              y: 1398.128
+            - x: -5303.143
+              y: 1381.528
+            - x: -5375.843
+              y: 1377.928
+          type: FULL
+          subtype: SLOW_STREETS
+          route_cost: -1
+        - geometry:
+            - x: -5282.343
+              y: 1397.728
+            - x: -5207.443
+              y: 1401.428
+            - x: -5208.443
+              y: 1386.128
+            - x: -5280.643
+              y: 1383.128
+          type: FULL
+          subtype: SLOW_STREETS
+          route_cost: -1
+        - geometry:
+            - x: -6035.743
+              y: 1351.228
+            - x: -5966.143
+              y: 1355.328
+            - x: -5965.143
+              y: 1339.728
+            - x: -6035.143
+              y: 1336.828
+          type: FULL
+          subtype: SLOW_STREETS
+          route_cost: -1
+        - geometry:
+            - x: -5188.143
+              y: 1403.228
+            - x: -5114.543
+              y: 1408.628
+            - x: -5112.843
+              y: 1391.928
+            - x: -5185.943
+              y: 1385.228
+          type: FULL
+          subtype: SLOW_STREETS
+          route_cost: -1
+        - geometry:
+            - x: -4900.143
+              y: 1486.828
+            - x: -4899.043
+              y: 1475.328
+            - x: -4726.143
+              y: 1503.928
+            - x: -4728.043
+              y: 1515.328
+          type: FULL
+          subtype: SLOW_STREETS
+          route_cost: -1
+        - geometry:
+            - x: -3711.043
+              y: 1685.128
+            - x: -3589.843
+              y: 1704.928
+            - x: -3588.743
+              y: 1695.728
+            - x: -3709.843
+              y: 1675.628
+          type: FULL
+          subtype: SLOW_STREETS
+          route_cost: -1
+        - geometry:
+            - x: -3981.343
+              y: 1636.428
+            - x: -3980.743
+              y: 1630.528
+            - x: -3855.143
+              y: 1652.428
+            - x: -3855.843
+              y: 1657.828
+          type: FULL
+          subtype: SLOW_STREETS
+          route_cost: -1
+        - geometry:
+            - x: -3122.243
+              y: 1786.428
+            - x: -3009.143
+              y: 1805.028
+            - x: -3007.643
+              y: 1790.128
+            - x: -3118.943
+              y: 1771.828
+          type: FULL
+          subtype: SLOW_STREETS
+          route_cost: -1
+        - geometry:
+            - x: -4561.143
+              y: 1543.128
+            - x: -4559.043
+              y: 1531.828
+            - x: -4435.443
+              y: 1552.828
+            - x: -4437.343
+              y: 1564.028
+          type: FULL
+          subtype: SLOW_STREETS
+          route_cost: -1
+        - geometry:
+            - x: -4417.543
+              y: 1567.228
+            - x: -4415.543
+              y: 1555.728
+            - x: -4290.943
+              y: 1576.628
+            - x: -4293.243
+              y: 1587.828
+          type: FULL
+          subtype: SLOW_STREETS
+          route_cost: -1
+        - geometry:
+            - x: -1611.443
+              y: 1872.028
+            - x: -1606.043
+              y: 1846.228
+            - x: -1602.243
+              y: 1846.828
+            - x: -1606.743
+              y: 1866.628
+            - x: -1607.943
+              y: 1876.528
+            - x: -1600.543
+              y: 1887.528
+            - x: -1601.643
+              y: 1888.628
+            - x: -1610.443
+              y: 1876.328
+          type: FULL
+          subtype: GEOGRAPHIC_SCOPE
+          route_cost: -1
+        - geometry:
+            - x: -6556.643
+              y: 2774.328
+            - x: -6562.743
+              y: 2789.228
+            - x: -6569.543
+              y: 2807.828
+            - x: -6573.343
+              y: 2821.728
+            - x: -6575.843
+              y: 2835.428
+            - x: -6578.143
+              y: 2857.028
+            - x: -6577.743
+              y: 2872.528
+            - x: -6577.443
+              y: 2882.128
+            - x: -6568.943
+              y: 2887.828
+            - x: -6567.843
+              y: 2855.428
+            - x: -6565.143
+              y: 2835.228
+            - x: -6560.843
+              y: 2815.428
+            - x: -6555.143
+              y: 2798.628
+            - x: -6546.343
+              y: 2779.328
+          type: FULL
+          subtype: GEOGRAPHIC_SCOPE
+          route_cost: -1
+        - geometry:
+            - x: -5108.343
+              y: 2100.328
+            - x: -5133.443
+              y: 2136.828
+            - x: -5144.143
+              y: 2150.928
+            - x: -5156.443
+              y: 2166.128
+            - x: -5164.943
+              y: 2178.128
+            - x: -5171.743
+              y: 2189.828
+            - x: -5177.743
+              y: 2202.228
+            - x: -5190.643
+              y: 2233.928
+            - x: -5196.743
+              y: 2248.628
+            - x: -5200.843
+              y: 2257.028
+            - x: -5209.943
+              y: 2265.228
+            - x: -5219.443
+              y: 2270.228
+            - x: -5229.643
+              y: 2273.728
+            - x: -5261.543
+              y: 2282.128
+            - x: -5284.443
+              y: 2287.028
+            - x: -5302.343
+              y: 2292.228
+            - x: -5320.043
+              y: 2298.328
+            - x: -5329.743
+              y: 2303.428
+            - x: -5337.743
+              y: 2311.628
+            - x: -5345.743
+              y: 2324.928
+            - x: -5350.443
+              y: 2335.428
+            - x: -5355.043
+              y: 2349.528
+            - x: -5362.443
+              y: 2362.328
+            - x: -5378.443
+              y: 2382.428
+            - x: -5417.243
+              y: 2430.228
+            - x: -5429.243
+              y: 2437.828
+            - x: -5448.743
+              y: 2443.328
+            - x: -5488.143
+              y: 2448.528
+            - x: -5503.643
+              y: 2448.028
+            - x: -5517.443
+              y: 2446.428
+            - x: -5532.243
+              y: 2442.128
+            - x: -5546.443
+              y: 2435.628
+            - x: -5555.243
+              y: 2429.928
+            - x: -5567.843
+              y: 2417.728
+            - x: -5586.543
+              y: 2394.128
+            - x: -5597.443
+              y: 2381.228
+            - x: -5609.843
+              y: 2370.328
+            - x: -5643.443
+              y: 2354.228
+            - x: -5672.443
+              y: 2346.028
+            - x: -5698.343
+              y: 2335.428
+            - x: -5715.043
+              y: 2321.528
+            - x: -5726.543
+              y: 2307.528
+            - x: -5736.243
+              y: 2298.928
+            - x: -5744.543
+              y: 2294.528
+            - x: -5753.243
+              y: 2292.628
+            - x: -5761.243
+              y: 2292.528
+            - x: -5771.543
+              y: 2296.028
+            - x: -5778.743
+              y: 2301.228
+            - x: -5783.643
+              y: 2306.928
+            - x: -5802.543
+              y: 2326.728
+            - x: -5816.243
+              y: 2335.828
+            - x: -5825.743
+              y: 2339.828
+            - x: -5836.743
+              y: 2343.228
+            - x: -5848.843
+              y: 2343.528
+            - x: -5861.443
+              y: 2339.928
+            - x: -5875.343
+              y: 2334.328
+            - x: -5892.843
+              y: 2325.528
+            - x: -5934.343
+              y: 2298.628
+            - x: -5943.543
+              y: 2293.928
+            - x: -5955.843
+              y: 2291.128
+            - x: -5980.543
+              y: 2287.928
+            - x: -5996.443
+              y: 2285.528
+            - x: -6010.143
+              y: 2281.128
+            - x: -6025.843
+              y: 2273.228
+            - x: -6045.343
+              y: 2258.328
+            - x: -6069.843
+              y: 2239.728
+            - x: -6078.143
+              y: 2236.028
+            - x: -6085.643
+              y: 2234.828
+            - x: -6094.843
+              y: 2235.528
+            - x: -6141.843
+              y: 2240.728
+            - x: -6156.643
+              y: 2241.228
+            - x: -6175.643
+              y: 2239.428
+            - x: -6190.143
+              y: 2235.028
+            - x: -6221.943
+              y: 2211.228
+            - x: -6265.543
+              y: 2179.228
+            - x: -6281.943
+              y: 2170.228
+            - x: -6300.043
+              y: 2164.128
+            - x: -6318.543
+              y: 2160.128
+            - x: -6335.043
+              y: 2161.628
+            - x: -6339.543
+              y: 2150.428
+            - x: -6331.643
+              y: 2147.328
+            - x: -6331.243
+              y: 2141.828
+            - x: -6331.743
+              y: 2119.428
+            - x: -6333.143
+              y: 2069.428
+            - x: -6328.843
+              y: 2033.828
+            - x: -6318.843
+              y: 1979.028
+            - x: -6309.243
+              y: 1940.128
+            - x: -6307.543
+              y: 1925.828
+            - x: -6309.643
+              y: 1911.228
+            - x: -6317.943
+              y: 1891.228
+            - x: -6344.443
+              y: 1840.828
+            - x: -6360.843
+              y: 1804.528
+            - x: -6363.543
+              y: 1785.328
+            - x: -6366.143
+              y: 1747.128
+            - x: -6364.443
+              y: 1722.928
+            - x: -6360.543
+              y: 1681.328
+            - x: -6356.443
+              y: 1630.928
+            - x: -6354.943
+              y: 1602.828
+            - x: -6351.043
+              y: 1594.328
+            - x: -6338.343
+              y: 1570.228
+            - x: -6318.143
+              y: 1532.828
+            - x: -6307.543
+              y: 1516.028
+            - x: -6300.743
+              y: 1510.828
+            - x: -6287.243
+              y: 1503.428
+            - x: -6276.143
+              y: 1501.528
+            - x: -6269.243
+              y: 1500.928
+            - x: -6269.743
+              y: 1509.728
+            - x: -6277.743
+              y: 1509.928
+            - x: -6287.643
+              y: 1512.028
+            - x: -6296.943
+              y: 1517.928
+            - x: -6303.343
+              y: 1525.328
+            - x: -6318.143
+              y: 1552.228
+            - x: -6340.043
+              y: 1592.628
+            - x: -6345.143
+              y: 1606.028
+            - x: -6347.643
+              y: 1633.228
+            - x: -6351.243
+              y: 1680.828
+            - x: -6354.043
+              y: 1721.228
+            - x: -6356.643
+              y: 1745.528
+            - x: -6355.643
+              y: 1764.828
+            - x: -6354.143
+              y: 1789.428
+            - x: -6350.443
+              y: 1805.128
+            - x: -6335.443
+              y: 1834.128
+            - x: -6308.443
+              y: 1885.828
+            - x: -6298.743
+              y: 1907.328
+            - x: -6296.343
+              y: 1923.628
+            - x: -6297.943
+              y: 1945.428
+            - x: -6305.643
+              y: 1982.928
+            - x: -6319.043
+              y: 2035.528
+            - x: -6324.443
+              y: 2068.228
+            - x: -6322.343
+              y: 2119.428
+            - x: -6321.443
+              y: 2141.628
+            - x: -6316.643
+              y: 2147.428
+            - x: -6293.843
+              y: 2153.828
+            - x: -6273.943
+              y: 2160.628
+            - x: -6256.043
+              y: 2171.028
+            - x: -6213.343
+              y: 2202.628
+            - x: -6187.943
+              y: 2222.328
+            - x: -6173.443
+              y: 2227.528
+            - x: -6161.843
+              y: 2230.228
+            - x: -6150.043
+              y: 2230.128
+            - x: -6095.143
+              y: 2224.628
+            - x: -6085.743
+              y: 2224.028
+            - x: -6077.143
+              y: 2224.828
+            - x: -6067.643
+              y: 2228.128
+            - x: -6057.843
+              y: 2233.928
+            - x: -6040.243
+              y: 2248.228
+            - x: -6027.543
+              y: 2258.328
+            - x: -6015.743
+              y: 2266.628
+            - x: -6004.343
+              y: 2271.928
+            - x: -5993.343
+              y: 2275.328
+            - x: -5978.743
+              y: 2277.828
+            - x: -5954.143
+              y: 2279.728
+            - x: -5941.643
+              y: 2282.628
+            - x: -5930.843
+              y: 2287.528
+            - x: -5914.443
+              y: 2297.628
+            - x: -5874.943
+              y: 2321.728
+            - x: -5859.543
+              y: 2328.328
+            - x: -5847.443
+              y: 2330.628
+            - x: -5833.543
+              y: 2329.328
+            - x: -5824.343
+              y: 2325.828
+            - x: -5816.743
+              y: 2321.928
+            - x: -5807.743
+              y: 2314.928
+            - x: -5793.943
+              y: 2297.428
+            - x: -5784.243
+              y: 2289.228
+            - x: -5775.543
+              y: 2283.628
+            - x: -5767.443
+              y: 2281.228
+            - x: -5758.143
+              y: 2280.328
+            - x: -5750.343
+              y: 2280.928
+            - x: -5735.643
+              y: 2285.528
+            - x: -5725.143
+              y: 2291.628
+            - x: -5716.643
+              y: 2299.028
+            - x: -5707.543
+              y: 2309.228
+            - x: -5701.043
+              y: 2316.528
+            - x: -5693.843
+              y: 2321.628
+            - x: -5668.043
+              y: 2330.928
+            - x: -5612.943
+              y: 2351.728
+            - x: -5594.943
+              y: 2364.728
+            - x: -5575.543
+              y: 2388.128
+            - x: -5560.143
+              y: 2407.828
+            - x: -5549.543
+              y: 2419.028
+            - x: -5538.843
+              y: 2426.328
+            - x: -5529.443
+              y: 2430.528
+            - x: -5518.143
+              y: 2434.128
+            - x: -5504.643
+              y: 2436.628
+            - x: -5489.143
+              y: 2436.928
+            - x: -5448.943
+              y: 2431.328
+            - x: -5434.643
+              y: 2426.428
+            - x: -5426.743
+              y: 2420.028
+            - x: -5392.043
+              y: 2379.328
+            - x: -5367.343
+              y: 2342.828
+            - x: -5355.843
+              y: 2320.028
+            - x: -5344.443
+              y: 2303.128
+            - x: -5335.843
+              y: 2295.028
+            - x: -5324.343
+              y: 2288.828
+            - x: -5293.543
+              y: 2278.628
+            - x: -5263.843
+              y: 2270.928
+            - x: -5231.843
+              y: 2263.528
+            - x: -5221.643
+              y: 2259.728
+            - x: -5215.043
+              y: 2255.128
+            - x: -5208.343
+              y: 2247.428
+            - x: -5196.943
+              y: 2219.128
+            - x: -5185.943
+              y: 2185.228
+            - x: -5173.643
+              y: 2165.828
+            - x: -5155.543
+              y: 2147.228
+            - x: -5138.343
+              y: 2123.628
+            - x: -5120.743
+              y: 2096.628
+            - x: -5102.443
+              y: 2076.728
+          type: FULL
+          subtype: SLOW_STREETS
+          route_cost: -1
+        - geometry:
+            - x: -793.743
+              y: 2370.228
+            - x: -778.543
+              y: 2372.628
+            - x: -777.243
+              y: 2365.828
+            - x: -794.243
+              y: 2364.028
+          type: FULL
+          subtype: LIGHT_RAIL_VEHICLE
+          route_cost: -1
+        - geometry:
+            - x: -817.943
+              y: 1950.828
+            - x: -817.043
+              y: 1947.228
+            - x: -803.043
+              y: 1949.928
+            - x: -804.243
+              y: 1952.828
+          type: FULL
+          subtype: LIGHT_RAIL_UNLOADING_ZONE
+          route_cost: -1
+        - geometry:
+            - x: -6328.143
+              y: 1335.328
+            - x: -6253.043
+              y: 1344.228
+            - x: -6251.943
+              y: 1320.328
+            - x: -6326.743
+              y: 1316.828
+          type: FULL
+          subtype: SLOW_STREETS
+          route_cost: -1
+        - geometry:
+            - x: 109.357
+              y: 1639.028
+            - x: 24.257
+              y: 1555.128
+            - x: 30.457
+              y: 1538.328
+            - x: 115.457
+              y: 1622.528
+          type: FULL
+          subtype: GEOGRAPHIC_SCOPE
+          route_cost: -1
+        - geometry:
+            - x: -17.643
+              y: 1511.028
+            - x: -12.943
+              y: 1492.728
+            - x: -62.743
+              y: 1440.528
+            - x: -77.943
+              y: 1450.128
+          type: FULL
+          subtype: GEOGRAPHIC_SCOPE
+          route_cost: -1
+        - geometry:
+            - x: 291.357
+              y: 1826.328
+            - x: 340.757
+              y: 1875.728
+            - x: 362.357
+              y: 1868.928
+            - x: 299.657
+              y: 1809.728
+          type: FULL
+          subtype: GEOGRAPHIC_SCOPE
+          route_cost: -1
+        - geometry:
+            - x: -124.543
+              y: 1402.928
+            - x: -115.443
+              y: 1391.028
+            - x: -178.143
+              y: 1328.028
+            - x: -194.343
+              y: 1334.328
+          type: FULL
+          subtype: GEOGRAPHIC_SCOPE
+          route_cost: -1
+        - geometry:
+            - x: 507.957
+              y: 2041.028
+            - x: 469.857
+              y: 2002.728
+            - x: 480.657
+              y: 1992.628
+            - x: 516.057
+              y: 2028.328
+          type: FULL
+          subtype: GEOGRAPHIC_SCOPE
+          route_cost: -1
+        - geometry:
+            - x: -248.443
+              y: 1278.428
+            - x: -388.043
+              y: 1139.728
+            - x: -377.443
+              y: 1127.428
+            - x: -240.943
+              y: 1263.328
+          type: FULL
+          subtype: GEOGRAPHIC_SCOPE
+          route_cost: -1
+        - geometry:
+            - x: -4850.843
+              y: 1762.828
+            - x: -4841.243
+              y: 1757.328
+            - x: -4821.943
+              y: 1749.528
+            - x: -4801.143
+              y: 1748.828
+            - x: -4490.343
+              y: 1828.828
+            - x: -4487.043
+              y: 1823.028
+            - x: -4752.043
+              y: 1754.728
+            - x: -4802.243
+              y: 1742.828
+            - x: -4818.843
+              y: 1742.328
+            - x: -4828.943
+              y: 1745.028
+            - x: -4836.743
+              y: 1748.028
+            - x: -4844.043
+              y: 1751.828
+            - x: -4854.043
+              y: 1757.128
+          type: FULL
+          subtype: SLOW_STREETS
+          route_cost: -1
+        - geometry:
+            - x: 45.257
+              y: 2257.828
+            - x: 46.957
+              y: 2251.628
+            - x: 97.257
+              y: 2260.128
+            - x: 96.057
+              y: 2266.028
+          type: PARTIAL
+          subtype: CONSTRUCTION_ROAD_CLOSURE
+          route_cost: -1
+        - geometry:
+            - x: -4984.243
+              y: 2025.028
+            - x: -4984.243
+              y: 2021.728
+            - x: -4978.943
+              y: 2021.428
+            - x: -4975.543
+              y: 2021.028
+            - x: -4971.343
+              y: 2020.328
+            - x: -4967.343
+              y: 2019.528
+            - x: -4963.743
+              y: 2018.528
+            - x: -4960.943
+              y: 2017.528
+            - x: -4957.743
+              y: 2016.228
+            - x: -4954.543
+              y: 2014.728
+            - x: -4936.843
+              y: 2005.328
+            - x: -4922.043
+              y: 1997.328
+            - x: -4893.443
+              y: 1981.828
+            - x: -4890.143
+              y: 1979.728
+            - x: -4888.343
+              y: 1978.528
+            - x: -4886.743
+              y: 1977.228
+            - x: -4884.943
+              y: 1975.528
+            - x: -4883.543
+              y: 1974.128
+            - x: -4882.143
+              y: 1972.228
+            - x: -4880.843
+              y: 1970.428
+            - x: -4879.643
+              y: 1968.328
+            - x: -4878.443
+              y: 1966.128
+            - x: -4877.643
+              y: 1964.028
+            - x: -4877.043
+              y: 1962.528
+            - x: -4876.243
+              y: 1959.228
+            - x: -4875.843
+              y: 1957.328
+            - x: -4875.643
+              y: 1955.528
+            - x: -4875.543
+              y: 1953.828
+            - x: -4875.543
+              y: 1950.228
+            - x: -4875.843
+              y: 1945.428
+            - x: -4877.243
+              y: 1932.428
+            - x: -4879.443
+              y: 1914.528
+            - x: -4875.343
+              y: 1914.628
+            - x: -4873.343
+              y: 1932.028
+            - x: -4871.543
+              y: 1948.028
+            - x: -4871.343
+              y: 1956.228
+            - x: -4872.143
+              y: 1961.428
+            - x: -4872.843
+              y: 1963.928
+            - x: -4873.643
+              y: 1966.628
+            - x: -4874.643
+              y: 1968.728
+            - x: -4876.043
+              y: 1971.528
+            - x: -4877.543
+              y: 1973.828
+            - x: -4879.343
+              y: 1975.928
+            - x: -4880.643
+              y: 1977.128
+            - x: -4882.743
+              y: 1979.228
+            - x: -4884.943
+              y: 1980.828
+            - x: -4887.043
+              y: 1982.228
+            - x: -4893.243
+              y: 1985.528
+            - x: -4947.143
+              y: 2014.528
+            - x: -4953.343
+              y: 2017.728
+            - x: -4957.743
+              y: 2019.728
+            - x: -4962.543
+              y: 2021.628
+            - x: -4966.843
+              y: 2022.828
+            - x: -4970.143
+              y: 2023.628
+            - x: -4974.543
+              y: 2024.228
+            - x: -4982.443
+              y: 2024.928
+          type: PARTIAL
+          subtype: UNKNOWN
+          route_cost: -1
+        - geometry:
+            - x: -2667.743
+              y: 2484.728
+            - x: -2667.243
+              y: 2457.928
+            - x: -2646.943
+              y: 2461.028
+            - x: -2652.843
+              y: 2489.028
+          type: FULL
+          subtype: CONSTRUCTION_ROAD_CLOSURE
+          route_cost: -1
+        - geometry:
+            - x: -7010.343
+              y: 1268.728
+            - x: -6994.543
+              y: 1089.228
+            - x: -6976.143
+              y: 1089.828
+            - x: -6991.543
+              y: 1268.628
+          type: FULL
+          subtype: SLOW_STREETS
+          route_cost: -1
+        - geometry:
+            - x: -1226.743
+              y: 1354.728
+            - x: -1225.743
+              y: 1353.928
+            - x: -1226.843
+              y: 1352.728
+            - x: -1227.843
+              y: 1353.428
+          type: FULL
+          subtype: MAP_ENG_OTHER
+          route_cost: -1
+        - geometry:
+            - x: -6707.743
+              y: 1311.628
+            - x: -6706.143
+              y: 1289.028
+            - x: -6632.943
+              y: 1295.828
+            - x: -6633.743
+              y: 1314.728
+          type: FULL
+          subtype: SLOW_STREETS
+          route_cost: -1
+        - geometry:
+            - x: -4760.743
+              y: 1734.628
+            - x: -4747.043
+              y: 1736.128
+            - x: -4744.343
+              y: 1723.028
+            - x: -4757.343
+              y: 1720.728
+          type: PARTIAL
+          subtype: CUL_DE_SAC
+          route_cost: -1
+        - geometry:
+            - x: -4063.343
+              y: 2640.228
+            - x: -4063.643
+              y: 2639.428
+            - x: -4060.343
+              y: 2637.828
+            - x: -4060.043
+              y: 2638.728
+          type: PARTIAL
+          subtype: MAKE_RIGHT_TURNS
+          route_cost: -1
+        - geometry:
+            - x: -241.243
+              y: 1310.028
+            - x: -239.643
+              y: 1307.328
+            - x: -231.943
+              y: 1312.728
+            - x: -233.543
+              y: 1315.028
+          type: FULL
+          subtype: NAVIGATE_TRAFFIC_LIGHT_INTERSECTIONS
+          route_cost: -1
+        - geometry:
+            - x: -2690.843
+              y: 2674.228
+            - x: -2698.843
+              y: 2671.928
+            - x: -2698.143
+              y: 2670.628
+            - x: -2690.343
+              y: 2672.928
+          type: FULL
+          subtype: CONSTRUCTION_ROAD_CLOSURE
+          route_cost: -1
+        - geometry:
+            - x: -7080.543
+              y: 1288.328
+            - x: -7079.343
+              y: 1268.528
+            - x: -7011.143
+              y: 1273.528
+            - x: -7011.343
+              y: 1290.228
+          type: FULL
+          subtype: SLOW_STREETS
+          route_cost: -1
+        - geometry:
+            - x: -703.143
+              y: 2587.128
+            - x: -700.743
+              y: 2569.728
+            - x: -629.943
+              y: 2586.828
+            - x: -616.943
+              y: 2604.728
+            - x: -646.843
+              y: 2596.628
+            - x: -656.543
+              y: 2596.628
+          type: FULL
+          subtype: REMOTE_ASSISTANCE
+          route_cost: -1
+        - geometry:
+            - x: -4070.543
+              y: 2648.328
+            - x: -4062.443
+              y: 2644.428
+            - x: -4063.043
+              y: 2673.728
+            - x: -4062.043
+              y: 2677.128
+            - x: -4059.443
+              y: 2679.228
+            - x: -4049.243
+              y: 2677.428
+            - x: -4048.443
+              y: 2684.728
+            - x: -4062.743
+              y: 2689.328
+            - x: -4068.043
+              y: 2691.428
+            - x: -4076.043
+              y: 2696.228
+            - x: -4106.543
+              y: 2709.928
+            - x: -4114.343
+              y: 2710.728
+            - x: -4120.343
+              y: 2709.528
+            - x: -4125.043
+              y: 2706.328
+            - x: -4148.243
+              y: 2689.228
+            - x: -4151.743
+              y: 2686.028
+            - x: -4143.443
+              y: 2682.528
+            - x: -4141.943
+              y: 2684.928
+            - x: -4126.743
+              y: 2696.228
+            - x: -4119.043
+              y: 2701.428
+            - x: -4114.843
+              y: 2702.528
+            - x: -4110.643
+              y: 2702.528
+            - x: -4094.043
+              y: 2695.628
+            - x: -4077.143
+              y: 2687.828
+            - x: -4073.443
+              y: 2685.328
+            - x: -4071.343
+              y: 2682.528
+            - x: -4070.143
+              y: 2679.228
+            - x: -4069.743
+              y: 2675.328
+            - x: -4069.543
+              y: 2664.928
+            - x: -4069.443
+              y: 2656.528
+            - x: -4069.443
+              y: 2651.228
+          type: FULL
+          subtype: MAP_ENG_OTHER
+          route_cost: -1
+        - geometry:
+            - x: -2800.343
+              y: 2367.428
+            - x: -2800.943
+              y: 2318.828
+            - x: -2770.543
+              y: 2328.028
+            - x: -2780.843
+              y: 2372.128
+          type: FULL
+          subtype: CONSTRUCTION_ROAD_CLOSURE
+          route_cost: -1
+        - geometry:
+            - x: -3931.843
+              y: 2104.728
+            - x: -3930.043
+              y: 2102.928
+            - x: -3932.443
+              y: 2101.328
+            - x: -3933.743
+              y: 2103.628
+          type: FULL
+          subtype: SLOW_STREETS
+          route_cost: -1
+        - geometry:
+            - x: -703.143
+              y: 2587.128
+            - x: -700.743
+              y: 2569.728
+            - x: -629.943
+              y: 2586.828
+            - x: -616.943
+              y: 2604.728
+            - x: -646.843
+              y: 2596.628
+            - x: -656.543
+              y: 2596.628
+          type: FULL
+          subtype: REMOTE_ASSISTANCE
+          route_cost: -1
+        - geometry:
+            - x: -2940.043
+              y: 2428.528
+            - x: -2939.343
+              y: 2424.328
+            - x: -2928.143
+              y: 2426.128
+            - x: -2928.943
+              y: 2430.328
+          type: PARTIAL
+          subtype: CONSTRUCTION_ROAD_CLOSURE
+          route_cost: -1
+        - geometry:
+            - x: -3960.343
+              y: 1419.028
+            - x: -3959.743
+              y: 1414.528
+            - x: -3952.143
+              y: 1415.528
+            - x: -3952.743
+              y: 1420.028
+          type: FULL
+          subtype: GATE
+          route_cost: -1
+        - geometry:
+            - x: -2974.543
+              y: 1810.328
+            - x: -2869.943
+              y: 1826.728
+            - x: -2865.843
+              y: 1811.328
+            - x: -2972.243
+              y: 1794.028
+          type: FULL
+          subtype: SLOW_STREETS
+          route_cost: -1
+        - geometry:
+            - x: -827.543
+              y: 1197.128
+            - x: -796.643
+              y: 1198.528
+            - x: -801.943
+              y: 1228.228
+            - x: -827.043
+              y: 1225.328
+          type: FULL
+          subtype: CONSTRUCTION_ROAD_DIGGING
+          route_cost: -1
+        - geometry:
+            - x: -4271.843
+              y: 1591.628
+            - x: -4269.943
+              y: 1580.228
+            - x: -4146.543
+              y: 1600.728
+            - x: -4148.743
+              y: 1611.928
+          type: FULL
+          subtype: SLOW_STREETS
+          route_cost: -1
+        - geometry:
+            - x: -612.887
+              y: 2204.921
+            - x: -607.29
+              y: 2206.264
+            - x: -621.703
+              y: 2285.999
+            - x: -626.153
+              y: 2285.131
+          type: PARTIAL
+          subtype: NAVIGATE_VARYING_ROAD_WIDTHS
+          route_cost: 1800
+        - geometry:
+            - x: -5763.143
+              y: 2645.728
+            - x: -5748.543
+              y: 2637.128
+            - x: -5731.743
+              y: 2631.428
+            - x: -5709.743
+              y: 2625.728
+            - x: -5674.143
+              y: 2616.228
+            - x: -5662.843
+              y: 2610.228
+            - x: -5655.843
+              y: 2602.228
+            - x: -5652.443
+              y: 2594.128
+            - x: -5650.543
+              y: 2584.928
+            - x: -5650.643
+              y: 2574.928
+            - x: -5652.443
+              y: 2564.828
+            - x: -5659.043
+              y: 2553.628
+            - x: -5687.043
+              y: 2513.928
+            - x: -5722.643
+              y: 2471.228
+            - x: -5733.443
+              y: 2458.628
+            - x: -5765.443
+              y: 2438.928
+            - x: -5779.343
+              y: 2428.828
+            - x: -5786.743
+              y: 2416.928
+            - x: -5785.143
+              y: 2402.228
+            - x: -5780.143
+              y: 2388.528
+            - x: -5775.343
+              y: 2374.028
+            - x: -5775.143
+              y: 2360.728
+            - x: -5777.143
+              y: 2348.128
+            - x: -5782.043
+              y: 2333.928
+            - x: -5789.243
+              y: 2316.928
+            - x: -5806.443
+              y: 2334.728
+            - x: -5788.943
+              y: 2346.828
+            - x: -5787.643
+              y: 2360.428
+            - x: -5790.343
+              y: 2376.328
+            - x: -5795.943
+              y: 2388.328
+            - x: -5802.943
+              y: 2402.428
+            - x: -5804.243
+              y: 2413.628
+            - x: -5803.443
+              y: 2425.728
+            - x: -5799.143
+              y: 2434.128
+            - x: -5787.543
+              y: 2443.128
+            - x: -5762.243
+              y: 2458.328
+            - x: -5736.843
+              y: 2477.528
+            - x: -5722.643
+              y: 2491.428
+            - x: -5695.943
+              y: 2524.228
+            - x: -5671.643
+              y: 2557.528
+            - x: -5667.143
+              y: 2566.328
+            - x: -5665.043
+              y: 2573.628
+            - x: -5666.343
+              y: 2583.828
+            - x: -5670.043
+              y: 2591.828
+            - x: -5675.943
+              y: 2599.228
+            - x: -5685.743
+              y: 2605.328
+            - x: -5717.643
+              y: 2615.528
+            - x: -5740.843
+              y: 2622.128
+            - x: -5757.843
+              y: 2628.228
+            - x: -5769.243
+              y: 2633.728
+          type: FULL
+          subtype: SLOW_STREETS
+          route_cost: -1
+        - geometry:
+            - x: 105.957
+              y: 2236.428
+            - x: 108.257
+              y: 2222.728
+            - x: 112.957
+              y: 2223.428
+            - x: 110.857
+              y: 2237.128
+          type: FULL
+          subtype: SLOW_STREETS
+          route_cost: -1
+        - geometry:
+            - x: -3901.843
+              y: 1957.928
+            - x: -3886.843
+              y: 1960.028
+            - x: -3914.143
+              y: 2105.328
+            - x: -3959.543
+              y: 2206.128
+            - x: -3963.043
+              y: 2279.728
+            - x: -3987.043
+              y: 2313.328
+            - x: -4021.543
+              y: 2325.328
+            - x: -4070.843
+              y: 2312.428
+            - x: -4144.343
+              y: 2337.328
+            - x: -4210.343
+              y: 2392.228
+            - x: -4221.543
+              y: 2426.828
+            - x: -4235.943
+              y: 2488.228
+            - x: -4236.843
+              y: 2502.828
+            - x: -4253.143
+              y: 2501.328
+            - x: -4227.743
+              y: 2383.328
+            - x: -4153.243
+              y: 2319.028
+            - x: -4070.743
+              y: 2291.528
+            - x: -4030.043
+              y: 2303.728
+            - x: -3988.843
+              y: 2279.228
+            - x: -3981.043
+              y: 2198.528
+            - x: -3935.943
+              y: 2110.028
+            - x: -3925.343
+              y: 2085.128
+          type: FULL
+          subtype: CONSTRUCTION_ROAD_CLOSURE
+          route_cost: -1
+        - geometry:
+            - x: -1071.143
+              y: 1703.328
+            - x: -1069.743
+              y: 1693.328
+            - x: -1057.343
+              y: 1695.328
+            - x: -1058.843
+              y: 1705.128
+          type: FULL
+          subtype: LOW_RES_DATA_NEEDED
+          route_cost: -1
+        - geometry:
+            - x: -3555.043
+              y: 1712.328
+            - x: -3447.543
+              y: 1730.828
+            - x: -3445.343
+              y: 1717.728
+            - x: -3553.443
+              y: 1699.228
+          type: FULL
+          subtype: SLOW_STREETS
+          route_cost: -1
+        - geometry:
+            - x: -3414.243
+              y: 1736.428
+            - x: -3303.043
+              y: 1754.928
+            - x: -3300.443
+              y: 1739.928
+            - x: -3412.143
+              y: 1721.228
+          type: FULL
+          subtype: SLOW_STREETS
+          route_cost: -1
+        - geometry:
+            - x: -4697.243
+              y: 1521.928
+            - x: -4695.443
+              y: 1506.028
+            - x: -4583.743
+              y: 1525.328
+            - x: -4587.043
+              y: 1541.028
+          type: FULL
+          subtype: SLOW_STREETS
+          route_cost: -1
+        - geometry:
+            - x: 352.957
+              y: 1587.828
+            - x: 354.257
+              y: 1586.228
+            - x: 359.957
+              y: 1592.028
+            - x: 358.357
+              y: 1593.428
+          type: PARTIAL
+          subtype: CONSTRUCTION_ROAD_DIGGING
+          route_cost: -1
+        - geometry:
+            - x: 258.657
+              y: 1789.428
+            - x: 267.557
+              y: 1777.428
+            - x: 155.657
+              y: 1664.628
+            - x: 146.757
+              y: 1676.728
+          type: FULL
+          subtype: GEOGRAPHIC_SCOPE
+          route_cost: -1
+        - geometry:
+            - x: -1334.543
+              y: 1696.428
+            - x: -1299.643
+              y: 1701.528
+            - x: -1296.243
+              y: 1682.628
+            - x: -1331.843
+              y: 1676.528
+          type: FULL
+          subtype: GEOGRAPHIC_SCOPE
+          route_cost: -1
+        - geometry:
+            - x: -2940.043
+              y: 2428.528
+            - x: -2939.343
+              y: 2424.328
+            - x: -2928.143
+              y: 2426.128
+            - x: -2928.943
+              y: 2430.328
+          type: PARTIAL
+          subtype: CONSTRUCTION_ROAD_CLOSURE
+          route_cost: -1
+        - geometry:
+            - x: -44.043
+              y: 2686.828
+            - x: -27.043
+              y: 2597.228
+            - x: -17.843
+              y: 2597.928
+            - x: -31.643
+              y: 2688.928
+          type: FULL
+          subtype: CONSTRUCTION_ROAD_CLOSURE
+          route_cost: -1
+        - geometry:
+            - x: -3833.043
+              y: 1664.628
+            - x: -3831.243
+              y: 1653.328
+            - x: -3732.643
+              y: 1669.928
+            - x: -3735.443
+              y: 1681.228
+          type: FULL
+          subtype: SLOW_STREETS
+          route_cost: -1
+        - geometry:
+            - x: 434.857
+              y: 1967.428
+            - x: 392.757
+              y: 1926.428
+            - x: 405.257
+              y: 1916.328
+            - x: 444.857
+              y: 1956.428
+          type: FULL
+          subtype: GEOGRAPHIC_SCOPE
+          route_cost: -1
+        - geometry:
+            - x: -6421.543
+              y: 1329.928
+            - x: -6351.043
+              y: 1332.728
+            - x: -6349.543
+              y: 1314.828
+            - x: -6421.143
+              y: 1310.728
+          type: FULL
+          subtype: SLOW_STREETS
+          route_cost: -1
+        - geometry:
+            - x: -10.943
+              y: 2513.628
+            - x: -9.443
+              y: 2504.928
+            - x: -6.843
+              y: 2505.128
+            - x: -8.443
+              y: 2514.228
+          type: PARTIAL
+          subtype: CONSTRUCTION_ROAD_DIGGING
+          route_cost: -1
+        - geometry:
+            - x: -4607.643
+              y: 1311.928
+            - x: -4607.443
+              y: 1306.728
+            - x: -4603.743
+              y: 1306.728
+            - x: -4604.043
+              y: 1312.228
+          type: FULL
+          subtype: COMBINED_LIGHTS_SIGNS
+          route_cost: -1
+        - geometry:
+            - x: 591.457
+              y: 2124.828
+            - x: 602.557
+              y: 2113.728
+            - x: 558.657
+              y: 2070.928
+            - x: 557.557
+              y: 2090.828
+          type: FULL
+          subtype: GEOGRAPHIC_SCOPE
+          route_cost: -1
+        - geometry:
+            - x: -127.343
+              y: 1590.328
+            - x: -127.643
+              y: 1592.228
+            - x: -128.243
+              y: 1591.628
+            - x: -130.843
+              y: 1591.228
+            - x: -131.443
+              y: 1590.828
+            - x: -132.543
+              y: 1591.128
+            - x: -133.843
+              y: 1591.228
+            - x: -133.143
+              y: 1586.028
+            - x: -132.343
+              y: 1586.328
+            - x: -131.743
+              y: 1586.928
+            - x: -131.543
+              y: 1587.528
+            - x: -131.043
+              y: 1587.528
+            - x: -130.143
+              y: 1587.228
+            - x: -126.843
+              y: 1587.628
+          type: FULL
+          subtype: GATE
+          route_cost: -1
+        - geometry:
+            - x: -7462.543
+              y: 1264.428
+            - x: -7454.043
+              y: 1265.328
+            - x: -7458.843
+              y: 1281.328
+            - x: -7465.543
+              y: 1279.828
+          type: FULL
+          subtype: LOW_RES_DATA_NEEDED
+          route_cost: -1
+        - geometry:
+            - x: -154.243
+              y: 1582.628
+            - x: -155.143
+              y: 1587.928
+            - x: -155.843
+              y: 1587.028
+            - x: -156.543
+              y: 1586.128
+            - x: -157.743
+              y: 1586.928
+            - x: -160.743
+              y: 1586.528
+            - x: -161.243
+              y: 1586.928
+            - x: -161.343
+              y: 1584.928
+            - x: -161.243
+              y: 1581.528
+            - x: -158.643
+              y: 1581.928
+            - x: -157.843
+              y: 1582.228
+            - x: -157.643
+              y: 1582.628
+            - x: -156.043
+              y: 1583.028
+            - x: -155.143
+              y: 1582.528
+          type: FULL
+          subtype: GATE
+          route_cost: -1
+        - geometry:
+            - x: -2688.643
+              y: 2578.528
+            - x: -2687.943
+              y: 2573.028
+            - x: -2687.343
+              y: 2573.128
+            - x: -2688.243
+              y: 2578.528
+          type: FULL
+          subtype: CONSTRUCTION_ROAD_CLOSURE
+          route_cost: -1
+        - geometry:
+            - x: -4867.243
+              y: 1987.328
+            - x: -4853.043
+              y: 1948.428
+            - x: -4820.043
+              y: 1971.328
+            - x: -4835.343
+              y: 2009.228
+          type: PARTIAL
+          subtype: GEOGRAPHIC_SCOPE
+          route_cost: -1
+        - geometry:
+            - x: -3452.143
+              y: 2663.828
+            - x: -3500.543
+              y: 2655.828
+            - x: -3499.543
+              y: 2650.228
+            - x: -3450.943
+              y: 2657.728
+          type: PARTIAL
+          subtype: CONSTRUCTION_ROAD_CLOSURE
+          route_cost: -1
+        - geometry:
+            - x: -226.124
+              y: 2070.565
+            - x: -214.799
+              y: 2072.284
+            - x: -258.528
+              y: 2327.719
+            - x: -290.142
+              y: 2516.383
+            - x: -297.001
+              y: 2558.825
+            - x: -306.674
+              y: 2557.411
+            - x: -275.876
+              y: 2358.158
+            - x: -320.203
+              y: 2350.872
+            - x: -304.916
+              y: 2254.705
+            - x: -259.337
+              y: 2260.425
+          type: FULL
+          subtype: EVENT
+          route_cost: -1
+        - geometry:
+            - x: -2814.043
+              y: 2473.528
+            - x: -2805.543
+              y: 2475.128
+            - x: -2817.243
+              y: 2545.128
+            - x: -2826.143
+              y: 2543.528
+          type: PARTIAL
+          subtype: CONSTRUCTION_ROAD_DIGGING
+          route_cost: -1
+        - geometry:
+            - x: -6611.743
+              y: 1314.728
+            - x: -6610.643
+              y: 1299.528
+            - x: -6536.243
+              y: 1302.928
+            - x: -6537.343
+              y: 1320.728
+          type: FULL
+          subtype: SLOW_STREETS
+          route_cost: -1
+        - geometry:
+            - x: -4566.043
+              y: 2644.628
+            - x: -4580.343
+              y: 2620.728
+            - x: -4573.543
+              y: 2618.128
+            - x: -4558.143
+              y: 2643.828
+          type: PARTIAL
+          subtype: CONSTRUCTION_ROAD_CLOSURE
+          route_cost: -1
+        - geometry:
+            - x: -3181.343
+              y: 1973.628
+            - x: -3193.343
+              y: 1971.428
+            - x: -3190.743
+              y: 1960.328
+            - x: -3187.643
+              y: 1960.828
+            - x: -3182.343
+              y: 1961.728
+            - x: -3180.743
+              y: 1962.028
+            - x: -3179.043
+              y: 1961.728
+          type: PARTIAL
+          subtype: CONSTRUCTION_ROAD_CLOSURE
+          route_cost: -1
+        - geometry:
+            - x: -1436.643
+              y: 1230.128
+            - x: -1435.043
+              y: 1220.828
+            - x: -1432.543
+              y: 1221.328
+            - x: -1433.643
+              y: 1230.528
+          type: FULL
+          subtype: GEOGRAPHIC_SCOPE
+          route_cost: -1
+        - geometry:
+            - x: -7364.843
+              y: 1266.628
+            - x: -7363.543
+              y: 1251.328
+            - x: -7289.743
+              y: 1254.928
+            - x: -7293.043
+              y: 1273.328
+          type: FULL
+          subtype: SLOW_STREETS
+          route_cost: -1
+        - geometry:
+            - x: -4005.243
+              y: 1634.928
+            - x: -4125.743
+              y: 1614.328
+            - x: -4124.043
+              y: 1605.328
+            - x: -4003.543
+              y: 1625.628
+          type: FULL
+          subtype: SLOW_STREETS
+          route_cost: -1
+        - geometry:
+            - x: -6836.743
+              y: 1834.228
+            - x: -6755.143
+              y: 1849.128
+            - x: -6745.343
+              y: 1804.728
+            - x: -6828.243
+              y: 1792.528
+          type: FULL
+          subtype: GEOGRAPHIC_SCOPE
+          route_cost: -1
+        - geometry:
+            - x: -3181.343
+              y: 1973.628
+            - x: -3193.343
+              y: 1971.428
+            - x: -3190.743
+              y: 1960.328
+            - x: -3187.643
+              y: 1960.828
+            - x: -3182.343
+              y: 1961.728
+            - x: -3180.743
+              y: 1962.028
+            - x: -3179.043
+              y: 1961.728
+          type: PARTIAL
+          subtype: CONSTRUCTION_ROAD_CLOSURE
+          route_cost: -1
+        - geometry:
+            - x: -1382.843
+              y: 1224.928
+            - x: -1382.243
+              y: 1221.728
+            - x: -1373.343
+              y: 1223.028
+            - x: -1374.343
+              y: 1226.628
+          type: PARTIAL
+          subtype: UNKNOWN
+          route_cost: -1
+        - geometry:
+            - x: -4897.143
+              y: 1194.328
+            - x: -4900.443
+              y: 1194.028
+            - x: -4898.943
+              y: 1169.328
+            - x: -4895.643
+              y: 1169.528
+            - x: -4895.643
+              y: 1169.528
+            - x: -4896.343
+              y: 1180.928
+          type: PARTIAL
+          subtype: CONSTRUCTION_ROAD_DIGGING
+          route_cost: -1
+        - geometry:
+            - x: -1442.543
+              y: 1587.028
+            - x: -1441.943
+              y: 1581.028
+            - x: -1430.643
+              y: 1582.828
+            - x: -1431.443
+              y: 1589.228
+          type: PARTIAL
+          subtype: NAVIGATE_VARYING_ROAD_WIDTHS
+          route_cost: 1800
+        - geometry:
+            - x: 127.457
+              y: 1665.528
+            - x: 127.457
+              y: 1661.528
+            - x: 131.357
+              y: 1662.328
+            - x: 130.557
+              y: 1666.028
+          type: FULL
+          subtype: UNKNOWN
+          route_cost: -1
+        - geometry:
+            - x: -3715.943
+              y: 2502.828
+            - x: -3706.243
+              y: 2448.028
+            - x: -3706.243
+              y: 2448.128
+            - x: -3701.043
+              y: 2414.328
+            - x: -3695.643
+              y: 2415.628
+            - x: -3710.843
+              y: 2503.628
+          type: FULL
+          subtype: CONSTRUCTION_ROAD_DIGGING
+          route_cost: -1
+        - geometry:
+            - x: -6336.943
+              y: 2161.928
+            - x: -6349.643
+              y: 2169.928
+            - x: -6357.243
+              y: 2180.328
+            - x: -6360.943
+              y: 2189.828
+            - x: -6365.943
+              y: 2206.728
+            - x: -6369.243
+              y: 2214.828
+            - x: -6390.643
+              y: 2236.828
+            - x: -6404.543
+              y: 2252.928
+            - x: -6419.643
+              y: 2269.128
+            - x: -6434.243
+              y: 2282.528
+            - x: -6463.243
+              y: 2305.628
+            - x: -6477.043
+              y: 2316.828
+            - x: -6491.743
+              y: 2329.228
+            - x: -6504.743
+              y: 2342.028
+            - x: -6513.543
+              y: 2354.728
+            - x: -6521.343
+              y: 2368.328
+            - x: -6527.543
+              y: 2381.928
+            - x: -6530.943
+              y: 2396.628
+            - x: -6532.343
+              y: 2410.228
+            - x: -6530.643
+              y: 2423.128
+            - x: -6526.543
+              y: 2431.728
+            - x: -6516.243
+              y: 2441.628
+            - x: -6495.343
+              y: 2465.528
+            - x: -6475.743
+              y: 2491.028
+            - x: -6460.243
+              y: 2512.628
+            - x: -6451.243
+              y: 2529.428
+            - x: -6443.643
+              y: 2562.128
+            - x: -6440.343
+              y: 2577.628
+            - x: -6445.543
+              y: 2597.928
+            - x: -6450.943
+              y: 2609.628
+            - x: -6463.743
+              y: 2630.528
+            - x: -6479.543
+              y: 2653.328
+            - x: -6499.443
+              y: 2681.828
+            - x: -6514.043
+              y: 2700.628
+            - x: -6523.243
+              y: 2717.828
+            - x: -6537.643
+              y: 2753.028
+            - x: -6548.543
+              y: 2748.428
+            - x: -6540.743
+              y: 2724.728
+            - x: -6532.643
+              y: 2705.328
+            - x: -6526.843
+              y: 2696.628
+            - x: -6507.343
+              y: 2670.628
+            - x: -6497.043
+              y: 2656.528
+            - x: -6482.543
+              y: 2636.928
+            - x: -6475.243
+              y: 2626.128
+            - x: -6464.643
+              y: 2609.128
+            - x: -6457.543
+              y: 2594.428
+            - x: -6455.043
+              y: 2579.328
+            - x: -6455.643
+              y: 2567.028
+            - x: -6461.543
+              y: 2539.528
+            - x: -6467.843
+              y: 2525.528
+            - x: -6479.143
+              y: 2508.528
+            - x: -6503.143
+              y: 2478.428
+            - x: -6527.943
+              y: 2453.228
+            - x: -6540.443
+              y: 2437.028
+            - x: -6545.643
+              y: 2424.628
+            - x: -6547.443
+              y: 2406.128
+            - x: -6540.443
+              y: 2378.328
+            - x: -6532.343
+              y: 2358.428
+            - x: -6521.643
+              y: 2340.928
+            - x: -6506.443
+              y: 2323.328
+            - x: -6474.643
+              y: 2298.228
+            - x: -6428.643
+              y: 2260.528
+            - x: -6403.543
+              y: 2232.928
+            - x: -6388.343
+              y: 2215.828
+            - x: -6380.643
+              y: 2204.428
+            - x: -6374.943
+              y: 2187.428
+            - x: -6367.043
+              y: 2170.328
+            - x: -6360.543
+              y: 2162.728
+            - x: -6349.643
+              y: 2154.728
+            - x: -6341.243
+              y: 2151.228
+          type: FULL
+          subtype: SLOW_STREETS
+          route_cost: -1
+        - geometry:
+            - x: -654.943
+              y: 1239.828
+            - x: -653.743
+              y: 1233.128
+            - x: -641.043
+              y: 1235.328
+            - x: -642.643
+              y: 1241.928
+          type: FULL
+          subtype: NAVIGATE_TRAFFIC_LIGHT_INTERSECTIONS
+          route_cost: -1
+        - geometry:
+            - x: -1454.543
+              y: 2462.728
+            - x: -1451.743
+              y: 2446.528
+            - x: -1333.543
+              y: 2465.428
+            - x: -1336.343
+              y: 2482.828
+          type: FULL
+          subtype: REMOTE_ASSISTANCE
+          route_cost: -1
+        - geometry:
+            - x: 3.057
+              y: 1495.828
+            - x: 3.057
+              y: 1495.628
+            - x: 3.257
+              y: 1495.628
+            - x: 3.257
+              y: 1495.828
+          type: FULL
+          subtype: SAFETY_MITIGATION
+          route_cost: -1
+        - geometry:
+            - x: -733.343
+              y: 2528.028
+            - x: -744.143
+              y: 2612.328
+            - x: -750.643
+              y: 2611.828
+            - x: -737.443
+              y: 2528.028
+          type: FULL
+          subtype: CONSTRUCTION_ROAD_DIGGING
+          route_cost: -1
+        - geometry:
+            - x: -3456.743
+              y: 2557.528
+            - x: -3455.443
+              y: 2550.728
+            - x: -3431.943
+              y: 2554.628
+            - x: -3432.843
+              y: 2561.528
+          type: FULL
+          subtype: EVENT
+          route_cost: -1
+        - geometry:
+            - x: -8.043
+              y: 2398.028
+            - x: -43.443
+              y: 2392.228
+            - x: -38.743
+              y: 2385.728
+            - x: -2.043
+              y: 2391.828
+          type: FULL
+          subtype: EVENT
+          route_cost: -1
+        - geometry:
+            - x: -6070.343
+              y: 1349.628
+            - x: -6056.143
+              y: 1352.328
+            - x: -6056.143
+              y: 1332.128
+            - x: -6072.443
+              y: 1332.028
+          type: FULL
+          subtype: SLOW_STREETS
+          route_cost: -1
+        - geometry:
+            - x: -1162.743
+              y: 1581.128
+            - x: -1164.743
+              y: 1580.728
+            - x: -1163.043
+              y: 1572.628
+            - x: -1161.443
+              y: 1572.928
+          type: FULL
+          subtype: LOW_RES_DATA_NEEDED
+          route_cost: -1
+        - geometry:
+            - x: -2850.043
+              y: 2670.628
+            - x: -2846.243
+              y: 2643.028
+            - x: -2826.643
+              y: 2646.928
+            - x: -2831.143
+              y: 2673.528
+          type: FULL
+          subtype: CONSTRUCTION_ROAD_CLOSURE
+          route_cost: -1
+        - geometry:
+            - x: -4070.543
+              y: 2648.328
+            - x: -4062.443
+              y: 2644.428
+            - x: -4063.043
+              y: 2673.728
+            - x: -4062.043
+              y: 2677.128
+            - x: -4059.443
+              y: 2679.228
+            - x: -4049.243
+              y: 2677.428
+            - x: -4048.443
+              y: 2684.728
+            - x: -4062.743
+              y: 2689.328
+            - x: -4068.043
+              y: 2691.428
+            - x: -4076.043
+              y: 2696.228
+            - x: -4106.543
+              y: 2709.928
+            - x: -4114.343
+              y: 2710.728
+            - x: -4120.343
+              y: 2709.528
+            - x: -4125.043
+              y: 2706.328
+            - x: -4148.243
+              y: 2689.228
+            - x: -4151.743
+              y: 2686.028
+            - x: -4143.443
+              y: 2682.528
+            - x: -4141.943
+              y: 2684.928
+            - x: -4126.743
+              y: 2696.228
+            - x: -4119.043
+              y: 2701.428
+            - x: -4114.843
+              y: 2702.528
+            - x: -4110.643
+              y: 2702.528
+            - x: -4094.043
+              y: 2695.628
+            - x: -4077.143
+              y: 2687.828
+            - x: -4073.443
+              y: 2685.328
+            - x: -4071.343
+              y: 2682.528
+            - x: -4070.143
+              y: 2679.228
+            - x: -4069.743
+              y: 2675.328
+            - x: -4069.543
+              y: 2664.928
+            - x: -4069.443
+              y: 2656.528
+            - x: -4069.443
+              y: 2651.228
+          type: FULL
+          subtype: MAP_ENG_OTHER
+          route_cost: -1
+        - geometry:
+            - x: -4070.543
+              y: 2648.328
+            - x: -4062.443
+              y: 2644.428
+            - x: -4063.043
+              y: 2673.728
+            - x: -4062.043
+              y: 2677.128
+            - x: -4059.443
+              y: 2679.228
+            - x: -4049.243
+              y: 2677.428
+            - x: -4048.443
+              y: 2684.728
+            - x: -4062.743
+              y: 2689.328
+            - x: -4068.043
+              y: 2691.428
+            - x: -4076.043
+              y: 2696.228
+            - x: -4106.543
+              y: 2709.928
+            - x: -4114.343
+              y: 2710.728
+            - x: -4120.343
+              y: 2709.528
+            - x: -4125.043
+              y: 2706.328
+            - x: -4148.243
+              y: 2689.228
+            - x: -4151.743
+              y: 2686.028
+            - x: -4143.443
+              y: 2682.528
+            - x: -4141.943
+              y: 2684.928
+            - x: -4126.743
+              y: 2696.228
+            - x: -4119.043
+              y: 2701.428
+            - x: -4114.843
+              y: 2702.528
+            - x: -4110.643
+              y: 2702.528
+            - x: -4094.043
+              y: 2695.628
+            - x: -4077.143
+              y: 2687.828
+            - x: -4073.443
+              y: 2685.328
+            - x: -4071.343
+              y: 2682.528
+            - x: -4070.143
+              y: 2679.228
+            - x: -4069.743
+              y: 2675.328
+            - x: -4069.543
+              y: 2664.928
+            - x: -4069.443
+              y: 2656.528
+            - x: -4069.443
+              y: 2651.228
+          type: FULL
+          subtype: MAP_ENG_OTHER
+          route_cost: -1
+        - geometry:
+            - x: -6131.643
+              y: 1346.228
+            - x: -6102.643
+              y: 1348.128
+            - x: -6107.043
+              y: 1329.128
+            - x: -6130.043
+              y: 1328.628
+          type: FULL
+          subtype: SLOW_STREETS
+          route_cost: -1
+        - geometry:
+            - x: -1142.043
+              y: 2211.328
+            - x: -1140.943
+              y: 2203.128
+            - x: -1137.143
+              y: 2198.828
+            - x: -1124.543
+              y: 2200.528
+            - x: -1119.343
+              y: 2202.728
+            - x: -1118.743
+              y: 2206.828
+            - x: -1119.843
+              y: 2215.128
+            - x: -1124.143
+              y: 2219.828
+            - x: -1130.343
+              y: 2219.228
+            - x: -1136.043
+              y: 2217.928
+            - x: -1137.343
+              y: 2217.428
+          type: FULL
+          subtype: OBSTRUCTION_UNWANTED_PUBLIC_INTERACTION
+          route_cost: -1
+        - geometry:
+            - x: -1410.543
+              y: 1696.228
+            - x: -1409.643
+              y: 1691.628
+            - x: -1393.743
+              y: 1694.428
+            - x: -1394.943
+              y: 1699.128
+          type: PARTIAL
+          subtype: NAVIGATE_VARYING_ROAD_WIDTHS
+          route_cost: 1800
+        - geometry:
+            - x: -19.143
+              y: 1611.528
+            - x: -17.743
+              y: 1604.128
+            - x: -20.243
+              y: 1603.428
+            - x: -22.043
+              y: 1611.728
+            - x: -19.143
+              y: 1612.228
+          type: FULL
+          subtype: GATE
+          route_cost: -1
+        - geometry:
+            - x: -3265.343
+              y: 1763.328
+            - x: -3155.543
+              y: 1779.728
+            - x: -3153.743
+              y: 1764.828
+            - x: -3262.043
+              y: 1743.128
+          type: FULL
+          subtype: SLOW_STREETS
+          route_cost: -1
+        - geometry:
+            - x: -4433.643
+              y: 1830.628
+            - x: -4432.943
+              y: 1828.128
+            - x: -4419.243
+              y: 1831.728
+            - x: -4419.943
+              y: 1834.128
+          type: FULL
+          subtype: NAVIGATE_VARYING_ROAD_WIDTHS
+          route_cost: -1
+        - geometry:
+            - x: -712.843
+              y: 1451.128
+            - x: -707.443
+              y: 1424.328
+            - x: -696.043
+              y: 1426.228
+            - x: -701.443
+              y: 1453.128
+          type: FULL
+          subtype: NAVIGATE_TRAFFIC_LIGHT_INTERSECTIONS
+          route_cost: -1
+        - geometry:
+            - x: -239.064
+              y: 2176.475
+            - x: -234.416
+              y: 2177.405
+            - x: -242.479
+              y: 2225.971
+            - x: -247.284
+              y: 2225.191
+          type: FULL
+          subtype: EVENT
+          route_cost: -1
+        - geometry:
+            - x: -4070.543
+              y: 2648.328
+            - x: -4062.443
+              y: 2644.428
+            - x: -4063.043
+              y: 2673.728
+            - x: -4062.043
+              y: 2677.128
+            - x: -4059.443
+              y: 2679.228
+            - x: -4049.243
+              y: 2677.428
+            - x: -4048.443
+              y: 2684.728
+            - x: -4062.743
+              y: 2689.328
+            - x: -4068.043
+              y: 2691.428
+            - x: -4076.043
+              y: 2696.228
+            - x: -4106.543
+              y: 2709.928
+            - x: -4114.343
+              y: 2710.728
+            - x: -4120.343
+              y: 2709.528
+            - x: -4125.043
+              y: 2706.328
+            - x: -4148.243
+              y: 2689.228
+            - x: -4151.743
+              y: 2686.028
+            - x: -4143.443
+              y: 2682.528
+            - x: -4141.943
+              y: 2684.928
+            - x: -4126.743
+              y: 2696.228
+            - x: -4119.043
+              y: 2701.428
+            - x: -4114.843
+              y: 2702.528
+            - x: -4110.643
+              y: 2702.528
+            - x: -4094.043
+              y: 2695.628
+            - x: -4077.143
+              y: 2687.828
+            - x: -4073.443
+              y: 2685.328
+            - x: -4071.343
+              y: 2682.528
+            - x: -4070.143
+              y: 2679.228
+            - x: -4069.743
+              y: 2675.328
+            - x: -4069.543
+              y: 2664.928
+            - x: -4069.443
+              y: 2656.528
+            - x: -4069.443
+              y: 2651.228
+          type: FULL
+          subtype: MAP_ENG_OTHER
+          route_cost: -1
+        - geometry:
+            - x: -6987.043
+              y: 1291.428
+            - x: -6985.843
+              y: 1275.328
+            - x: -6917.543
+              y: 1280.628
+            - x: -6918.143
+              y: 1297.728
+          type: FULL
+          subtype: SLOW_STREETS
+          route_cost: -1
+        - geometry:
+            - x: -5470.043
+              y: 1386.328
+            - x: -5399.743
+              y: 1387.428
+            - x: -5397.943
+              y: 1375.428
+            - x: -5469.143
+              y: 1371.628
+          type: FULL
+          subtype: SLOW_STREETS
+          route_cost: -1
+        - geometry:
+            - x: -6066.443
+              y: 1482.128
+            - x: -6086.643
+              y: 1428.028
+            - x: -6096.543
+              y: 1352.928
+            - x: -6071.943
+              y: 1354.928
+            - x: -6039.943
+              y: 1478.828
+          type: FULL
+          subtype: HIGHWAY_RAMPS
+          route_cost: -1
+        - geometry:
+            - x: -382.943
+              y: 2108.328
+            - x: -372.843
+              y: 2050.828
+            - x: -349.543
+              y: 2054.928
+            - x: -360.443
+              y: 2112.528
+          type: FULL
+          subtype: GEOGRAPHIC_SCOPE
+          route_cost: -1
+        - geometry:
+            - x: -5848.043
+              y: 1361.728
+            - x: -5775.943
+              y: 1366.128
+            - x: -5775.143
+              y: 1351.028
+            - x: -5847.143
+              y: 1348.628
+          type: FULL
+          subtype: SLOW_STREETS
+          route_cost: -1
+        - geometry:
+            - x: -4378.843
+              y: 1314.328
+            - x: -4376.543
+              y: 1299.128
+            - x: -4356.943
+              y: 1294.528
+            - x: -4109.143
+              y: 1335.828
+            - x: -4100.243
+              y: 1347.428
+            - x: -4103.743
+              y: 1363.228
+            - x: -4294.343
+              y: 1331.028
+          type: FULL
+          subtype: GEOGRAPHIC_SCOPE
+          route_cost: -1
+        - geometry:
+            - x: -1047.643
+              y: 1689.628
+            - x: -1046.243
+              y: 1681.228
+            - x: -1039.243
+              y: 1682.728
+            - x: -1040.643
+              y: 1691.228
+          type: FULL
+          subtype: LOW_RES_DATA_NEEDED
+          route_cost: -1
+        - geometry:
+            - x: -1465.043
+              y: 1214.528
+            - x: -1465.443
+              y: 1214.728
+            - x: -1465.843
+              y: 1214.028
+            - x: -1465.143
+              y: 1213.228
+            - x: -1464.343
+              y: 1213.828
+          type: FULL
+          subtype: MAP_ENG_OTHER
+          route_cost: -1
+        - geometry:
+            - x: -5659.243
+              y: 1373.628
+            - x: -5586.843
+              y: 1377.728
+            - x: -5586.443
+              y: 1363.228
+            - x: -5656.943
+              y: 1358.128
+          type: FULL
+          subtype: SLOW_STREETS
+          route_cost: -1
+        - geometry:
+            - x: -5093.043
+              y: 1409.828
+            - x: -5023.143
+              y: 1414.028
+            - x: -5022.843
+              y: 1398.528
+            - x: -5092.843
+              y: 1393.828
+          type: FULL
+          subtype: SLOW_STREETS
+          route_cost: -1
+    - name: spoof_houston_connection_loss_1695507601007124227
+      publish_topic:
+        topic_name: /houston_comms/connectivity_ddtf_status
+        message:
+          connectivity_heartbeat_ok: true
+          driverless_control_backend_ok: true
+    - name: segment_end_action
+      terminate_scenario_success: {}
+analyze_template: planning_multi_scoring_distance_to_collision_ml_grader.yaml
+
